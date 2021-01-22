@@ -1,0 +1,6 @@
+framework module Pods_DemoIPORollver {
+  umbrella header "Pods-DemoIPORollver-umbrella.h"
+
+  export *
+  module * { export * }
+}
