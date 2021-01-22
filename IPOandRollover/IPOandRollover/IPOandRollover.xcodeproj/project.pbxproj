@@ -8,14 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		96124EE7147E99E9B4ACDAD6 /* Pods_IPOandRollover.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E19907AA737DC3AC0F41C1CE /* Pods_IPOandRollover.framework */; };
+		CE1F05DB25B940B300DDF462 /* IPORolloverData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1F05DA25B940B300DDF462 /* IPORolloverData.swift */; };
 		CE843E7325B80BAE00D7C35A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE843E7225B80BAE00D7C35A /* AppDelegate.swift */; };
 		CE843E7725B80BAE00D7C35A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE843E7625B80BAE00D7C35A /* ViewController.swift */; };
 		CE843E7A25B80BAE00D7C35A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE843E7825B80BAE00D7C35A /* Main.storyboard */; };
 		CE843E7C25B80BAF00D7C35A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE843E7B25B80BAF00D7C35A /* Assets.xcassets */; };
 		CE843E7F25B80BAF00D7C35A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE843E7D25B80BAF00D7C35A /* LaunchScreen.storyboard */; };
+		CEBD210C25B9383F0003F17A /* IPORolloverPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBD210625B9383F0003F17A /* IPORolloverPresenter.swift */; };
+		CEBD210D25B9383F0003F17A /* IPORolloverWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBD210725B9383F0003F17A /* IPORolloverWorker.swift */; };
+		CEBD210E25B9383F0003F17A /* IPORolloverRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBD210825B9383F0003F17A /* IPORolloverRouter.swift */; };
+		CEBD210F25B9383F0003F17A /* IPORolloverModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBD210925B9383F0003F17A /* IPORolloverModels.swift */; };
+		CEBD211025B9383F0003F17A /* IPORolloverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBD210A25B9383F0003F17A /* IPORolloverViewController.swift */; };
+		CEBD211125B9383F0003F17A /* IPORolloverInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBD210B25B9383F0003F17A /* IPORolloverInteractor.swift */; };
+		CEBD211625B938B40003F17A /* IPORolloverViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBD211525B938B40003F17A /* IPORolloverViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE1F05DA25B940B300DDF462 /* IPORolloverData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPORolloverData.swift; sourceTree = "<group>"; };
 		CE843E6F25B80BAE00D7C35A /* IPOandRollover.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IPOandRollover.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE843E7225B80BAE00D7C35A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE843E7625B80BAE00D7C35A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -23,6 +32,13 @@
 		CE843E7B25B80BAF00D7C35A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE843E7E25B80BAF00D7C35A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE843E8025B80BAF00D7C35A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEBD210625B9383F0003F17A /* IPORolloverPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPORolloverPresenter.swift; sourceTree = "<group>"; };
+		CEBD210725B9383F0003F17A /* IPORolloverWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPORolloverWorker.swift; sourceTree = "<group>"; };
+		CEBD210825B9383F0003F17A /* IPORolloverRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPORolloverRouter.swift; sourceTree = "<group>"; };
+		CEBD210925B9383F0003F17A /* IPORolloverModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPORolloverModels.swift; sourceTree = "<group>"; };
+		CEBD210A25B9383F0003F17A /* IPORolloverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPORolloverViewController.swift; sourceTree = "<group>"; };
+		CEBD210B25B9383F0003F17A /* IPORolloverInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPORolloverInteractor.swift; sourceTree = "<group>"; };
+		CEBD211525B938B40003F17A /* IPORolloverViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPORolloverViewCell.swift; sourceTree = "<group>"; };
 		E19907AA737DC3AC0F41C1CE /* Pods_IPOandRollover.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IPOandRollover.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED3C198B27488BC8B4413AD3 /* Pods-IPOandRollover.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IPOandRollover.debug.xcconfig"; path = "Target Support Files/Pods-IPOandRollover/Pods-IPOandRollover.debug.xcconfig"; sourceTree = "<group>"; };
 		F91BFD45C22194343B611748 /* Pods-IPOandRollover.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IPOandRollover.release.xcconfig"; path = "Target Support Files/Pods-IPOandRollover/Pods-IPOandRollover.release.xcconfig"; sourceTree = "<group>"; };
@@ -57,6 +73,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CE1F05D925B9408600DDF462 /* IPORolloverData */ = {
+			isa = PBXGroup;
+			children = (
+				CE1F05DA25B940B300DDF462 /* IPORolloverData.swift */,
+			);
+			path = IPORolloverData;
+			sourceTree = "<group>";
+		};
 		CE843E6625B80BAE00D7C35A = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +102,7 @@
 		CE843E7125B80BAE00D7C35A /* IPOandRollover */ = {
 			isa = PBXGroup;
 			children = (
+				CEBD210525B938220003F17A /* CleanSwift */,
 				CE843E7225B80BAE00D7C35A /* AppDelegate.swift */,
 				CE843E7625B80BAE00D7C35A /* ViewController.swift */,
 				CE843E7825B80BAE00D7C35A /* Main.storyboard */,
@@ -86,6 +111,29 @@
 				CE843E8025B80BAF00D7C35A /* Info.plist */,
 			);
 			path = IPOandRollover;
+			sourceTree = "<group>";
+		};
+		CEBD210525B938220003F17A /* CleanSwift */ = {
+			isa = PBXGroup;
+			children = (
+				CE1F05D925B9408600DDF462 /* IPORolloverData */,
+				CEBD211425B9389B0003F17A /* ViewCell */,
+				CEBD210625B9383F0003F17A /* IPORolloverPresenter.swift */,
+				CEBD210725B9383F0003F17A /* IPORolloverWorker.swift */,
+				CEBD210825B9383F0003F17A /* IPORolloverRouter.swift */,
+				CEBD210925B9383F0003F17A /* IPORolloverModels.swift */,
+				CEBD210A25B9383F0003F17A /* IPORolloverViewController.swift */,
+				CEBD210B25B9383F0003F17A /* IPORolloverInteractor.swift */,
+			);
+			path = CleanSwift;
+			sourceTree = "<group>";
+		};
+		CEBD211425B9389B0003F17A /* ViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				CEBD211525B938B40003F17A /* IPORolloverViewCell.swift */,
+			);
+			path = ViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,8 +250,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEBD210C25B9383F0003F17A /* IPORolloverPresenter.swift in Sources */,
+				CEBD210D25B9383F0003F17A /* IPORolloverWorker.swift in Sources */,
 				CE843E7725B80BAE00D7C35A /* ViewController.swift in Sources */,
 				CE843E7325B80BAE00D7C35A /* AppDelegate.swift in Sources */,
+				CEBD211625B938B40003F17A /* IPORolloverViewCell.swift in Sources */,
+				CEBD210E25B9383F0003F17A /* IPORolloverRouter.swift in Sources */,
+				CEBD211025B9383F0003F17A /* IPORolloverViewController.swift in Sources */,
+				CEBD211125B9383F0003F17A /* IPORolloverInteractor.swift in Sources */,
+				CEBD210F25B9383F0003F17A /* IPORolloverModels.swift in Sources */,
+				CE1F05DB25B940B300DDF462 /* IPORolloverData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
