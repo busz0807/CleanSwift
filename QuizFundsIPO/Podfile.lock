@@ -1,0 +1,30 @@
+PODS:
+  - Alamofire (5.4.1)
+  - LanguageManager-iOS (1.2.3)
+  - SDWebImage (5.10.2):
+    - SDWebImage/Core (= 5.10.2)
+  - SDWebImage/Core (5.10.2)
+  - SwiftyJSON (5.0.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - LanguageManager-iOS
+  - SDWebImage
+  - SwiftyJSON
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - LanguageManager-iOS
+    - SDWebImage
+    - SwiftyJSON
+
+SPEC CHECKSUMS:
+  Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
+  LanguageManager-iOS: 020a6849c97949683926773fd5b82baceaa142db
+  SDWebImage: b969dcfc02c40a5da71eac0b03b8f1a0c794a86f
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
+
+PODFILE CHECKSUM: 17009a25f124f14fc497889230bce8808c9e7f73
+
+COCOAPODS: 1.10.0

@@ -1,0 +1,508 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CE33192625BEAC6B00EE6A1A /* FundsIPOViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE33192525BEAC6B00EE6A1A /* FundsIPOViewCell.swift */; };
+		CE33192925BEBAE700EE6A1A /* ModelFunds.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE33192825BEBAE700EE6A1A /* ModelFunds.swift */; };
+		CE7575C725BE858F00984116 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7575C625BE858E00984116 /* AppDelegate.swift */; };
+		CE7575C925BE858F00984116 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7575C825BE858F00984116 /* SceneDelegate.swift */; };
+		CE7575CB25BE858F00984116 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7575CA25BE858F00984116 /* ViewController.swift */; };
+		CE7575CE25BE858F00984116 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE7575CC25BE858F00984116 /* Main.storyboard */; };
+		CE7575D025BE859100984116 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE7575CF25BE859100984116 /* Assets.xcassets */; };
+		CE7575D325BE859100984116 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE7575D125BE859100984116 /* LaunchScreen.storyboard */; };
+		CE7575EB25BE864300984116 /* FundsIPOPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7575E525BE864300984116 /* FundsIPOPresenter.swift */; };
+		CE7575EC25BE864300984116 /* FundsIPOWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7575E625BE864300984116 /* FundsIPOWorker.swift */; };
+		CE7575ED25BE864300984116 /* FundsIPORouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7575E725BE864300984116 /* FundsIPORouter.swift */; };
+		CE7575EE25BE864300984116 /* FundsIPOModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7575E825BE864300984116 /* FundsIPOModels.swift */; };
+		CE7575EF25BE864300984116 /* FundsIPOViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7575E925BE864300984116 /* FundsIPOViewController.swift */; };
+		CE7575F025BE864300984116 /* FundsIPOInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7575EA25BE864300984116 /* FundsIPOInteractor.swift */; };
+		CE7575F925BE865900984116 /* FundsIPORolloverPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7575F325BE865900984116 /* FundsIPORolloverPresenter.swift */; };
+		CE7575FA25BE865900984116 /* FundsIPORolloverWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7575F425BE865900984116 /* FundsIPORolloverWorker.swift */; };
+		CE7575FB25BE865900984116 /* FundsIPORolloverRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7575F525BE865900984116 /* FundsIPORolloverRouter.swift */; };
+		CE7575FC25BE865900984116 /* FundsIPORolloverModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7575F625BE865900984116 /* FundsIPORolloverModels.swift */; };
+		CE7575FD25BE865900984116 /* FundsIPORolloverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7575F725BE865900984116 /* FundsIPORolloverViewController.swift */; };
+		CE7575FE25BE865900984116 /* FundsIPORolloverInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7575F825BE865900984116 /* FundsIPORolloverInteractor.swift */; };
+		CE75760625BE86FA00984116 /* FundIPORolloverDataModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE75760525BE86FA00984116 /* FundIPORolloverDataModels.swift */; };
+		D1DB9738EF3515E117496FA0 /* Pods_QuizFundsIPO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7711C4E3FAC55895BF42CC45 /* Pods_QuizFundsIPO.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		20AFA783F27704D4C4E04565 /* Pods-QuizFundsIPO.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuizFundsIPO.release.xcconfig"; path = "Target Support Files/Pods-QuizFundsIPO/Pods-QuizFundsIPO.release.xcconfig"; sourceTree = "<group>"; };
+		334D18D52EF3670200E65731 /* Pods-QuizFundsIPO.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuizFundsIPO.debug.xcconfig"; path = "Target Support Files/Pods-QuizFundsIPO/Pods-QuizFundsIPO.debug.xcconfig"; sourceTree = "<group>"; };
+		7711C4E3FAC55895BF42CC45 /* Pods_QuizFundsIPO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuizFundsIPO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE33192525BEAC6B00EE6A1A /* FundsIPOViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundsIPOViewCell.swift; sourceTree = "<group>"; };
+		CE33192825BEBAE700EE6A1A /* ModelFunds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelFunds.swift; sourceTree = "<group>"; };
+		CE7575C325BE858E00984116 /* QuizFundsIPO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuizFundsIPO.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE7575C625BE858E00984116 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CE7575C825BE858F00984116 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		CE7575CA25BE858F00984116 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CE7575CD25BE858F00984116 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CE7575CF25BE859100984116 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CE7575D225BE859100984116 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CE7575D425BE859100984116 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE7575E525BE864300984116 /* FundsIPOPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundsIPOPresenter.swift; sourceTree = "<group>"; };
+		CE7575E625BE864300984116 /* FundsIPOWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundsIPOWorker.swift; sourceTree = "<group>"; };
+		CE7575E725BE864300984116 /* FundsIPORouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundsIPORouter.swift; sourceTree = "<group>"; };
+		CE7575E825BE864300984116 /* FundsIPOModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundsIPOModels.swift; sourceTree = "<group>"; };
+		CE7575E925BE864300984116 /* FundsIPOViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundsIPOViewController.swift; sourceTree = "<group>"; };
+		CE7575EA25BE864300984116 /* FundsIPOInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundsIPOInteractor.swift; sourceTree = "<group>"; };
+		CE7575F325BE865900984116 /* FundsIPORolloverPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundsIPORolloverPresenter.swift; sourceTree = "<group>"; };
+		CE7575F425BE865900984116 /* FundsIPORolloverWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundsIPORolloverWorker.swift; sourceTree = "<group>"; };
+		CE7575F525BE865900984116 /* FundsIPORolloverRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundsIPORolloverRouter.swift; sourceTree = "<group>"; };
+		CE7575F625BE865900984116 /* FundsIPORolloverModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundsIPORolloverModels.swift; sourceTree = "<group>"; };
+		CE7575F725BE865900984116 /* FundsIPORolloverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundsIPORolloverViewController.swift; sourceTree = "<group>"; };
+		CE7575F825BE865900984116 /* FundsIPORolloverInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundsIPORolloverInteractor.swift; sourceTree = "<group>"; };
+		CE75760525BE86FA00984116 /* FundIPORolloverDataModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundIPORolloverDataModels.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CE7575C025BE858E00984116 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1DB9738EF3515E117496FA0 /* Pods_QuizFundsIPO.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1492A36FEE02F1377F1ADA1C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				334D18D52EF3670200E65731 /* Pods-QuizFundsIPO.debug.xcconfig */,
+				20AFA783F27704D4C4E04565 /* Pods-QuizFundsIPO.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		6660B49448B34F0F78DD7CFA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7711C4E3FAC55895BF42CC45 /* Pods_QuizFundsIPO.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CE7575BA25BE858E00984116 = {
+			isa = PBXGroup;
+			children = (
+				CE7575C525BE858E00984116 /* QuizFundsIPO */,
+				CE7575C425BE858E00984116 /* Products */,
+				1492A36FEE02F1377F1ADA1C /* Pods */,
+				6660B49448B34F0F78DD7CFA /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		CE7575C425BE858E00984116 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CE7575C325BE858E00984116 /* QuizFundsIPO.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CE7575C525BE858E00984116 /* QuizFundsIPO */ = {
+			isa = PBXGroup;
+			children = (
+				CE7575E125BE85FE00984116 /* Scenes */,
+				CE7575C625BE858E00984116 /* AppDelegate.swift */,
+				CE7575C825BE858F00984116 /* SceneDelegate.swift */,
+				CE7575CA25BE858F00984116 /* ViewController.swift */,
+				CE7575CC25BE858F00984116 /* Main.storyboard */,
+				CE7575CF25BE859100984116 /* Assets.xcassets */,
+				CE7575D125BE859100984116 /* LaunchScreen.storyboard */,
+				CE7575D425BE859100984116 /* Info.plist */,
+			);
+			path = QuizFundsIPO;
+			sourceTree = "<group>";
+		};
+		CE7575E125BE85FE00984116 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				CE33192525BEAC6B00EE6A1A /* FundsIPOViewCell.swift */,
+				CE75760025BE86BC00984116 /* Models */,
+				CE7575E425BE862E00984116 /* FundsIPO */,
+				CE7575E325BE861700984116 /* FundsIPORollover */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		CE7575E325BE861700984116 /* FundsIPORollover */ = {
+			isa = PBXGroup;
+			children = (
+				CE7575F325BE865900984116 /* FundsIPORolloverPresenter.swift */,
+				CE7575F425BE865900984116 /* FundsIPORolloverWorker.swift */,
+				CE7575F525BE865900984116 /* FundsIPORolloverRouter.swift */,
+				CE7575F625BE865900984116 /* FundsIPORolloverModels.swift */,
+				CE7575F725BE865900984116 /* FundsIPORolloverViewController.swift */,
+				CE7575F825BE865900984116 /* FundsIPORolloverInteractor.swift */,
+			);
+			path = FundsIPORollover;
+			sourceTree = "<group>";
+		};
+		CE7575E425BE862E00984116 /* FundsIPO */ = {
+			isa = PBXGroup;
+			children = (
+				CE7575E525BE864300984116 /* FundsIPOPresenter.swift */,
+				CE7575E625BE864300984116 /* FundsIPOWorker.swift */,
+				CE7575E725BE864300984116 /* FundsIPORouter.swift */,
+				CE7575E925BE864300984116 /* FundsIPOViewController.swift */,
+				CE7575E825BE864300984116 /* FundsIPOModels.swift */,
+				CE7575EA25BE864300984116 /* FundsIPOInteractor.swift */,
+			);
+			path = FundsIPO;
+			sourceTree = "<group>";
+		};
+		CE75760025BE86BC00984116 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CE75760525BE86FA00984116 /* FundIPORolloverDataModels.swift */,
+				CE33192825BEBAE700EE6A1A /* ModelFunds.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CE7575C225BE858E00984116 /* QuizFundsIPO */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE7575D725BE859100984116 /* Build configuration list for PBXNativeTarget "QuizFundsIPO" */;
+			buildPhases = (
+				F46051D73701BF73CBB8A8E0 /* [CP] Check Pods Manifest.lock */,
+				CE7575BF25BE858E00984116 /* Sources */,
+				CE7575C025BE858E00984116 /* Frameworks */,
+				CE7575C125BE858E00984116 /* Resources */,
+				B244C17D4C2874E8F3C150A6 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QuizFundsIPO;
+			productName = QuizFundsIPO;
+			productReference = CE7575C325BE858E00984116 /* QuizFundsIPO.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CE7575BB25BE858E00984116 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1230;
+				LastUpgradeCheck = 1230;
+				TargetAttributes = {
+					CE7575C225BE858E00984116 = {
+						CreatedOnToolsVersion = 12.3;
+					};
+				};
+			};
+			buildConfigurationList = CE7575BE25BE858E00984116 /* Build configuration list for PBXProject "QuizFundsIPO" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CE7575BA25BE858E00984116;
+			productRefGroup = CE7575C425BE858E00984116 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CE7575C225BE858E00984116 /* QuizFundsIPO */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CE7575C125BE858E00984116 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE7575D325BE859100984116 /* LaunchScreen.storyboard in Resources */,
+				CE7575D025BE859100984116 /* Assets.xcassets in Resources */,
+				CE7575CE25BE858F00984116 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B244C17D4C2874E8F3C150A6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-QuizFundsIPO/Pods-QuizFundsIPO-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-QuizFundsIPO/Pods-QuizFundsIPO-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-QuizFundsIPO/Pods-QuizFundsIPO-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F46051D73701BF73CBB8A8E0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-QuizFundsIPO-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CE7575BF25BE858E00984116 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE7575CB25BE858F00984116 /* ViewController.swift in Sources */,
+				CE7575F925BE865900984116 /* FundsIPORolloverPresenter.swift in Sources */,
+				CE75760625BE86FA00984116 /* FundIPORolloverDataModels.swift in Sources */,
+				CE7575EE25BE864300984116 /* FundsIPOModels.swift in Sources */,
+				CE7575FA25BE865900984116 /* FundsIPORolloverWorker.swift in Sources */,
+				CE7575C725BE858F00984116 /* AppDelegate.swift in Sources */,
+				CE7575FB25BE865900984116 /* FundsIPORolloverRouter.swift in Sources */,
+				CE33192625BEAC6B00EE6A1A /* FundsIPOViewCell.swift in Sources */,
+				CE33192925BEBAE700EE6A1A /* ModelFunds.swift in Sources */,
+				CE7575EB25BE864300984116 /* FundsIPOPresenter.swift in Sources */,
+				CE7575C925BE858F00984116 /* SceneDelegate.swift in Sources */,
+				CE7575F025BE864300984116 /* FundsIPOInteractor.swift in Sources */,
+				CE7575FC25BE865900984116 /* FundsIPORolloverModels.swift in Sources */,
+				CE7575ED25BE864300984116 /* FundsIPORouter.swift in Sources */,
+				CE7575EF25BE864300984116 /* FundsIPOViewController.swift in Sources */,
+				CE7575EC25BE864300984116 /* FundsIPOWorker.swift in Sources */,
+				CE7575FE25BE865900984116 /* FundsIPORolloverInteractor.swift in Sources */,
+				CE7575FD25BE865900984116 /* FundsIPORolloverViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CE7575CC25BE858F00984116 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE7575CD25BE858F00984116 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CE7575D125BE859100984116 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE7575D225BE859100984116 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CE7575D525BE859100984116 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CE7575D625BE859100984116 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CE7575D825BE859100984116 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 334D18D52EF3670200E65731 /* Pods-QuizFundsIPO.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9FVVBAQ8ZW;
+				INFOPLIST_FILE = QuizFundsIPO/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.projects.me.QuizFundsIPO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CE7575D925BE859100984116 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 20AFA783F27704D4C4E04565 /* Pods-QuizFundsIPO.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9FVVBAQ8ZW;
+				INFOPLIST_FILE = QuizFundsIPO/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.projects.me.QuizFundsIPO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CE7575BE25BE858E00984116 /* Build configuration list for PBXProject "QuizFundsIPO" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE7575D525BE859100984116 /* Debug */,
+				CE7575D625BE859100984116 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE7575D725BE859100984116 /* Build configuration list for PBXNativeTarget "QuizFundsIPO" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE7575D825BE859100984116 /* Debug */,
+				CE7575D925BE859100984116 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CE7575BB25BE858E00984116 /* Project object */;
+}
