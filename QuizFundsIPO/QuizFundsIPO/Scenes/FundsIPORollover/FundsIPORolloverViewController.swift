@@ -17,7 +17,8 @@ protocol FundsIPORolloverDisplayLogic: class {
 }
 
 class FundsIPORolloverViewController: UIViewController, FundsIPORolloverDisplayLogic {
-  var interactor: FundsIPORolloverBusinessLogic?
+    @IBOutlet weak var tableView: UITableView!
+    var interactor: FundsIPORolloverBusinessLogic?
   var router: (NSObjectProtocol & FundsIPORolloverRoutingLogic & FundsIPORolloverDataPassing)?
     var fundsIPOData : [FundIPORolloverDataModels]?
     typealias Models = FundsIPORolloverModels
@@ -83,9 +84,36 @@ class FundsIPORolloverViewController: UIViewController, FundsIPORolloverDisplayL
             return
         }
         self.fundsIPOData = viewModel.fundsIPO
+        self.tableView.reloadData()
 //        print("FundsIPO >> " , self.fundsIPOData)
-        if let fundsIPOData = self.fundsIPOData {
-            router?.goToFundIPO(fundsIPORollover: fundsIPOData[0])
-        }
+      
   }
+}
+extension FundsIPORolloverViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+       
+        return self.fundsIPOData?.count ?? 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "FundsIPOViewCell") as! FundsIPOViewCell
+        cell.data = self.fundsIPOData?[indexPath.row]
+//        cell.lbfundcode.text = self.fundsIPOData?.fundcode
+//        cell.lbchnfname.text = self.fundsIPOData?.chnfmname
+//        cell.lbipoRollOver.text = self.fundsIPOData?.ipoRollOver
+//        cell.lbOfferExpire.text = "\(self.fundsIPOData?.ipoOfferDate2 ?? "") - \(self.fundsIPOData?.ipoExpireDate2 ?? "")"
+//        let imageURL = self.fundsIPOData?.lgpic ?? ""
+//        let url = URL(string: imageURL)
+//        cell.imgLgpic.sd_setImage(with: url,  placeholderImage: UIImage(named: "Image"))
+        return cell
+
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        if let fundsIPOData = self.fundsIPOData?[indexPath.row] {
+            router?.goToFundIPO(fundsIPORollover: fundsIPOData)
+        }
+    }
+    
 }

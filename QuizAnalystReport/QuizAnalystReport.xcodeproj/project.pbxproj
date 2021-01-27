@@ -1,0 +1,532 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CE60BA1B25C10BD700F23339 /* AnalystTalksViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE60BA1A25C10BD700F23339 /* AnalystTalksViewCell.swift */; };
+		CE881E6025BFB58F0000ABE2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE881E5F25BFB58F0000ABE2 /* AppDelegate.swift */; };
+		CE881E6225BFB58F0000ABE2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE881E6125BFB58F0000ABE2 /* SceneDelegate.swift */; };
+		CE881E6425BFB58F0000ABE2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE881E6325BFB58F0000ABE2 /* ViewController.swift */; };
+		CE881E6725BFB58F0000ABE2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE881E6525BFB58F0000ABE2 /* Main.storyboard */; };
+		CE881E6925BFB5900000ABE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE881E6825BFB5900000ABE2 /* Assets.xcassets */; };
+		CE881E6C25BFB5900000ABE2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE881E6A25BFB5900000ABE2 /* LaunchScreen.storyboard */; };
+		CE881E7C25BFB5CF0000ABE2 /* AnalystReportPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE881E7625BFB5CF0000ABE2 /* AnalystReportPresenter.swift */; };
+		CE881E7D25BFB5CF0000ABE2 /* AnalystReportWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE881E7725BFB5CF0000ABE2 /* AnalystReportWorker.swift */; };
+		CE881E7E25BFB5CF0000ABE2 /* AnalystReportRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE881E7825BFB5CF0000ABE2 /* AnalystReportRouter.swift */; };
+		CE881E7F25BFB5CF0000ABE2 /* AnalystReportModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE881E7925BFB5CF0000ABE2 /* AnalystReportModels.swift */; };
+		CE881E8025BFB5CF0000ABE2 /* AnalystReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE881E7A25BFB5CF0000ABE2 /* AnalystReportViewController.swift */; };
+		CE881E8125BFB5CF0000ABE2 /* AnalystReportInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE881E7B25BFB5CF0000ABE2 /* AnalystReportInteractor.swift */; };
+		CE881E8525BFBAED0000ABE2 /* AnalystReportModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE881E8425BFBAED0000ABE2 /* AnalystReportModel.swift */; };
+		CE881E9A25BFD88A0000ABE2 /* NavAnalystReportPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE881E9425BFD88A0000ABE2 /* NavAnalystReportPresenter.swift */; };
+		CE881E9B25BFD88A0000ABE2 /* NavAnalystReportWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE881E9525BFD88A0000ABE2 /* NavAnalystReportWorker.swift */; };
+		CE881E9C25BFD88A0000ABE2 /* NavAnalystReportRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE881E9625BFD88A0000ABE2 /* NavAnalystReportRouter.swift */; };
+		CE881E9D25BFD88A0000ABE2 /* NavAnalystReportModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE881E9725BFD88A0000ABE2 /* NavAnalystReportModels.swift */; };
+		CE881E9E25BFD88A0000ABE2 /* NavAnalystReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE881E9825BFD88A0000ABE2 /* NavAnalystReportViewController.swift */; };
+		CE881E9F25BFD88A0000ABE2 /* NavAnalystReportInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE881E9925BFD88A0000ABE2 /* NavAnalystReportInteractor.swift */; };
+		CE881EA825BFFE2B0000ABE2 /* AnalystReportMonthlyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE881EA725BFFE2B0000ABE2 /* AnalystReportMonthlyModel.swift */; };
+		CE881EAB25BFFE3C0000ABE2 /* AnalystReportWeeklyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE881EAA25BFFE3C0000ABE2 /* AnalystReportWeeklyModel.swift */; };
+		CE881EAF25C00BC20000ABE2 /* WeeklyViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE881EAE25C00BC20000ABE2 /* WeeklyViewCell.swift */; };
+		CE881EB325C00C740000ABE2 /* MonthlyViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE881EB225C00C740000ABE2 /* MonthlyViewCell.swift */; };
+		CE881EB925C01E9B0000ABE2 /* AnalystTalksModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE881EB825C01E9B0000ABE2 /* AnalystTalksModel.swift */; };
+		EF4B167FE5C1ECE0C1164DE0 /* Pods_QuizAnalystReport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79D2B40002858E154B0AD5CC /* Pods_QuizAnalystReport.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		01C1D08DE8E24B81D3A62607 /* Pods-QuizAnalystReport.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuizAnalystReport.debug.xcconfig"; path = "Target Support Files/Pods-QuizAnalystReport/Pods-QuizAnalystReport.debug.xcconfig"; sourceTree = "<group>"; };
+		79D2B40002858E154B0AD5CC /* Pods_QuizAnalystReport.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuizAnalystReport.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F48356AA8D1988E2A5CBA13 /* Pods-QuizAnalystReport.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuizAnalystReport.release.xcconfig"; path = "Target Support Files/Pods-QuizAnalystReport/Pods-QuizAnalystReport.release.xcconfig"; sourceTree = "<group>"; };
+		CE60BA1A25C10BD700F23339 /* AnalystTalksViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalystTalksViewCell.swift; sourceTree = "<group>"; };
+		CE881E5C25BFB58F0000ABE2 /* QuizAnalystReport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuizAnalystReport.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE881E5F25BFB58F0000ABE2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CE881E6125BFB58F0000ABE2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		CE881E6325BFB58F0000ABE2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CE881E6625BFB58F0000ABE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CE881E6825BFB5900000ABE2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CE881E6B25BFB5900000ABE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CE881E6D25BFB5900000ABE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE881E7625BFB5CF0000ABE2 /* AnalystReportPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalystReportPresenter.swift; sourceTree = "<group>"; };
+		CE881E7725BFB5CF0000ABE2 /* AnalystReportWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalystReportWorker.swift; sourceTree = "<group>"; };
+		CE881E7825BFB5CF0000ABE2 /* AnalystReportRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalystReportRouter.swift; sourceTree = "<group>"; };
+		CE881E7925BFB5CF0000ABE2 /* AnalystReportModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalystReportModels.swift; sourceTree = "<group>"; };
+		CE881E7A25BFB5CF0000ABE2 /* AnalystReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalystReportViewController.swift; sourceTree = "<group>"; };
+		CE881E7B25BFB5CF0000ABE2 /* AnalystReportInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalystReportInteractor.swift; sourceTree = "<group>"; };
+		CE881E8425BFBAED0000ABE2 /* AnalystReportModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalystReportModel.swift; sourceTree = "<group>"; };
+		CE881E9425BFD88A0000ABE2 /* NavAnalystReportPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavAnalystReportPresenter.swift; sourceTree = "<group>"; };
+		CE881E9525BFD88A0000ABE2 /* NavAnalystReportWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavAnalystReportWorker.swift; sourceTree = "<group>"; };
+		CE881E9625BFD88A0000ABE2 /* NavAnalystReportRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavAnalystReportRouter.swift; sourceTree = "<group>"; };
+		CE881E9725BFD88A0000ABE2 /* NavAnalystReportModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavAnalystReportModels.swift; sourceTree = "<group>"; };
+		CE881E9825BFD88A0000ABE2 /* NavAnalystReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavAnalystReportViewController.swift; sourceTree = "<group>"; };
+		CE881E9925BFD88A0000ABE2 /* NavAnalystReportInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavAnalystReportInteractor.swift; sourceTree = "<group>"; };
+		CE881EA725BFFE2B0000ABE2 /* AnalystReportMonthlyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalystReportMonthlyModel.swift; sourceTree = "<group>"; };
+		CE881EAA25BFFE3C0000ABE2 /* AnalystReportWeeklyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalystReportWeeklyModel.swift; sourceTree = "<group>"; };
+		CE881EAE25C00BC20000ABE2 /* WeeklyViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyViewCell.swift; sourceTree = "<group>"; };
+		CE881EB225C00C740000ABE2 /* MonthlyViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyViewCell.swift; sourceTree = "<group>"; };
+		CE881EB825C01E9B0000ABE2 /* AnalystTalksModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalystTalksModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CE881E5925BFB58F0000ABE2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF4B167FE5C1ECE0C1164DE0 /* Pods_QuizAnalystReport.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CC0E654792E94D9B76E6D932 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				79D2B40002858E154B0AD5CC /* Pods_QuizAnalystReport.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CD3A5784AEB5B34B81229512 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				01C1D08DE8E24B81D3A62607 /* Pods-QuizAnalystReport.debug.xcconfig */,
+				9F48356AA8D1988E2A5CBA13 /* Pods-QuizAnalystReport.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		CE881E5325BFB58F0000ABE2 = {
+			isa = PBXGroup;
+			children = (
+				CE881E5E25BFB58F0000ABE2 /* QuizAnalystReport */,
+				CE881E5D25BFB58F0000ABE2 /* Products */,
+				CD3A5784AEB5B34B81229512 /* Pods */,
+				CC0E654792E94D9B76E6D932 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		CE881E5D25BFB58F0000ABE2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CE881E5C25BFB58F0000ABE2 /* QuizAnalystReport.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CE881E5E25BFB58F0000ABE2 /* QuizAnalystReport */ = {
+			isa = PBXGroup;
+			children = (
+				CE881E7425BFB59D0000ABE2 /* Scenes */,
+				CE881E5F25BFB58F0000ABE2 /* AppDelegate.swift */,
+				CE881E6125BFB58F0000ABE2 /* SceneDelegate.swift */,
+				CE881E6325BFB58F0000ABE2 /* ViewController.swift */,
+				CE881E6525BFB58F0000ABE2 /* Main.storyboard */,
+				CE881E6825BFB5900000ABE2 /* Assets.xcassets */,
+				CE881E6A25BFB5900000ABE2 /* LaunchScreen.storyboard */,
+				CE881E6D25BFB5900000ABE2 /* Info.plist */,
+			);
+			path = QuizAnalystReport;
+			sourceTree = "<group>";
+		};
+		CE881E7425BFB59D0000ABE2 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				CE881EAD25C00BAE0000ABE2 /* ViewCell */,
+				CE881E9325BFD8610000ABE2 /* NavAnalystReport */,
+				CE881E8325BFBAD00000ABE2 /* Models */,
+				CE881E7525BFB5A90000ABE2 /* AnalystReport */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		CE881E7525BFB5A90000ABE2 /* AnalystReport */ = {
+			isa = PBXGroup;
+			children = (
+				CE881E7625BFB5CF0000ABE2 /* AnalystReportPresenter.swift */,
+				CE881E7725BFB5CF0000ABE2 /* AnalystReportWorker.swift */,
+				CE881E7825BFB5CF0000ABE2 /* AnalystReportRouter.swift */,
+				CE881E7925BFB5CF0000ABE2 /* AnalystReportModels.swift */,
+				CE881E7A25BFB5CF0000ABE2 /* AnalystReportViewController.swift */,
+				CE881E7B25BFB5CF0000ABE2 /* AnalystReportInteractor.swift */,
+			);
+			path = AnalystReport;
+			sourceTree = "<group>";
+		};
+		CE881E8325BFBAD00000ABE2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CE881E8425BFBAED0000ABE2 /* AnalystReportModel.swift */,
+				CE881EA725BFFE2B0000ABE2 /* AnalystReportMonthlyModel.swift */,
+				CE881EAA25BFFE3C0000ABE2 /* AnalystReportWeeklyModel.swift */,
+				CE881EB825C01E9B0000ABE2 /* AnalystTalksModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CE881E9325BFD8610000ABE2 /* NavAnalystReport */ = {
+			isa = PBXGroup;
+			children = (
+				CE881E9425BFD88A0000ABE2 /* NavAnalystReportPresenter.swift */,
+				CE881E9525BFD88A0000ABE2 /* NavAnalystReportWorker.swift */,
+				CE881E9625BFD88A0000ABE2 /* NavAnalystReportRouter.swift */,
+				CE881E9725BFD88A0000ABE2 /* NavAnalystReportModels.swift */,
+				CE881E9825BFD88A0000ABE2 /* NavAnalystReportViewController.swift */,
+				CE881E9925BFD88A0000ABE2 /* NavAnalystReportInteractor.swift */,
+			);
+			path = NavAnalystReport;
+			sourceTree = "<group>";
+		};
+		CE881EAD25C00BAE0000ABE2 /* ViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				CE881EAE25C00BC20000ABE2 /* WeeklyViewCell.swift */,
+				CE881EB225C00C740000ABE2 /* MonthlyViewCell.swift */,
+				CE60BA1A25C10BD700F23339 /* AnalystTalksViewCell.swift */,
+			);
+			path = ViewCell;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CE881E5B25BFB58F0000ABE2 /* QuizAnalystReport */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE881E7025BFB5900000ABE2 /* Build configuration list for PBXNativeTarget "QuizAnalystReport" */;
+			buildPhases = (
+				AAE6645070F95C4CAA66C901 /* [CP] Check Pods Manifest.lock */,
+				CE881E5825BFB58F0000ABE2 /* Sources */,
+				CE881E5925BFB58F0000ABE2 /* Frameworks */,
+				CE881E5A25BFB58F0000ABE2 /* Resources */,
+				AB6EF3229477A207612DF420 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QuizAnalystReport;
+			productName = QuizAnalystReport;
+			productReference = CE881E5C25BFB58F0000ABE2 /* QuizAnalystReport.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CE881E5425BFB58F0000ABE2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1230;
+				LastUpgradeCheck = 1230;
+				TargetAttributes = {
+					CE881E5B25BFB58F0000ABE2 = {
+						CreatedOnToolsVersion = 12.3;
+					};
+				};
+			};
+			buildConfigurationList = CE881E5725BFB58F0000ABE2 /* Build configuration list for PBXProject "QuizAnalystReport" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CE881E5325BFB58F0000ABE2;
+			productRefGroup = CE881E5D25BFB58F0000ABE2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CE881E5B25BFB58F0000ABE2 /* QuizAnalystReport */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CE881E5A25BFB58F0000ABE2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE881E6C25BFB5900000ABE2 /* LaunchScreen.storyboard in Resources */,
+				CE881E6925BFB5900000ABE2 /* Assets.xcassets in Resources */,
+				CE881E6725BFB58F0000ABE2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		AAE6645070F95C4CAA66C901 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-QuizAnalystReport-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AB6EF3229477A207612DF420 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-QuizAnalystReport/Pods-QuizAnalystReport-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-QuizAnalystReport/Pods-QuizAnalystReport-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-QuizAnalystReport/Pods-QuizAnalystReport-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CE881E5825BFB58F0000ABE2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE881EB925C01E9B0000ABE2 /* AnalystTalksModel.swift in Sources */,
+				CE881EA825BFFE2B0000ABE2 /* AnalystReportMonthlyModel.swift in Sources */,
+				CE881E9D25BFD88A0000ABE2 /* NavAnalystReportModels.swift in Sources */,
+				CE60BA1B25C10BD700F23339 /* AnalystTalksViewCell.swift in Sources */,
+				CE881EB325C00C740000ABE2 /* MonthlyViewCell.swift in Sources */,
+				CE881E6425BFB58F0000ABE2 /* ViewController.swift in Sources */,
+				CE881E8025BFB5CF0000ABE2 /* AnalystReportViewController.swift in Sources */,
+				CE881E8525BFBAED0000ABE2 /* AnalystReportModel.swift in Sources */,
+				CE881E6025BFB58F0000ABE2 /* AppDelegate.swift in Sources */,
+				CE881E7F25BFB5CF0000ABE2 /* AnalystReportModels.swift in Sources */,
+				CE881E9F25BFD88A0000ABE2 /* NavAnalystReportInteractor.swift in Sources */,
+				CE881E9C25BFD88A0000ABE2 /* NavAnalystReportRouter.swift in Sources */,
+				CE881E9E25BFD88A0000ABE2 /* NavAnalystReportViewController.swift in Sources */,
+				CE881EAF25C00BC20000ABE2 /* WeeklyViewCell.swift in Sources */,
+				CE881E6225BFB58F0000ABE2 /* SceneDelegate.swift in Sources */,
+				CE881EAB25BFFE3C0000ABE2 /* AnalystReportWeeklyModel.swift in Sources */,
+				CE881E9B25BFD88A0000ABE2 /* NavAnalystReportWorker.swift in Sources */,
+				CE881E8125BFB5CF0000ABE2 /* AnalystReportInteractor.swift in Sources */,
+				CE881E7E25BFB5CF0000ABE2 /* AnalystReportRouter.swift in Sources */,
+				CE881E7D25BFB5CF0000ABE2 /* AnalystReportWorker.swift in Sources */,
+				CE881E7C25BFB5CF0000ABE2 /* AnalystReportPresenter.swift in Sources */,
+				CE881E9A25BFD88A0000ABE2 /* NavAnalystReportPresenter.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CE881E6525BFB58F0000ABE2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE881E6625BFB58F0000ABE2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CE881E6A25BFB5900000ABE2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE881E6B25BFB5900000ABE2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CE881E6E25BFB5900000ABE2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CE881E6F25BFB5900000ABE2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CE881E7125BFB5900000ABE2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 01C1D08DE8E24B81D3A62607 /* Pods-QuizAnalystReport.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9FVVBAQ8ZW;
+				INFOPLIST_FILE = QuizAnalystReport/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.projects.me.QuizAnalystReport;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CE881E7225BFB5900000ABE2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F48356AA8D1988E2A5CBA13 /* Pods-QuizAnalystReport.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9FVVBAQ8ZW;
+				INFOPLIST_FILE = QuizAnalystReport/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.projects.me.QuizAnalystReport;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CE881E5725BFB58F0000ABE2 /* Build configuration list for PBXProject "QuizAnalystReport" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE881E6E25BFB5900000ABE2 /* Debug */,
+				CE881E6F25BFB5900000ABE2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE881E7025BFB5900000ABE2 /* Build configuration list for PBXNativeTarget "QuizAnalystReport" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE881E7125BFB5900000ABE2 /* Debug */,
+				CE881E7225BFB5900000ABE2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CE881E5425BFB58F0000ABE2 /* Project object */;
+}

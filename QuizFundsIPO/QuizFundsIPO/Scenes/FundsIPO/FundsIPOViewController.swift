@@ -11,7 +11,7 @@
 //
 
 import UIKit
-
+import SDWebImage
 protocol FundsIPODisplayLogic: class
 {
     func displayFetchFromLocalDataStore(viewModel: FundsIPO.FetchFromLocalDataStore.ViewModel)
@@ -21,7 +21,27 @@ protocol FundsIPODisplayLogic: class
 
 class FundsIPOViewController: UIViewController, FundsIPODisplayLogic {
 
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var lbFundcode: UILabel!
+    @IBOutlet weak var imgView: UIImageView!
+    @IBOutlet weak var lbDesciption: UILabel!
+    @IBOutlet weak var setView: UIView!
+    @IBOutlet weak var lbIPORollover: UILabel!
+    @IBOutlet weak var lbDate: UILabel!
+    @IBOutlet weak var setViewRisk: UIView!
+    @IBOutlet weak var setViewChange: UIView!
+    @IBOutlet weak var lbRisk: UILabel!
+    @IBOutlet weak var lbChange: UILabel!
+    @IBOutlet weak var setViewInvestment: UIView!
+    @IBOutlet weak var lbInvestment: UILabel!
+    @IBOutlet weak var setDuration: UIView!
+    @IBOutlet weak var lbDuration: UILabel!
+    @IBOutlet weak var lbReward: UILabel!
+    @IBOutlet weak var lbDetail: UILabel!
+    @IBOutlet weak var setViewbtn: UIView!
+    @IBAction func btnBuyFund(_ sender: Any) {
+        didSelectFormCell()
+    }
+    
     var interactor: FundsIPOBusinessLogic?
 
   var router: (NSObjectProtocol & FundsIPORoutingLogic & FundsIPODataPassing)?
@@ -75,9 +95,61 @@ class FundsIPOViewController: UIViewController, FundsIPODisplayLogic {
   {
     super.viewDidLoad()
     setupFetchFromLocalDataStore()
-    setupFetchFundsData() 
+    setupFetchFundsData()
+    self.setView.clipsToBounds = true
+    self.setView.layer.cornerRadius = 15
+//    self.setView.layer.shadowOpacity = 0.3
+    self.setView.layer.shadowOffset = CGSize(width: 0, height: 20)
+    self.setView.layer.shadowRadius = 5
+    self.setView.layer.masksToBounds = false
+    
+    self.setViewRisk.clipsToBounds = true
+    self.setViewRisk.layer.cornerRadius = 15
+//    self.setView.layer.shadowOpacity = 0.3
+    self.setViewRisk.layer.shadowOffset = CGSize(width: 0, height: 20)
+    self.setViewRisk.layer.shadowRadius = 5
+    self.setViewRisk.layer.masksToBounds = false
+    
+    self.setViewChange.clipsToBounds = true
+    self.setViewChange.layer.cornerRadius = 15
+//    self.setView.layer.shadowOpacity = 0.3
+    self.setViewChange.layer.shadowOffset = CGSize(width: 0, height: 20)
+    self.setViewChange.layer.shadowRadius = 5
+    self.setViewChange.layer.masksToBounds = false
+    
+    self.setViewInvestment.clipsToBounds = true
+    self.setViewInvestment.layer.cornerRadius = 15
+//    self.setView.layer.shadowOpacity = 0.3
+    self.setViewInvestment.layer.shadowOffset = CGSize(width: 0, height: 20)
+    self.setViewInvestment.layer.shadowRadius = 5
+    self.setViewInvestment.layer.masksToBounds = false
+    
+    self.setDuration.clipsToBounds = true
+    self.setDuration.layer.cornerRadius = 15
+//    self.setView.layer.shadowOpacity = 0.3
+    self.setDuration.layer.shadowOffset = CGSize(width: 0, height: 20)
+    self.setDuration.layer.shadowRadius = 5
+    self.setDuration.layer.masksToBounds = false
+    
+    self.setViewbtn.clipsToBounds = true
+    self.setViewbtn.layer.cornerRadius = 15
+//    self.setView.layer.shadowOpacity = 0.3
+    self.setViewbtn.layer.shadowOffset = CGSize(width: 0, height: 20)
+    self.setViewbtn.layer.shadowRadius = 5
+    self.setViewbtn.layer.masksToBounds = false
+    
+    
   }
-  
+    func didSelectFormCell() {
+      
+        let alert = UIAlertController(title: "ยืนยันการซื้อกองทุน", message: "คุณต้องการจะซื้อกองทุนใช่หรือไม่ ?", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.default, handler: { _ in
+                          //Cancel Action
+                      }))
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+       
+        self.present(alert, animated: true, completion: nil)
+    }
   // MARK: Do something
   
   //@IBOutlet weak var nameTextField: UITextField!
@@ -94,37 +166,36 @@ class FundsIPOViewController: UIViewController, FundsIPODisplayLogic {
     func displayFetchFromLocalDataStore(viewModel: FundsIPO.FetchFromLocalDataStore.ViewModel) {
     //nameTextField.text = viewModel.name
         self.fundsIPOData = viewModel.iPOData
+//        print("data!!>>",self.fundsIPOData)
+         self.lbFundcode.text = self.fundsIPOData?.fundcode
+        let imageURL = self.fundsIPOData?.lgpic ?? ""
+        let url = URL(string: imageURL)
+        self.imgView.sd_setImage(with: url,  placeholderImage: UIImage(named: "Image"))
+        self.lbDesciption.text = self.fundsIPOData?.chnfname ?? ""
+        self.lbIPORollover.text = self.fundsIPOData?.ipoRollOver ?? ""
+        self.lbDate.text = "\(self.fundsIPOData?.ipoOfferDate ?? "") - \(self.fundsIPOData?.ipoExpireDate ?? "")"
+      let  risk = self.fundsIPOData?.risklevel ?? 0
+        self.lbRisk.text = String(risk)
+        let risktxt = self.fundsIPOData?.fxRisk ?? ""
+
+        if risktxt == "Y" {
+            self.lbChange.text = "ยอมรับ"
+        }else {
+            self.lbChange.text = "ไม่ยอมรับ"
+        }
+        let ipoInvestment = self.fundsIPOData?.ipoInvestment ?? 0
+        self.lbInvestment.text = String(ipoInvestment)
+        self.lbDuration.text = self.fundsIPOData?.ipoDuration ?? ""
+        self.lbReward.text = self.fundsIPOData?.ipoReward ?? ""
+        self.lbDetail.text = self.fundsIPOData?.ipoDetails ?? ""
   }
     func displayFetchFundsData(viewModel: FundsIPO.FetchFundsDatas.ViewModel) {
         let fundsfullData = viewModel.fundsData
         self.fundsData = fundsfullData
-        self.tableView.reloadData()
+//        self.tableView.reloadData()
 //        let Counter = Int(self.fundsData!.count )
-//        print("fundsData>>>",  Counter )
+//        print("fundsData>>>",   self.fundsData )
        
         
     }
-}
-extension FundsIPOViewController: UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-       
-        return self.fundsData?.count ?? 0
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: "FundsIPOViewCell") as! FundsIPOViewCell
-        cell.data = self.fundsData?[indexPath.row]
-//        cell.lbfundcode.text = self.fundsIPOData?.fundcode
-//        cell.lbchnfname.text = self.fundsIPOData?.chnfmname
-//        cell.lbipoRollOver.text = self.fundsIPOData?.ipoRollOver
-//        cell.lbOfferExpire.text = "\(self.fundsIPOData?.ipoOfferDate2 ?? "") - \(self.fundsIPOData?.ipoExpireDate2 ?? "")"
-//        let imageURL = self.fundsIPOData?.lgpic ?? ""
-//        let url = URL(string: imageURL)
-//        cell.imgLgpic.sd_setImage(with: url,  placeholderImage: UIImage(named: "Image"))
-        return cell
-
-    }
-    
-    
 }

@@ -8,15 +8,15 @@
 import UIKit
 import SDWebImage
 class FundsIPOViewCell: UITableViewCell {
-    var data: ModelFunds?  {
+    var data: FundIPORolloverDataModels?  {
         didSet {
             guard let data = data else { return }
 //            Label.text = data
             lbfundcode.text = data.fundcode
             lbchnfname.text = data.chnfmname
             lbipoRollOver.text = data.ipoRollOver
-            lbOfferExpire.text = "\(data.ipoOfferDate2 ) - \(data.ipoExpireDate2)"
-            let imageURL = data.lgpic 
+            lbOfferExpire.text = "\(data.ipoOfferDate2 ?? "") - \(data.ipoExpireDate2 ?? "" )"
+            let imageURL = data.lgpic ?? "" 
                 let url = URL(string: imageURL)
             imgLgpic.sd_setImage(with: url,  placeholderImage: UIImage(named: "Image"))
         }

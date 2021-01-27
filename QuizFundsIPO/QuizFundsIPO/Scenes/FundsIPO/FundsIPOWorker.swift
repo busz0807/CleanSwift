@@ -19,7 +19,7 @@ class FundsIPOWorker {
 
     typealias FecthFundsDataCompletionHandler = (_ fundsData: [ModelFunds]?,_ error: Error?) -> ()
     func doFetchFunds(nameFund: String,  completionHandler: @escaping FecthFundsDataCompletionHandler) {
-        AF.request("https://www.fame.in.th/FAMEMvc/api/DashUnAuthor/\(nameFund)", method:.post,encoding:    JSONEncoding.default).response { response in
+        AF.request("https://www.fame.in.th/FAMEMvc/api/DashUnAuthor\(nameFund)", method:.post,encoding:    JSONEncoding.default).response { response in
             if response.error != nil {
                 completionHandler(nil, response.error)
                 return
@@ -28,7 +28,7 @@ class FundsIPOWorker {
             if let data = response.data {
                 do {
                     let fundsModelData = try JSONDecoder().decode([ModelFunds].self, from: data)
-//                    print("iPOModelData>>", iPOModelData)
+                    print("iPOModelData>>", fundsModelData)
                     completionHandler(fundsModelData, nil)
                     
                 } catch let error {
