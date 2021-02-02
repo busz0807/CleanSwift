@@ -21,6 +21,7 @@ protocol MoreDisplayLogic: class {
     @IBOutlet weak var tableViewMore: UITableView!
     @IBOutlet weak var tableViewSetting: UITableView!
     @IBOutlet weak var setView: UIView!
+        @IBOutlet weak var btnLogin: UIButton!
         var anlystReportData :[AnalystReportModel]?
         var interactor: MoreBusinessLogic?
         var router: (NSObjectProtocol & MoreRoutingLogic & MoreDataPassing)?
@@ -70,6 +71,13 @@ protocol MoreDisplayLogic: class {
   // MARK: View lifecycle
     override func viewDidLoad() {
     super.viewDidLoad()
+        
+        let origImage = UIImage(named: "exit2")
+        let tintedImage = origImage?.withRenderingMode(.alwaysTemplate)
+        btnLogin.setImage(tintedImage, for: .normal)
+        btnLogin.tintColor = .green
+        btnLogin.setTitleColor(.green, for: .normal)
+        
     self.setView.clipsToBounds = true
     self.setView.layer.cornerRadius = 15
 //    self.setView.layer.shadowOpacity = 0.3

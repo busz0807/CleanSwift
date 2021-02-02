@@ -43,6 +43,7 @@
 		CE4065E425C3E4F900027C32 /* GMFViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4065E325C3E4F900027C32 /* GMFViewCell.swift */; };
 		CE4065E925C3E51700027C32 /* FIFViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4065E825C3E51700027C32 /* FIFViewCell.swift */; };
 		CE40662C25C3F40700027C32 /* Pods_QuizFundsPhillip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 963C99EBD60E578BAC2BB70F /* Pods_QuizFundsPhillip.framework */; };
+		CE46468C25C7F7B2000DF60F /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE46468B25C7F7B2000DF60F /* Request.swift */; };
 		CEAF7A1F25C25EBD00F88FB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAF7A1E25C25EBD00F88FB1 /* AppDelegate.swift */; };
 		CEAF7A2325C25EBD00F88FB1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAF7A2225C25EBD00F88FB1 /* ViewController.swift */; };
 		CEAF7A2625C25EBD00F88FB1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEAF7A2425C25EBD00F88FB1 /* Main.storyboard */; };
@@ -123,6 +124,7 @@
 		CE4065DE25C3E4E200027C32 /* SSFViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSFViewCell.swift; sourceTree = "<group>"; };
 		CE4065E325C3E4F900027C32 /* GMFViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GMFViewCell.swift; sourceTree = "<group>"; };
 		CE4065E825C3E51700027C32 /* FIFViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FIFViewCell.swift; sourceTree = "<group>"; };
+		CE46468B25C7F7B2000DF60F /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		CEAF7A1B25C25EBD00F88FB1 /* QuizFundsPhillip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuizFundsPhillip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEAF7A1E25C25EBD00F88FB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEAF7A2225C25EBD00F88FB1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -319,6 +321,14 @@
 			path = ViewCell;
 			sourceTree = "<group>";
 		};
+		CE46468A25C7F780000DF60F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CE46468B25C7F7B2000DF60F /* Request.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		CEAF7A1225C25EBD00F88FB1 = {
 			isa = PBXGroup;
 			children = (
@@ -354,6 +364,7 @@
 		CEAF7A3B25C2603A00F88FB1 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				CE46468A25C7F780000DF60F /* Services */,
 				CE40658825C3B89F00027C32 /* Home */,
 				CEAF7A9825C2C85600F88FB1 /* FundsIPO */,
 				CEAF7A3E25C2606C00F88FB1 /* IPORollover */,
@@ -632,6 +643,7 @@
 				CE4065A525C3E29000027C32 /* RMFRouter.swift in Sources */,
 				CEAF7A9F25C2C87100F88FB1 /* FundsIPOPresenter.swift in Sources */,
 				CE40659025C3B8C000027C32 /* HomepageWorker.swift in Sources */,
+				CE46468C25C7F7B2000DF60F /* Request.swift in Sources */,
 				CE4065B325C3E2AD00027C32 /* SSFRouter.swift in Sources */,
 				CEAF7A6D25C2AE7800F88FB1 /* IPORolloverInteractor.swift in Sources */,
 				CEAF7A6925C2AE7800F88FB1 /* IPORolloverWorker.swift in Sources */,

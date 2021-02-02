@@ -12,14 +12,15 @@
 
 import UIKit
 import Alamofire
-class IPORolloverWorker
-{
+import SwiftyJSON
+class IPORolloverWorker {
     
     typealias Models = IPORollovers
     typealias FecthFundsIPODataCompletionHandler = (_ fundsIPOData: [FundIPORolloverDataModels]?,_ error: Error?) -> ()
     func fetchFundsIPOData(nameFund: String,  completionHandler: @escaping FecthFundsIPODataCompletionHandler) {
         
         AF.request("https://www.fame.in.th/FAMEMvc/api/DashUnAuthor/\(nameFund)", method:.post,encoding:    JSONEncoding.default).response { response in
+            
             if response.error != nil {
                 completionHandler(nil, response.error)
                 return
@@ -35,6 +36,21 @@ class IPORolloverWorker
                     completionHandler(nil, error)
                
                 }
+            }
+        }
+    }
+    
+    func fetchFundsIPODatas(  completionHandler: @escaping FecthFundsIPODataCompletionHandler) {
+        let router = Funds.asURLRequest(Funds.get)
+        AF.request(router()).responseData { (response) in
+            print(response.value)
+            print(response.data ?? "")
+            switch response.result {
+            case .success:
+                print(response.data ?? "")
+
+            case .failure:
+                print(response.error)
             }
         }
     }

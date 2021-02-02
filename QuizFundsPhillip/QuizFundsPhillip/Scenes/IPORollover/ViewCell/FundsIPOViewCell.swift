@@ -13,7 +13,7 @@ class FundsIPOViewCell: UITableViewCell {
             guard let data = data else { return }
 //            Label.text = data
             lbfundcode.text = data.fundcode
-            lbchnfname.text = data.chnfmname
+            lbchnfname.text = data.chnfname
             lbipoRollOver.text = data.ipoRollOver
             lbOfferExpire.text = "\(data.ipoOfferDate2 ?? "") - \(data.ipoExpireDate2 ?? "" )"
             let imageURL = data.lgpic ?? ""
@@ -21,9 +21,7 @@ class FundsIPOViewCell: UITableViewCell {
             imgLgpic.sd_setImage(with: url,  placeholderImage: UIImage(named: "Image"))
         }
     }
-//    let imageURL = self.fundsIPOData?.lgpic ?? ""
-//    let url = URL(string: imageURL)
-//    cell.imgLgpic.sd_setImage(with: url,  placeholderImage: UIImage(named: "Image"))
+
     @IBOutlet weak var setView: UIView!
     @IBOutlet weak var setImg: UIImageView!
     @IBOutlet weak var lbfundcode: UILabel!
@@ -38,10 +36,9 @@ class FundsIPOViewCell: UITableViewCell {
   
         self.setView.clipsToBounds = true
         self.setView.layer.cornerRadius = 5
-        self.setView.layer.shadowColor = UIColor.gray.cgColor
-        self.setView.layer.shadowOpacity = 0.3
-        self.setView.layer.shadowOffset = CGSize(width: 0, height: 20)
-        self.setView.layer.shadowRadius = 5
+        self.setView.layer.shadowColor = UIColor.systemGray.cgColor
+        self.setView.layer.shadowOpacity = 0.5
+        self.setView.layer.shadowRadius = 6
         self.setView.layer.masksToBounds = false
  
     }
