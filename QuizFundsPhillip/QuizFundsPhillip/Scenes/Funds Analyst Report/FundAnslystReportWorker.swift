@@ -21,9 +21,10 @@ class FundAnslystReportWorker
     typealias FecthAnalystReportMonthlyDataCompletionHandler = (_ analystReportMonthlyData: [AnalystReportMonthlyModel]?,_ error: Error?) -> ()
     func fetchDataMonthly(completionHandler: @escaping FecthAnalystReportMonthlyDataCompletionHandler) {
 //        let URL = "https://servicebeta.poems.in.th/FundSmart/api/funds/reports?AnalystReport=IPO"
-        let router = Funds.asURLRequest(Funds.analystReport)
-        print(router())
-        AF.request(router()).responseJSON { response in
+        let router = Funds.analystReport
+        
+        print(router)
+        AF.request(router).responseJSON { response in
 //            print("Data",String(data: response.data!, encoding: .utf8)!)
             if response.error != nil {
                 completionHandler(nil, response.error)
@@ -45,9 +46,9 @@ class FundAnslystReportWorker
     typealias FecthAnalystReportWeeklyDataCompletionHandler = (_ analystReportWeeklyData: [AnalystReportWeeklyModel]?,_ error: Error?) -> ()
     func fetchDataWeekly(completionHandler: @escaping FecthAnalystReportWeeklyDataCompletionHandler) {
 //        let URL = "https://servicebeta.poems.in.th/FundSmart/api/funds/reports?AnalystReport=IPO"
-        let router = Funds.asURLRequest(Funds.analystReport)
-        print(router())
-        AF.request(router()).responseJSON { response in
+        let router = Funds.analystReport
+//        print(router)
+        AF.request(router).responseJSON { response in
 //            print("Data",String(data: response.data!, encoding: .utf8)!)
             if response.error != nil {
                 completionHandler(nil, response.error)
@@ -70,9 +71,8 @@ class FundAnslystReportWorker
     typealias FecthAnalystTalksDataCompletionHandler = (_ analystTalksData: [AnalystTalksModel]?,_ error: Error?) -> ()
     func  fetchDataAnalystTalks(completionHandler: @escaping FecthAnalystTalksDataCompletionHandler) {
 //        let URL = "https://servicebeta.poems.in.th/FundSmart/api/funds/reports?AnalystReport=IPO"
-        let router = Funds.asURLRequest(Funds.analystReport)
-        print(router())
-        AF.request(router()).responseJSON { response in
+        let router = Funds.analystReport
+        AF.request(router).responseJSON  { response in
 //            print("Data",String(data: response.data!, encoding: .utf8)!)
             if response.error != nil {
                 completionHandler(nil, response.error)
@@ -94,10 +94,9 @@ class FundAnslystReportWorker
     }
     typealias FecthAnalystReportsDatasCompletionHandler = (_ analystReportMonthlyData: [FundAnalystReportsModels]?,_ error: Error?) -> ()
     func fetchFundsanalystReportDatas(  completionHandler: @escaping FecthAnalystReportsDatasCompletionHandler) {
-        let router = Funds.asURLRequest(Funds.analystReport)
-        print(router())
-        AF.request(router()).responseJSON { (response) in
-            print(response.value)
+        let router = Funds.analystReport
+        AF.request(router).responseJSON { (response) in
+//            print(response.value)
             if response.error != nil {
                 completionHandler(nil, response.error)
                 return
@@ -106,11 +105,11 @@ class FundAnslystReportWorker
                 do {
                     let dataJSON = JSON(data)
                     let fundAnalystTalk = dataJSON[]
-                    print("Data>>",dataJSON)
+//                    print("Data>>",dataJSON)
                     let fundAnalystTalkData = try fundAnalystTalk.rawData(options: .fragmentsAllowed)
-                    print("fundAnalystTalkData", fundAnalystTalkData)
+//                    print("fundAnalystTalkData", fundAnalystTalkData)
                     let analystTalksData = try JSONDecoder().decode([FundAnalystReportsModels].self, from: fundAnalystTalkData)
-                    print("FundAnalystReportsModels>>>", analystTalksData)
+//                    print("FundAnalystReportsModels>>>", analystTalksData)
                     completionHandler(analystTalksData, nil)
                 } catch let error {
                     completionHandler(nil, error)

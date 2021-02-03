@@ -18,10 +18,8 @@ class IPORolloverWorker {
     typealias Models = IPORollovers
     typealias FecthFundsIPODataCompletionHandler = (_ fundsIPOData: [FundIPORolloverDataModels]?,_ error: Error?) -> ()
     func fetchFundsIPOData(nameFund: String,  completionHandler: @escaping FecthFundsIPODataCompletionHandler) {
-        
-        let router = Funds.asURLRequest(Funds.iPO)
-        print(router())
-        AF.request(router()).responseJSON { response in
+        let router = Funds.iPO
+        AF.request(router).responseJSON { response in
             
             if response.error != nil {
                 completionHandler(nil, response.error)
@@ -43,10 +41,10 @@ class IPORolloverWorker {
     } // FundIPOsRolloverDatasModels
     typealias FecthFundsIPOsDatasCompletionHandler = (_ fundsIPOData: [FundIPOsRolloverDatasModels]?,_ error: Error?) -> ()
     func fetchFundsIPODatas(  completionHandler: @escaping FecthFundsIPOsDatasCompletionHandler) {
-        let router = Funds.asURLRequest(Funds.iPO)
-        print(router())
-        AF.request(router()).responseJSON { (response) in
-            print(response.value)
+        let router = Funds.iPO
+//        print(router)
+        AF.request(router).responseJSON { (response) in
+//            print(response.value)
             if response.error != nil {
                 completionHandler(nil, response.error)
                 return
@@ -55,11 +53,11 @@ class IPORolloverWorker {
                 do {
                     let dataJSON = JSON(data)
                     let fundAnalystTalk = dataJSON[]
-                    print("Data>>",dataJSON)
+//                    print("Data>>",dataJSON)
                     let fundAnalystTalkData = try fundAnalystTalk.rawData(options: .fragmentsAllowed)
-                    print("fundAnalystTalkData", fundAnalystTalkData)
+//                    print("fundAnalystTalkData", fundAnalystTalkData)
                     let analystTalksData = try JSONDecoder().decode([FundIPOsRolloverDatasModels].self, from: fundAnalystTalkData)
-                    print("FundAnalystReportsModels>>>", analystTalksData)
+//                    print("FundAnalystReportsModels>>>", analystTalksData)
 //                    completionHandler(analystTalksData, nil)
                 } catch let error {
 //                    completionHandler(nil, error)

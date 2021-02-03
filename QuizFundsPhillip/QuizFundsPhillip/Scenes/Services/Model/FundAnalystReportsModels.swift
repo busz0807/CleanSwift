@@ -8,8 +8,9 @@
 import Foundation
 struct FundAnalystReportsModels:  Codable {
     
-    var AnalystReport: analystReportModel?
     var AnalystTalk : AnalystTalksModels?
+    var AnalystReport: analystReportModel?
+    
     }
 
 struct analystReportModel: Codable {
