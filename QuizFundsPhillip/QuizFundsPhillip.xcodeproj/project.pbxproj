@@ -44,6 +44,7 @@
 		CE4065E925C3E51700027C32 /* FIFViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4065E825C3E51700027C32 /* FIFViewCell.swift */; };
 		CE40662C25C3F40700027C32 /* Pods_QuizFundsPhillip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 963C99EBD60E578BAC2BB70F /* Pods_QuizFundsPhillip.framework */; };
 		CE46468C25C7F7B2000DF60F /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE46468B25C7F7B2000DF60F /* Request.swift */; };
+		CE9D236725CA5DBB0039DEED /* FundAnalystReportsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9D236625CA5DBB0039DEED /* FundAnalystReportsModels.swift */; };
 		CEAF7A1F25C25EBD00F88FB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAF7A1E25C25EBD00F88FB1 /* AppDelegate.swift */; };
 		CEAF7A2325C25EBD00F88FB1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAF7A2225C25EBD00F88FB1 /* ViewController.swift */; };
 		CEAF7A2625C25EBD00F88FB1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEAF7A2425C25EBD00F88FB1 /* Main.storyboard */; };
@@ -125,6 +126,7 @@
 		CE4065E325C3E4F900027C32 /* GMFViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GMFViewCell.swift; sourceTree = "<group>"; };
 		CE4065E825C3E51700027C32 /* FIFViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FIFViewCell.swift; sourceTree = "<group>"; };
 		CE46468B25C7F7B2000DF60F /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		CE9D236625CA5DBB0039DEED /* FundAnalystReportsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundAnalystReportsModels.swift; sourceTree = "<group>"; };
 		CEAF7A1B25C25EBD00F88FB1 /* QuizFundsPhillip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuizFundsPhillip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEAF7A1E25C25EBD00F88FB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEAF7A2225C25EBD00F88FB1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -324,9 +326,18 @@
 		CE46468A25C7F780000DF60F /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				CE9D236425CA5D810039DEED /* Model */,
 				CE46468B25C7F7B2000DF60F /* Request.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		CE9D236425CA5D810039DEED /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CE9D236625CA5DBB0039DEED /* FundAnalystReportsModels.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		CEAF7A1225C25EBD00F88FB1 = {
@@ -630,6 +641,7 @@
 				CEAF7A6825C2AE7800F88FB1 /* IPORolloverPresenter.swift in Sources */,
 				CEAF7A2325C25EBD00F88FB1 /* ViewController.swift in Sources */,
 				CE4065C625C3E30C00027C32 /* GMFViewController.swift in Sources */,
+				CE9D236725CA5DBB0039DEED /* FundAnalystReportsModels.swift in Sources */,
 				CEAF7A7125C2B25B00F88FB1 /* AnalystReportModel.swift in Sources */,
 				CE4065E425C3E4F900027C32 /* GMFViewCell.swift in Sources */,
 				CEAF7A1F25C25EBD00F88FB1 /* AppDelegate.swift in Sources */,
