@@ -35,9 +35,6 @@ enum Funds: URLRequestConvertible {
         return request
     }
 }
-//    struct TestModel: Codable {
-////        var IPO : 
-//    }
 
 
 

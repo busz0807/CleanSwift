@@ -96,7 +96,7 @@ class FundAnslystReportWorker
     func fetchFundsanalystReportDatas(  completionHandler: @escaping FecthAnalystReportsDatasCompletionHandler) {
         let router = Funds.analystReport
         AF.request(router).responseJSON { (response) in
-//            print(response.value)
+            print(response.value)
             if response.error != nil {
                 completionHandler(nil, response.error)
                 return
@@ -104,12 +104,11 @@ class FundAnslystReportWorker
             if let data = response.value {
                 do {
                     let dataJSON = JSON(data)
-                    let fundAnalystTalk = dataJSON[]
-//                    print("Data>>",dataJSON)
-                    let fundAnalystTalkData = try fundAnalystTalk.rawData(options: .fragmentsAllowed)
-//                    print("fundAnalystTalkData", fundAnalystTalkData)
+//                    print(dataJSON)
+                    let fundAnalystTalkData = try dataJSON.rawData(options: .fragmentsAllowed)
+                    print("fundAnalystTalkData", fundAnalystTalkData)
                     let analystTalksData = try JSONDecoder().decode([FundAnalystReportsModels].self, from: fundAnalystTalkData)
-//                    print("FundAnalystReportsModels>>>", analystTalksData)
+                    print("FundAnalystReportsModels>>>", analystTalksData)
                     completionHandler(analystTalksData, nil)
                 } catch let error {
                     completionHandler(nil, error)

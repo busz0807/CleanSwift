@@ -18,9 +18,8 @@ class MoreWorker  {
     typealias Models = More
     typealias FecthAnalystReportDataCompletionHandler = (_ analystReportData: [AnalystReportModel]?,_ error: Error?) -> ()
   func doFetchAnalystReport(nameFunds:String, completionHandler: @escaping FecthAnalystReportDataCompletionHandler) {
-    //        let URL = "https://servicebeta.poems.in.th/FundSmart/api/funds/reports?AnalystReport=IPO"
-                                     
-            AF.request("https://servicebeta.poems.in.th/FundSmart/api/funds/reports?\(nameFunds)").responseData { response in
+        let router = Funds.analystReport
+        AF.request(router).responseJSON { response in
     //            print("Data",String(data: response.data!, encoding: .utf8)!)
                 if response.error != nil {
                     completionHandler(nil, response.error)

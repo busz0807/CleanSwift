@@ -6,20 +6,19 @@
 //
 
 import Foundation
-struct FundAnalystReportsModels:  Codable {
+struct FundAnalystReportsModels:  Decodable {
     
-    var AnalystTalk : AnalystTalksModels?
-    var AnalystReport: analystReportModel?
-    
+    var AnalystTalk: [AnalystTalksModels]
+    var AnalystReport : analystReportModel?
     }
 
-struct analystReportModel: Codable {
-    var IPO: [IPOsModel]?
-    var Weekly: [WeeklysModel]?
-    var Monthly: [MonthlysModel]?
+struct analystReportModel: Decodable {
+    var IPO: [IPO]?
+    var Weekly: [Weekly]?
+    var Monthly: [Monthly]?
 
 }
-struct IPOsModel: Codable {
+struct IPO: Decodable {
    
     var HeadlineEn: String?
     var HeadlineTh: String?
@@ -28,17 +27,7 @@ struct IPOsModel: Codable {
     var fileUrl : String?
 }
 
-struct WeeklysModel: Codable {
-   
-    var HeadlineEn: String?
-    var HeadlineTh: String?
-    var lastUpdate: String?
-    var name: String?
-    var fileUrl : String?
-}
-
-
-struct MonthlysModel: Codable {
+struct Weekly: Decodable {
    
     var HeadlineEn: String?
     var HeadlineTh: String?
@@ -48,7 +37,17 @@ struct MonthlysModel: Codable {
 }
 
 
-struct AnalystTalksModels: Codable {
+struct Monthly: Decodable {
+   
+    var HeadlineEn: String?
+    var HeadlineTh: String?
+    var lastUpdate: String?
+    var name: String?
+    var fileUrl : String?
+}
+
+
+struct AnalystTalksModels: Decodable {
    
     var Screen: String?
     var Title:String?
