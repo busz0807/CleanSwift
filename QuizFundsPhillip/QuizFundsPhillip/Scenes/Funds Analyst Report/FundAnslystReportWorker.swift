@@ -96,7 +96,7 @@ class FundAnslystReportWorker
     func fetchFundsanalystReportDatas(  completionHandler: @escaping FecthAnalystReportsDatasCompletionHandler) {
         let router = Funds.analystReport
         Alamofire.request(router).responseJSON { (response) in
-            print(response.value)
+//            print(response.value as Any)
             if response.error != nil {
                 completionHandler(nil, response.error)
                 return
@@ -106,7 +106,7 @@ class FundAnslystReportWorker
                     let dataJSON = JSON(data)
 //                    print(dataJSON)
                     let fundAnalystTalkData = try dataJSON.rawData(options: .fragmentsAllowed)
-                    print("fundAnalystTalkData", fundAnalystTalkData)
+//                    print("fundAnalystTalkData", fundAnalystTalkData)
                     let analystTalksData = try JSONDecoder().decode([FundAnalystReportsModels].self, from: fundAnalystTalkData)
                     print("FundAnalystReportsModels>>>", analystTalksData)
                     completionHandler(analystTalksData, nil)

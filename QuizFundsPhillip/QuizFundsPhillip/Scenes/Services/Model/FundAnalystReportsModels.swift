@@ -8,14 +8,14 @@
 import Foundation
 struct FundAnalystReportsModels:  Codable {
     
-    var AnalystTalk: [AnalystTalksModels]
-    var AnalystReport : analystReportModel?
+    var AnalystTalk: AnalystTalksModels
+    var AnalystReport : analystReportModel
     }
 
 struct analystReportModel: Codable {
-    var IPO: [IPO]?
-    var Weekly: [Weekly]?
-    var Monthly: [Monthly]?
+    var IPO: IPO
+    var Weekly: Weekly
+    var Monthly: Monthly
 
 }
 struct IPO: Codable {

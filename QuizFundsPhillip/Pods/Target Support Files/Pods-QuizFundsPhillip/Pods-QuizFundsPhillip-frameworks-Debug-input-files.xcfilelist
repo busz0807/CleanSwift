@@ -1,5 +1,6 @@
 ${PODS_ROOT}/Target Support Files/Pods-QuizFundsPhillip/Pods-QuizFundsPhillip-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
+${BUILT_PRODUCTS_DIR}/CircleImageView/CircleImageView.framework
 ${BUILT_PRODUCTS_DIR}/FSPagerView/FSPagerView.framework
 ${BUILT_PRODUCTS_DIR}/LanguageManager-iOS/LanguageManager_iOS.framework
 ${BUILT_PRODUCTS_DIR}/Parchment/Parchment.framework

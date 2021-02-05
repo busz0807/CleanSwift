@@ -12,6 +12,6 @@ target 'QuizFundsPhillip' do
   pod 'SDWebImage'
   pod 'Parchment'
   pod 'FSPagerView'
-
+pod 'CircleImageView'
 
 end

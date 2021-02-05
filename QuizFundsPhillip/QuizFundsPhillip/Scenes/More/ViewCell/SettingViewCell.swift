@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import CircleImageView
 class SettingViewCell: UITableViewCell {
     
     @IBOutlet weak var setViewimg: UIView!
@@ -32,13 +32,16 @@ class SettingViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+//        setViewimg.layer.masksToBounds = true
+//        setViewimg.layer.cornerRadius = setViewimg.bounds.width/2
+//        setViewimg.contentMode =  .scaleAspectFill
+//        self.setViewimg.addSubview(imgView)
         self.setViewimg.clipsToBounds = true
         self.setViewimg.layer.cornerRadius = 20
     //    self.setView.layer.shadowOpacity = 0.3
         self.setViewimg.layer.shadowRadius = 70
         self.setViewimg.layer.masksToBounds = false
-        
-        // Configure the view for the selected state
+    
     }
 
 }

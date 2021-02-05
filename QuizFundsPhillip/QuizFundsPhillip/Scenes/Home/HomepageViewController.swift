@@ -137,6 +137,9 @@ class HomepageViewController: UIViewController, HomepageDisplayLogic {
   override func viewDidLoad() {
     super.viewDidLoad()
     self.pagerView.transformer = FSPagerViewTransformer(type: .linear)
+    self.pagerView.automaticSlidingInterval = 5.0
+//    self.pagerView.decelerationDistance = 2
+    self.pagerView.isInfinite = true
     doSomething()
     self.setViewSim.clipsToBounds = true
     self.setViewSim.layer.cornerRadius = 20
@@ -173,6 +176,7 @@ class HomepageViewController: UIViewController, HomepageDisplayLogic {
 //    self.setView.layer.shadowOpacity = 0.3
     self.setViewStatus.layer.shadowRadius = 10
     self.setViewStatus.layer.masksToBounds = false
+   
     //Pagging
   
     let rmf = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "RMFViewController") as! RMFViewController
@@ -198,7 +202,6 @@ class HomepageViewController: UIViewController, HomepageDisplayLogic {
       //      view.constrainToEdges(pagingViewController.view)
              pagingViewController.didMove(toParent: self)
         pagingViewController.view.translatesAutoresizingMaskIntoConstraints = false
-            
         NSLayoutConstraint.activate([
             pagingViewController.view.topAnchor.constraint(equalTo: self.pageViewPanging.topAnchor),
               pagingViewController.view.bottomAnchor.constraint(equalTo: self.pageViewPanging.bottomAnchor),

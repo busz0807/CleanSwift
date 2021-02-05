@@ -19,7 +19,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="axB-tA-ZuG">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="axB-tA-ZuG">
                                 <rect key="frame" x="0.0" y="88" width="414" height="701.5"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UoX-fh-xj8">
@@ -198,13 +198,13 @@
                                                                                             <rect key="frame" x="20" y="10" width="58.5" height="60"/>
                                                                                             <subviews>
                                                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="list" translatesAutoresizingMaskIntoConstraints="NO" id="AoZ-3h-ecH">
-                                                                                                    <rect key="frame" x="19.5" y="10" width="16" height="40"/>
+                                                                                                    <rect key="frame" x="20" y="10" width="18.5" height="40"/>
                                                                                                 </imageView>
                                                                                             </subviews>
                                                                                             <color key="backgroundColor" systemColor="systemGray6Color"/>
                                                                                             <constraints>
-                                                                                                <constraint firstAttribute="trailing" secondItem="AoZ-3h-ecH" secondAttribute="trailing" constant="23" id="8s4-VD-hqP"/>
-                                                                                                <constraint firstItem="AoZ-3h-ecH" firstAttribute="leading" secondItem="ZyB-aJ-3Sk" secondAttribute="leading" constant="19.5" id="Rtn-oL-K1a"/>
+                                                                                                <constraint firstAttribute="trailing" secondItem="AoZ-3h-ecH" secondAttribute="trailing" constant="20" id="8s4-VD-hqP"/>
+                                                                                                <constraint firstItem="AoZ-3h-ecH" firstAttribute="leading" secondItem="ZyB-aJ-3Sk" secondAttribute="leading" constant="20" id="Rtn-oL-K1a"/>
                                                                                                 <constraint firstItem="AoZ-3h-ecH" firstAttribute="top" secondItem="ZyB-aJ-3Sk" secondAttribute="top" constant="10" id="TE0-8v-T4H"/>
                                                                                                 <constraint firstAttribute="bottom" secondItem="AoZ-3h-ecH" secondAttribute="bottom" constant="10" id="c1U-I3-eHd"/>
                                                                                             </constraints>
@@ -384,7 +384,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wdu-CD-ctA">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wdu-CD-ctA">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D5w-UV-ek7">
@@ -415,27 +415,27 @@
                                                     <constraint firstAttribute="height" constant="150" id="rXH-O9-D1X"/>
                                                 </constraints>
                                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="cDc-gy-2IX">
-                                                    <size key="itemSize" width="128" height="128"/>
+                                                    <size key="itemSize" width="140" height="128"/>
                                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 </collectionViewFlowLayout>
                                                 <cells>
                                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AnalystTalksViewCell" id="Xiw-tr-FNf" customClass="AnalystTalksViewCell" customModule="QuizFundsPhillip" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="11" width="128" height="128"/>
+                                                        <rect key="frame" x="0.0" y="11" width="140" height="128"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Elq-qN-DQ0">
-                                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="140" height="128"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <subviews>
-                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ax-Rn-VxO">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="88"/>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" image="Youtube_default-400px" translatesAutoresizingMaskIntoConstraints="NO" id="9Ax-Rn-VxO">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="140" height="88"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="88" id="zEE-NR-vug"/>
                                                                     </constraints>
                                                                 </imageView>
                                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YIh-16-4ix">
-                                                                    <rect key="frame" x="0.0" y="88" width="128" height="40"/>
+                                                                    <rect key="frame" x="0.0" y="88" width="140" height="40"/>
                                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                     <color key="textColor" systemColor="labelColor"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
@@ -865,7 +865,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Xo-yj-ZFV">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Xo-yj-ZFV">
                                 <rect key="frame" x="0.0" y="61" width="414" height="774"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8ah-Se-KGn">
@@ -1259,7 +1259,9 @@
         <scene sceneID="chG-D3-cQE">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QpE-hw-A8G" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="more_inactive" id="ORm-Au-GJW"/>
+                    <tabBarItem key="tabBarItem" title="" image="more_inactive" selectedImage="more_inactive-1" id="ORm-Au-GJW">
+                        <color key="badgeColor" red="0.090239159762859344" green="0.14602333307266235" blue="0.45389342308044434" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="JhV-SO-gHm">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -1284,7 +1286,7 @@
                         <viewLayoutGuide key="safeArea" id="EQU-su-a6F"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="wallet_inactive-1" id="KYM-Zt-vRr"/>
+                    <tabBarItem key="tabBarItem" title="" image="wallet_inactive-1" selectedImage="wallet_inactive-2" id="KYM-Zt-vRr"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CIk-KB-PTM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1300,7 +1302,7 @@
                         <viewLayoutGuide key="safeArea" id="zAn-sv-vek"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="trade_inactive-1" id="6NP-14-EsG"/>
+                    <tabBarItem key="tabBarItem" title="" image="trade_inactive-1" selectedImage="trade_inactive-2" id="6NP-14-EsG"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jgh-QI-WFn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1316,7 +1318,7 @@
                         <viewLayoutGuide key="safeArea" id="gGW-tq-UbN"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="port_inactive-1" id="1hY-Pq-bzg"/>
+                    <tabBarItem key="tabBarItem" title="" image="port_inactive-1" selectedImage="port_inactive-2" id="1hY-Pq-bzg"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hcp-ye-krq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1330,7 +1332,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yzt-CF-6IM">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yzt-CF-6IM">
                                 <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sP3-PD-grE">
@@ -1790,7 +1792,7 @@
                             <constraint firstItem="lWa-51-xtJ" firstAttribute="bottom" secondItem="yzt-CF-6IM" secondAttribute="bottom" id="kFD-Hp-AMg"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="home_active-1" springLoaded="YES" id="3eu-zd-18Z"/>
+                    <tabBarItem key="tabBarItem" title="" image="home_active-1" selectedImage="home_active-2" springLoaded="YES" id="3eu-zd-18Z"/>
                     <connections>
                         <outlet property="collectionView" destination="qHr-yb-l6E" id="5zL-cS-vRN"/>
                         <outlet property="pageViewPanging" destination="T58-uw-CxR" id="rqd-YE-m34"/>
@@ -1944,6 +1946,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" red="0.089702673256397247" green="0.11832333356142044" blue="0.44739747047424316" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="3s0-A5-QsD" kind="relationship" relationship="viewControllers" id="sfG-1d-3um"/>
@@ -2404,18 +2408,24 @@
         <image name="LINE_SOCIAL_Circle" width="28" height="28"/>
         <image name="LINE_SOCIAL_Circle-1" width="28" height="28"/>
         <image name="LINE_SOCIAL_Circle-2" width="28" height="28"/>
+        <image name="Youtube_default-400px" width="160" height="116"/>
         <image name="exit2" width="18" height="18"/>
         <image name="home_active-1" width="52" height="52"/>
+        <image name="home_active-2" width="52" height="52"/>
         <image name="list" width="16" height="16"/>
         <image name="more_inactive" width="52" height="52"/>
+        <image name="more_inactive-1" width="52" height="52"/>
         <image name="pig" width="22" height="22"/>
         <image name="port_inactive-1" width="52" height="52"/>
+        <image name="port_inactive-2" width="52" height="52"/>
         <image name="rank (1)" width="22" height="22"/>
         <image name="right-arrow" width="14" height="14"/>
         <image name="simport1" width="22" height="22"/>
         <image name="tax (2)" width="20.5" height="20"/>
         <image name="trade_inactive-1" width="52" height="52"/>
+        <image name="trade_inactive-2" width="52" height="52"/>
         <image name="wallet_inactive-1" width="52" height="52"/>
+        <image name="wallet_inactive-2" width="52" height="52"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

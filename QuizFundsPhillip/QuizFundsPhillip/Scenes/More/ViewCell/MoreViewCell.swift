@@ -15,6 +15,7 @@ class MoreViewCell: UITableViewCell {
     @IBOutlet weak var lbmenu: UILabel!
 
     @IBOutlet weak var setimgMenu: UIImageView!
+  
     var data: [String:String]?  {
         didSet {
             guard let data = data else { return }

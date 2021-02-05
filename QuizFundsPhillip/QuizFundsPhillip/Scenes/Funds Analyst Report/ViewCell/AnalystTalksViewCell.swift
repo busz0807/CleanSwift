@@ -24,9 +24,6 @@ class AnalystTalksViewCell: UICollectionViewCell {
         }
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.imgView.layer.masksToBounds = true
-        self.imgView.clipsToBounds = true
-        self.imgView.layer.cornerRadius = 12
-        
+   
     }
 }

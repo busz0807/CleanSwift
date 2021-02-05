@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.9.1)
+  - CircleImageView (1.0.1)
   - FSPagerView (0.8.3)
   - LanguageManager-iOS (1.2.3)
   - Parchment (3.0.1)
@@ -10,6 +11,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - CircleImageView
   - FSPagerView
   - LanguageManager-iOS
   - Parchment
@@ -19,6 +21,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - CircleImageView
     - FSPagerView
     - LanguageManager-iOS
     - Parchment
@@ -27,12 +30,13 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  CircleImageView: 3339a6d2755333cf9fefdc9a76aa00d62957c7fb
   FSPagerView: 670405b2f18e2a87fa37f20b00de783e562c25a8
   LanguageManager-iOS: 020a6849c97949683926773fd5b82baceaa142db
   Parchment: 466a1cfb6151780db8acb4bbedc2d9c6bfa1e2ff
   SDWebImage: b969dcfc02c40a5da71eac0b03b8f1a0c794a86f
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: c7d1e165f8da1e5072b88d2aaa2d7c64168e1365
+PODFILE CHECKSUM: 35d3063de5aa8add94b230cf82336a494eb28889
 
 COCOAPODS: 1.10.0
