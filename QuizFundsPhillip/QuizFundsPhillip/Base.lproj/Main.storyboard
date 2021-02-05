@@ -466,6 +466,16 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0uX-mF-SX5">
                                                 <rect key="frame" x="30" y="222" width="384" height="100"/>
                                                 <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9wz-nx-Z8I">
+                                                        <rect key="frame" x="0.0" y="0.0" width="384" height="100"/>
+                                                        <state key="normal">
+                                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="btnIPO:" destination="SSi-HT-yho" eventType="touchUpInside" id="6sh-22-QSB"/>
+                                                        </connections>
+                                                    </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IPO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hIQ-B1-7Zu">
                                                         <rect key="frame" x="0.0" y="0.0" width="384" height="24"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
@@ -491,10 +501,14 @@
                                                     <constraint firstItem="e6h-1G-q3D" firstAttribute="top" secondItem="hIQ-B1-7Zu" secondAttribute="bottom" constant="20" id="7Ml-lm-cc9"/>
                                                     <constraint firstItem="zhg-ui-K75" firstAttribute="leading" secondItem="0uX-mF-SX5" secondAttribute="leading" id="F9h-Fs-JPb"/>
                                                     <constraint firstAttribute="trailing" secondItem="hIQ-B1-7Zu" secondAttribute="trailing" id="FOM-UU-CZy"/>
+                                                    <constraint firstAttribute="bottom" secondItem="9wz-nx-Z8I" secondAttribute="bottom" id="KDk-UU-Ltp"/>
                                                     <constraint firstItem="hIQ-B1-7Zu" firstAttribute="leading" secondItem="0uX-mF-SX5" secondAttribute="leading" id="WQ0-8v-zkh"/>
+                                                    <constraint firstItem="9wz-nx-Z8I" firstAttribute="top" secondItem="0uX-mF-SX5" secondAttribute="top" id="XAf-dO-XNY"/>
                                                     <constraint firstItem="hIQ-B1-7Zu" firstAttribute="top" secondItem="0uX-mF-SX5" secondAttribute="top" id="Xtt-jb-mzU"/>
                                                     <constraint firstAttribute="bottom" secondItem="zhg-ui-K75" secondAttribute="bottom" constant="10" id="gIH-Bc-xW2"/>
+                                                    <constraint firstAttribute="trailing" secondItem="9wz-nx-Z8I" secondAttribute="trailing" id="j2N-vL-lXY"/>
                                                     <constraint firstItem="zhg-ui-K75" firstAttribute="top" secondItem="e6h-1G-q3D" secondAttribute="bottom" constant="10" id="nx0-5h-3iz"/>
+                                                    <constraint firstItem="9wz-nx-Z8I" firstAttribute="leading" secondItem="0uX-mF-SX5" secondAttribute="leading" id="r3n-CO-qjp"/>
                                                     <constraint firstAttribute="trailing" secondItem="e6h-1G-q3D" secondAttribute="trailing" id="rHT-m1-vFv"/>
                                                     <constraint firstAttribute="trailing" secondItem="zhg-ui-K75" secondAttribute="trailing" id="wXN-jK-L3u"/>
                                                 </constraints>
@@ -1385,6 +1399,9 @@
                                                                             <color key="titleShadowColor" systemColor="labelColor"/>
                                                                             <imageReference key="image" image="simport1" symbolScale="medium" renderingMode="original"/>
                                                                         </state>
+                                                                        <connections>
+                                                                            <action selector="btnSim:" destination="3s0-A5-QsD" eventType="touchUpInside" id="GBg-As-pby"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                                 <color key="backgroundColor" red="0.089704640209674835" green="0.11853668838739395" blue="0.44739764928817749" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1404,6 +1421,9 @@
                                                                             <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                             <imageReference key="image" image="tax (2)" symbolScale="medium" renderingMode="original"/>
                                                                         </state>
+                                                                        <connections>
+                                                                            <action selector="btnTax:" destination="3s0-A5-QsD" eventType="touchUpInside" id="uu6-ea-MCW"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                                 <color key="backgroundColor" red="0.089704640209674835" green="0.11853668838739395" blue="0.44739764928817749" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1422,6 +1442,9 @@
                                                                         <state key="normal">
                                                                             <imageReference key="image" image="pig" symbolScale="medium" renderingMode="original"/>
                                                                         </state>
+                                                                        <connections>
+                                                                            <action selector="btnPig:" destination="3s0-A5-QsD" eventType="touchUpInside" id="m4H-iC-v5z"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                                 <color key="backgroundColor" red="0.089704640209674835" green="0.11853668838739395" blue="0.44739764928817749" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1440,6 +1463,9 @@
                                                                         <state key="normal">
                                                                             <imageReference key="image" image="rank (1)" symbolScale="medium" renderingMode="original"/>
                                                                         </state>
+                                                                        <connections>
+                                                                            <action selector="btnRank:" destination="3s0-A5-QsD" eventType="touchUpInside" id="3uh-w1-YsU"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                                 <color key="backgroundColor" red="0.089704640209674835" green="0.11853668838739395" blue="0.44739764928817749" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

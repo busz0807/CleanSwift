@@ -11,6 +11,6 @@ struct AnalystReportModel:  Codable {
     var HeadlineTh: String?
     var lastUpdate: String?
     var name: String?
-    var fileUrl : String?
+    var fileUrl: String?
 
     }

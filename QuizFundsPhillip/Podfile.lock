@@ -1,5 +1,5 @@
 PODS:
-  - Alamofire (5.4.1)
+  - Alamofire (4.9.1)
   - FSPagerView (0.8.3)
   - LanguageManager-iOS (1.2.3)
   - Parchment (3.0.1)
@@ -26,13 +26,13 @@ SPEC REPOS:
     - SwiftyJSON
 
 SPEC CHECKSUMS:
-  Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   FSPagerView: 670405b2f18e2a87fa37f20b00de783e562c25a8
   LanguageManager-iOS: 020a6849c97949683926773fd5b82baceaa142db
   Parchment: 466a1cfb6151780db8acb4bbedc2d9c6bfa1e2ff
   SDWebImage: b969dcfc02c40a5da71eac0b03b8f1a0c794a86f
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: 2244eb58b687fddc7e1c3a0e51d53678c04dc6fc
+PODFILE CHECKSUM: c7d1e165f8da1e5072b88d2aaa2d7c64168e1365
 
 COCOAPODS: 1.10.0

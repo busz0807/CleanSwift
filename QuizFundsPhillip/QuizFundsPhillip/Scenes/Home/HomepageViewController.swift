@@ -18,7 +18,11 @@ protocol HomepageDisplayLogic: class {
 }
 
 class HomepageViewController: UIViewController, HomepageDisplayLogic {
-
+//    [["Name": "1AMSET50-RA"],["Name": "K-CASH"],["Name": "SCBSET50"]]
+    let url = [["url" : "http://datacenter.poems.in.th/fame/040/20201009_SSF%20and%20RMF%202020.pdf"],
+              [ "url" : "https://www.phillipasset.co.th/information-center2/2020/4/7/top-sectors-out-perform-covid-19-a5m67-mwhht"],
+              [ "url" : "https://www.phillipasset.co.th/information-center2/pwin-illumina"],
+               ["url" : "https://www.phillipasset.co.th/information-center2/2020/2/11/pwin-tesla-200"]]
     let imageNames = ["1.jpg","2.jpg","4.jpg","5.jpg"]
     let transformerTypes: [FSPagerViewTransformerType] = [.crossFading,
                                                                       .zoomOut,
@@ -66,6 +70,18 @@ class HomepageViewController: UIViewController, HomepageDisplayLogic {
             self.pagerView.register(FSPagerViewCell.self, forCellWithReuseIdentifier: "cell")
             self.typeIndex = 0
         }
+    }
+    @IBAction func btnSim(_ sender: Any) {
+        didTapNew()
+    }
+    @IBAction func btnTax(_ sender: Any) {
+        didTapNew()
+    }
+    @IBAction func btnPig(_ sender: Any) {
+        didTapNew()
+    }
+    @IBAction func btnRank(_ sender: Any) {
+        didTapNew()
     }
     @IBOutlet weak var setViewPig: UIView!
     @IBOutlet weak var pageViewPanging: UIView!
@@ -208,6 +224,12 @@ class HomepageViewController: UIViewController, HomepageDisplayLogic {
   {
     //nameTextField.text = viewModel.name
   }
+    func didTapNew() {
+        let alert = UIAlertController(title: "เร็วๆ นี้", message: "ฟังก์ชั่นนี่กำลังพัฒนาอยู่", preferredStyle: UIAlertController.Style.alert)
+    
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
 }
 extension HomepageViewController: FSPagerViewDelegate, FSPagerViewDataSource {
     func numberOfItems(in pagerView: FSPagerView) -> Int {
@@ -224,8 +246,10 @@ extension HomepageViewController: FSPagerViewDelegate, FSPagerViewDataSource {
     func pagerView(_ pagerView: FSPagerView, didSelectItemAt index: Int) {
     pagerView.deselectItem(at: index, animated: true)
     pagerView.scrollToItem(at: index, animated: true)
+        UIApplication.shared.openURL(NSURL(string: "\(self.url[index]["url"] ?? "")")! as URL)
+       
     }
-
+   
 }
 extension HomepageViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

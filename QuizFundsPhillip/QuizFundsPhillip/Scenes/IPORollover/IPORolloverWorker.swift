@@ -19,7 +19,7 @@ class IPORolloverWorker {
     typealias FecthFundsIPODataCompletionHandler = (_ fundsIPOData: [FundIPORolloverDataModels]?,_ error: Error?) -> ()
     func fetchFundsIPOData(nameFund: String,  completionHandler: @escaping FecthFundsIPODataCompletionHandler) {
         let router = Funds.iPO
-        AF.request(router).responseJSON { response in
+        Alamofire.request(router).responseJSON { response in
             
             if response.error != nil {
                 completionHandler(nil, response.error)
@@ -43,7 +43,7 @@ class IPORolloverWorker {
     func fetchFundsIPODatas(  completionHandler: @escaping FecthFundsIPOsDatasCompletionHandler) {
         let router = Funds.iPO
 //        print(router)
-        AF.request(router).responseJSON { (response) in
+        Alamofire.request(router).responseJSON { (response) in
 //            print(response.value)
             if response.error != nil {
                 completionHandler(nil, response.error)

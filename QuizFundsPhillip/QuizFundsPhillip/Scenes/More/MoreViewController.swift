@@ -140,8 +140,37 @@ extension MoreViewController: UITableViewDelegate, UITableViewDataSource {
             } else if indexPath.row == 3 {
                 print("IPO & Rollover")
                 router?.goToIPORollover()
-            } else {
-                
+            } else if indexPath.row == 0 {
+                let alert = UIAlertController(title: "เร็วๆ นี้", message: "ฟังก์ชั่นนี่กำลังพัฒนาอยู่", preferredStyle:UIAlertController.Style.alert)
+                                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+               
+                self.present(alert, animated: true, completion: nil)
+            }else if indexPath.row == 1 {
+                let alert = UIAlertController(title: "เร็วๆ นี้", message: "ฟังก์ชั่นนี่กำลังพัฒนาอยู่", preferredStyle: UIAlertController.Style.alert)
+            
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+               
+                self.present(alert, animated: true, completion: nil)
+            }else if indexPath.row == 4 {
+                let alert = UIAlertController(title: "เร็วๆ นี้", message: "ฟังก์ชั่นนี่กำลังพัฒนาอยู่", preferredStyle: UIAlertController.Style.alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+            } else if indexPath.row == 5 {
+                let alert = UIAlertController(title: "เร็วๆ นี้", message: "ฟังก์ชั่นนี่กำลังพัฒนาอยู่", preferredStyle: UIAlertController.Style.alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+            } else if indexPath.row == 6 {
+                let alert = UIAlertController(title: "เร็วๆ นี้", message: "ฟังก์ชั่นนี่กำลังพัฒนาอยู่", preferredStyle: UIAlertController.Style.alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+            }else if indexPath.row == 7 {
+                let alert = UIAlertController(title: "เร็วๆ นี้", message: "ฟังก์ชั่นนี่กำลังพัฒนาอยู่", preferredStyle: UIAlertController.Style.alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+            }else {
+                let alert = UIAlertController(title: "เร็วๆ นี้", message: "ฟังก์ชั่นนี่กำลังพัฒนาอยู่", preferredStyle: UIAlertController.Style.alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
             }
         } else {
             print(indexPath.row)

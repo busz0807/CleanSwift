@@ -13,5 +13,4 @@ target 'QuizFundsPhillip' do
   pod 'Parchment'
   pod 'FSPagerView'
 
-
 end

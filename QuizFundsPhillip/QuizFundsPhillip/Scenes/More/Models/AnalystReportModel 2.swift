@@ -6,11 +6,11 @@
 //
 
 import Foundation
-struct AnalystReportModel:  Codable {
+struct AnalystReportModel: Codable {
     var HeadlineEn: String?
     var HeadlineTh: String?
     var lastUpdate: String?
     var name: String?
-    var fileUrl : String?
+    var fileUrl: String?
 
     }

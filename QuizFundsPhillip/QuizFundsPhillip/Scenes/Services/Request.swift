@@ -31,7 +31,7 @@ enum Funds: URLRequestConvertible {
         let urlString = "\(path)"
         let url = URL(string: urlString)!
         var request = URLRequest(url: url)
-        request.method = method
+        request.httpMethod = method.rawValue
         return request
     }
 }

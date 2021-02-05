@@ -27,6 +27,9 @@ class FundAnslystReportViewController: UIViewController, FundAnslystReportDispla
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var lbtitle: UILabel!
     @IBOutlet weak var lbUpdate: UILabel!
+    @IBAction func btnIPO(_ sender: Any) {
+        UIApplication.shared.openURL(NSURL(string: "http://datacenter.poems.in.th/investmentunit/ipo/ipolist.pdf")! as URL)
+    }
     var interactor: FundAnslystReportBusinessLogic?
     var analystReportMonthly: [AnalystReportMonthlyModel]?
     var analystTalkData: [AnalystTalksModel]?
@@ -76,7 +79,7 @@ class FundAnslystReportViewController: UIViewController, FundAnslystReportDispla
   }
   
   // MARK: View lifecycle
- 
+
   override func viewDidLoad()
   {
     super.viewDidLoad()
@@ -85,6 +88,8 @@ class FundAnslystReportViewController: UIViewController, FundAnslystReportDispla
     fetchMonthlyData()
     fetchWeeklyData()
     fetchAnalystTalksData()
+    tableViewWeekly.allowsMultipleSelection = true
+    tableViewMonthly.allowsMultipleSelection = true
   }
   
   // MARK: Do something
@@ -144,13 +149,16 @@ extension FundAnslystReportViewController: UICollectionViewDelegate, UICollectio
         cell.data = self.analystTalkData?[indexPath.row]
         return cell
     }
-    func collectionView(_ collectionView: UICollectionView,
-                        layout collectionViewLayout: UICollectionViewLayout,
-                        sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
-        return CGSize(width: 160.0, height: 145.0)
+//    func collectionView(_ collectionView: UICollectionView,
+//                        layout collectionViewLayout: UICollectionViewLayout,
+//                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+//        
+//        return CGSize(width: 160.0, height: 145.0)
+//    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        UIApplication.shared.openURL(NSURL(string: "\(self.analystTalkData?[indexPath.row].en_url ?? "")") as! URL)
+
     }
-    
 }
 extension FundAnslystReportViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -175,6 +183,13 @@ extension FundAnslystReportViewController: UITableViewDelegate, UITableViewDataS
         }
     }
     
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+       
+        if tableView == tableViewWeekly {
+        UIApplication.shared.openURL(NSURL(string: "http://datacenter.poems.in.th/investmentunit/analyst/Weekly_1Feb2021.pdf")! as URL)
+        } else {
+            UIApplication.shared.openURL(NSURL(string: "http://datacenter.poems.in.th/investmentunit/analyst/Monthly_Nov2020.pdf")! as URL)
+        }
+    }
     
 }

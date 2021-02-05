@@ -24,7 +24,7 @@ class FundAnslystReportWorker
         let router = Funds.analystReport
         
         print(router)
-        AF.request(router).responseJSON { response in
+        Alamofire.request(router).responseJSON { response in
 //            print("Data",String(data: response.data!, encoding: .utf8)!)
             if response.error != nil {
                 completionHandler(nil, response.error)
@@ -48,7 +48,7 @@ class FundAnslystReportWorker
 //        let URL = "https://servicebeta.poems.in.th/FundSmart/api/funds/reports?AnalystReport=IPO"
         let router = Funds.analystReport
 //        print(router)
-        AF.request(router).responseJSON { response in
+        Alamofire.request(router).responseJSON { response in
 //            print("Data",String(data: response.data!, encoding: .utf8)!)
             if response.error != nil {
                 completionHandler(nil, response.error)
@@ -72,7 +72,7 @@ class FundAnslystReportWorker
     func  fetchDataAnalystTalks(completionHandler: @escaping FecthAnalystTalksDataCompletionHandler) {
 //        let URL = "https://servicebeta.poems.in.th/FundSmart/api/funds/reports?AnalystReport=IPO"
         let router = Funds.analystReport
-        AF.request(router).responseJSON  { response in
+        Alamofire.request(router).responseJSON  { response in
 //            print("Data",String(data: response.data!, encoding: .utf8)!)
             if response.error != nil {
                 completionHandler(nil, response.error)
@@ -95,7 +95,7 @@ class FundAnslystReportWorker
     typealias FecthAnalystReportsDatasCompletionHandler = (_ analystReportMonthlyData: [FundAnalystReportsModels]?,_ error: Error?) -> ()
     func fetchFundsanalystReportDatas(  completionHandler: @escaping FecthAnalystReportsDatasCompletionHandler) {
         let router = Funds.analystReport
-        AF.request(router).responseJSON { (response) in
+        Alamofire.request(router).responseJSON { (response) in
             print(response.value)
             if response.error != nil {
                 completionHandler(nil, response.error)
