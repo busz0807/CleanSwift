@@ -18,10 +18,21 @@ protocol MoreDisplayLogic: class {
     class MoreViewController: UIViewController, MoreDisplayLogic {
    
         
+        @IBAction func btnline(_ sender: Any) {
+            UIApplication.shared.openURL(NSURL(string: "https://line.me/ti/p/%40phillipcapital#~")! as URL)
+        }
+        
+        @IBAction func btnyoutube(_ sender: Any) {
+            UIApplication.shared.openURL(NSURL(string: "https://www.youtube.com/user/phillipthai")! as URL)
+        }
+        @IBAction func btnfacebook(_ sender: Any) {
+//            var fbUrl = NSURL(string: "fb://profile/216521891692080")!
+            UIApplication.shared.openURL(NSURL(string: "https://www.facebook.com/PhillipCapitalTH")! as URL)
+        }
     @IBOutlet weak var tableViewMore: UITableView!
     @IBOutlet weak var tableViewSetting: UITableView!
     @IBOutlet weak var setView: UIView!
-        @IBOutlet weak var btnLogin: UIButton!
+    @IBOutlet weak var btnLogin: UIButton!
         var anlystReportData :[AnalystReportModel]?
         var interactor: MoreBusinessLogic?
         var router: (NSObjectProtocol & MoreRoutingLogic & MoreDataPassing)?
@@ -29,20 +40,19 @@ protocol MoreDisplayLogic: class {
         var data = [["More": "Order Status"],["More": "Sim Port"],["More": "Fund Analyst Report"],["More": "IPO & Rollover"],["More": "Compare Funds"],["More": "Fund Builder Plan"],["More": "Tax Saving Fund"],["More": "Prosal Order"],["More": "POEMS Mobile"]]
         var menu = [["Menu": "2 รายการ"],["Menu": ""],["Menu": ""],["Menu": ""],["Menu": ""],["Menu": "4 รายการ"],["Menu": ""],["Menu": ""],["Menu": ""]]
         var dataSetting = [["Setting": "ข้อมูลผู้ใช้"],["Setting": "ตั้งค่า"],["Setting": "แจ้งเตือน"],["Setting": "โหลดข้อมูลกองทุนใหม่"],["Setting": "ติดต่อเรา"]]
-  // MARK: Object lifecycle
         var dataimageSetting = [UIImage(named: "user"),UIImage(named: "setting"),UIImage(named: "notice"),UIImage(named: "reload"),UIImage(named: "contact")]
   
+// MARK: Object lifecycle
         override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-            super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-            setup()
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+          setup()
         }
-  
+        
         required init?(coder aDecoder: NSCoder) {
-            super.init(coder: aDecoder)
-            setup()
-            
+          super.init(coder: aDecoder)
+          setup()
         }
-  
+      
   // MARK: Setup
   private func setup() {
     let viewController = self
@@ -56,18 +66,15 @@ protocol MoreDisplayLogic: class {
     router.viewController = viewController
     router.dataStore = interactor
   }
-  
-  // MARK: Routing
-  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    if let scene = segue.identifier {
-        let selector = NSSelectorFromString("routeTo\(scene)WithSegue:")
-        if let router = router, router.responds(to: selector) {
-            router.perform(selector, with: segue)
+        // MARK: Routing
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let scene = segue.identifier {
+            let selector = NSSelectorFromString("routeTo\(scene)WithSegue:")
+            if let router = router, router.responds(to: selector) {
+                router.perform(selector, with: segue)
+            }
         }
     }
-    
-  }
-  
   // MARK: View lifecycle
     override func viewDidLoad() {
     super.viewDidLoad()
@@ -131,47 +138,47 @@ extension MoreViewController: UITableViewDelegate, UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if tableView == tableViewMore {
+//            if indexPath.row == 0 {
+//                let alert = UIAlertController(title: "เร็วๆ นี้", message: "ฟังก์ชั่นนี่กำลังพัฒนาอยู่", preferredStyle:UIAlertController.Style.alert)
+//                                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+//
+//                self.present(alert, animated: true, completion: nil)
+//            }else if indexPath.row == 1 {
+//                let alert = UIAlertController(title: "เร็วๆ นี้", message: "ฟังก์ชั่นนี่กำลังพัฒนาอยู่", preferredStyle: UIAlertController.Style.alert)
+//
+//                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+//
+//                self.present(alert, animated: true, completion: nil)
+//            }
             if indexPath.row == 2 {
                 if let analystReportData = self.anlystReportData {
                     router?.goToFundAnalystReport(analystReportData: analystReportData[0])
                 }
-//                print("FundsAnalystReport")
-                
             } else if indexPath.row == 3 {
-                print("IPO & Rollover")
+              
                 router?.goToIPORollover()
-            } else if indexPath.row == 0 {
-                let alert = UIAlertController(title: "เร็วๆ นี้", message: "ฟังก์ชั่นนี่กำลังพัฒนาอยู่", preferredStyle:UIAlertController.Style.alert)
-                                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-               
-                self.present(alert, animated: true, completion: nil)
-            }else if indexPath.row == 1 {
-                let alert = UIAlertController(title: "เร็วๆ นี้", message: "ฟังก์ชั่นนี่กำลังพัฒนาอยู่", preferredStyle: UIAlertController.Style.alert)
-            
-                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-               
-                self.present(alert, animated: true, completion: nil)
-            }else if indexPath.row == 4 {
-                let alert = UIAlertController(title: "เร็วๆ นี้", message: "ฟังก์ชั่นนี่กำลังพัฒนาอยู่", preferredStyle: UIAlertController.Style.alert)
-                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-                self.present(alert, animated: true, completion: nil)
-            } else if indexPath.row == 5 {
-                let alert = UIAlertController(title: "เร็วๆ นี้", message: "ฟังก์ชั่นนี่กำลังพัฒนาอยู่", preferredStyle: UIAlertController.Style.alert)
-                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-                self.present(alert, animated: true, completion: nil)
-            } else if indexPath.row == 6 {
-                let alert = UIAlertController(title: "เร็วๆ นี้", message: "ฟังก์ชั่นนี่กำลังพัฒนาอยู่", preferredStyle: UIAlertController.Style.alert)
-                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-                self.present(alert, animated: true, completion: nil)
-            }else if indexPath.row == 7 {
-                let alert = UIAlertController(title: "เร็วๆ นี้", message: "ฟังก์ชั่นนี่กำลังพัฒนาอยู่", preferredStyle: UIAlertController.Style.alert)
-                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-                self.present(alert, animated: true, completion: nil)
-            }else {
-                let alert = UIAlertController(title: "เร็วๆ นี้", message: "ฟังก์ชั่นนี่กำลังพัฒนาอยู่", preferredStyle: UIAlertController.Style.alert)
-                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-                self.present(alert, animated: true, completion: nil)
             }
+//                else if indexPath.row == 4 {
+//                let alert = UIAlertController(title: "เร็วๆ นี้", message: "ฟังก์ชั่นนี่กำลังพัฒนาอยู่", preferredStyle: UIAlertController.Style.alert)
+//                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+//                self.present(alert, animated: true, completion: nil)
+//            } else if indexPath.row == 5 {
+//                let alert = UIAlertController(title: "เร็วๆ นี้", message: "ฟังก์ชั่นนี่กำลังพัฒนาอยู่", preferredStyle: UIAlertController.Style.alert)
+//                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+//                self.present(alert, animated: true, completion: nil)
+//            } else if indexPath.row == 6 {
+//                let alert = UIAlertController(title: "เร็วๆ นี้", message: "ฟังก์ชั่นนี่กำลังพัฒนาอยู่", preferredStyle: UIAlertController.Style.alert)
+//                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+//                self.present(alert, animated: true, completion: nil)
+//            }else if indexPath.row == 7 {
+//                let alert = UIAlertController(title: "เร็วๆ นี้", message: "ฟังก์ชั่นนี่กำลังพัฒนาอยู่", preferredStyle: UIAlertController.Style.alert)
+//                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+//                self.present(alert, animated: true, completion: nil)
+//            }else {
+//                let alert = UIAlertController(title: "เร็วๆ นี้", message: "ฟังก์ชั่นนี่กำลังพัฒนาอยู่", preferredStyle: UIAlertController.Style.alert)
+//                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+//                self.present(alert, animated: true, completion: nil)
+//            }
         } else {
             print(indexPath.row)
         }

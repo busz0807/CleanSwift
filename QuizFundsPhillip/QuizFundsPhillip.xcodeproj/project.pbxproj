@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B44A5C1359FF625C4C62E61F /* Pods_QuizFundsPhillip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A4F99A9707ABFA074CDDB09 /* Pods_QuizFundsPhillip.framework */; };
+		CE2A408325D29609003A51FF /* ReealmFundsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2A408225D29609003A51FF /* ReealmFundsList.swift */; };
 		CE40658F25C3B8C000027C32 /* HomepagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE40658925C3B8C000027C32 /* HomepagePresenter.swift */; };
 		CE40659025C3B8C000027C32 /* HomepageWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE40658A25C3B8C000027C32 /* HomepageWorker.swift */; };
 		CE40659125C3B8C000027C32 /* HomepageRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE40658B25C3B8C000027C32 /* HomepageRouter.swift */; };
@@ -42,9 +44,79 @@
 		CE4065DF25C3E4E200027C32 /* SSFViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4065DE25C3E4E200027C32 /* SSFViewCell.swift */; };
 		CE4065E425C3E4F900027C32 /* GMFViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4065E325C3E4F900027C32 /* GMFViewCell.swift */; };
 		CE4065E925C3E51700027C32 /* FIFViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4065E825C3E51700027C32 /* FIFViewCell.swift */; };
-		CE40662C25C3F40700027C32 /* Pods_QuizFundsPhillip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 963C99EBD60E578BAC2BB70F /* Pods_QuizFundsPhillip.framework */; };
 		CE46468C25C7F7B2000DF60F /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE46468B25C7F7B2000DF60F /* Request.swift */; };
-		CE9D236725CA5DBB0039DEED /* FundAnalystReportsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9D236625CA5DBB0039DEED /* FundAnalystReportsModels.swift */; };
+		CE56D44F25F71B490070B655 /* SimulationportPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE56D44925F71B490070B655 /* SimulationportPresenter.swift */; };
+		CE56D45025F71B490070B655 /* SimulationportWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE56D44A25F71B490070B655 /* SimulationportWorker.swift */; };
+		CE56D45125F71B490070B655 /* SimulationportRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE56D44B25F71B490070B655 /* SimulationportRouter.swift */; };
+		CE56D45225F71B490070B655 /* SimulationportModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE56D44C25F71B490070B655 /* SimulationportModels.swift */; };
+		CE56D45325F71B490070B655 /* SimulationportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE56D44D25F71B490070B655 /* SimulationportViewController.swift */; };
+		CE56D45425F71B490070B655 /* SimulationportInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE56D44E25F71B490070B655 /* SimulationportInteractor.swift */; };
+		CE56D45925F7283E0070B655 /* SimulationPortViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE56D45825F7283E0070B655 /* SimulationPortViewCell.swift */; };
+		CE56D46625F757310070B655 /* AddSimulationPortPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE56D46025F757310070B655 /* AddSimulationPortPresenter.swift */; };
+		CE56D46725F757310070B655 /* AddSimulationPortWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE56D46125F757310070B655 /* AddSimulationPortWorker.swift */; };
+		CE56D46825F757310070B655 /* AddSimulationPortRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE56D46225F757310070B655 /* AddSimulationPortRouter.swift */; };
+		CE56D46925F757310070B655 /* AddSimulationPortModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE56D46325F757310070B655 /* AddSimulationPortModels.swift */; };
+		CE56D46A25F757310070B655 /* AddSimulationPortViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE56D46425F757310070B655 /* AddSimulationPortViewController.swift */; };
+		CE56D46B25F757310070B655 /* AddSimulationPortInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE56D46525F757310070B655 /* AddSimulationPortInteractor.swift */; };
+		CE7656A9260B052F006AAB86 /* GetOrderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7656A8260B052F006AAB86 /* GetOrderModel.swift */; };
+		CE7B2C7A25D3A8F9009F773B /* BuyViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7B2C7925D3A8F9009F773B /* BuyViewCell.swift */; };
+		CE7DD26925DF79C100B47B3B /* SecondSearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7DD26325DF79C100B47B3B /* SecondSearchPresenter.swift */; };
+		CE7DD26A25DF79C100B47B3B /* SecondSearchWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7DD26425DF79C100B47B3B /* SecondSearchWorker.swift */; };
+		CE7DD26B25DF79C100B47B3B /* SecondSearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7DD26525DF79C100B47B3B /* SecondSearchRouter.swift */; };
+		CE7DD26C25DF79C100B47B3B /* SecondSearchModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7DD26625DF79C100B47B3B /* SecondSearchModels.swift */; };
+		CE7DD26D25DF79C100B47B3B /* SecondSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7DD26725DF79C100B47B3B /* SecondSearchViewController.swift */; };
+		CE7DD26E25DF79C100B47B3B /* SecondSearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7DD26825DF79C100B47B3B /* SecondSearchInteractor.swift */; };
+		CE7DD27925DFA1E700B47B3B /* RiskPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7DD27325DFA1E700B47B3B /* RiskPresenter.swift */; };
+		CE7DD27A25DFA1E700B47B3B /* RiskWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7DD27425DFA1E700B47B3B /* RiskWorker.swift */; };
+		CE7DD27B25DFA1E700B47B3B /* RiskRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7DD27525DFA1E700B47B3B /* RiskRouter.swift */; };
+		CE7DD27C25DFA1E700B47B3B /* RiskModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7DD27625DFA1E700B47B3B /* RiskModels.swift */; };
+		CE7DD27D25DFA1E700B47B3B /* RiskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7DD27725DFA1E700B47B3B /* RiskViewController.swift */; };
+		CE7DD27E25DFA1E700B47B3B /* RiskInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7DD27825DFA1E700B47B3B /* RiskInteractor.swift */; };
+		CE867C0025FF0D610003FA70 /* FundSalePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE867BFA25FF0D610003FA70 /* FundSalePresenter.swift */; };
+		CE867C0125FF0D610003FA70 /* FundSaleWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE867BFB25FF0D610003FA70 /* FundSaleWorker.swift */; };
+		CE867C0225FF0D610003FA70 /* FundSaleRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE867BFC25FF0D610003FA70 /* FundSaleRouter.swift */; };
+		CE867C0325FF0D610003FA70 /* FundSaleModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE867BFD25FF0D610003FA70 /* FundSaleModels.swift */; };
+		CE867C0425FF0D610003FA70 /* FundSaleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE867BFE25FF0D610003FA70 /* FundSaleViewController.swift */; };
+		CE867C0525FF0D610003FA70 /* FundSaleInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE867BFF25FF0D610003FA70 /* FundSaleInteractor.swift */; };
+		CE867C1025FF1F890003FA70 /* BuyAndSalePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE867C0A25FF1F890003FA70 /* BuyAndSalePresenter.swift */; };
+		CE867C1125FF1F890003FA70 /* BuyAndSaleWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE867C0B25FF1F890003FA70 /* BuyAndSaleWorker.swift */; };
+		CE867C1225FF1F890003FA70 /* BuyAndSaleRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE867C0C25FF1F890003FA70 /* BuyAndSaleRouter.swift */; };
+		CE867C1325FF1F890003FA70 /* BuyAndSaleModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE867C0D25FF1F890003FA70 /* BuyAndSaleModels.swift */; };
+		CE867C1425FF1F890003FA70 /* BuyAndSaleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE867C0E25FF1F890003FA70 /* BuyAndSaleViewController.swift */; };
+		CE867C1525FF1F890003FA70 /* BuyAndSaleInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE867C0F25FF1F890003FA70 /* BuyAndSaleInteractor.swift */; };
+		CE90EA2925FB73E800E98000 /* FundsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE90EA2825FB73E800E98000 /* FundsViewCell.swift */; };
+		CE93A155260C500D00EAB3B5 /* PortDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93A14F260C500D00EAB3B5 /* PortDetailPresenter.swift */; };
+		CE93A156260C500D00EAB3B5 /* PortDetailWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93A150260C500D00EAB3B5 /* PortDetailWorker.swift */; };
+		CE93A157260C500D00EAB3B5 /* PortDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93A151260C500D00EAB3B5 /* PortDetailRouter.swift */; };
+		CE93A158260C500D00EAB3B5 /* PortDetailModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93A152260C500D00EAB3B5 /* PortDetailModels.swift */; };
+		CE93A159260C500D00EAB3B5 /* PortDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93A153260C500D00EAB3B5 /* PortDetailViewController.swift */; };
+		CE93A15A260C500D00EAB3B5 /* PortDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93A154260C500D00EAB3B5 /* PortDetailInteractor.swift */; };
+		CEA79EF72611BD020092F6E4 /* DeleteMenuPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA79EF12611BD020092F6E4 /* DeleteMenuPresenter.swift */; };
+		CEA79EF82611BD020092F6E4 /* DeleteMenuWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA79EF22611BD020092F6E4 /* DeleteMenuWorker.swift */; };
+		CEA79EF92611BD020092F6E4 /* DeleteMenuRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA79EF32611BD020092F6E4 /* DeleteMenuRouter.swift */; };
+		CEA79EFA2611BD020092F6E4 /* DeleteMenuModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA79EF42611BD020092F6E4 /* DeleteMenuModels.swift */; };
+		CEA79EFB2611BD020092F6E4 /* DeleteMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA79EF52611BD020092F6E4 /* DeleteMenuViewController.swift */; };
+		CEA79EFC2611BD020092F6E4 /* DeleteMenuInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA79EF62611BD020092F6E4 /* DeleteMenuInteractor.swift */; };
+		CEA79F002611CA4A0092F6E4 /* DeleteOrderNoViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA79EFF2611CA4A0092F6E4 /* DeleteOrderNoViewCell.swift */; };
+		CEAB3F932600560E0093B43F /* HistoryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB3F8D2600560E0093B43F /* HistoryPresenter.swift */; };
+		CEAB3F942600560E0093B43F /* HistoryWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB3F8E2600560E0093B43F /* HistoryWorker.swift */; };
+		CEAB3F952600560E0093B43F /* HistoryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB3F8F2600560E0093B43F /* HistoryRouter.swift */; };
+		CEAB3F962600560E0093B43F /* HistoryModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB3F902600560E0093B43F /* HistoryModels.swift */; };
+		CEAB3F972600560E0093B43F /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB3F912600560E0093B43F /* HistoryViewController.swift */; };
+		CEAB3F982600560E0093B43F /* HistoryInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB3F922600560E0093B43F /* HistoryInteractor.swift */; };
+		CEAB3FA6260060280093B43F /* SaveDividendPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB3FA0260060280093B43F /* SaveDividendPresenter.swift */; };
+		CEAB3FA7260060280093B43F /* SaveDividendWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB3FA1260060280093B43F /* SaveDividendWorker.swift */; };
+		CEAB3FA8260060280093B43F /* SaveDividendRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB3FA2260060280093B43F /* SaveDividendRouter.swift */; };
+		CEAB3FA9260060280093B43F /* SaveDividendModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB3FA3260060280093B43F /* SaveDividendModels.swift */; };
+		CEAB3FAA260060280093B43F /* SaveDividendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB3FA4260060280093B43F /* SaveDividendViewController.swift */; };
+		CEAB3FAB260060280093B43F /* SaveDividendInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB3FA5260060280093B43F /* SaveDividendInteractor.swift */; };
+		CEAB3FB5260060520093B43F /* SaveBuySellPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB3FAF260060520093B43F /* SaveBuySellPresenter.swift */; };
+		CEAB3FB6260060520093B43F /* SaveBuySellWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB3FB0260060520093B43F /* SaveBuySellWorker.swift */; };
+		CEAB3FB7260060520093B43F /* SaveBuySellRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB3FB1260060520093B43F /* SaveBuySellRouter.swift */; };
+		CEAB3FB8260060520093B43F /* SaveBuySellModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB3FB2260060520093B43F /* SaveBuySellModels.swift */; };
+		CEAB3FB9260060520093B43F /* SaveBuySellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB3FB3260060520093B43F /* SaveBuySellViewController.swift */; };
+		CEAB3FBA260060520093B43F /* SaveBuySellInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB3FB4260060520093B43F /* SaveBuySellInteractor.swift */; };
+		CEAB3FC1260066600093B43F /* SaveBuySellViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB3FC0260066600093B43F /* SaveBuySellViewCell.swift */; };
 		CEAF7A1F25C25EBD00F88FB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAF7A1E25C25EBD00F88FB1 /* AppDelegate.swift */; };
 		CEAF7A2325C25EBD00F88FB1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAF7A2225C25EBD00F88FB1 /* ViewController.swift */; };
 		CEAF7A2625C25EBD00F88FB1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEAF7A2425C25EBD00F88FB1 /* Main.storyboard */; };
@@ -85,11 +157,53 @@
 		CEAF7AA225C2C87100F88FB1 /* FundsIPOModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAF7A9C25C2C87100F88FB1 /* FundsIPOModels.swift */; };
 		CEAF7AA325C2C87100F88FB1 /* FundsIPOViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAF7A9D25C2C87100F88FB1 /* FundsIPOViewController.swift */; };
 		CEAF7AA425C2C87100F88FB1 /* FundsIPOInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAF7A9E25C2C87100F88FB1 /* FundsIPOInteractor.swift */; };
+		CED4370225DE6D7C000A26A9 /* PaymentPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED436FC25DE6D7C000A26A9 /* PaymentPresenter.swift */; };
+		CED4370325DE6D7C000A26A9 /* PaymentWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED436FD25DE6D7C000A26A9 /* PaymentWorker.swift */; };
+		CED4370425DE6D7C000A26A9 /* PaymentRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED436FE25DE6D7C000A26A9 /* PaymentRouter.swift */; };
+		CED4370525DE6D7C000A26A9 /* PaymentModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED436FF25DE6D7C000A26A9 /* PaymentModels.swift */; };
+		CED4370625DE6D7C000A26A9 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED4370025DE6D7C000A26A9 /* PaymentViewController.swift */; };
+		CED4370725DE6D7C000A26A9 /* PaymentInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED4370125DE6D7C000A26A9 /* PaymentInteractor.swift */; };
+		CED4370B25DE7215000A26A9 /* PhillipViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED4370A25DE7215000A26A9 /* PhillipViewCell.swift */; };
+		CED4370E25DE7254000A26A9 /* BankingViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED4370D25DE7254000A26A9 /* BankingViewCell.swift */; };
+		CED4371125DE7266000A26A9 /* OtherViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED4371025DE7266000A26A9 /* OtherViewCell.swift */; };
+		CED9FDF625D0F5AB001142CD /* TradePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED9FDF025D0F5AB001142CD /* TradePresenter.swift */; };
+		CED9FDF725D0F5AB001142CD /* TradeWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED9FDF125D0F5AB001142CD /* TradeWorker.swift */; };
+		CED9FDF825D0F5AB001142CD /* TradeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED9FDF225D0F5AB001142CD /* TradeRouter.swift */; };
+		CED9FDF925D0F5AB001142CD /* TradeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED9FDF325D0F5AB001142CD /* TradeModels.swift */; };
+		CED9FDFA25D0F5AB001142CD /* TradeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED9FDF425D0F5AB001142CD /* TradeViewController.swift */; };
+		CED9FDFB25D0F5AB001142CD /* TradeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED9FDF525D0F5AB001142CD /* TradeInteractor.swift */; };
+		CED9FE0A25D0F6CB001142CD /* ChangePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED9FE0425D0F6CB001142CD /* ChangePresenter.swift */; };
+		CED9FE0B25D0F6CB001142CD /* ChangeWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED9FE0525D0F6CB001142CD /* ChangeWorker.swift */; };
+		CED9FE0C25D0F6CB001142CD /* ChangeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED9FE0625D0F6CB001142CD /* ChangeRouter.swift */; };
+		CED9FE0D25D0F6CB001142CD /* ChangeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED9FE0725D0F6CB001142CD /* ChangeModels.swift */; };
+		CED9FE0E25D0F6CB001142CD /* ChangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED9FE0825D0F6CB001142CD /* ChangeViewController.swift */; };
+		CED9FE0F25D0F6CB001142CD /* ChangeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED9FE0925D0F6CB001142CD /* ChangeInteractor.swift */; };
+		CED9FE1725D0F6E3001142CD /* SalePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED9FE1125D0F6E3001142CD /* SalePresenter.swift */; };
+		CED9FE1825D0F6E3001142CD /* SaleWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED9FE1225D0F6E3001142CD /* SaleWorker.swift */; };
+		CED9FE1925D0F6E3001142CD /* SaleRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED9FE1325D0F6E3001142CD /* SaleRouter.swift */; };
+		CED9FE1A25D0F6E3001142CD /* SaleModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED9FE1425D0F6E3001142CD /* SaleModels.swift */; };
+		CED9FE1B25D0F6E3001142CD /* SaleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED9FE1525D0F6E3001142CD /* SaleViewController.swift */; };
+		CED9FE1C25D0F6E3001142CD /* SaleInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED9FE1625D0F6E3001142CD /* SaleInteractor.swift */; };
+		CED9FE2425D0F6FE001142CD /* BuyPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED9FE1E25D0F6FE001142CD /* BuyPresenter.swift */; };
+		CED9FE2525D0F6FE001142CD /* BuyWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED9FE1F25D0F6FE001142CD /* BuyWorker.swift */; };
+		CED9FE2625D0F6FE001142CD /* BuyRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED9FE2025D0F6FE001142CD /* BuyRouter.swift */; };
+		CED9FE2725D0F6FE001142CD /* BuyModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED9FE2125D0F6FE001142CD /* BuyModels.swift */; };
+		CED9FE2825D0F6FE001142CD /* BuyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED9FE2225D0F6FE001142CD /* BuyViewController.swift */; };
+		CED9FE2925D0F6FE001142CD /* BuyInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED9FE2325D0F6FE001142CD /* BuyInteractor.swift */; };
+		CED9FE3225D137FE001142CD /* SearchFundsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED9FE2C25D137FE001142CD /* SearchFundsPresenter.swift */; };
+		CED9FE3325D137FE001142CD /* SearchFundsWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED9FE2D25D137FE001142CD /* SearchFundsWorker.swift */; };
+		CED9FE3425D137FE001142CD /* SearchFundsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED9FE2E25D137FE001142CD /* SearchFundsRouter.swift */; };
+		CED9FE3525D137FE001142CD /* SearchFundsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED9FE2F25D137FE001142CD /* SearchFundsModels.swift */; };
+		CED9FE3625D137FE001142CD /* SearchFundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED9FE3025D137FE001142CD /* SearchFundsViewController.swift */; };
+		CED9FE3725D137FE001142CD /* SearchFundsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED9FE3125D137FE001142CD /* SearchFundsInteractor.swift */; };
+		CED9FE3C25D14298001142CD /* SearchFundsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED9FE3B25D14298001142CD /* SearchFundsModel.swift */; };
+		CED9FE4125D1486B001142CD /* SearchFundsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED9FE4025D1486B001142CD /* SearchFundsViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2CBDC22A8E8D4261156A30BC /* Pods-QuizFundsPhillip.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuizFundsPhillip.release.xcconfig"; path = "Target Support Files/Pods-QuizFundsPhillip/Pods-QuizFundsPhillip.release.xcconfig"; sourceTree = "<group>"; };
-		963C99EBD60E578BAC2BB70F /* Pods_QuizFundsPhillip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuizFundsPhillip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A4F99A9707ABFA074CDDB09 /* Pods_QuizFundsPhillip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuizFundsPhillip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C051F0A8B6BD8A2A5D22227 /* Pods-QuizFundsPhillip.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuizFundsPhillip.debug.xcconfig"; path = "Target Support Files/Pods-QuizFundsPhillip/Pods-QuizFundsPhillip.debug.xcconfig"; sourceTree = "<group>"; };
+		CE2A408225D29609003A51FF /* ReealmFundsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReealmFundsList.swift; sourceTree = "<group>"; };
 		CE40658925C3B8C000027C32 /* HomepagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepagePresenter.swift; sourceTree = "<group>"; };
 		CE40658A25C3B8C000027C32 /* HomepageWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageWorker.swift; sourceTree = "<group>"; };
 		CE40658B25C3B8C000027C32 /* HomepageRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageRouter.swift; sourceTree = "<group>"; };
@@ -126,7 +240,78 @@
 		CE4065E325C3E4F900027C32 /* GMFViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GMFViewCell.swift; sourceTree = "<group>"; };
 		CE4065E825C3E51700027C32 /* FIFViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FIFViewCell.swift; sourceTree = "<group>"; };
 		CE46468B25C7F7B2000DF60F /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
-		CE9D236625CA5DBB0039DEED /* FundAnalystReportsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundAnalystReportsModels.swift; sourceTree = "<group>"; };
+		CE56D44925F71B490070B655 /* SimulationportPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulationportPresenter.swift; sourceTree = "<group>"; };
+		CE56D44A25F71B490070B655 /* SimulationportWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulationportWorker.swift; sourceTree = "<group>"; };
+		CE56D44B25F71B490070B655 /* SimulationportRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulationportRouter.swift; sourceTree = "<group>"; };
+		CE56D44C25F71B490070B655 /* SimulationportModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulationportModels.swift; sourceTree = "<group>"; };
+		CE56D44D25F71B490070B655 /* SimulationportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulationportViewController.swift; sourceTree = "<group>"; };
+		CE56D44E25F71B490070B655 /* SimulationportInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulationportInteractor.swift; sourceTree = "<group>"; };
+		CE56D45825F7283E0070B655 /* SimulationPortViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulationPortViewCell.swift; sourceTree = "<group>"; };
+		CE56D46025F757310070B655 /* AddSimulationPortPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSimulationPortPresenter.swift; sourceTree = "<group>"; };
+		CE56D46125F757310070B655 /* AddSimulationPortWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSimulationPortWorker.swift; sourceTree = "<group>"; };
+		CE56D46225F757310070B655 /* AddSimulationPortRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSimulationPortRouter.swift; sourceTree = "<group>"; };
+		CE56D46325F757310070B655 /* AddSimulationPortModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSimulationPortModels.swift; sourceTree = "<group>"; };
+		CE56D46425F757310070B655 /* AddSimulationPortViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSimulationPortViewController.swift; sourceTree = "<group>"; };
+		CE56D46525F757310070B655 /* AddSimulationPortInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSimulationPortInteractor.swift; sourceTree = "<group>"; };
+		CE7656A8260B052F006AAB86 /* GetOrderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetOrderModel.swift; sourceTree = "<group>"; };
+		CE7B2C7925D3A8F9009F773B /* BuyViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyViewCell.swift; sourceTree = "<group>"; };
+		CE7DD26325DF79C100B47B3B /* SecondSearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSearchPresenter.swift; sourceTree = "<group>"; };
+		CE7DD26425DF79C100B47B3B /* SecondSearchWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSearchWorker.swift; sourceTree = "<group>"; };
+		CE7DD26525DF79C100B47B3B /* SecondSearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSearchRouter.swift; sourceTree = "<group>"; };
+		CE7DD26625DF79C100B47B3B /* SecondSearchModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSearchModels.swift; sourceTree = "<group>"; };
+		CE7DD26725DF79C100B47B3B /* SecondSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSearchViewController.swift; sourceTree = "<group>"; };
+		CE7DD26825DF79C100B47B3B /* SecondSearchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSearchInteractor.swift; sourceTree = "<group>"; };
+		CE7DD27325DFA1E700B47B3B /* RiskPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiskPresenter.swift; sourceTree = "<group>"; };
+		CE7DD27425DFA1E700B47B3B /* RiskWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiskWorker.swift; sourceTree = "<group>"; };
+		CE7DD27525DFA1E700B47B3B /* RiskRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiskRouter.swift; sourceTree = "<group>"; };
+		CE7DD27625DFA1E700B47B3B /* RiskModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiskModels.swift; sourceTree = "<group>"; };
+		CE7DD27725DFA1E700B47B3B /* RiskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiskViewController.swift; sourceTree = "<group>"; };
+		CE7DD27825DFA1E700B47B3B /* RiskInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiskInteractor.swift; sourceTree = "<group>"; };
+		CE867BFA25FF0D610003FA70 /* FundSalePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundSalePresenter.swift; sourceTree = "<group>"; };
+		CE867BFB25FF0D610003FA70 /* FundSaleWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundSaleWorker.swift; sourceTree = "<group>"; };
+		CE867BFC25FF0D610003FA70 /* FundSaleRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundSaleRouter.swift; sourceTree = "<group>"; };
+		CE867BFD25FF0D610003FA70 /* FundSaleModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundSaleModels.swift; sourceTree = "<group>"; };
+		CE867BFE25FF0D610003FA70 /* FundSaleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundSaleViewController.swift; sourceTree = "<group>"; };
+		CE867BFF25FF0D610003FA70 /* FundSaleInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundSaleInteractor.swift; sourceTree = "<group>"; };
+		CE867C0A25FF1F890003FA70 /* BuyAndSalePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyAndSalePresenter.swift; sourceTree = "<group>"; };
+		CE867C0B25FF1F890003FA70 /* BuyAndSaleWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyAndSaleWorker.swift; sourceTree = "<group>"; };
+		CE867C0C25FF1F890003FA70 /* BuyAndSaleRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyAndSaleRouter.swift; sourceTree = "<group>"; };
+		CE867C0D25FF1F890003FA70 /* BuyAndSaleModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyAndSaleModels.swift; sourceTree = "<group>"; };
+		CE867C0E25FF1F890003FA70 /* BuyAndSaleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyAndSaleViewController.swift; sourceTree = "<group>"; };
+		CE867C0F25FF1F890003FA70 /* BuyAndSaleInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyAndSaleInteractor.swift; sourceTree = "<group>"; };
+		CE90EA2825FB73E800E98000 /* FundsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundsViewCell.swift; sourceTree = "<group>"; };
+		CE93A14F260C500D00EAB3B5 /* PortDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortDetailPresenter.swift; sourceTree = "<group>"; };
+		CE93A150260C500D00EAB3B5 /* PortDetailWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortDetailWorker.swift; sourceTree = "<group>"; };
+		CE93A151260C500D00EAB3B5 /* PortDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortDetailRouter.swift; sourceTree = "<group>"; };
+		CE93A152260C500D00EAB3B5 /* PortDetailModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortDetailModels.swift; sourceTree = "<group>"; };
+		CE93A153260C500D00EAB3B5 /* PortDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortDetailViewController.swift; sourceTree = "<group>"; };
+		CE93A154260C500D00EAB3B5 /* PortDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortDetailInteractor.swift; sourceTree = "<group>"; };
+		CEA79EF12611BD020092F6E4 /* DeleteMenuPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteMenuPresenter.swift; sourceTree = "<group>"; };
+		CEA79EF22611BD020092F6E4 /* DeleteMenuWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteMenuWorker.swift; sourceTree = "<group>"; };
+		CEA79EF32611BD020092F6E4 /* DeleteMenuRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteMenuRouter.swift; sourceTree = "<group>"; };
+		CEA79EF42611BD020092F6E4 /* DeleteMenuModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteMenuModels.swift; sourceTree = "<group>"; };
+		CEA79EF52611BD020092F6E4 /* DeleteMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteMenuViewController.swift; sourceTree = "<group>"; };
+		CEA79EF62611BD020092F6E4 /* DeleteMenuInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteMenuInteractor.swift; sourceTree = "<group>"; };
+		CEA79EFF2611CA4A0092F6E4 /* DeleteOrderNoViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DeleteOrderNoViewCell.swift; path = "QuizFundsPhillip/Scenes/Home/Simulation port/DeleteMenu/Secenes/DeleteOrderNoViewCell.swift"; sourceTree = SOURCE_ROOT; };
+		CEAB3F8D2600560E0093B43F /* HistoryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryPresenter.swift; sourceTree = "<group>"; };
+		CEAB3F8E2600560E0093B43F /* HistoryWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryWorker.swift; sourceTree = "<group>"; };
+		CEAB3F8F2600560E0093B43F /* HistoryRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryRouter.swift; sourceTree = "<group>"; };
+		CEAB3F902600560E0093B43F /* HistoryModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryModels.swift; sourceTree = "<group>"; };
+		CEAB3F912600560E0093B43F /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		CEAB3F922600560E0093B43F /* HistoryInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryInteractor.swift; sourceTree = "<group>"; };
+		CEAB3FA0260060280093B43F /* SaveDividendPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveDividendPresenter.swift; sourceTree = "<group>"; };
+		CEAB3FA1260060280093B43F /* SaveDividendWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveDividendWorker.swift; sourceTree = "<group>"; };
+		CEAB3FA2260060280093B43F /* SaveDividendRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveDividendRouter.swift; sourceTree = "<group>"; };
+		CEAB3FA3260060280093B43F /* SaveDividendModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveDividendModels.swift; sourceTree = "<group>"; };
+		CEAB3FA4260060280093B43F /* SaveDividendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveDividendViewController.swift; sourceTree = "<group>"; };
+		CEAB3FA5260060280093B43F /* SaveDividendInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveDividendInteractor.swift; sourceTree = "<group>"; };
+		CEAB3FAF260060520093B43F /* SaveBuySellPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveBuySellPresenter.swift; sourceTree = "<group>"; };
+		CEAB3FB0260060520093B43F /* SaveBuySellWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveBuySellWorker.swift; sourceTree = "<group>"; };
+		CEAB3FB1260060520093B43F /* SaveBuySellRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveBuySellRouter.swift; sourceTree = "<group>"; };
+		CEAB3FB2260060520093B43F /* SaveBuySellModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveBuySellModels.swift; sourceTree = "<group>"; };
+		CEAB3FB3260060520093B43F /* SaveBuySellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveBuySellViewController.swift; sourceTree = "<group>"; };
+		CEAB3FB4260060520093B43F /* SaveBuySellInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveBuySellInteractor.swift; sourceTree = "<group>"; };
+		CEAB3FC0260066600093B43F /* SaveBuySellViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveBuySellViewCell.swift; sourceTree = "<group>"; };
 		CEAF7A1B25C25EBD00F88FB1 /* QuizFundsPhillip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuizFundsPhillip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEAF7A1E25C25EBD00F88FB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEAF7A2225C25EBD00F88FB1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -169,7 +354,48 @@
 		CEAF7A9C25C2C87100F88FB1 /* FundsIPOModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundsIPOModels.swift; sourceTree = "<group>"; };
 		CEAF7A9D25C2C87100F88FB1 /* FundsIPOViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundsIPOViewController.swift; sourceTree = "<group>"; };
 		CEAF7A9E25C2C87100F88FB1 /* FundsIPOInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundsIPOInteractor.swift; sourceTree = "<group>"; };
-		E26424AAFD8B7B88A0D0EED7 /* Pods-QuizFundsPhillip.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuizFundsPhillip.debug.xcconfig"; path = "Target Support Files/Pods-QuizFundsPhillip/Pods-QuizFundsPhillip.debug.xcconfig"; sourceTree = "<group>"; };
+		CED436FC25DE6D7C000A26A9 /* PaymentPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentPresenter.swift; sourceTree = "<group>"; };
+		CED436FD25DE6D7C000A26A9 /* PaymentWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentWorker.swift; sourceTree = "<group>"; };
+		CED436FE25DE6D7C000A26A9 /* PaymentRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentRouter.swift; sourceTree = "<group>"; };
+		CED436FF25DE6D7C000A26A9 /* PaymentModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentModels.swift; sourceTree = "<group>"; };
+		CED4370025DE6D7C000A26A9 /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
+		CED4370125DE6D7C000A26A9 /* PaymentInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentInteractor.swift; sourceTree = "<group>"; };
+		CED4370A25DE7215000A26A9 /* PhillipViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhillipViewCell.swift; sourceTree = "<group>"; };
+		CED4370D25DE7254000A26A9 /* BankingViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankingViewCell.swift; sourceTree = "<group>"; };
+		CED4371025DE7266000A26A9 /* OtherViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherViewCell.swift; sourceTree = "<group>"; };
+		CED9FDF025D0F5AB001142CD /* TradePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradePresenter.swift; sourceTree = "<group>"; };
+		CED9FDF125D0F5AB001142CD /* TradeWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeWorker.swift; sourceTree = "<group>"; };
+		CED9FDF225D0F5AB001142CD /* TradeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeRouter.swift; sourceTree = "<group>"; };
+		CED9FDF325D0F5AB001142CD /* TradeModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeModels.swift; sourceTree = "<group>"; };
+		CED9FDF425D0F5AB001142CD /* TradeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeViewController.swift; sourceTree = "<group>"; };
+		CED9FDF525D0F5AB001142CD /* TradeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeInteractor.swift; sourceTree = "<group>"; };
+		CED9FE0425D0F6CB001142CD /* ChangePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePresenter.swift; sourceTree = "<group>"; };
+		CED9FE0525D0F6CB001142CD /* ChangeWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeWorker.swift; sourceTree = "<group>"; };
+		CED9FE0625D0F6CB001142CD /* ChangeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeRouter.swift; sourceTree = "<group>"; };
+		CED9FE0725D0F6CB001142CD /* ChangeModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeModels.swift; sourceTree = "<group>"; };
+		CED9FE0825D0F6CB001142CD /* ChangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeViewController.swift; sourceTree = "<group>"; };
+		CED9FE0925D0F6CB001142CD /* ChangeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeInteractor.swift; sourceTree = "<group>"; };
+		CED9FE1125D0F6E3001142CD /* SalePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalePresenter.swift; sourceTree = "<group>"; };
+		CED9FE1225D0F6E3001142CD /* SaleWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaleWorker.swift; sourceTree = "<group>"; };
+		CED9FE1325D0F6E3001142CD /* SaleRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaleRouter.swift; sourceTree = "<group>"; };
+		CED9FE1425D0F6E3001142CD /* SaleModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaleModels.swift; sourceTree = "<group>"; };
+		CED9FE1525D0F6E3001142CD /* SaleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaleViewController.swift; sourceTree = "<group>"; };
+		CED9FE1625D0F6E3001142CD /* SaleInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaleInteractor.swift; sourceTree = "<group>"; };
+		CED9FE1E25D0F6FE001142CD /* BuyPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyPresenter.swift; sourceTree = "<group>"; };
+		CED9FE1F25D0F6FE001142CD /* BuyWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyWorker.swift; sourceTree = "<group>"; };
+		CED9FE2025D0F6FE001142CD /* BuyRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyRouter.swift; sourceTree = "<group>"; };
+		CED9FE2125D0F6FE001142CD /* BuyModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyModels.swift; sourceTree = "<group>"; };
+		CED9FE2225D0F6FE001142CD /* BuyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyViewController.swift; sourceTree = "<group>"; };
+		CED9FE2325D0F6FE001142CD /* BuyInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyInteractor.swift; sourceTree = "<group>"; };
+		CED9FE2C25D137FE001142CD /* SearchFundsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFundsPresenter.swift; sourceTree = "<group>"; };
+		CED9FE2D25D137FE001142CD /* SearchFundsWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFundsWorker.swift; sourceTree = "<group>"; };
+		CED9FE2E25D137FE001142CD /* SearchFundsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFundsRouter.swift; sourceTree = "<group>"; };
+		CED9FE2F25D137FE001142CD /* SearchFundsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFundsModels.swift; sourceTree = "<group>"; };
+		CED9FE3025D137FE001142CD /* SearchFundsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFundsViewController.swift; sourceTree = "<group>"; };
+		CED9FE3125D137FE001142CD /* SearchFundsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFundsInteractor.swift; sourceTree = "<group>"; };
+		CED9FE3B25D14298001142CD /* SearchFundsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFundsModel.swift; sourceTree = "<group>"; };
+		CED9FE4025D1486B001142CD /* SearchFundsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFundsViewCell.swift; sourceTree = "<group>"; };
+		E4AECD68B67F822DA4CF042A /* Pods-QuizFundsPhillip.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuizFundsPhillip.release.xcconfig"; path = "Target Support Files/Pods-QuizFundsPhillip/Pods-QuizFundsPhillip.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,7 +403,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE40662C25C3F40700027C32 /* Pods_QuizFundsPhillip.framework in Frameworks */,
+				B44A5C1359FF625C4C62E61F /* Pods_QuizFundsPhillip.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,31 +413,34 @@
 		4A460506C4F713E6AE2C08B1 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				E26424AAFD8B7B88A0D0EED7 /* Pods-QuizFundsPhillip.debug.xcconfig */,
-				2CBDC22A8E8D4261156A30BC /* Pods-QuizFundsPhillip.release.xcconfig */,
+				4C051F0A8B6BD8A2A5D22227 /* Pods-QuizFundsPhillip.debug.xcconfig */,
+				E4AECD68B67F822DA4CF042A /* Pods-QuizFundsPhillip.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		4F099722C9FAEDB4A3CFBC38 /* Frameworks */ = {
+		CE2A408025D295D6003A51FF /* Database */ = {
 			isa = PBXGroup;
 			children = (
-				963C99EBD60E578BAC2BB70F /* Pods_QuizFundsPhillip.framework */,
+				CE2A408125D295E8003A51FF /* Realm */,
 			);
-			name = Frameworks;
+			path = Database;
+			sourceTree = "<group>";
+		};
+		CE2A408125D295E8003A51FF /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				CE2A408225D29609003A51FF /* ReealmFundsList.swift */,
+			);
+			path = Realm;
 			sourceTree = "<group>";
 		};
 		CE40658825C3B89F00027C32 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				CE867C0725FF1ECD0003FA70 /* Scene */,
 				CE40659B25C3D32C00027C32 /* Pangging */,
-				CE40659625C3CB4700027C32 /* ViewCell */,
-				CE40658925C3B8C000027C32 /* HomepagePresenter.swift */,
-				CE40658A25C3B8C000027C32 /* HomepageWorker.swift */,
-				CE40658B25C3B8C000027C32 /* HomepageRouter.swift */,
-				CE40658C25C3B8C000027C32 /* HomepageModels.swift */,
-				CE40658D25C3B8C000027C32 /* HomepageViewController.swift */,
-				CE40658E25C3B8C000027C32 /* HomepageInteractor.swift */,
+				CE56D44725F71AF60070B655 /* Simulation port */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -326,18 +555,324 @@
 		CE46468A25C7F780000DF60F /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				CE9D236425CA5D810039DEED /* Model */,
 				CE46468B25C7F7B2000DF60F /* Request.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
 		};
-		CE9D236425CA5D810039DEED /* Model */ = {
+		CE56D44725F71AF60070B655 /* Simulation port */ = {
 			isa = PBXGroup;
 			children = (
-				CE9D236625CA5DBB0039DEED /* FundAnalystReportsModels.swift */,
+				CEA79EEE2611BCBC0092F6E4 /* DeleteMenu */,
+				CE93A14B260C4FC400EAB3B5 /* PortDetail */,
+				CE7656A6260B04DF006AAB86 /* Model GetOrder */,
+				CEAB3F8A2600559D0093B43F /* HistoryFunds */,
+				CE867C0825FF1F440003FA70 /* Buy&Sale */,
+				CE56D45E25F756F50070B655 /* Add Simulation Port */,
+				CE867BF725FF0CB60003FA70 /* Fund Sale */,
+				CE56D45625F7280C0070B655 /* ViewCell */,
+				CE56D44825F71AFF0070B655 /* Secene */,
+			);
+			path = "Simulation port";
+			sourceTree = "<group>";
+		};
+		CE56D44825F71AFF0070B655 /* Secene */ = {
+			isa = PBXGroup;
+			children = (
+				CE56D44925F71B490070B655 /* SimulationportPresenter.swift */,
+				CE56D44A25F71B490070B655 /* SimulationportWorker.swift */,
+				CE56D44B25F71B490070B655 /* SimulationportRouter.swift */,
+				CE56D44C25F71B490070B655 /* SimulationportModels.swift */,
+				CE56D44D25F71B490070B655 /* SimulationportViewController.swift */,
+				CE56D44E25F71B490070B655 /* SimulationportInteractor.swift */,
+			);
+			path = Secene;
+			sourceTree = "<group>";
+		};
+		CE56D45625F7280C0070B655 /* ViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				CE56D45825F7283E0070B655 /* SimulationPortViewCell.swift */,
+				CE90EA2825FB73E800E98000 /* FundsViewCell.swift */,
+			);
+			path = ViewCell;
+			sourceTree = "<group>";
+		};
+		CE56D45E25F756F50070B655 /* Add Simulation Port */ = {
+			isa = PBXGroup;
+			children = (
+				CE56D45F25F757090070B655 /* Secene */,
+			);
+			path = "Add Simulation Port";
+			sourceTree = "<group>";
+		};
+		CE56D45F25F757090070B655 /* Secene */ = {
+			isa = PBXGroup;
+			children = (
+				CE56D46025F757310070B655 /* AddSimulationPortPresenter.swift */,
+				CE56D46125F757310070B655 /* AddSimulationPortWorker.swift */,
+				CE56D46225F757310070B655 /* AddSimulationPortRouter.swift */,
+				CE56D46325F757310070B655 /* AddSimulationPortModels.swift */,
+				CE56D46425F757310070B655 /* AddSimulationPortViewController.swift */,
+				CE56D46525F757310070B655 /* AddSimulationPortInteractor.swift */,
+			);
+			path = Secene;
+			sourceTree = "<group>";
+		};
+		CE7656A6260B04DF006AAB86 /* Model GetOrder */ = {
+			isa = PBXGroup;
+			children = (
+				CE7656A8260B052F006AAB86 /* GetOrderModel.swift */,
+			);
+			path = "Model GetOrder";
+			sourceTree = "<group>";
+		};
+		CE7B2C7825D3A8DB009F773B /* ViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				CE7B2C7925D3A8F9009F773B /* BuyViewCell.swift */,
+			);
+			path = ViewCell;
+			sourceTree = "<group>";
+		};
+		CE7DD26125DF799400B47B3B /* SecondSearch */ = {
+			isa = PBXGroup;
+			children = (
+				CE7DD27125DFA1C300B47B3B /* Risk */,
+				CE7DD26225DF79A100B47B3B /* Secene */,
+			);
+			path = SecondSearch;
+			sourceTree = "<group>";
+		};
+		CE7DD26225DF79A100B47B3B /* Secene */ = {
+			isa = PBXGroup;
+			children = (
+				CE7DD26325DF79C100B47B3B /* SecondSearchPresenter.swift */,
+				CE7DD26425DF79C100B47B3B /* SecondSearchWorker.swift */,
+				CE7DD26525DF79C100B47B3B /* SecondSearchRouter.swift */,
+				CE7DD26625DF79C100B47B3B /* SecondSearchModels.swift */,
+				CE7DD26725DF79C100B47B3B /* SecondSearchViewController.swift */,
+				CE7DD26825DF79C100B47B3B /* SecondSearchInteractor.swift */,
+			);
+			path = Secene;
+			sourceTree = "<group>";
+		};
+		CE7DD27125DFA1C300B47B3B /* Risk */ = {
+			isa = PBXGroup;
+			children = (
+				CE7DD27225DFA1D300B47B3B /* Secene */,
+			);
+			path = Risk;
+			sourceTree = "<group>";
+		};
+		CE7DD27225DFA1D300B47B3B /* Secene */ = {
+			isa = PBXGroup;
+			children = (
+				CE7DD27325DFA1E700B47B3B /* RiskPresenter.swift */,
+				CE7DD27425DFA1E700B47B3B /* RiskWorker.swift */,
+				CE7DD27525DFA1E700B47B3B /* RiskRouter.swift */,
+				CE7DD27625DFA1E700B47B3B /* RiskModels.swift */,
+				CE7DD27725DFA1E700B47B3B /* RiskViewController.swift */,
+				CE7DD27825DFA1E700B47B3B /* RiskInteractor.swift */,
+			);
+			path = Secene;
+			sourceTree = "<group>";
+		};
+		CE867BF725FF0CB60003FA70 /* Fund Sale */ = {
+			isa = PBXGroup;
+			children = (
+				CE867BF925FF0D3D0003FA70 /* Secene */,
+			);
+			path = "Fund Sale";
+			sourceTree = "<group>";
+		};
+		CE867BF925FF0D3D0003FA70 /* Secene */ = {
+			isa = PBXGroup;
+			children = (
+				CE867BFA25FF0D610003FA70 /* FundSalePresenter.swift */,
+				CE867BFB25FF0D610003FA70 /* FundSaleWorker.swift */,
+				CE867BFC25FF0D610003FA70 /* FundSaleRouter.swift */,
+				CE867BFD25FF0D610003FA70 /* FundSaleModels.swift */,
+				CE867BFE25FF0D610003FA70 /* FundSaleViewController.swift */,
+				CE867BFF25FF0D610003FA70 /* FundSaleInteractor.swift */,
+			);
+			path = Secene;
+			sourceTree = "<group>";
+		};
+		CE867C0725FF1ECD0003FA70 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				CE40659625C3CB4700027C32 /* ViewCell */,
+				CE40658925C3B8C000027C32 /* HomepagePresenter.swift */,
+				CE40658A25C3B8C000027C32 /* HomepageWorker.swift */,
+				CE40658B25C3B8C000027C32 /* HomepageRouter.swift */,
+				CE40658C25C3B8C000027C32 /* HomepageModels.swift */,
+				CE40658D25C3B8C000027C32 /* HomepageViewController.swift */,
+				CE40658E25C3B8C000027C32 /* HomepageInteractor.swift */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		CE867C0825FF1F440003FA70 /* Buy&Sale */ = {
+			isa = PBXGroup;
+			children = (
+				CE867C0925FF1F630003FA70 /* Secene */,
+			);
+			path = "Buy&Sale";
+			sourceTree = "<group>";
+		};
+		CE867C0925FF1F630003FA70 /* Secene */ = {
+			isa = PBXGroup;
+			children = (
+				CE867C0A25FF1F890003FA70 /* BuyAndSalePresenter.swift */,
+				CE867C0B25FF1F890003FA70 /* BuyAndSaleWorker.swift */,
+				CE867C0C25FF1F890003FA70 /* BuyAndSaleRouter.swift */,
+				CE867C0D25FF1F890003FA70 /* BuyAndSaleModels.swift */,
+				CE867C0E25FF1F890003FA70 /* BuyAndSaleViewController.swift */,
+				CE867C0F25FF1F890003FA70 /* BuyAndSaleInteractor.swift */,
+			);
+			path = Secene;
+			sourceTree = "<group>";
+		};
+		CE93A14B260C4FC400EAB3B5 /* PortDetail */ = {
+			isa = PBXGroup;
+			children = (
+				CE93A14E260C4FEF00EAB3B5 /* Scenes */,
+			);
+			path = PortDetail;
+			sourceTree = "<group>";
+		};
+		CE93A14E260C4FEF00EAB3B5 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				CE93A14F260C500D00EAB3B5 /* PortDetailPresenter.swift */,
+				CE93A150260C500D00EAB3B5 /* PortDetailWorker.swift */,
+				CE93A151260C500D00EAB3B5 /* PortDetailRouter.swift */,
+				CE93A152260C500D00EAB3B5 /* PortDetailModels.swift */,
+				CE93A153260C500D00EAB3B5 /* PortDetailViewController.swift */,
+				CE93A154260C500D00EAB3B5 /* PortDetailInteractor.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		CEA79EEE2611BCBC0092F6E4 /* DeleteMenu */ = {
+			isa = PBXGroup;
+			children = (
+				CEA79F152611DD7B0092F6E4 /* Model */,
+				CEA79EEF2611BCD30092F6E4 /* Secenes */,
+			);
+			path = DeleteMenu;
+			sourceTree = "<group>";
+		};
+		CEA79EEF2611BCD30092F6E4 /* Secenes */ = {
+			isa = PBXGroup;
+			children = (
+				CEA79EFE2611CA260092F6E4 /* ViewCell */,
+				CEA79EF12611BD020092F6E4 /* DeleteMenuPresenter.swift */,
+				CEA79EF22611BD020092F6E4 /* DeleteMenuWorker.swift */,
+				CEA79EF32611BD020092F6E4 /* DeleteMenuRouter.swift */,
+				CEA79EF42611BD020092F6E4 /* DeleteMenuModels.swift */,
+				CEA79EF52611BD020092F6E4 /* DeleteMenuViewController.swift */,
+				CEA79EF62611BD020092F6E4 /* DeleteMenuInteractor.swift */,
+			);
+			path = Secenes;
+			sourceTree = "<group>";
+		};
+		CEA79EFE2611CA260092F6E4 /* ViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				CEA79EFF2611CA4A0092F6E4 /* DeleteOrderNoViewCell.swift */,
+			);
+			path = ViewCell;
+			sourceTree = "<group>";
+		};
+		CEA79F152611DD7B0092F6E4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		CEAB3F8A2600559D0093B43F /* HistoryFunds */ = {
+			isa = PBXGroup;
+			children = (
+				CEAB3F9B26005FB50093B43F /* Paging */,
+				CEAB3F8B260055B60093B43F /* Secene */,
+			);
+			path = HistoryFunds;
+			sourceTree = "<group>";
+		};
+		CEAB3F8B260055B60093B43F /* Secene */ = {
+			isa = PBXGroup;
+			children = (
+				CEAB3F8D2600560E0093B43F /* HistoryPresenter.swift */,
+				CEAB3F8E2600560E0093B43F /* HistoryWorker.swift */,
+				CEAB3F8F2600560E0093B43F /* HistoryRouter.swift */,
+				CEAB3F902600560E0093B43F /* HistoryModels.swift */,
+				CEAB3F912600560E0093B43F /* HistoryViewController.swift */,
+				CEAB3F922600560E0093B43F /* HistoryInteractor.swift */,
+			);
+			path = Secene;
+			sourceTree = "<group>";
+		};
+		CEAB3F9B26005FB50093B43F /* Paging */ = {
+			isa = PBXGroup;
+			children = (
+				CEAB3F9E26005FD60093B43F /* SaveDividend */,
+				CEAB3F9C26005FBF0093B43F /* SaveBuySell */,
+			);
+			path = Paging;
+			sourceTree = "<group>";
+		};
+		CEAB3F9C26005FBF0093B43F /* SaveBuySell */ = {
+			isa = PBXGroup;
+			children = (
+				CEAB3FAE260060390093B43F /* Scene */,
+			);
+			path = SaveBuySell;
+			sourceTree = "<group>";
+		};
+		CEAB3F9E26005FD60093B43F /* SaveDividend */ = {
+			isa = PBXGroup;
+			children = (
+				CEAB3F9F260060170093B43F /* Secene */,
+			);
+			path = SaveDividend;
+			sourceTree = "<group>";
+		};
+		CEAB3F9F260060170093B43F /* Secene */ = {
+			isa = PBXGroup;
+			children = (
+				CEAB3FA0260060280093B43F /* SaveDividendPresenter.swift */,
+				CEAB3FA1260060280093B43F /* SaveDividendWorker.swift */,
+				CEAB3FA2260060280093B43F /* SaveDividendRouter.swift */,
+				CEAB3FA3260060280093B43F /* SaveDividendModels.swift */,
+				CEAB3FA4260060280093B43F /* SaveDividendViewController.swift */,
+				CEAB3FA5260060280093B43F /* SaveDividendInteractor.swift */,
+			);
+			path = Secene;
+			sourceTree = "<group>";
+		};
+		CEAB3FAE260060390093B43F /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				CEAB3FBE260066360093B43F /* ViewCell */,
+				CEAB3FAF260060520093B43F /* SaveBuySellPresenter.swift */,
+				CEAB3FB0260060520093B43F /* SaveBuySellWorker.swift */,
+				CEAB3FB1260060520093B43F /* SaveBuySellRouter.swift */,
+				CEAB3FB2260060520093B43F /* SaveBuySellModels.swift */,
+				CEAB3FB3260060520093B43F /* SaveBuySellViewController.swift */,
+				CEAB3FB4260060520093B43F /* SaveBuySellInteractor.swift */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		CEAB3FBE260066360093B43F /* ViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				CEAB3FC0260066600093B43F /* SaveBuySellViewCell.swift */,
+			);
+			path = ViewCell;
 			sourceTree = "<group>";
 		};
 		CEAF7A1225C25EBD00F88FB1 = {
@@ -346,7 +881,7 @@
 				CEAF7A1D25C25EBD00F88FB1 /* QuizFundsPhillip */,
 				CEAF7A1C25C25EBD00F88FB1 /* Products */,
 				4A460506C4F713E6AE2C08B1 /* Pods */,
-				4F099722C9FAEDB4A3CFBC38 /* Frameworks */,
+				D86CEB1A021CDD1AA79A115E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -361,6 +896,8 @@
 		CEAF7A1D25C25EBD00F88FB1 /* QuizFundsPhillip */ = {
 			isa = PBXGroup;
 			children = (
+				CE2A408025D295D6003A51FF /* Database */,
+				CE46468A25C7F780000DF60F /* Services */,
 				CEAF7A3B25C2603A00F88FB1 /* Scenes */,
 				CEAF7A1E25C25EBD00F88FB1 /* AppDelegate.swift */,
 				CEAF7A2225C25EBD00F88FB1 /* ViewController.swift */,
@@ -375,7 +912,7 @@
 		CEAF7A3B25C2603A00F88FB1 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				CE46468A25C7F780000DF60F /* Services */,
+				CED9FDFD25D0F5B5001142CD /* Trade */,
 				CE40658825C3B89F00027C32 /* Home */,
 				CEAF7A9825C2C85600F88FB1 /* FundsIPO */,
 				CEAF7A3E25C2606C00F88FB1 /* IPORollover */,
@@ -496,6 +1033,184 @@
 			path = FundsIPO;
 			sourceTree = "<group>";
 		};
+		CED436F425DE6BDB000A26A9 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				CE7B2C7825D3A8DB009F773B /* ViewCell */,
+				CED9FE1E25D0F6FE001142CD /* BuyPresenter.swift */,
+				CED9FE1F25D0F6FE001142CD /* BuyWorker.swift */,
+				CED9FE2025D0F6FE001142CD /* BuyRouter.swift */,
+				CED9FE2125D0F6FE001142CD /* BuyModels.swift */,
+				CED9FE2225D0F6FE001142CD /* BuyViewController.swift */,
+				CED9FE2325D0F6FE001142CD /* BuyInteractor.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		CED436F525DE6BF5000A26A9 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				CED9FDF025D0F5AB001142CD /* TradePresenter.swift */,
+				CED9FDF125D0F5AB001142CD /* TradeWorker.swift */,
+				CED9FDF225D0F5AB001142CD /* TradeRouter.swift */,
+				CED9FDF325D0F5AB001142CD /* TradeModels.swift */,
+				CED9FDF425D0F5AB001142CD /* TradeViewController.swift */,
+				CED9FDF525D0F5AB001142CD /* TradeInteractor.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		CED436F625DE6C06000A26A9 /* Secens */ = {
+			isa = PBXGroup;
+			children = (
+				CED9FE0425D0F6CB001142CD /* ChangePresenter.swift */,
+				CED9FE0525D0F6CB001142CD /* ChangeWorker.swift */,
+				CED9FE0625D0F6CB001142CD /* ChangeRouter.swift */,
+				CED9FE0725D0F6CB001142CD /* ChangeModels.swift */,
+				CED9FE0825D0F6CB001142CD /* ChangeViewController.swift */,
+				CED9FE0925D0F6CB001142CD /* ChangeInteractor.swift */,
+			);
+			path = Secens;
+			sourceTree = "<group>";
+		};
+		CED436F725DE6C1A000A26A9 /* Secens */ = {
+			isa = PBXGroup;
+			children = (
+				CED9FE1125D0F6E3001142CD /* SalePresenter.swift */,
+				CED9FE1225D0F6E3001142CD /* SaleWorker.swift */,
+				CED9FE1325D0F6E3001142CD /* SaleRouter.swift */,
+				CED9FE1425D0F6E3001142CD /* SaleModels.swift */,
+				CED9FE1525D0F6E3001142CD /* SaleViewController.swift */,
+				CED9FE1625D0F6E3001142CD /* SaleInteractor.swift */,
+			);
+			path = Secens;
+			sourceTree = "<group>";
+		};
+		CED436F825DE6C37000A26A9 /* Secene */ = {
+			isa = PBXGroup;
+			children = (
+				CED9FE2C25D137FE001142CD /* SearchFundsPresenter.swift */,
+				CED9FE2D25D137FE001142CD /* SearchFundsWorker.swift */,
+				CED9FE2E25D137FE001142CD /* SearchFundsRouter.swift */,
+				CED9FE2F25D137FE001142CD /* SearchFundsModels.swift */,
+				CED9FE3025D137FE001142CD /* SearchFundsViewController.swift */,
+				CED9FE3125D137FE001142CD /* SearchFundsInteractor.swift */,
+			);
+			path = Secene;
+			sourceTree = "<group>";
+		};
+		CED436F925DE6CBD000A26A9 /* Payment */ = {
+			isa = PBXGroup;
+			children = (
+				CED436FB25DE6D64000A26A9 /* Secens */,
+			);
+			path = Payment;
+			sourceTree = "<group>";
+		};
+		CED436FB25DE6D64000A26A9 /* Secens */ = {
+			isa = PBXGroup;
+			children = (
+				CED4370925DE71E7000A26A9 /* ViewCell */,
+				CED436FC25DE6D7C000A26A9 /* PaymentPresenter.swift */,
+				CED436FD25DE6D7C000A26A9 /* PaymentWorker.swift */,
+				CED436FE25DE6D7C000A26A9 /* PaymentRouter.swift */,
+				CED436FF25DE6D7C000A26A9 /* PaymentModels.swift */,
+				CED4370025DE6D7C000A26A9 /* PaymentViewController.swift */,
+				CED4370125DE6D7C000A26A9 /* PaymentInteractor.swift */,
+			);
+			path = Secens;
+			sourceTree = "<group>";
+		};
+		CED4370925DE71E7000A26A9 /* ViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				CED4370A25DE7215000A26A9 /* PhillipViewCell.swift */,
+				CED4370D25DE7254000A26A9 /* BankingViewCell.swift */,
+				CED4371025DE7266000A26A9 /* OtherViewCell.swift */,
+			);
+			path = ViewCell;
+			sourceTree = "<group>";
+		};
+		CED9FDFD25D0F5B5001142CD /* Trade */ = {
+			isa = PBXGroup;
+			children = (
+				CED436F525DE6BF5000A26A9 /* Scenes */,
+				CED9FDFF25D0F66E001142CD /* Pageging */,
+			);
+			path = Trade;
+			sourceTree = "<group>";
+		};
+		CED9FDFF25D0F66E001142CD /* Pageging */ = {
+			isa = PBXGroup;
+			children = (
+				CED9FE0225D0F694001142CD /* Change */,
+				CED9FE0125D0F68C001142CD /* Sale */,
+				CED9FE0025D0F685001142CD /* Buy */,
+			);
+			path = Pageging;
+			sourceTree = "<group>";
+		};
+		CED9FE0025D0F685001142CD /* Buy */ = {
+			isa = PBXGroup;
+			children = (
+				CED436F925DE6CBD000A26A9 /* Payment */,
+				CED436F425DE6BDB000A26A9 /* Scenes */,
+				CED9FE2B25D137DA001142CD /* SeachFunds */,
+			);
+			path = Buy;
+			sourceTree = "<group>";
+		};
+		CED9FE0125D0F68C001142CD /* Sale */ = {
+			isa = PBXGroup;
+			children = (
+				CED436F725DE6C1A000A26A9 /* Secens */,
+			);
+			path = Sale;
+			sourceTree = "<group>";
+		};
+		CED9FE0225D0F694001142CD /* Change */ = {
+			isa = PBXGroup;
+			children = (
+				CED436F625DE6C06000A26A9 /* Secens */,
+			);
+			path = Change;
+			sourceTree = "<group>";
+		};
+		CED9FE2B25D137DA001142CD /* SeachFunds */ = {
+			isa = PBXGroup;
+			children = (
+				CE7DD26125DF799400B47B3B /* SecondSearch */,
+				CED436F825DE6C37000A26A9 /* Secene */,
+				CED9FE3A25D1422A001142CD /* Models */,
+				CED9FE3F25D14850001142CD /* ViewCell */,
+			);
+			path = SeachFunds;
+			sourceTree = "<group>";
+		};
+		CED9FE3A25D1422A001142CD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CED9FE3B25D14298001142CD /* SearchFundsModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CED9FE3F25D14850001142CD /* ViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				CED9FE4025D1486B001142CD /* SearchFundsViewCell.swift */,
+			);
+			path = ViewCell;
+			sourceTree = "<group>";
+		};
+		D86CEB1A021CDD1AA79A115E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1A4F99A9707ABFA074CDDB09 /* Pods_QuizFundsPhillip.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -503,11 +1218,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CEAF7A2F25C25EBE00F88FB1 /* Build configuration list for PBXNativeTarget "QuizFundsPhillip" */;
 			buildPhases = (
-				C7E72F200D11D1A1CBD7A744 /* [CP] Check Pods Manifest.lock */,
+				C033DED8CB19853915D7C58D /* [CP] Check Pods Manifest.lock */,
 				CEAF7A1725C25EBD00F88FB1 /* Sources */,
 				CEAF7A1825C25EBD00F88FB1 /* Frameworks */,
 				CEAF7A1925C25EBD00F88FB1 /* Resources */,
-				F2774DCE1D5B064A7652A8A6 /* [CP] Embed Pods Frameworks */,
+				D64627EA515060981B1AD4B9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -564,7 +1279,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		C7E72F200D11D1A1CBD7A744 /* [CP] Check Pods Manifest.lock */ = {
+		C033DED8CB19853915D7C58D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -586,7 +1301,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F2774DCE1D5B064A7652A8A6 /* [CP] Embed Pods Frameworks */ = {
+		D64627EA515060981B1AD4B9 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -612,77 +1327,190 @@
 			files = (
 				CEAF7A8325C2BF6000F88FB1 /* AnalystTalksViewCell.swift in Sources */,
 				CEAF7AA225C2C87100F88FB1 /* FundsIPOModels.swift in Sources */,
+				CED4370225DE6D7C000A26A9 /* PaymentPresenter.swift in Sources */,
+				CEAB3F972600560E0093B43F /* HistoryViewController.swift in Sources */,
 				CEAF7A4A25C2668000F88FB1 /* MoreViewController.swift in Sources */,
+				CED9FE4125D1486B001142CD /* SearchFundsViewCell.swift in Sources */,
+				CED9FE2925D0F6FE001142CD /* BuyInteractor.swift in Sources */,
 				CE4065A325C3E29000027C32 /* RMFPresenter.swift in Sources */,
 				CE4065B425C3E2AD00027C32 /* SSFModels.swift in Sources */,
+				CE7DD26C25DF79C100B47B3B /* SecondSearchModels.swift in Sources */,
+				CED9FE0B25D0F6CB001142CD /* ChangeWorker.swift in Sources */,
+				CEAB3FB6260060520093B43F /* SaveBuySellWorker.swift in Sources */,
+				CED9FDF625D0F5AB001142CD /* TradePresenter.swift in Sources */,
+				CEAB3FAA260060280093B43F /* SaveDividendViewController.swift in Sources */,
 				CE4065C225C3E30C00027C32 /* GMFPresenter.swift in Sources */,
+				CE7DD26B25DF79C100B47B3B /* SecondSearchRouter.swift in Sources */,
 				CEAF7A8725C2BF9400F88FB1 /* MonthlyViewCell.swift in Sources */,
 				CE40658F25C3B8C000027C32 /* HomepagePresenter.swift in Sources */,
+				CE867C1225FF1F890003FA70 /* BuyAndSaleRouter.swift in Sources */,
+				CE7DD26925DF79C100B47B3B /* SecondSearchPresenter.swift in Sources */,
+				CED4371125DE7266000A26A9 /* OtherViewCell.swift in Sources */,
+				CEA79EF72611BD020092F6E4 /* DeleteMenuPresenter.swift in Sources */,
+				CE7DD26A25DF79C100B47B3B /* SecondSearchWorker.swift in Sources */,
+				CED9FE1825D0F6E3001142CD /* SaleWorker.swift in Sources */,
 				CEAF7A5F25C2AE5800F88FB1 /* FundAnslystReportViewController.swift in Sources */,
+				CE867C0525FF0D610003FA70 /* FundSaleInteractor.swift in Sources */,
 				CE4065D025C3E32A00027C32 /* FIFPresenter.swift in Sources */,
 				CEAF7A4F25C266CE00F88FB1 /* MoreViewCell.swift in Sources */,
+				CED4370525DE6D7C000A26A9 /* PaymentModels.swift in Sources */,
+				CE93A15A260C500D00EAB3B5 /* PortDetailInteractor.swift in Sources */,
+				CED9FE3725D137FE001142CD /* SearchFundsInteractor.swift in Sources */,
+				CE7656A9260B052F006AAB86 /* GetOrderModel.swift in Sources */,
 				CE40659425C3B8C000027C32 /* HomepageInteractor.swift in Sources */,
 				CE4065A725C3E29000027C32 /* RMFViewController.swift in Sources */,
 				CEAF7A4725C2668000F88FB1 /* MoreWorker.swift in Sources */,
+				CE7DD26D25DF79C100B47B3B /* SecondSearchViewController.swift in Sources */,
 				CEAF7A8A25C2BFA600F88FB1 /* WeeklyViewCell.swift in Sources */,
 				CE4065C325C3E30C00027C32 /* GMFWorker.swift in Sources */,
 				CE4065B225C3E2AD00027C32 /* SSFWorker.swift in Sources */,
+				CEAB3F952600560E0093B43F /* HistoryRouter.swift in Sources */,
 				CE4065A425C3E29000027C32 /* RMFWorker.swift in Sources */,
+				CEAB3F942600560E0093B43F /* HistoryWorker.swift in Sources */,
 				CEAF7A9125C2C22000F88FB1 /* FundIPORolloverDataModels.swift in Sources */,
+				CE56D46925F757310070B655 /* AddSimulationPortModels.swift in Sources */,
 				CEAF7A7C25C2BB2200F88FB1 /* AnalystTalksModel.swift in Sources */,
 				CEAF7A5D25C2AE5800F88FB1 /* FundAnslystReportRouter.swift in Sources */,
+				CED9FE0D25D0F6CB001142CD /* ChangeModels.swift in Sources */,
+				CE7DD27C25DFA1E700B47B3B /* RiskModels.swift in Sources */,
+				CED9FDF725D0F5AB001142CD /* TradeWorker.swift in Sources */,
 				CEAF7A6C25C2AE7800F88FB1 /* IPORolloverViewController.swift in Sources */,
+				CED4370B25DE7215000A26A9 /* PhillipViewCell.swift in Sources */,
 				CEAF7A7525C2BB0100F88FB1 /* AnalystReportMonthlyModel.swift in Sources */,
 				CE40659125C3B8C000027C32 /* HomepageRouter.swift in Sources */,
+				CE93A156260C500D00EAB3B5 /* PortDetailWorker.swift in Sources */,
+				CE867C0125FF0D610003FA70 /* FundSaleWorker.swift in Sources */,
 				CEAF7A4825C2668000F88FB1 /* MoreRouter.swift in Sources */,
 				CE4065C525C3E30C00027C32 /* GMFModels.swift in Sources */,
+				CE7B2C7A25D3A8F9009F773B /* BuyViewCell.swift in Sources */,
 				CE4065D525C3E32A00027C32 /* FIFInteractor.swift in Sources */,
+				CEAB3FA8260060280093B43F /* SaveDividendRouter.swift in Sources */,
+				CE7DD27925DFA1E700B47B3B /* RiskPresenter.swift in Sources */,
 				CE4065A625C3E29000027C32 /* RMFModels.swift in Sources */,
+				CE7DD27D25DFA1E700B47B3B /* RiskViewController.swift in Sources */,
 				CEAF7A6825C2AE7800F88FB1 /* IPORolloverPresenter.swift in Sources */,
+				CEAB3F962600560E0093B43F /* HistoryModels.swift in Sources */,
+				CED9FE1925D0F6E3001142CD /* SaleRouter.swift in Sources */,
 				CEAF7A2325C25EBD00F88FB1 /* ViewController.swift in Sources */,
+				CED9FE3425D137FE001142CD /* SearchFundsRouter.swift in Sources */,
+				CE867C0325FF0D610003FA70 /* FundSaleModels.swift in Sources */,
 				CE4065C625C3E30C00027C32 /* GMFViewController.swift in Sources */,
-				CE9D236725CA5DBB0039DEED /* FundAnalystReportsModels.swift in Sources */,
+				CED9FE2625D0F6FE001142CD /* BuyRouter.swift in Sources */,
 				CEAF7A7125C2B25B00F88FB1 /* AnalystReportModel.swift in Sources */,
 				CE4065E425C3E4F900027C32 /* GMFViewCell.swift in Sources */,
+				CE867C1525FF1F890003FA70 /* BuyAndSaleInteractor.swift in Sources */,
+				CE56D46A25F757310070B655 /* AddSimulationPortViewController.swift in Sources */,
 				CEAF7A1F25C25EBD00F88FB1 /* AppDelegate.swift in Sources */,
+				CED9FE0C25D0F6CB001142CD /* ChangeRouter.swift in Sources */,
 				CE4065C725C3E30C00027C32 /* GMFInteractor.swift in Sources */,
 				CE40659825C3CB6C00027C32 /* PortViewCell.swift in Sources */,
+				CE56D45025F71B490070B655 /* SimulationportWorker.swift in Sources */,
+				CED4370E25DE7254000A26A9 /* BankingViewCell.swift in Sources */,
+				CEA79F002611CA4A0092F6E4 /* DeleteOrderNoViewCell.swift in Sources */,
+				CE867C1025FF1F890003FA70 /* BuyAndSalePresenter.swift in Sources */,
 				CE4065DA25C3E4CA00027C32 /* RMFViewCell.swift in Sources */,
 				CEAF7AA325C2C87100F88FB1 /* FundsIPOViewController.swift in Sources */,
+				CEA79EF92611BD020092F6E4 /* DeleteMenuRouter.swift in Sources */,
 				CEAF7A7925C2BB1200F88FB1 /* AnalystReportWeeklyModel.swift in Sources */,
 				CE4065A825C3E29000027C32 /* RMFInteractor.swift in Sources */,
 				CE4065D325C3E32A00027C32 /* FIFModels.swift in Sources */,
+				CE56D46825F757310070B655 /* AddSimulationPortRouter.swift in Sources */,
+				CE56D45425F71B490070B655 /* SimulationportInteractor.swift in Sources */,
 				CE4065A525C3E29000027C32 /* RMFRouter.swift in Sources */,
+				CED9FE3225D137FE001142CD /* SearchFundsPresenter.swift in Sources */,
+				CED9FE2825D0F6FE001142CD /* BuyViewController.swift in Sources */,
+				CEA79EFA2611BD020092F6E4 /* DeleteMenuModels.swift in Sources */,
+				CE7DD27E25DFA1E700B47B3B /* RiskInteractor.swift in Sources */,
 				CEAF7A9F25C2C87100F88FB1 /* FundsIPOPresenter.swift in Sources */,
+				CED9FDF925D0F5AB001142CD /* TradeModels.swift in Sources */,
+				CE7DD26E25DF79C100B47B3B /* SecondSearchInteractor.swift in Sources */,
 				CE40659025C3B8C000027C32 /* HomepageWorker.swift in Sources */,
+				CEA79EF82611BD020092F6E4 /* DeleteMenuWorker.swift in Sources */,
+				CED4370625DE6D7C000A26A9 /* PaymentViewController.swift in Sources */,
+				CE867C1425FF1F890003FA70 /* BuyAndSaleViewController.swift in Sources */,
+				CE56D46725F757310070B655 /* AddSimulationPortWorker.swift in Sources */,
+				CE56D45125F71B490070B655 /* SimulationportRouter.swift in Sources */,
+				CED9FE1725D0F6E3001142CD /* SalePresenter.swift in Sources */,
+				CED4370325DE6D7C000A26A9 /* PaymentWorker.swift in Sources */,
+				CED9FE3C25D14298001142CD /* SearchFundsModel.swift in Sources */,
+				CED9FE2425D0F6FE001142CD /* BuyPresenter.swift in Sources */,
+				CE7DD27B25DFA1E700B47B3B /* RiskRouter.swift in Sources */,
 				CE46468C25C7F7B2000DF60F /* Request.swift in Sources */,
+				CEAB3FA9260060280093B43F /* SaveDividendModels.swift in Sources */,
+				CED9FE1C25D0F6E3001142CD /* SaleInteractor.swift in Sources */,
 				CE4065B325C3E2AD00027C32 /* SSFRouter.swift in Sources */,
+				CE867C1125FF1F890003FA70 /* BuyAndSaleWorker.swift in Sources */,
+				CE90EA2925FB73E800E98000 /* FundsViewCell.swift in Sources */,
+				CE56D45325F71B490070B655 /* SimulationportViewController.swift in Sources */,
 				CEAF7A6D25C2AE7800F88FB1 /* IPORolloverInteractor.swift in Sources */,
 				CEAF7A6925C2AE7800F88FB1 /* IPORolloverWorker.swift in Sources */,
+				CEAB3FA7260060280093B43F /* SaveDividendWorker.swift in Sources */,
 				CE4065B625C3E2AD00027C32 /* SSFInteractor.swift in Sources */,
+				CE93A158260C500D00EAB3B5 /* PortDetailModels.swift in Sources */,
+				CED9FE2725D0F6FE001142CD /* BuyModels.swift in Sources */,
+				CEA79EFB2611BD020092F6E4 /* DeleteMenuViewController.swift in Sources */,
 				CEAF7A9625C2C7EA00F88FB1 /* FundsIPOViewCell.swift in Sources */,
 				CE4065B525C3E2AD00027C32 /* SSFViewController.swift in Sources */,
+				CEAB3FB9260060520093B43F /* SaveBuySellViewController.swift in Sources */,
 				CE4065D425C3E32A00027C32 /* FIFViewController.swift in Sources */,
 				CEAF7AA025C2C87100F88FB1 /* FundsIPOWorker.swift in Sources */,
+				CED9FE0F25D0F6CB001142CD /* ChangeInteractor.swift in Sources */,
+				CED9FE0A25D0F6CB001142CD /* ChangePresenter.swift in Sources */,
+				CE93A155260C500D00EAB3B5 /* PortDetailPresenter.swift in Sources */,
 				CEAF7AA425C2C87100F88FB1 /* FundsIPOInteractor.swift in Sources */,
 				CEAF7A4B25C2668000F88FB1 /* MoreInteractor.swift in Sources */,
+				CE56D46625F757310070B655 /* AddSimulationPortPresenter.swift in Sources */,
+				CEAB3FB8260060520093B43F /* SaveBuySellModels.swift in Sources */,
 				CEAF7A6A25C2AE7800F88FB1 /* IPORolloverRouter.swift in Sources */,
+				CEAB3F932600560E0093B43F /* HistoryPresenter.swift in Sources */,
+				CED9FE3525D137FE001142CD /* SearchFundsModels.swift in Sources */,
 				CEAF7A4925C2668000F88FB1 /* MoreModels.swift in Sources */,
+				CEAB3FA6260060280093B43F /* SaveDividendPresenter.swift in Sources */,
+				CEAB3FB5260060520093B43F /* SaveBuySellPresenter.swift in Sources */,
+				CED9FE3625D137FE001142CD /* SearchFundsViewController.swift in Sources */,
+				CEAB3FAB260060280093B43F /* SaveDividendInteractor.swift in Sources */,
+				CE56D45925F7283E0070B655 /* SimulationPortViewCell.swift in Sources */,
+				CE867C0425FF0D610003FA70 /* FundSaleViewController.swift in Sources */,
 				CEAF7A6025C2AE5800F88FB1 /* FundAnslystReportInteractor.swift in Sources */,
 				CEAF7A5B25C2AE5800F88FB1 /* FundAnslystReportPresenter.swift in Sources */,
+				CEAB3F982600560E0093B43F /* HistoryInteractor.swift in Sources */,
 				CE4065DF25C3E4E200027C32 /* SSFViewCell.swift in Sources */,
+				CE56D46B25F757310070B655 /* AddSimulationPortInteractor.swift in Sources */,
+				CE56D44F25F71B490070B655 /* SimulationportPresenter.swift in Sources */,
 				CE40659225C3B8C000027C32 /* HomepageModels.swift in Sources */,
+				CE93A157260C500D00EAB3B5 /* PortDetailRouter.swift in Sources */,
+				CE7DD27A25DFA1E700B47B3B /* RiskWorker.swift in Sources */,
+				CE867C1325FF1F890003FA70 /* BuyAndSaleModels.swift in Sources */,
+				CEAB3FC1260066600093B43F /* SaveBuySellViewCell.swift in Sources */,
 				CEAF7A5C25C2AE5800F88FB1 /* FundAnslystReportWorker.swift in Sources */,
+				CED9FE2525D0F6FE001142CD /* BuyWorker.swift in Sources */,
+				CED4370725DE6D7C000A26A9 /* PaymentInteractor.swift in Sources */,
+				CED9FE1A25D0F6E3001142CD /* SaleModels.swift in Sources */,
+				CED9FE0E25D0F6CB001142CD /* ChangeViewController.swift in Sources */,
+				CE867C0225FF0D610003FA70 /* FundSaleRouter.swift in Sources */,
 				CEAF7A4625C2668000F88FB1 /* MorePresenter.swift in Sources */,
+				CED9FE1B25D0F6E3001142CD /* SaleViewController.swift in Sources */,
+				CEAB3FB7260060520093B43F /* SaveBuySellRouter.swift in Sources */,
+				CE2A408325D29609003A51FF /* ReealmFundsList.swift in Sources */,
 				CEAF7A5325C27CA700F88FB1 /* SettingViewCell.swift in Sources */,
+				CED4370425DE6D7C000A26A9 /* PaymentRouter.swift in Sources */,
 				CE4065D125C3E32A00027C32 /* FIFWorker.swift in Sources */,
+				CE56D45225F71B490070B655 /* SimulationportModels.swift in Sources */,
 				CE40659325C3B8C000027C32 /* HomepageViewController.swift in Sources */,
 				CEAF7A5E25C2AE5800F88FB1 /* FundAnslystReportModels.swift in Sources */,
+				CEAB3FBA260060520093B43F /* SaveBuySellInteractor.swift in Sources */,
 				CE4065D225C3E32A00027C32 /* FIFRouter.swift in Sources */,
+				CEA79EFC2611BD020092F6E4 /* DeleteMenuInteractor.swift in Sources */,
+				CED9FDFA25D0F5AB001142CD /* TradeViewController.swift in Sources */,
 				CE4065C425C3E30C00027C32 /* GMFRouter.swift in Sources */,
+				CE867C0025FF0D610003FA70 /* FundSalePresenter.swift in Sources */,
 				CE4065E925C3E51700027C32 /* FIFViewCell.swift in Sources */,
+				CED9FDFB25D0F5AB001142CD /* TradeInteractor.swift in Sources */,
+				CED9FDF825D0F5AB001142CD /* TradeRouter.swift in Sources */,
 				CEAF7AA125C2C87100F88FB1 /* FundsIPORouter.swift in Sources */,
+				CE93A159260C500D00EAB3B5 /* PortDetailViewController.swift in Sources */,
 				CE4065B125C3E2AD00027C32 /* SSFPresenter.swift in Sources */,
+				CED9FE3325D137FE001142CD /* SearchFundsWorker.swift in Sources */,
 				CEAF7A6B25C2AE7800F88FB1 /* IPORolloverModels.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -829,7 +1657,7 @@
 		};
 		CEAF7A3025C25EBE00F88FB1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E26424AAFD8B7B88A0D0EED7 /* Pods-QuizFundsPhillip.debug.xcconfig */;
+			baseConfigurationReference = 4C051F0A8B6BD8A2A5D22227 /* Pods-QuizFundsPhillip.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -852,7 +1680,7 @@
 		};
 		CEAF7A3125C25EBE00F88FB1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2CBDC22A8E8D4261156A30BC /* Pods-QuizFundsPhillip.release.xcconfig */;
+			baseConfigurationReference = E4AECD68B67F822DA4CF042A /* Pods-QuizFundsPhillip.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -866,6 +1694,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../Frameworks",
 				);
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.projects.me.TrainCleanSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

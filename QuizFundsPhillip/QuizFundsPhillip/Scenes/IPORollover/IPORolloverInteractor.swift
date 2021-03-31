@@ -35,9 +35,9 @@ class IPORolloverInteractor: IPORolloverBusinessLogic, IPORolloverDataStore
     func setupFetchFundsIPO(request: IPORollovers.FetchFromRemoteDataStore.Request) {
         let nameFunds = request.nameFunds
         worker = IPORolloverWorker()
-        worker?.fetchFundsIPODatas {_ , _ in
+//        worker?.fetchFundsIPODatas {_ , _ in
       
-        }
+//        }
         worker?.fetchFundsIPOData(nameFund: nameFunds) { (fundsIPO , error ) in
             if error != nil {
                 let response = IPORollovers.FetchFromRemoteDataStore.Response(fundsIPO: nil, error: error)

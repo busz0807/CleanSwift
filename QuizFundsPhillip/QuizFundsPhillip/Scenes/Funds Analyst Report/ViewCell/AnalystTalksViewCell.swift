@@ -17,13 +17,16 @@ class AnalystTalksViewCell: UICollectionViewCell {
     //            Label.text = data
                 self.txtDesciption.text = data.Title
                 let url = URL(string: data.Screen ?? "")
+                if data.Screen == "http://img.youtube.com/vi/sfefasecse/0.jpg" {
+                    self.imgView.image = #imageLiteral(resourceName: "Youtube_default-400px")
+                }else {
                 self.imgView.sd_setImage(with: url,  placeholderImage: UIImage(named: "Image"))
                 
-    
+            }
             }
         }
     override func awakeFromNib() {
         super.awakeFromNib()
-   
+    
     }
 }

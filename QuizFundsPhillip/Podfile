@@ -12,6 +12,10 @@ target 'QuizFundsPhillip' do
   pod 'SDWebImage'
   pod 'Parchment'
   pod 'FSPagerView'
-pod 'CircleImageView'
-
+  pod 'CircleImageView'
+  pod 'IQKeyboardManagerSwift'
+  pod 'RealmSwift'
+  pod 'FSCalendar'
+  pod "CenteredCollectionView"
+  pod 'UIColor_Hex_Swift'
 end

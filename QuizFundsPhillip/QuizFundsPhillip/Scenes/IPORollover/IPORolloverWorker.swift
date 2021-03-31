@@ -39,31 +39,31 @@ class IPORolloverWorker {
             }
         }
     } // FundIPOsRolloverDatasModels
-    typealias FecthFundsIPOsDatasCompletionHandler = (_ fundsIPOData: [FundIPOsRolloverDatasModels]?,_ error: Error?) -> ()
-    func fetchFundsIPODatas(  completionHandler: @escaping FecthFundsIPOsDatasCompletionHandler) {
-        let router = Funds.iPO
-//        print(router)
-        Alamofire.request(router).responseJSON { (response) in
-//            print(response.value)
-            if response.error != nil {
-                completionHandler(nil, response.error)
-                return
-            }
-            if let data = response.value {
-                do {
-                    let dataJSON = JSON(data)
-                    let fundAnalystTalk = dataJSON[]
-//                    print("Data>>",dataJSON)
-                    let fundAnalystTalkData = try fundAnalystTalk.rawData(options: .fragmentsAllowed)
-//                    print("fundAnalystTalkData", fundAnalystTalkData)
-                    let analystTalksData = try JSONDecoder().decode([FundIPOsRolloverDatasModels].self, from: fundAnalystTalkData)
-//                    print("FundAnalystReportsModels>>>", analystTalksData)
-//                    completionHandler(analystTalksData, nil)
-                } catch let error {
-//                    completionHandler(nil, error)
-            
-                }
-            }
-        }
-    }
+//    typealias FecthFundsIPOsDatasCompletionHandler = (_ fundsIPOData: [FundIPOsRolloverDatasModels]?,_ error: Error?) -> ()
+//    func fetchFundsIPODatas(  completionHandler: @escaping FecthFundsIPOsDatasCompletionHandler) {
+//        let router = Funds.iPO
+////        print(router)
+//        Alamofire.request(router).responseJSON { (response) in
+////            print(response.value)
+//            if response.error != nil {
+//                completionHandler(nil, response.error)
+//                return
+//            }
+//            if let data = response.value {
+//                do {
+//                    let dataJSON = JSON(data)
+//                    let fundAnalystTalk = dataJSON[]
+////                    print("Data>>",dataJSON)
+//                    let fundAnalystTalkData = try fundAnalystTalk.rawData(options: .fragmentsAllowed)
+////                    print("fundAnalystTalkData", fundAnalystTalkData)
+//                    let analystTalksData = try JSONDecoder().decode([FundIPOsRolloverDatasModels].self, from: fundAnalystTalkData)
+////                    print("FundAnalystReportsModels>>>", analystTalksData)
+////                    completionHandler(analystTalksData, nil)
+//                } catch let error {
+////                    completionHandler(nil, error)
+//
+//                }
+//            }
+//        }
+//    }
 }

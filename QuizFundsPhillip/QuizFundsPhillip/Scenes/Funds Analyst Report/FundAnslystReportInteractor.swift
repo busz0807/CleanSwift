@@ -44,9 +44,7 @@ class FundAnslystReportInteractor: FundAnslystReportBusinessLogic, FundAnslystRe
   {
     worker = FundAnslystReportWorker()
     worker?.doSomeWork()
-    worker?.fetchFundsanalystReportDatas() { (_,_) in}
-    let response = FundAnslystReport.Something.Response(analystReportData: analystReport)
-    presenter?.presentSomething(response: response)
+
   }
     func fetchMonthlyData(request: FundAnslystReport.MonthlyData.Request) {
         worker = FundAnslystReportWorker()

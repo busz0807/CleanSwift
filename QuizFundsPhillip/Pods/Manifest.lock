@@ -1,42 +1,68 @@
 PODS:
   - Alamofire (4.9.1)
+  - CenteredCollectionView (2.2.2)
   - CircleImageView (1.0.1)
+  - FSCalendar (2.8.2)
   - FSPagerView (0.8.3)
+  - IQKeyboardManagerSwift (6.5.6)
   - LanguageManager-iOS (1.2.3)
   - Parchment (3.0.1)
-  - SDWebImage (5.10.2):
-    - SDWebImage/Core (= 5.10.2)
-  - SDWebImage/Core (5.10.2)
-  - SwiftyJSON (5.0.0)
+  - Realm (10.7.2):
+    - Realm/Headers (= 10.7.2)
+  - Realm/Headers (10.7.2)
+  - RealmSwift (10.7.2):
+    - Realm (= 10.7.2)
+  - SDWebImage (5.10.4):
+    - SDWebImage/Core (= 5.10.4)
+  - SDWebImage/Core (5.10.4)
+  - SwiftyJSON (5.0.1)
+  - UIColor_Hex_Swift (5.1.0)
 
 DEPENDENCIES:
   - Alamofire
+  - CenteredCollectionView
   - CircleImageView
+  - FSCalendar
   - FSPagerView
+  - IQKeyboardManagerSwift
   - LanguageManager-iOS
   - Parchment
+  - RealmSwift
   - SDWebImage
   - SwiftyJSON
+  - UIColor_Hex_Swift
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - CenteredCollectionView
     - CircleImageView
+    - FSCalendar
     - FSPagerView
+    - IQKeyboardManagerSwift
     - LanguageManager-iOS
     - Parchment
+    - Realm
+    - RealmSwift
     - SDWebImage
     - SwiftyJSON
+    - UIColor_Hex_Swift
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  CenteredCollectionView: a9217908a698c386cbb98af11b596da48900b908
   CircleImageView: 3339a6d2755333cf9fefdc9a76aa00d62957c7fb
+  FSCalendar: e6a2eb9c571bf0719ed797ef807e08426753c241
   FSPagerView: 670405b2f18e2a87fa37f20b00de783e562c25a8
+  IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
   LanguageManager-iOS: 020a6849c97949683926773fd5b82baceaa142db
   Parchment: 466a1cfb6151780db8acb4bbedc2d9c6bfa1e2ff
-  SDWebImage: b969dcfc02c40a5da71eac0b03b8f1a0c794a86f
-  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
+  Realm: e523da9ade306c5ae87e85dc09fdef148d3e1cc1
+  RealmSwift: 4f6758c3adbdcc87f7b7777107226532a077f61c
+  SDWebImage: c666b97e1fa9c64b4909816a903322018f0a9c84
+  SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
+  UIColor_Hex_Swift: 8be7432edacb7fa91c78aa05ef3c30b66e4f9415
 
-PODFILE CHECKSUM: 35d3063de5aa8add94b230cf82336a494eb28889
+PODFILE CHECKSUM: 563932959dcb3ed08a4624538734a2fee02b2a03
 
 COCOAPODS: 1.10.0

@@ -92,29 +92,6 @@ class FundAnslystReportWorker
             }
         }
     }
-    typealias FecthAnalystReportsDatasCompletionHandler = (_ analystReportMonthlyData: [FundAnalystReportsModels]?,_ error: Error?) -> ()
-    func fetchFundsanalystReportDatas(  completionHandler: @escaping FecthAnalystReportsDatasCompletionHandler) {
-        let router = Funds.analystReport
-        Alamofire.request(router).responseJSON { (response) in
-//            print(response.value as Any)
-            if response.error != nil {
-                completionHandler(nil, response.error)
-                return
-            }
-            if let data = response.value {
-                do {
-                    let dataJSON = JSON(data)
-//                    print(dataJSON)
-                    let fundAnalystTalkData = try dataJSON.rawData(options: .fragmentsAllowed)
-//                    print("fundAnalystTalkData", fundAnalystTalkData)
-                    let analystTalksData = try JSONDecoder().decode([FundAnalystReportsModels].self, from: fundAnalystTalkData)
-                    print("FundAnalystReportsModels>>>", analystTalksData)
-                    completionHandler(analystTalksData, nil)
-                } catch let error {
-                    completionHandler(nil, error)
-                }
-            }
-        }
-    }
+
 }
 
