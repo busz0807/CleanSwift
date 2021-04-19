@@ -14,7 +14,10 @@ import UIKit
 
 protocol FundSaleDisplayLogic: class
 {
-  func displaySomething(viewModel: FundSale.Something.ViewModel)
+  func displayFetchData(viewModel: FundSale.FetchData.ViewModel)
+    func displayInsertFunds(viewModel: FundSale.FetchInsertDataFunds.ViewModel)
+
+    
 }
 
 class FundSaleViewController: UIViewController, FundSaleDisplayLogic
@@ -24,10 +27,32 @@ class FundSaleViewController: UIViewController, FundSaleDisplayLogic
     
         case 0:
             self.textfield.placeholder = "0 บาท"
+            let textDouble = Double(textfield.text ?? "") ?? 0.00
+            let navsell =  self.navsell
+            let num =  textDouble / navsell
+            print("numbath", num)
+            print("currentValue" ,self.currentValue)
+            if num > self.availableUnits {
+                self.textfield.text = "\(self.availableUnits)"
+            }
+            self.units = num
+            self.grsam = Double(textfield.text ?? "") ?? 0.00
         case 1:
             self.textfield.placeholder = "0 หน่วย"
+            let textDouble = Double(textfield.text ?? "") ?? 0.00
+            let navsell =  self.navsell
+            let num =  textDouble * navsell
+            print("availableUnits" ,self.availableUnits)
+            print("nummount", num)
+            if num > self.currentValue {
+                self.textfield.text = "\(self.availableUnits)"
+            }
+            self.grsam = num
+            self.units = Double(textfield.text ?? "") ?? 0.00
        case 2:
-           self.textfield.placeholder = "2,250.2250 หน่วย"
+        self.textfield.text = "\(self.availableUnits)"
+        self.grsam = self.currentValue
+        self.units = self.availableUnits
         default:
             break
         }
@@ -36,20 +61,45 @@ class FundSaleViewController: UIViewController, FundSaleDisplayLogic
     @IBOutlet weak var textfield: UITextField!
     @IBOutlet weak var navtitle: UINavigationItem!
     @IBOutlet weak var navBar: UINavigationBar!
+    @IBAction func btnActioninsertsellordeee(_ sender: Any) {
+        self.doFetchInsertFunds()
+        self.setNotificationCenter()
+        router?.backtoMainPagePreview()
+    }
     @IBAction func navBtnback(_ sender: Any) {
         self.dismiss(animated: false, completion: nil)
     }
     @IBAction func btnrisk(_ sender: Any) {
-        router?.sendDatagoToRiskPreview(risk: 1)
+        router?.sendDatagoToRiskPreview(risk: self.risk)
     }
     @IBOutlet weak var setbtnactionCalendar: UIButton!
     @IBAction func btnactionCalendar(_ sender: Any) {
+        doFetchInsertFunds()
+  
     }
     @IBOutlet weak var setbtnrisk: UIButton!
     @IBOutlet weak var lbenname: UILabel!
     @IBOutlet weak var lbthname: UILabel!
     @IBOutlet weak var setView: UIView!
-  var interactor: FundSaleBusinessLogic?
+    @IBOutlet weak var lbnav: UILabel!
+    @IBOutlet var navtextField: UITextField!
+    @IBOutlet weak var navDateLabel: UILabel!
+    @IBOutlet weak var lbchage: UILabel!
+    @IBOutlet weak var lbbuy: UILabel!
+    @IBOutlet weak var lbsell: UILabel!
+    @IBOutlet weak var lbcurrentValue: UILabel!
+    @IBOutlet weak var totalamountlabel: UIView!
+    @IBOutlet weak var lbavailableUnits: UILabel!
+    @IBOutlet weak var datenavlabeel: UILabel!
+    var risk = 0
+    var currentValue = 0.0
+    var availableUnits  = 0.0
+    var interactor: FundSaleBusinessLogic?
+    var navsell = 0.0
+    var grsam = 0.00
+    var units = 0.00
+    var portNo = 0
+    var fcode = ""
   var router: (NSObjectProtocol & FundSaleRoutingLogic & FundSaleDataPassing)?
 
   // MARK: Object lifecycle
@@ -99,7 +149,8 @@ class FundSaleViewController: UIViewController, FundSaleDisplayLogic
   override func viewDidLoad()
   {
     super.viewDidLoad()
-    doSomething()
+    doFetchData()
+    
 //    self.navtitle?.title = self.searchFunds?.assetCompany
     self.navBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
     self.navBar.barTintColor = UIColor.systemBlue;
@@ -108,25 +159,95 @@ class FundSaleViewController: UIViewController, FundSaleDisplayLogic
 //    self.setView.layer.shadowOpacity = 0.3
     self.setView.layer.shadowRadius = 10
     self.setView.layer.masksToBounds = false
-    self.setbtnrisk.setImage(UIImage(named: "111"), for: .normal)
-    let dataFormatter = DateFormatter()
-    dataFormatter.dateFormat = "dd/MM/yyyy"
-    let formattedDate = dataFormatter.string(from: Date())
-    self.setbtnactionCalendar.setTitle(formattedDate, for: .normal)
   }
   
   // MARK: Do something
   
   //@IBOutlet weak var nameTextField: UITextField!
   
-  func doSomething()
+  func doFetchData()
   {
-    let request = FundSale.Something.Request()
-    interactor?.doSomething(request: request)
+    let request = FundSale.FetchData.Request()
+    interactor?.doFetchData(request: request)
   }
-  
-  func displaySomething(viewModel: FundSale.Something.ViewModel)
-  {
+    func setbtnimage(risk: Int) {
+        if risk == 1 {
+            print("1")
+            self.setbtnrisk.setImage(UIImage(named: "111"), for: .normal)
+        } else if  risk == 2 {
+            print("2")
+            self.setbtnrisk.setImage(UIImage(named: "222"), for: .normal)
+        } else if  risk == 3 {
+            print("3")
+            self.setbtnrisk.setImage(UIImage(named: "333"), for: .normal)
+        } else if  risk == 4 {
+            print("4")
+            self.setbtnrisk.setImage(UIImage(named: "444"), for: .normal)
+        } else if  risk == 5 {
+            print("5")
+            self.setbtnrisk.setImage(UIImage(named: "555"), for: .normal)
+        } else if  risk == 6 {
+            print("6")
+            self.setbtnrisk.setImage(UIImage(named: "666"), for: .normal)
+        } else if  risk == 7 {
+            print("7")
+            self.setbtnrisk.setImage(UIImage(named: "777"), for: .normal)
+        } else  {
+            print("8")
+            self.setbtnrisk.setImage(UIImage(named: "888"), for: .normal)
+        }
+       
+    }
+    func displayFetchData(viewModel: FundSale.FetchData.ViewModel)  {
     //nameTextField.text = viewModel.name
+        print("fcode", viewModel.getOrderList?.fcode ?? "")
+        self.portNo = viewModel.portNo ?? 0
+        self.fcode =  viewModel.getOrderList?.fcode ?? ""
+        self.navtitle.title = viewModel.thName
+        self.lbnav.text = viewModel.nav
+        self.lbbuy.text = viewModel.buy
+        self.lbsell.text = viewModel.sell
+        self.lbchage.text = viewModel.chage
+        self.lbenname.text = viewModel.enName
+        self.lbthname.text = viewModel.thName
+        self.datenavlabeel.text = "NAV ณ วันที่  \(viewModel.datenav)"
+        self.setbtnimage(risk: viewModel.risk)
+        self.risk = viewModel.risk
+        self.navtitle.title = viewModel.assetCompany
+        self.navtextField.text = viewModel.sell
+        let dateString = viewModel.investOpenDate
+//                print("date", dateString)
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale(identifier: "en_US_POSIX")
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+        let date = dateFormatter.date(from: "\(dateString)")!
+    
+        let dateFormatterString = DateFormatter()
+        dateFormatterString.dateFormat = "dd/MM/yyyy"
+        let formattedDate1 = dateFormatterString.string(from: date)
+        self.navDateLabel.text = "  \(formattedDate1)"
+        self.setbtnactionCalendar.setTitle(formattedDate1, for: .normal)
+        self.lbcurrentValue.text = "\(viewModel.getOrderList?.currentValue ?? 0)"
+        self.lbavailableUnits.text = "\(viewModel.getOrderList?.availableUnits ?? 0)"
+        self.currentValue = viewModel.getOrderList?.currentValue ?? 0.0
+        self.availableUnits = viewModel.getOrderList?.availableUnits ?? 0.0
+        self.navsell = Double(viewModel.sell) ?? 0.0
   }
+    func doFetchInsertFunds() {
+      
+    let dataFormatter = DateFormatter()
+    dataFormatter.dateFormat = "yyyyMMdd"
+    let formattedDate1 = dataFormatter.string(from: Date())
+
+        let request = FundSale.FetchInsertDataFunds.Request(username: "bookling01", portNo: self.portNo, portName: "null", fcode: self.fcode, ordtp: 2, grsam: self.grsam , units: self.units, unprc: self.navsell, trndt: formattedDate1, status: "null", channel: "PI", realized: "null")
+      interactor?.doFetchInsertFunds(request: request)
+    }
+    func displayInsertFunds(viewModel: FundSale.FetchInsertDataFunds.ViewModel) {
+//        print("InsertSell>>", viewModel.insertOrder?.Success)
+    }
+    // MARK: setNotificationCenter
+    func setNotificationCenter() {
+        NotificationCenter.default.post(name: NSNotification.Name(NotificationCenterFundSale.Clicked.rawValue), object: self)
+
+    }
 }

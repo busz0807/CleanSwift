@@ -12,9 +12,11 @@
 
 import UIKit
 
-@objc protocol PortDetailRoutingLogic
+protocol PortDetailRoutingLogic
 {
-    func dismiss()
+    func backtoMainPagePreview()
+    func backtoPagePreview()
+    
 }
 
 protocol PortDetailDataPassing
@@ -29,7 +31,13 @@ class PortDetailRouter: NSObject, PortDetailRoutingLogic, PortDetailDataPassing
   
   // MARK: Routing
   
-    func dismiss() {
-        viewController?.dismiss(animated: false)
+    func backtoMainPagePreview() {
+
+       
+        viewController?.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
+        
+    }
+    func backtoPagePreview() {
+        viewController?.dismiss(animated: true, completion: nil)
     }
 }

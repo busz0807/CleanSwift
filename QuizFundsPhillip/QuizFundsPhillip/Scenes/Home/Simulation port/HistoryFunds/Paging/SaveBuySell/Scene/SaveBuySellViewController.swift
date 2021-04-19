@@ -14,14 +14,15 @@ import UIKit
 
 protocol SaveBuySellDisplayLogic: class
 {
-  func displaySomething(viewModel: SaveBuySell.Something.ViewModel)
+    func displayfetchfundscode(viewModel: SaveBuySell.FetchFundsDataHistory.ViewModel)
 }
 
 class SaveBuySellViewController: UIViewController, SaveBuySellDisplayLogic
 {
     @IBOutlet weak var tableView: UITableView!
+    var  getHistory: [DataGetHistoryModel]?
     var interactor: SaveBuySellBusinessLogic?
-  var router: (NSObjectProtocol & SaveBuySellRoutingLogic & SaveBuySellDataPassing)?
+    var router: (NSObjectProtocol & SaveBuySellRoutingLogic & SaveBuySellDataPassing)?
 
   // MARK: Object lifecycle
   
@@ -70,31 +71,33 @@ class SaveBuySellViewController: UIViewController, SaveBuySellDisplayLogic
   override func viewDidLoad()
   {
     super.viewDidLoad()
-    doSomething()
+    doFetchFundsId()
   }
   
   // MARK: Do something
   
   //@IBOutlet weak var nameTextField: UITextField!
   
-  func doSomething()
-  {
-    let request = SaveBuySell.Something.Request()
-    interactor?.doSomething(request: request)
-  }
-  
-  func displaySomething(viewModel: SaveBuySell.Something.ViewModel)
-  {
-    //nameTextField.text = viewModel.name
-  }
+func doFetchFundsId() {
+    let request = SaveBuySell.FetchFundsDataHistory.Request()
+    interactor?.doFetchFundsId(request: request)
+    
+    }
+func displayfetchfundscode(viewModel: SaveBuySell.FetchFundsDataHistory.ViewModel) {
+     
+        self.getHistory = viewModel.getHistory
+        self.tableView.reloadData()
+    }
+
 }
 extension SaveBuySellViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return self.getHistory?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SaveBuySellViewCell") as! SaveBuySellViewCell
+        cell.dataHistory = self.getHistory?[indexPath.row]
         return cell
     }
     

@@ -15,6 +15,8 @@ import UIKit
 protocol FundSaleRoutingLogic
 {
     func sendDatagoToRiskPreview(risk: Int?)
+    func backtoMainPagePreview()
+    func backtoPagePreview()
 }
 
 protocol FundSaleDataPassing
@@ -35,5 +37,14 @@ class FundSaleRouter: NSObject, FundSaleRoutingLogic, FundSaleDataPassing
         destinationDS.risk = risk
         viewController?.present(destinationVC, animated: true)
         
+    }
+    func backtoMainPagePreview() {
+//        let destinationtabbarVC = UITapbar.performSegue(withIdentifier: "tabBar", sender: self
+       
+        viewController?.view.window?.rootViewController?.dismiss(animated: false, completion: nil)
+        
+    }
+    func backtoPagePreview() {
+        viewController?.dismiss(animated: true, completion: nil)
     }
 }

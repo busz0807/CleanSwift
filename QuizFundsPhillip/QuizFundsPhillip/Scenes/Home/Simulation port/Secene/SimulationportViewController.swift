@@ -12,7 +12,16 @@
 
 import UIKit
 import CenteredCollectionView
-import UIColor_Hex_Swift
+import RealmSwift
+enum NotificationCenterPortDetailPage: String {
+    case Clicked
+}
+enum NotificationCenterFundSale: String {
+    case Clicked
+}
+enum NotificationCenterAddSimulationPort: String {
+    case Clicked
+}
 protocol SimulationportDisplayLogic: class
 {
 
@@ -37,13 +46,17 @@ class SimulationportViewController: UIViewController, SimulationportDisplayLogic
     var getOrderData3: GetOrderModel?
     var getOrderData4: GetOrderModel?
     var getOrderData5: GetOrderModel?
+  
     var sumValue: Double?
     var sumunrealizedReturns: Double?
     var sumunrealizedProfits: Double?
     var indexcollectioncenterred: Int?
     @IBAction func btngoToFunds(_ sender: Any) {
         print("mainpage", mainpage)
-        router?.goToSearchFundsPreview(mainpage: self.mainpage)
+        
+        let index = Int(self.indexcollectioncenterred ?? 0) + 1
+        print("index", index )
+        router?.goToSearchFundsPreview(mainpage: self.mainpage, portNo: index)
     }
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var viewtableview: UIView!
@@ -101,6 +114,12 @@ class SimulationportViewController: UIViewController, SimulationportDisplayLogic
   override func viewDidLoad()
   {
     super.viewDidLoad()
+    // MARK:NotificationCenter
+    sendclickPortDetail()
+    sendclickFundSale()
+    sendclickAddSimulationPort()
+   
+    // MARK:get Data APi
     doFecthGetOrderData()
     doFecthGetOrderData2()
     doFecthGetOrderData3()
@@ -173,12 +192,17 @@ class SimulationportViewController: UIViewController, SimulationportDisplayLogic
 //        print("err", viewModel.error)
         let data = viewModel.getOrderDate
         self.getOrderData = data
-//        print("count",   self.getOrderData?.Data.count ?? 0)
-//        let count = self.getOrderData?.Data.count ?? 0
-//        let unrealizedReturns1 = self.getOrderData?.Data[0].unrealizedReturns ?? 0
-//        let unrealizedReturns2 = self.getOrderData?.Data[1].unrealizedReturns ?? 0
-//        let unrealizedReturns3 = self.getOrderData?.Data[2].unrealizedReturns ?? 0
-//        self.sumunrealizedReturns = unrealizedReturns1 + unrealizedReturns2 + unrealizedReturns3
+        print("count",   self.getOrderData?.Data.count ?? 0)
+        let count = Int(self.getOrderData?.Data.count ?? 0) - 1
+        print("count", count )
+//        for countindex in 0...count {
+//            let unrealizedReturns1 = Double(self.getOrderData?.Data[countindex].currentValue ?? 0.0)
+//            print("unrealizedReturns1", unrealizedReturns1)
+        let unrealizedReturns2 = self.getOrderData?.Data[0].unrealizedProfits ?? 0
+        let unrealizedReturns3 = self.getOrderData?.Data[1].unrealizedProfits ?? 0
+        self.sumunrealizedReturns =  unrealizedReturns2 + unrealizedReturns3
+        print("sumunrealizedReturns", sumunrealizedReturns)
+//        }
 //
 //        let unrealizedProfits1 = self.getOrderData?.Data[0].unrealizedProfits ?? 0
 //        let unrealizedProfits2 = self.getOrderData?.Data[1].unrealizedProfits ?? 0
@@ -230,6 +254,50 @@ class SimulationportViewController: UIViewController, SimulationportDisplayLogic
         self.getOrderData5 = viewModel.getOrderDate5
 
     }
+    func sendclickPortDetail() {
+        NotificationCenter.default.addObserver(self, selector: #selector(receivedPortDetailPageNotificationCenter), name: NSNotification.Name(NotificationCenterPortDetailPage.Clicked.rawValue), object: nil)
+    }
+    @objc func receivedPortDetailPageNotificationCenter(notifition: Notification) {
+//        print("Did Receive sendclickPortDetail")
+        // MARK:get Data APi
+                  doFecthGetOrderData()
+                  doFecthGetOrderData2()
+                  doFecthGetOrderData3()
+                  doFecthGetOrderData4()
+                  doFecthGetOrderData5()
+                  self.tableView.reloadData()
+                  self.collectionView.reloadData()
+    }
+    func sendclickFundSale() {
+        NotificationCenter.default.addObserver(self, selector: #selector(receivedFundSaleNotificationCenter), name: NSNotification.Name(NotificationCenterFundSale.Clicked.rawValue), object: nil)
+    }
+        @objc func receivedFundSaleNotificationCenter(notifition: Notification) {
+//            print("Did Receive sendclickFundSale")
+//    // MARK:get Data APi
+            doFecthGetOrderData()
+            doFecthGetOrderData2()
+            doFecthGetOrderData3()
+            doFecthGetOrderData4()
+            doFecthGetOrderData5()
+            self.tableView.reloadData()
+            self.collectionView.reloadData()
+            
+        }
+    func sendclickAddSimulationPort() {
+        NotificationCenter.default.addObserver(self, selector: #selector(receivedAddSimulationPortNotificationCenter), name: NSNotification.Name(NotificationCenterAddSimulationPort.Clicked.rawValue), object: nil)
+    }
+
+    @objc func receivedAddSimulationPortNotificationCenter(notifition: Notification) {
+//                print("Did Receive sendclickAddSimulationPort")
+//          // MARK:get Data APi
+                doFecthGetOrderData()
+                doFecthGetOrderData2()
+                doFecthGetOrderData3()
+                doFecthGetOrderData4()
+                doFecthGetOrderData5()
+                self.tableView.reloadData()
+                self.collectionView.reloadData()
+        }
 }
 extension SimulationportViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -240,18 +308,51 @@ extension SimulationportViewController: UICollectionViewDelegate, UICollectionVi
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SimulationPortViewCell", for: indexPath) as! SimulationPortViewCell
 //        let indexcollection = self.indexcollectioncenterred
         if indexPath.row == 0 {
-            cell.lbcurrency.text = "ไม่มีพอร์ตจำลอง"
-            cell.lbport.text = ""
-            cell.lbdouble.text = ""
-            cell.lbfloat.text = ""
-//            cell.index = indexPath.row
-        } else if indexPath.row  == 1 {
+            let data = Int(self.getOrderData?.Data.count ?? 0)
+            if data == 0 {
+                cell.lbcurrency.text = "ไม่มีพอร์ตจำลอง"
+                cell.lbport.text = ""
+                cell.lbdouble.text = ""
+                cell.lbfloat.text = ""
+            }
+            cell.lbcurrency.text = "\(self.getOrderData?.Data[0].currentValue ?? 0)"
             cell.lbport.text = "พอร์ตจำลอง\((indexPath.row) + 1)"
-            cell.lbcurrency.text = "\(self.sumValue ?? 0 )"
-//            cell.lbcurrency.font.withSize(30)
-            cell.lbdouble.text = "+\(sumunrealizedProfits ?? 0)"
-            cell.lbfloat.text = "+\(self.sumunrealizedReturns ?? 0)%"
+            cell.lbfloat.text = "\(self.getOrderData?.Data[0].unrealizedReturns ?? 0)"
+            let change = self.getOrderData?.Data[0].unrealizedProfits ?? 0
+            if change < 0 {
+            cell.lbdouble.text = "\(self.getOrderData?.Data[0].unrealizedProfits ?? 0)"
+            cell.lbdouble.textColor = .red
+//                self.chage = "\(navlist[countindexnav].change)(\(navlist[countindexnav].changePercent)%)"
+            } else {
+                cell.lbdouble.text = "+\(self.getOrderData?.Data[0].unrealizedProfits ?? 0)"
+//                self.chage = "+\(navlist[countindexnav].change)(+\(navlist[countindexnav].changePercent)%)"
+                cell.lbdouble.textColor = .green
+            }
+            cell.lbfloat.text = "\(self.getOrderData?.Data[0].unrealizedReturns ?? 0)"
+          
 //            cell.index = indexPath.row
+        } else if indexPath.row  == 1 {  let data = Int(self.getOrderData2?.Data.count ?? 0)
+            if data == 0 {
+                cell.lbcurrency.text = "ไม่มีพอร์ตจำลอง"
+                cell.lbport.text = ""
+                cell.lbdouble.text = ""
+                cell.lbfloat.text = ""
+            }
+            cell.lbcurrency.text = "\(self.getOrderData2?.Data[0].currentValue ?? 0)"
+            cell.lbport.text = "พอร์ตจำลอง\((indexPath.row) + 1)"
+            cell.lbfloat.text = "\(self.getOrderData2?.Data[0].unrealizedReturns ?? 0)"
+            let change = self.getOrderData2?.Data[0].unrealizedProfits ?? 0
+            if change < 0 {
+            cell.lbdouble.text = "\(self.getOrderData2?.Data[0].unrealizedProfits ?? 0)"
+            cell.lbdouble.textColor = .red
+//                self.chage = "\(navlist[countindexnav].change)(\(navlist[countindexnav].changePercent)%)"
+            } else {
+                cell.lbdouble.text = "+\(self.getOrderData2?.Data[0].unrealizedProfits ?? 0)"
+//                self.chage = "+\(navlist[countindexnav].change)(+\(navlist[countindexnav].changePercent)%)"
+                cell.lbdouble.textColor = .green
+            }
+            cell.lbfloat.text = "\(self.getOrderData?.Data[0].unrealizedReturns ?? 0)"
+          
         }  else if indexPath.row  == 2 {
             cell.lbcurrency.text = "ไม่มีพอร์ตจำลอง"
             cell.lbport.text = ""
@@ -259,13 +360,12 @@ extension SimulationportViewController: UICollectionViewDelegate, UICollectionVi
             cell.lbfloat.text = ""
 //            cell.index = indexPath.row
         }  else if indexPath.row == 3 {
-            cell.lbport.text = "พอร์ตจำลอง\((indexPath.row) + 1)"
-            cell.lbcurrency.text = "\(self.sumValue ?? 0 )"
-//            cell.lbcurrency.font.withSize(30)
-            cell.lbdouble.text = "+\(sumunrealizedProfits ?? 0)"
-            cell.lbfloat.text = "+\(self.sumunrealizedReturns ?? 0)%"
+            cell.lbcurrency.text = "ไม่มีพอร์ตจำลอง"
+            cell.lbport.text = ""
+            cell.lbdouble.text = ""
+            cell.lbfloat.text = ""
 //            cell.index = indexPath.row
-        }  else {
+        }  else if indexPath.row == 4 {
             cell.lbcurrency.text = "ไม่มีพอร์ตจำลอง"
             cell.lbport.text = ""
             cell.lbdouble.text = ""
@@ -322,33 +422,56 @@ extension SimulationportViewController: UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FundsViewCell") as! FundsViewCell
         let indexcollection = self.indexcollectioncenterred
+        let realm: Realm = try! Realm()
+        let result = realm.objects(ReealmFundsListMobile.self)
+        let search = Array(result)
+        let fundsList = search
         if indexcollection == 0 {
             cell.getOrderData = self.getOrderData?.Data[indexPath.row]
+            cell.fundsList = fundsList
             cell.indexcollectioncenterred = indexcollection ?? 0
-            tableView.separatorStyle = .none
         } else  if indexcollection == 1 {
             cell.getOrderData2 = self.getOrderData2?.Data[indexPath.row]
+            cell.fundsList = fundsList
             cell.indexcollectioncenterred = indexcollection ?? 0
-            tableView.separatorStyle = .singleLine
         } else  if indexcollection == 2 {
             cell.getOrderData3 = self.getOrderData3?.Data[indexPath.row]
+            cell.fundsList = fundsList
             cell.indexcollectioncenterred = indexcollection ?? 0
-            tableView.separatorStyle = .none
+          
         } else  if indexcollection == 3 {
             cell.getOrderData4 = self.getOrderData4?.Data[indexPath.row]
+            cell.fundsList = fundsList
             cell.indexcollectioncenterred = indexcollection ?? 0
-            tableView.separatorStyle = .singleLine
-        }else {
+
+        }else if indexcollection == 4 {
             cell.getOrderData5 = self.getOrderData5?.Data[indexPath.row]
+            cell.fundsList = fundsList
             cell.indexcollectioncenterred = indexcollection ?? 0
-            tableView.separatorStyle = .none
+      
         }
 //        print("indexcentered", cell.indexcollectioncenterred)
         
         return cell
     }
-    
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let realm: Realm = try! Realm()
+        let result = realm.objects(ReealmFundsListMobile.self)
+        let search = Array(result)
+        let fundsList = search
+        let portNo =  Int(self.indexcollectioncenterred ?? 0) + 1
+        if indexcollectioncenterred == 0 {
+            router?.sendDatagoToBuyAndSalePreview(fundsList: fundsList, getOrderList: self.getOrderData?.Data[indexPath.row], portNo: portNo)
+        } else if indexcollectioncenterred == 1 {
+            router?.sendDatagoToBuyAndSalePreview(fundsList: fundsList, getOrderList: self.getOrderData2?.Data[indexPath.row], portNo: portNo)
+    } else if indexcollectioncenterred == 2  {
+        router?.sendDatagoToBuyAndSalePreview(fundsList: fundsList, getOrderList: self.getOrderData3?.Data[indexPath.row], portNo: portNo)
+    }else if indexcollectioncenterred == 3 {
+        router?.sendDatagoToBuyAndSalePreview(fundsList: fundsList, getOrderList: self.getOrderData4?.Data[indexPath.row], portNo: portNo)
+    } else if indexcollectioncenterred == 4 {
+        router?.sendDatagoToBuyAndSalePreview(fundsList: fundsList, getOrderList: self.getOrderData5?.Data[indexPath.row], portNo: portNo)
+    }
 }
 
 
+}

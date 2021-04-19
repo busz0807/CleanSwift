@@ -14,10 +14,11 @@ import UIKit
 
 protocol DeleteMenuPresentationLogic
 {
-  func presentfetchHistory(response: DeleteMenu.FetchHistoryData.Response)
+
     func presentDeleteOrder(response: DeleteMenu.DeleteOrderNo.Response)
     func presentDeleteFcode(response: DeleteMenu.DeleteFcode.Response)
-    
+    func presentFundscode(response: DeleteMenu.FetchFundsID.Response)
+    func presentfetchHistory(response: DeleteMenu.FetchHistoryData.Response)
 }
 
 class DeleteMenuPresenter: DeleteMenuPresentationLogic
@@ -39,4 +40,9 @@ class DeleteMenuPresenter: DeleteMenuPresentationLogic
         let viewModel = DeleteMenu.DeleteFcode.ViewModel(delorder: response.delorder, error: response.error)
         viewController?.displaydeletefcode(viewModel: viewModel)
     }
+    func presentFundscode(response: DeleteMenu.FetchFundsID.Response) {
+        let viewModel = DeleteMenu.FetchFundsID.ViewModel(fcode: response.fcode, portNo: response.portNo)
+        viewController?.displayfetchfundscode(viewModel: viewModel)
+    }
+    
 }

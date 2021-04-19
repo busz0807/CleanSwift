@@ -11,18 +11,16 @@
 //
 
 import UIKit
-
+import RealmSwift
 protocol BuyAndSaleDisplayLogic: class
 {
-  func displaySomething(viewModel: BuyAndSale.Something.ViewModel)
+    func displayFetchData(viewModel: BuyAndSale.FetchData.ViewModel)
 }
 
-class BuyAndSaleViewController: UIViewController, BuyAndSaleDisplayLogic
-{
+class BuyAndSaleViewController: UIViewController, BuyAndSaleDisplayLogic {
     @available(iOS 14.0, *)
     @IBAction func btnChangeColorstar(_ sender: Any) {
-       
-      
+
         if self.setbtnstar.tintColor?.accessibilityName == "white" {
             let image = UIImage(named: "star")
             let tintImage = image?.withRenderingMode(.alwaysTemplate)
@@ -38,18 +36,41 @@ class BuyAndSaleViewController: UIViewController, BuyAndSaleDisplayLogic
         }
     }
     @IBAction func btnback(_ sender: Any) {
+        router?.backtoPagePreview()
     }
     @IBAction func btngoToRisk(_ sender: Any) {
+        router?.sendDatagoToRiskPreview(risk: self.risk)
     }
     @IBAction func btngotoDelete(_ sender: Any) {
-        
+        router?.sendDatagoToDeletePreview(fundsId: self.fcode, portNo: self.portNo )
     }
     @IBAction func btngoToHistory(_ sender: Any) {
-        
+        router?.sendDatagoToHistoryPreview(fundsId: self.fcode, portNo: self.portNo)
+    }
+    @IBAction func btnbuyplus(_ sender: Any) {
+        router?.sendDatagoToAddPortPreview(mainPage: self.mainPage, enName: self.enName, thName: self.thName, risk: self.risk, nav: self.nav, chage: self.chage, buy: self.buy, sell: self.sell, date: self.datenav, portNo: self.portNo,assetCompany: self.assetCompany,investOpenDate: self.investOpenDate,  getOrderList: self.getOrderList)
+
+    }
+    @IBAction func btnsellfunds(_ sender: Any) {
+        router?.sendDatagoToSellPortPreview(mainPage: self.mainPage, enName: self.enName, thName: self.thName, risk: self.risk, nav: self.nav, chage: self.chage, buy: self.buy, sell: self.sell, date: self.datenav, portNo: self.portNo,assetCompany: self.assetCompany,investOpenDate: self.investOpenDate,  getOrderList: self.getOrderList)
     }
     @IBOutlet weak var lbcost: UILabel!
+    @IBOutlet weak var unreallizelabel: UILabel!
+    @IBOutlet weak var numUnrealizeLabel: UILabel!
+    @IBOutlet weak var navlabel: UILabel!
+    @IBOutlet weak var amountlabel: UILabel!
+    @IBOutlet weak var lbamount: UILabel!
+    @IBOutlet weak var labelvalue: UILabel!
     @IBOutlet weak var lbvalue: UILabel!
+    @IBOutlet weak var valuelabel: UILabel!
+    @IBOutlet weak var lbenName: UILabel!
+    @IBOutlet weak var settingbtnrisk: UIButton!
+    @IBOutlet weak var lbbuy: UILabel!
+    @IBOutlet weak var lbsell: UILabel!
+    @IBOutlet weak var lbchange: UILabel!
     @IBOutlet weak var setbtnstar: UIButton!
+    @IBOutlet weak var lbnav: UILabel!
+    @IBOutlet weak var lbthName: UILabel!
     @IBOutlet weak var setviewfund: UIView!
     @IBOutlet weak var setviewbuy: UIView!
     @IBOutlet weak var setviewsell: UIView!
@@ -207,7 +228,22 @@ class BuyAndSaleViewController: UIViewController, BuyAndSaleDisplayLogic
         self.setview3y.backgroundColor = .white
         self.setview1m.backgroundColor = .white
     }
+    var risk = 0
+    var fcode = ""
+    var portNo = 0
+    var fundslist: [ReealmFundsListMobile]?
+    var mainPage = "BuyandSellPage"
     var interactor: BuyAndSaleBusinessLogic?
+    var enName = ""
+    var thName = ""
+    var nav = ""
+    var chage = ""
+    var buy = ""
+    var sell = ""
+    var datenav = ""
+    var assetCompany = ""
+    var investOpenDate = ""
+    var getOrderList: DataGetOrder?
   var router: (NSObjectProtocol & BuyAndSaleRoutingLogic & BuyAndSaleDataPassing)?
 
   // MARK: Object lifecycle
@@ -254,68 +290,172 @@ class BuyAndSaleViewController: UIViewController, BuyAndSaleDisplayLogic
   
   // MARK: View lifecycle
   
-  override func viewDidLoad()
-  {
-    super.viewDidLoad()
-    doSomething()
-    self.lbcost.font = UIFont.boldSystemFont(ofSize: 16.0)
-    self.lbvalue.font = UIFont.boldSystemFont(ofSize: 16.0)
-          self.setviewbuy.clipsToBounds = true
-          self.setviewbuy.layer.cornerRadius = 5
-          self.setviewbuy.layer.shadowColor = UIColor.systemGray.cgColor
-          self.setviewbuy.layer.shadowOpacity = 0.5
-          self.setviewbuy.layer.shadowRadius = 6
-          self.setviewbuy.layer.masksToBounds = false
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        doFetchData()
+        self.lbcost.font = UIFont.boldSystemFont(ofSize: 16.0)
+        self.lbvalue.font = UIFont.boldSystemFont(ofSize: 16.0)
+        self.setviewbuy.clipsToBounds = true
+        self.setviewbuy.layer.cornerRadius = 5
+        self.setviewbuy.layer.shadowColor = UIColor.systemGray.cgColor
+        self.setviewbuy.layer.shadowOpacity = 0.5
+        self.setviewbuy.layer.shadowRadius = 6
+        self.setviewbuy.layer.masksToBounds = false
     
-    self.setviewsell.clipsToBounds = true
-    self.setviewsell.layer.cornerRadius = 5
-    self.setviewsell.layer.shadowColor = UIColor.systemGray.cgColor
-    self.setviewsell.layer.shadowOpacity = 0.5
-    self.setviewsell.layer.shadowRadius = 6
-    self.setviewsell.layer.masksToBounds = false
-    
-    self.setviewbuy1.clipsToBounds = true
-    self.setviewbuy1.layer.cornerRadius = 5
-    self.setviewbuy1.layer.shadowColor = UIColor.systemGray.cgColor
-    self.setviewbuy1.layer.shadowOpacity = 0.5
-    self.setviewbuy1.layer.shadowRadius = 6
-    self.setviewbuy1.layer.masksToBounds = false
+        self.setviewsell.clipsToBounds = true
+        self.setviewsell.layer.cornerRadius = 5
+        self.setviewsell.layer.shadowColor = UIColor.systemGray.cgColor
+        self.setviewsell.layer.shadowOpacity = 0.5
+        self.setviewsell.layer.shadowRadius = 6
+        self.setviewsell.layer.masksToBounds = false
 
-self.setviewsell1.clipsToBounds = true
-self.setviewsell1.layer.cornerRadius = 5
-self.setviewsell1.layer.shadowColor = UIColor.systemGray.cgColor
-self.setviewsell1.layer.shadowOpacity = 0.5
-self.setviewsell1.layer.shadowRadius = 6
-self.setviewsell1.layer.masksToBounds = false
+        self.setviewbuy1.clipsToBounds = true
+        self.setviewbuy1.layer.cornerRadius = 5
+        self.setviewbuy1.layer.shadowColor = UIColor.systemGray.cgColor
+        self.setviewbuy1.layer.shadowOpacity = 0.5
+        self.setviewbuy1.layer.shadowRadius = 6
+        self.setviewbuy1.layer.masksToBounds = false
+
+        self.setviewsell1.clipsToBounds = true
+        self.setviewsell1.layer.cornerRadius = 5
+        self.setviewsell1.layer.shadowColor = UIColor.systemGray.cgColor
+        self.setviewsell1.layer.shadowOpacity = 0.5
+        self.setviewsell1.layer.shadowRadius = 6
+        self.setviewsell1.layer.masksToBounds = false
+
+        self.setviewfund.clipsToBounds = true
+        self.setviewfund.layer.cornerRadius = 5
+        self.setviewfund.layer.shadowColor = UIColor.systemGray.cgColor
+        self.setviewfund.layer.shadowOpacity = 0.5
+        self.setviewfund.layer.shadowRadius = 6
+        self.setviewfund.layer.masksToBounds = false
+
+        self.setview1m.clipsToBounds = true
+        self.setview1m.layer.cornerRadius = 15
+        //    self.setView.layer.shadowOpacity = 0.3
+        self.setview1m.layer.shadowRadius = 50
+        self.setview1m.layer.masksToBounds = false
+        self.setview1m.backgroundColor = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)
     
-    self.setviewfund.clipsToBounds = true
-    self.setviewfund.layer.cornerRadius = 5
-    self.setviewfund.layer.shadowColor = UIColor.systemGray.cgColor
-    self.setviewfund.layer.shadowOpacity = 0.5
-    self.setviewfund.layer.shadowRadius = 6
-    self.setviewfund.layer.masksToBounds = false
-    
-    self.setview1m.clipsToBounds = true
-    self.setview1m.layer.cornerRadius = 15
-//    self.setView.layer.shadowOpacity = 0.3
-    self.setview1m.layer.shadowRadius = 50
-    self.setview1m.layer.masksToBounds = false
-    self.setview1m.backgroundColor = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)
-    
-  }
+    }
   
   // MARK: Do something
   
   //@IBOutlet weak var nameTextField: UITextField!
   
-  func doSomething()
-  {
-    let request = BuyAndSale.Something.Request()
-    interactor?.doSomething(request: request)
-  }
+    
+    func doFetchData()
+    {
+      let request = BuyAndSale.FetchData.Request()
+      interactor?.doFetchData(request: request)
+    }
+    
   
-  func displaySomething(viewModel: BuyAndSale.Something.ViewModel)
-  {
-    //nameTextField.text = viewModel.name
+    func displayFetchData(viewModel: BuyAndSale.FetchData.ViewModel)  {
+        print("portNo>>", viewModel.portNo ?? 0)
+        
+        self.fundslist = viewModel.fundsList
+        self.fcode = viewModel.getOrderList?.fcode ?? ""
+        self.portNo = Int(viewModel.portNo ?? 0)
+//        print("fcode>>", viewModel.getOrderList?.fcode ?? "" )
+        self.getOrderList = viewModel.getOrderList
+        self.amountlabel.text = "\(viewModel.getOrderList?.principal ?? 0)"
+        self.valuelabel.text = "\(viewModel.getOrderList?.realizedProfit ?? 0)"
+        self.navlabel.text = " \(viewModel.getOrderList?.averageCost ?? 0)"
+        self.labelvalue.text = "\(viewModel.getOrderList?.currentValue ?? 0)"
+        self.lbcost.text = " \(viewModel.getOrderList?.unrealizedReturns ?? 0)"
+        print("value", viewModel.getOrderList?.unrealizedProfits ?? 0)
+        if viewModel.getOrderList?.unrealizedProfits ?? 0 <  0 {
+            self.lbvalue.text = " \(viewModel.getOrderList?.unrealizedProfits ?? 0)"
+            self.unreallizelabel.text = " \(viewModel.getOrderList?.unrealizedProfits ?? 0)"
+            self.lbvalue.textColor = .red
+            self.unreallizelabel.textColor = .red
+        }
+        self.lbamount.text = " \(viewModel.getOrderList?.availableUnits ?? 0)"
+        let realizedProfit = Double(viewModel.getOrderList?.realizedProfit ?? 0)
+        let unrealizedProfits = Double(viewModel.getOrderList?.unrealizedProfits ?? 0)
+        print("realizedProfit", realizedProfit)
+        print("unrealizedProfits", unrealizedProfits)
+        let num = realizedProfit + unrealizedProfits
+        print("num", num)
+        if num <  0 {
+            self.numUnrealizeLabel.text = "\(num)"
+            self.numUnrealizeLabel.textColor = .red
+         
+        }
+        self.numUnrealizeLabel.text = "\(num)"
+        let count = Int(viewModel.fundsList?.count ?? 0)  - 1
+        for countindex in 0...count {
+            if viewModel.fundsList?[countindex].fundId == viewModel.getOrderList?.fcode {
+                self.lbenName.text  = viewModel.fundsList?[countindex].enName ?? ""
+                self.lbthName.text =  viewModel.fundsList?[countindex].thName  ?? ""
+                self.enName  = viewModel.fundsList?[countindex].enName ?? ""
+                self.thName  = viewModel.fundsList?[countindex].thName  ?? ""
+                print("funds",viewModel.fundsList?[countindex].code  ?? "")
+                self.risk =  viewModel.fundsList?[countindex].risk ?? 0
+                print("assetCompany",viewModel.fundsList?[countindex].assetCompany ?? "")
+                print("opendate",viewModel.fundsList?[countindex].investOpenDate ?? "")
+                self.investOpenDate = viewModel.fundsList?[countindex].investOpenDate ?? ""
+                self.assetCompany = viewModel.fundsList?[countindex].assetCompany ?? ""
+                let risk = viewModel.fundsList?[countindex].risk ?? 0
+                if risk == 1 {
+                    self.settingbtnrisk.setImage(UIImage(named: "111"), for: .normal)
+                } else if risk == 2 {
+                    self.settingbtnrisk.setImage(UIImage(named: "222"), for: .normal)
+                } else if risk == 3 {
+                    self.settingbtnrisk.setImage(UIImage(named: "333"), for: .normal)
+                } else if risk == 4 {
+                    self.settingbtnrisk.setImage(UIImage(named: "444"), for: .normal)
+                } else if risk == 5 {
+                    self.settingbtnrisk.setImage(UIImage(named: "555"), for: .normal)
+                } else if risk == 6 {
+                    self.settingbtnrisk.setImage(UIImage(named: "666"), for: .normal)
+                } else if risk == 7 {
+                    self.settingbtnrisk.setImage(UIImage(named: "777"), for: .normal)
+                } else  {
+                    self.settingbtnrisk.setImage(UIImage(named: "888"), for: .normal)
+                }
+             let fundscode = viewModel.fundsList?[countindex].code  ?? ""
+                let realm = try! Realm()
+                let result = realm.objects(NavListDb.self)
+                let navlist = Array(result)
+                let countnav =  Int(navlist.count) - 1
+                for countindexnav in 0...countnav {
+                    let fundscodenav = navlist[countindexnav].fundCode
+                    if fundscodenav  == fundscode {
+                        self.lbbuy.text = "\(navlist[countindexnav].buy)"
+                        self.lbsell.text = "\(navlist[countindexnav].sell)"
+                        self.lbnav.text = "\(navlist[countindexnav].nav)"
+                        let dateString = navlist[countindexnav].date
+        //                print("date", dateString)
+                        let dateFormatter = DateFormatter()
+                        dateFormatter.locale = Locale(identifier: "en_US_POSIX")
+                        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+                        let date = dateFormatter.date(from: "\(dateString)")!
+                    
+                        let dateFormatterString = DateFormatter()
+                        dateFormatterString.dateFormat = "dd/MM/yyyy"
+                        let formattedDate1 = dateFormatterString.string(from: date)
+                        self.datenav = formattedDate1
+                        print("datenav", self.datenav)
+                        self.sell = "\(navlist[countindexnav].sell)"
+                        self.nav = "\(navlist[countindexnav].nav)"
+                        self.buy = "\(navlist[countindexnav].buy)"
+                        
+                        let change = navlist[countindexnav].change
+                        if change < 0 {
+                        self.lbchange.text = "\(navlist[countindexnav].change)(\(navlist[countindexnav].changePercent)%)"
+                        self.lbchange.textColor = .red
+                            self.chage = "\(navlist[countindexnav].change)(\(navlist[countindexnav].changePercent)%)"
+                        } else {
+                            self.lbchange.text = "+\(navlist[countindexnav].change)(+\(navlist[countindexnav].changePercent)%)"
+                            self.chage = "+\(navlist[countindexnav].change)(+\(navlist[countindexnav].changePercent)%)"
+                            self.lbchange.textColor = .green
+                        }
+                    }
+                }
+            }
+        }
   }
 }
+ 

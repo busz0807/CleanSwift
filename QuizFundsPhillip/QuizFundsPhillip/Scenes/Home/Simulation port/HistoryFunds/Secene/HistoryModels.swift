@@ -12,20 +12,36 @@
 
 import UIKit
 
-enum History
-{
+enum History {
   // MARK: Use cases
-  
-  enum Something
-  {
-    struct Request
-    {
+        
+    enum FetchFundsID {
+        struct Request {
+ 
+        }
+        struct Response {
+            var fcode: String
+            var portNo: Int
+        }
+        struct ViewModel {
+            var fcode: String
+            var portNo: Int
+        }
     }
-    struct Response
-    {
+    enum FetchHistoryData   {
+        struct Request  {
+            var username: String
+            var portno: Int
+            var fcode: String
+        }
+        struct Response   {
+            var getHistory: GetHistoryModel?
+            var error: Error?
+        }
+        struct ViewModel  {
+            var getHistory: GetHistoryModel?
+            var error: Error?
+        }
     }
-    struct ViewModel
-    {
-    }
-  }
 }
+

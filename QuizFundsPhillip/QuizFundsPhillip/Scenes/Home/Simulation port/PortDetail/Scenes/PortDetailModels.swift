@@ -15,7 +15,21 @@ import UIKit
 enum PortDetail
 {
   // MARK: Use cases
-  
+    enum GetOrderList {
+      struct Request {
+          var username: String
+          var portNo: Int
+          
+      }
+      struct Response {
+        var getOrderData: GetOrderModel?
+          var error: Error?
+      }
+      struct ViewModel {
+        var getOrderData: GetOrderModel?
+          var error: Error?
+      }
+    }
   enum PortNo{
     struct Request{
         

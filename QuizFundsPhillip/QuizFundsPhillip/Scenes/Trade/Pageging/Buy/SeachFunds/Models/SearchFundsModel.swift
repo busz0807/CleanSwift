@@ -43,7 +43,22 @@ struct SearchFundsModel: Codable {
     var thName: String?
     var type:String?
 }
+struct navlist: Codable {
+    var navlist: [SearchNavModel]?
+}
 
+struct SearchNavModel: Codable {
+    var buy: Double?
+    var change: Double?
+    var changePercent: Double?
+    var date: String?
+    var fundCode: String?
+    var fundSize: Double?
+    var nav: Double?
+    var sell: Double?
+    var switchIn: Double?
+    var switchOut: Double?
+}
 //struct FundIPOsRolloverDatasModels: Codable {
 //    var ipoShowFlag: String?
 //    var ipoExpireDate: String?

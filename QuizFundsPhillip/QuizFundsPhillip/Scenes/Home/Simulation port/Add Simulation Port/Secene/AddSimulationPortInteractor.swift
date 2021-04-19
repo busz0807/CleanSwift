@@ -15,18 +15,56 @@ import UIKit
 protocol AddSimulationPortBusinessLogic
 {
   func doSomething(request: AddSimulationPort.Something.Request)
+    func doFetchnavData(request: AddSimulationPort.FetchNavListData.Request)
+    func doFetchInsertFunds(request: AddSimulationPort.FetchInsertDataFunds.Request)
+
+//    doFetchInsertFunds
 }
 
 protocol AddSimulationPortDataStore
 {
     var searchfunds: ReealmFundsListMobile? { get set }
+    var navList: [NavListModel]? { get set }
+    var fundslist: [ReealmFundsListMobile]? { get set }
+    var insertData: [InsertOrderModel]? { get set }
+    var risk : Int {get set}
+    var fcode: String {get set}
+    var mainPage: String {get set}
+    var enName: String {get set}
+    var thName: String {get set}
+    var nav: String {get set}
+    var chage: String {get set}
+    var buy: String {get set}
+    var sell: String {get set}
+    var datenav: String {get set}
+    var assetCompany: String {get set}
+    var portNo: Int  {get set}
+    var investOpenDate: String {get set}
+    var getOrderList: DataGetOrder?  {get set}
 }
 
 class AddSimulationPortInteractor: AddSimulationPortBusinessLogic, AddSimulationPortDataStore
 {
+    var portNo = 0
+    var getOrderList: DataGetOrder?
+    var risk = 0
+    var fcode = ""
+    var mainPage = ""
+    var enName = ""
+    var thName = ""
+    var nav = ""
+    var chage = ""
+    var buy = ""
+    var sell = ""
+    var datenav = ""
+    var assetCompany = ""
+    var investOpenDate = ""
+    var fundslist: [ReealmFundsListMobile]?
     var searchfunds: ReealmFundsListMobile?
-  var presenter: AddSimulationPortPresentationLogic?
-  var worker: AddSimulationPortWorker?
+    var navList: [NavListModel]?
+    var insertData: [InsertOrderModel]?
+    var presenter: AddSimulationPortPresentationLogic?
+    var worker: AddSimulationPortWorker?
   //var name: String = ""
   
   // MARK: Do something
@@ -35,8 +73,60 @@ class AddSimulationPortInteractor: AddSimulationPortBusinessLogic, AddSimulation
       worker = AddSimulationPortWorker()
       worker?.doSomeWork()
       
-      let response = AddSimulationPort.Something.Response(searchfunds: searchfunds)
+        let response = AddSimulationPort.Something.Response(risk: risk, fcode: fcode, mainPage: mainPage, enName: enName, thName: thName, nav: nav, chage: chage, buy: buy, sell: sell, datenav: datenav, portNo: portNo, assetCompany: assetCompany, investOpenDate: investOpenDate, getOrderList: getOrderList, searchfunds: searchfunds)
   //        print("Data", response.fundsList?._change ?? "")
       presenter?.presentSomething(response: response)
     }
+    func doFetchnavData(request: AddSimulationPort.FetchNavListData.Request) {
+        worker = AddSimulationPortWorker()
+        worker?.doFetchNavListData{ (navList, error ) in
+            if error != nil {
+                let response = AddSimulationPort.FetchNavListData.Response(NavList: nil, error: error)
+                self.presenter?.presentFetchNavData(response: response)
+            }
+            
+            let response = AddSimulationPort.FetchNavListData.Response(NavList: navList, error: nil)
+    //        print("data", navList?.count ?? 0)
+            self.presenter?.presentFetchNavData(response: response)
+    }
+      
+}
+    func doFetchInsertFunds(request: AddSimulationPort.FetchInsertDataFunds.Request){
+        worker = AddSimulationPortWorker()
+        let username = request.username
+        let portName = request.portName
+        let portNo = request.portNo
+        let fcode = request.fcode
+        let ordtp = request.ordtp
+         let grsam = request.grsam
+        let units = request.units
+        let unprc = request.unprc
+        let trndt = request.trndt
+        let status = request.status
+        let channel = request.channel
+        let realized = request.realized
+//        print("username",username )
+//        print("portName", portName)
+//        print("portNo", portNo)
+//        print("fcode",fcode )
+//        print("ordtp",ordtp )
+//        print("grsam", grsam)
+//        print("units", units)
+//        print("unprc",unprc )
+//        print("trndt",trndt )
+//        print("status", status )
+//        print("channel", channel )
+//        print("realized", realized)
+        worker?.fecthInsertData(username: username, portNo: portNo, portName: portName, fcode: fcode, ordtp: ordtp, grsam: grsam, units: units, unprc: unprc, trndt: trndt, status: status, channel: channel, realized: realized){ (insertData, error ) in
+                if error != nil {
+                    let response = AddSimulationPort.FetchInsertDataFunds.Response(insertOrder: nil, error: error)
+                    self.presenter?.presentFetchInsertFunds(response: response)
+                }
+                
+                let response = AddSimulationPort.FetchInsertDataFunds.Response(insertOrder: insertData, error:  error)
+        //      print("getOrderData", getOrderData)
+                self.presenter?.presentFetchInsertFunds(response: response)
+            }
+    }
+  
 }

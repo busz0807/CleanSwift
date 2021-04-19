@@ -14,8 +14,9 @@ import UIKit
 
 protocol SimulationportRoutingLogic
 {
-    func goToSearchFundsPreview(mainpage: String)
+    func goToSearchFundsPreview(mainpage: String, portNo: Int)
     func goToPortDetail(portNo: Int )
+    func sendDatagoToBuyAndSalePreview(fundsList: [ReealmFundsListMobile]?,getOrderList: DataGetOrder? , portNo: Int)
 }
 
 protocol SimulationportDataPassing
@@ -30,10 +31,11 @@ class SimulationportRouter: NSObject, SimulationportRoutingLogic, Simulationport
   
   // MARK: Routing
   
-    func goToSearchFundsPreview(mainpage: String) {
+    func goToSearchFundsPreview(mainpage: String,portNo: Int) {
          let destinationVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SearchFundsViewController") as! SearchFundsViewController
         var destinationDS = destinationVC.router!.dataStore!
         destinationDS.mainpage = mainpage
+        destinationDS.portNo = portNo
         viewController?.present(destinationVC, animated: true)
     }
     func goToPortDetail(portNo: Int ) {
@@ -42,4 +44,13 @@ class SimulationportRouter: NSObject, SimulationportRoutingLogic, Simulationport
         destinationDS.portNo = portNo
         viewController?.present(destinationVC, animated: true, completion: nil)
    }
+    func sendDatagoToBuyAndSalePreview(fundsList: [ReealmFundsListMobile]?,getOrderList: DataGetOrder? , portNo: Int) {
+      let destinationVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "BuyAndSaleViewController") as! BuyAndSaleViewController
+        var destinationDS = destinationVC.router!.dataStore!
+        destinationDS.fundsList = fundsList
+        destinationDS.portNo = portNo
+        destinationDS.getOrderList = getOrderList
+      viewController?.present(destinationVC, animated: false)
+        
+    }
 }

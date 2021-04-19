@@ -12,9 +12,9 @@
 
 import UIKit
 
-protocol DeleteMenuDisplayLogic: class
-{
-  func displayfetchHistory(viewModel: DeleteMenu.FetchHistoryData.ViewModel)
+protocol DeleteMenuDisplayLogic: class {
+    func displayfetchHistory(viewModel: DeleteMenu.FetchHistoryData.ViewModel)
+    func displayfetchfundscode(viewModel: DeleteMenu.FetchFundsID.ViewModel)
     func displaydeleteorder(viewModel: DeleteMenu.DeleteOrderNo.ViewModel)
     func displaydeletefcode(viewModel: DeleteMenu.DeleteFcode.ViewModel)
 }
@@ -25,6 +25,7 @@ class DeleteMenuViewController: UIViewController, DeleteMenuDisplayLogic
         let createMenu = UIAlertController(title: nil, message: "Action using", preferredStyle: .actionSheet)
         let CreAteAction = UIAlertAction(title: "Delete", style: .default, handler: {(_: UIAlertAction) -> Void in
             self.dodeletefcode()
+            
             self.tableView.reloadData()
         })
       
@@ -32,11 +33,15 @@ class DeleteMenuViewController: UIViewController, DeleteMenuDisplayLogic
         createMenu.addAction(CreAteAction)
         createMenu.addAction(cancelAction)
         self.present(createMenu, animated: true, completion: nil)
+        doFetchFundsId()
+        self.tableView.reloadData()
     }
     @IBAction func btnback(_ sender: Any) {
-        
+        router?.backtoPagePreview()
     }
     @IBOutlet weak var tableView: UITableView!
+    var fcode = ""
+    var portNo = 0
     var getHistory: GetHistoryModel?
     var interactor: DeleteMenuBusinessLogic?
   var router: (NSObjectProtocol & DeleteMenuRoutingLogic & DeleteMenuDataPassing)?
@@ -88,27 +93,30 @@ class DeleteMenuViewController: UIViewController, DeleteMenuDisplayLogic
   override func viewDidLoad()
   {
     super.viewDidLoad()
-    dofetchHistory()
+    
+    doFetchFundsId()
   }
   
   // MARK: Do something
   
   //@IBOutlet weak var nameTextField: UITextField!
   
-  func dofetchHistory()
+    func dofetchHistory(portNo: Int, fcode: String)
   {
-    let request = DeleteMenu.FetchHistoryData.Request(username: "bookling01", portno: 4, fcode: "017015")
+    let request = DeleteMenu.FetchHistoryData.Request(username: "bookling01", portno: self.portNo, fcode: self.fcode)
     interactor?.dofetchHistory(request: request)
+    self.tableView.reloadData()
   }
   
     func displayfetchHistory(viewModel: DeleteMenu.FetchHistoryData.ViewModel)
   {
    
         self.getHistory = viewModel.getHistory
+        print("Data", self.getHistory?.Data)
         self.tableView.reloadData()
   }
     func dodeleteorder(orderno: Int) {
-      let request = DeleteMenu.DeleteOrderNo.Request(delflag: "O", username: "bookling01", portno: 4, channel: "PI", ordno:  orderno)
+      let request = DeleteMenu.DeleteOrderNo.Request(delflag: "O", username: "bookling01", portno: self.portNo, channel: "PI", ordno:  orderno)
       interactor?.dodeleteorder(request: request)
     }
     
@@ -117,12 +125,25 @@ class DeleteMenuViewController: UIViewController, DeleteMenuDisplayLogic
 //        print("Message", viewModel.delorder?.Message ?? "Success")
     }
     func dodeletefcode() {
-      let request = DeleteMenu.DeleteFcode.Request(delflag: "F", username: "bookling01", portno: 4, channel: "PI", fcode: "017015")
+      let request = DeleteMenu.DeleteFcode.Request(delflag: "F", username: "bookling01", portno: self.portNo, channel: "PI", fcode: self.fcode)
       interactor?.dodeletefcode(request: request)
     }
     func displaydeletefcode(viewModel: DeleteMenu.DeleteFcode.ViewModel){
-        print("err", viewModel.error)
-    print("Message", viewModel.delorder?.Message ?? "Success")
+//        print("err", viewModel.error)
+//        print("Message", viewModel.delorder?.Message ?? "Success")
+    }
+    func doFetchFundsId() {
+    let request = DeleteMenu.FetchFundsID.Request()
+    interactor?.doFetchFundsId(request: request)
+    
+    }
+    func displayfetchfundscode(viewModel: DeleteMenu.FetchFundsID.ViewModel) {
+//        print("fundscodeID", viewModel.fcode)
+//        print("portNo", viewModel.portNo)
+        self.fcode =  viewModel.fcode
+        self.portNo =  viewModel.portNo
+        dofetchHistory(portNo:  self.portNo , fcode: self.fcode)
+        self.tableView.reloadData()
     }
 }
 extension DeleteMenuViewController: UITableViewDelegate, UITableViewDataSource {
@@ -132,26 +153,29 @@ extension DeleteMenuViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "DeleteOrderNoViewCell", for: indexPath) as? DeleteOrderNoViewCell
+        cell?.datagetHistory = self.getHistory?.Data[indexPath.row]
         cell?.number = indexPath.row
         cell?.delegate = self
         cell?.index = indexPath
         return cell!
     }
+    
+ 
 }
 extension DeleteMenuViewController: CellDelegagte {
     func CellbtnTap(index: IndexPath, number: Int) {
-     
-  //        print("\(index) \(name)")
+        
+        print("data",self.getHistory?.Data[number].orderno ?? 0)
         let createMenu = UIAlertController(title: nil, message: "Action using", preferredStyle: .actionSheet)
         let CreAteAction = UIAlertAction(title: "Delete", style: .default, handler: {(_: UIAlertAction) -> Void in
             self.dodeleteorder(orderno: self.getHistory?.Data[number].orderno ?? 0)
-            print("\(index)>>\(self.getHistory?.Data[number].fcode ?? "")")
-            print("\(index)>>\(self.getHistory?.Data[number].orderno ?? 0)")
+//            print("\(index)>>\(self.getHistory?.Data[number].fcode ?? "")")
+//            print("\(index)>>\(self.getHistory?.Data[number].orderno ?? 0)")
 //            let indexss = index
             self.getHistory?.Data.remove(at: number)
             
             let indexs = IndexPath(indexes: index)
-            print("indexs",indexs)
+//            print("indexs",indexs)
             self.tableView.deleteRows(at: [indexs], with: .fade)
             self.tableView.reloadData()
         })

@@ -39,4 +39,31 @@ class PortDetailWorker
             }
         }
     }
+    typealias FecthGetOrderDataCompletionHandler = (_ getOrderData: GetOrderModel?,_ error: Error?) -> ()
+    func fecthGetOrderData(username: String, portNo: Int,completionHandler: @escaping FecthGetOrderDataCompletionHandler) {
+        let router = Funds.getOder.path
+//        print("\(router)username=\(username)&portNo=\(portNo)")
+//        let url = URL(string: "\(router)username=\(username)&portNo=\(portNo)" )!
+//        var request = URLRequest(url: url)
+//        request.httpMethod = "POST"
+        Alamofire.request(router, method: .post, parameters: ["username": username, "portNo": portNo]).responseJSON { response in
+            if response.error != nil {
+                completionHandler(nil, response.error)
+                return
+            }
+            
+            if let data = response.data {
+                do {
+                    let getOrderModelData = try JSONDecoder().decode(GetOrderModel.self, from: data)
+//                    print("getOrderModelData >> ", getOrderModelData)
+                    completionHandler(getOrderModelData, nil)
+                    
+                } catch let error {
+                    print("Failed to load: \(error.localizedDescription)")
+
+                    completionHandler(nil, error)
+                }
+            }
+        }
+    }
 }

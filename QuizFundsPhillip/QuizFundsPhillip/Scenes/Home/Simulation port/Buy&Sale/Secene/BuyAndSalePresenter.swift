@@ -14,7 +14,7 @@ import UIKit
 
 protocol BuyAndSalePresentationLogic
 {
-  func presentSomething(response: BuyAndSale.Something.Response)
+    func presentFetchData(response: BuyAndSale.FetchData.Response)
 }
 
 class BuyAndSalePresenter: BuyAndSalePresentationLogic
@@ -23,9 +23,9 @@ class BuyAndSalePresenter: BuyAndSalePresentationLogic
   
   // MARK: Do something
   
-  func presentSomething(response: BuyAndSale.Something.Response)
-  {
-    let viewModel = BuyAndSale.Something.ViewModel()
-    viewController?.displaySomething(viewModel: viewModel)
-  }
+    func presentFetchData(response: BuyAndSale.FetchData.Response)
+    {
+      let viewModel = BuyAndSale.FetchData.ViewModel(fundsList: response.fundsList, portNo: response.portNo, getOrderList: response.getOrderList)
+      viewController?.displayFetchData(viewModel: viewModel)
+    }
 }

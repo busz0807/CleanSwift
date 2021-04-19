@@ -16,16 +16,66 @@ enum FundSale
 {
   // MARK: Use cases
   
-  enum Something
-  {
-    struct Request
-    {
+  enum FetchData {
+    struct Request {
     }
-    struct Response
-    {
+    struct Response {
+        var risk : Int
+        var fcode: String
+        var mainPage: String
+        var enName: String
+        var thName: String
+        var nav: String
+        var chage: String
+        var buy: String
+        var sell: String
+        var datenav: String
+        var portNo: Int?
+        var assetCompany: String
+        var investOpenDate: String
+        var getOrderList: DataGetOrder?
     }
-    struct ViewModel
-    {
+    struct ViewModel {
+        var risk : Int
+        var fcode: String
+        var mainPage: String
+        var enName: String
+        var thName: String
+        var nav: String
+        var chage: String
+        var buy: String
+        var sell: String
+        var datenav: String
+        var portNo: Int?
+        var assetCompany: String
+        var investOpenDate: String
+        var getOrderList: DataGetOrder?
     }
   }
+    enum  FetchInsertDataFunds {
+      struct Request {
+          var username: String
+          var portNo: Int
+          var portName: String
+          var fcode: String
+          var ordtp: Double
+          var grsam: Double
+          var units: Double
+          var unprc: Double
+          var trndt: String
+          var status: String
+          var channel:String
+          var realized: String
+      }
+      struct Response {
+          var insertOrder: InsertOrderModel?
+         
+          var error: Error?
+      }
+      struct ViewModel {
+          var insertOrder: InsertOrderModel?
+        
+          var error: Error?
+      }
+    }
 }

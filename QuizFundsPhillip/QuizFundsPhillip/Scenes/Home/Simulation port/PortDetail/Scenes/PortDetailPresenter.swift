@@ -16,7 +16,7 @@ protocol PortDetailPresentationLogic
 {
   func presentDeleteData(response: PortDetail.DeletePort.Response)
     func presentFecthPortNo(response: PortDetail.PortNo.Response)
-  
+    func presentdoFecthGetOrderData(response: PortDetail.GetOrderList.Response)
 }
 
 
@@ -35,4 +35,10 @@ class PortDetailPresenter: PortDetailPresentationLogic
     let viewModel = PortDetail.DeletePort.ViewModel(delete: response.delete, error: response.error)
     viewController?.displayDeletePort(viewModel: viewModel)
   }
+    func presentdoFecthGetOrderData(response: PortDetail.GetOrderList.Response){
+        let getOrderData = response.getOrderData
+        let error = response.error
+        let viewModel = PortDetail.GetOrderList.ViewModel(getOrderData: getOrderData, error: error)
+        viewController?.displayFecthGetOrderData(viewModel: viewModel)
+    }
 }

@@ -14,7 +14,7 @@ import UIKit
 
 protocol SearchFundsRoutingLogic {
     func sendDatagoToSecondSearchPreview(fundsList: ReealmFundsListMobile)
-    func sendDatagoToAddPortPreview(fundsList: ReealmFundsListMobile)
+    func sendDatagoToAddPortPreview(fundsList: ReealmFundsListMobile, portNo: Int, mainPage: String)
 }
 
 protocol SearchFundsDataPassing
@@ -30,18 +30,20 @@ class SearchFundsRouter: NSObject, SearchFundsRoutingLogic, SearchFundsDataPassi
   // MARK: Routing
   
     func sendDatagoToSecondSearchPreview(fundsList: ReealmFundsListMobile) {
-         let destinationVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SecondSearchViewController") as! SecondSearchViewController
+        let destinationVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SecondSearchViewController") as! SecondSearchViewController
          var destinationDS = destinationVC.router!.dataStore!
-        destinationDS.searchfunds = fundsList
+            destinationDS.searchfunds = fundsList
         viewController?.present(destinationVC, animated: false)
         
     }
     
-      func sendDatagoToAddPortPreview(fundsList: ReealmFundsListMobile) {
-           let destinationVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AddSimulationPortViewController") as! AddSimulationPortViewController
-           var destinationDS = destinationVC.router!.dataStore!
-          destinationDS.searchfunds = fundsList
-          viewController?.present(destinationVC, animated: false)
+    func sendDatagoToAddPortPreview(fundsList: ReealmFundsListMobile, portNo: Int, mainPage: String) {
+        let destinationVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AddSimulationPortViewController") as! AddSimulationPortViewController
+        var destinationDS = destinationVC.router!.dataStore!
+        destinationDS.searchfunds = fundsList
+        destinationDS.portNo = portNo
+        destinationDS.mainPage = mainPage
+        viewController?.present(destinationVC, animated: false)
           
       }
 }

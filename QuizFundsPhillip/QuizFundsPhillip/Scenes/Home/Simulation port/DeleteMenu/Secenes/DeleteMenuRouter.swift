@@ -14,7 +14,8 @@ import UIKit
 
 protocol DeleteMenuRoutingLogic
 {
-  //func routeToSomewhere(segue: UIStoryboardSegue?)
+    func backtoMainPagePreview()
+    func backtoPagePreview()
 }
 
 protocol DeleteMenuDataPassing
@@ -28,33 +29,13 @@ class DeleteMenuRouter: NSObject, DeleteMenuRoutingLogic, DeleteMenuDataPassing
   var dataStore: DeleteMenuDataStore?
   
   // MARK: Routing
-  
-  //func routeToSomewhere(segue: UIStoryboardSegue?)
-  //{
-  //  if let segue = segue {
-  //    let destinationVC = segue.destination as! SomewhereViewController
-  //    var destinationDS = destinationVC.router!.dataStore!
-  //    passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-  //  } else {
-  //    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-  //    let destinationVC = storyboard.instantiateViewController(withIdentifier: "SomewhereViewController") as! SomewhereViewController
-  //    var destinationDS = destinationVC.router!.dataStore!
-  //    passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-  //    navigateToSomewhere(source: viewController!, destination: destinationVC)
-  //  }
-  //}
-
-  // MARK: Navigation
-  
-  //func navigateToSomewhere(source: DeleteMenuViewController, destination: SomewhereViewController)
-  //{
-  //  source.show(destination, sender: nil)
-  //}
-  
-  // MARK: Passing data
-  
-  //func passDataToSomewhere(source: DeleteMenuDataStore, destination: inout SomewhereDataStore)
-  //{
-  //  destination.name = source.name
-  //}
+    func backtoMainPagePreview() {
+//        let destinationtabbarVC = UITapbar.performSegue(withIdentifier: "tabBar", sender: self
+       
+        viewController?.view.window?.rootViewController?.dismiss(animated: false, completion: nil)
+        
+    }
+    func backtoPagePreview() {
+        viewController?.dismiss(animated: true, completion: nil)
+    }
 }

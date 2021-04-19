@@ -12,30 +12,52 @@
 
 import UIKit
 
-protocol HistoryBusinessLogic
-{
-  func doSomething(request: History.Something.Request)
+protocol HistoryBusinessLogic {
+    func doFetchFundsId(request: History.FetchFundsID.Request)
+    func dofetchHistory(request: History.FetchHistoryData.Request)
 }
 
-protocol HistoryDataStore
-{
-  //var name: String { get set }
+protocol HistoryDataStore {
+    var getHistory: GetHistoryModel? { get set }
+    var fundsId: String? {get set}
+    var portNo: Int {get set}
 }
 
-class HistoryInteractor: HistoryBusinessLogic, HistoryDataStore
-{
+class HistoryInteractor: HistoryBusinessLogic, HistoryDataStore {
+    var getHistory: GetHistoryModel?
+    
   var presenter: HistoryPresentationLogic?
   var worker: HistoryWorker?
-  //var name: String = ""
-  
-  // MARK: Do something
-  
-  func doSomething(request: History.Something.Request)
-  {
-    worker = HistoryWorker()
-    worker?.doSomeWork()
+    var fundsId: String?
+    var portNo: Int = 0
     
-    let response = History.Something.Response()
-    presenter?.presentSomething(response: response)
-  }
+  // MARK: Do something
+    
+    func doFetchFundsId(request: History.FetchFundsID.Request) {
+        let response = History.FetchFundsID.Response(fcode: fundsId ?? "", portNo: portNo )
+        presenter?.presentFundscode(response: response)
+    }
+    func dofetchHistory(request: History.FetchHistoryData.Request)
+    {
+      worker = HistoryWorker()
+      let username = request.username
+      let portNo = request.portno
+      let fcode = request.fcode
+  //    print("username", username)
+  //    print("portNo", portNo )
+  //    print("fcode", fcode )
+      worker?.fecthGetHistoryData (username: username, portNo: portNo, fcode: fcode) { (getHistory, error ) in
+          if error != nil {
+              let response =  History.FetchHistoryData.Response(getHistory: nil, error: error)
+              self.presenter?.presentfetchHistory(response: response)
+          }
+          
+          let response =  History.FetchHistoryData.Response(getHistory: getHistory, error: nil)
+  //      print("getOrderData", getOrderData)
+          self.presenter?.presentfetchHistory(response: response)
+      }
+     
+      let response = History.FetchHistoryData.Response()
+      presenter?.presentfetchHistory(response: response)
+    }
 }

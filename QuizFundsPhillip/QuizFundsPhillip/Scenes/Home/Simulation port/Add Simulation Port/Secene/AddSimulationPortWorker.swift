@@ -11,10 +11,57 @@
 //
 
 import UIKit
-
+import Alamofire
+import SwiftyJSON
 class AddSimulationPortWorker
 {
-  func doSomeWork()
-  {
+  func doSomeWork() {
   }
+    typealias FecthNavListDataCompletionHandler = (_ navList: [NavListModel]?,_ error: Error?) -> ()
+    func doFetchNavListData(completionHandler: @escaping FecthNavListDataCompletionHandler) {
+        let router = Funds.navList
+        Alamofire.request(router).responseJSON { response in
+            if response.error != nil {
+                completionHandler(nil, response.error)
+                return
+            }
+            
+            if let data = response.data {
+                do {
+                    let NavListModelData = try JSONDecoder().decode([NavListModel]?.self, from: data)
+//                    print("getOrderModelData >> ", NavListModelData.count)
+                    completionHandler(NavListModelData, nil)
+                    
+                } catch let error {
+                    print("Failed to load: \(error.localizedDescription)")
+
+                    completionHandler(nil, error)
+                }
+            }
+        }
+    }
+    typealias FecthInsertDataCompletionHandler = (_ getHistory: InsertOrderModel?,_ error: Error?) -> ()
+    func fecthInsertData(username: String, portNo: Int, portName: String, fcode: String, ordtp: Double, grsam: Double, units: Double, unprc: Double, trndt: String, status: String, channel:String, realized: String, completionHandler: @escaping FecthInsertDataCompletionHandler) {
+        let router = Funds.insertOrder.path
+        Alamofire.request(router, method: .post, parameters: ["username": username, "portNo": portNo, "portName": portName, "fcode": fcode, "ordtp": ordtp, "grsam": grsam, "units": units, "unprc": unprc, "trndt": trndt, "status": status, "channel":channel, "realized": realized]).responseJSON { response in
+            if response.error != nil {
+                completionHandler(nil, response.error)
+                return
+            }
+            
+            if let data = response.data {
+                print("data>>", response.value)
+                do {
+                    let insertOrderModel = try JSONDecoder().decode(InsertOrderModel.self, from: data)
+//                    print("getOrderModelData >> ", getOrderModelData)
+                    completionHandler(insertOrderModel, nil)
+                    
+                } catch let error {
+                    print("Failed to load: \(error.localizedDescription)")
+
+                    completionHandler(nil, error)
+                }
+            }
+        }
+    }
 }

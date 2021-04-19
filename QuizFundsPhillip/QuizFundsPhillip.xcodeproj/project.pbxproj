@@ -7,7 +7,81 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B44A5C1359FF625C4C62E61F /* Pods_QuizFundsPhillip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A4F99A9707ABFA074CDDB09 /* Pods_QuizFundsPhillip.framework */; };
+		A3E34F2D4829E4704D42E544 /* Pods_QuizFundsPhillip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 055D70E71A5E2C62ECE3DB8C /* Pods_QuizFundsPhillip.framework */; };
+		CE03E4F5261479EA00E5795C /* NotoSansThaiUI-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE03E4AB261479EA00E5795C /* NotoSansThaiUI-ExtraBold.ttf */; };
+		CE03E4F6261479EA00E5795C /* NotoSansThai-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE03E4AC261479EA00E5795C /* NotoSansThai-SemiBold.ttf */; };
+		CE03E4F7261479EA00E5795C /* NotoSansThaiUI-SemiCondensedBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE03E4AD261479EA00E5795C /* NotoSansThaiUI-SemiCondensedBold.ttf */; };
+		CE03E4F8261479EA00E5795C /* NotoSansThaiUI-CondensedBlack.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE03E4AE261479EA00E5795C /* NotoSansThaiUI-CondensedBlack.ttf */; };
+		CE03E4F9261479EA00E5795C /* NotoSansThai-ExtraCondensed.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE03E4AF261479EA00E5795C /* NotoSansThai-ExtraCondensed.ttf */; };
+		CE03E4FA261479EA00E5795C /* NotoSansThai-ExtraCondensedExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE03E4B0261479EA00E5795C /* NotoSansThai-ExtraCondensedExtraLight.ttf */; };
+		CE03E4FB261479EA00E5795C /* NotoSansThaiUI-CondensedBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE03E4B1261479EA00E5795C /* NotoSansThaiUI-CondensedBold.ttf */; };
+		CE03E4FC261479EA00E5795C /* NotoSansThai-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE03E4B2261479EA00E5795C /* NotoSansThai-Regular.ttf */; };
+		CE03E4FD261479EA00E5795C /* NotoSansThaiUI-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE03E4B3261479EA00E5795C /* NotoSansThaiUI-SemiBold.ttf */; };
+		CE03E4FE261479EA00E5795C /* NotoSansThaiUI-CondensedExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE03E4B4261479EA00E5795C /* NotoSansThaiUI-CondensedExtraBold.ttf */; };
+		CE03E4FF261479EA00E5795C /* NotoSansThaiUI-CondensedThin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE03E4B5261479EA00E5795C /* NotoSansThaiUI-CondensedThin.ttf */; };
+		CE03E500261479EA00E5795C /* NotoSansThai-CondensedBlack.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE03E4B6261479EA00E5795C /* NotoSansThai-CondensedBlack.ttf */; };
+		CE03E501261479EA00E5795C /* NotoSansThaiUI-SemiCondensedThin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE03E4B7261479EA00E5795C /* NotoSansThaiUI-SemiCondensedThin.ttf */; };
+		CE03E502261479EA00E5795C /* NotoSansThai-CondensedSemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE03E4B8261479EA00E5795C /* NotoSansThai-CondensedSemiBold.ttf */; };
+		CE03E503261479EA00E5795C /* NotoSansThaiUI-SemiCondensed.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE03E4B9261479EA00E5795C /* NotoSansThaiUI-SemiCondensed.ttf */; };
+		CE03E504261479EA00E5795C /* NotoSansThaiUI-ExtraCondensed.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE03E4BA261479EA00E5795C /* NotoSansThaiUI-ExtraCondensed.ttf */; };
+		CE03E505261479EA00E5795C /* NotoSansThai-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE03E4BB261479EA00E5795C /* NotoSansThai-ExtraLight.ttf */; };
+		CE03E506261479EA00E5795C /* NotoSansThai-SemiCondensedBlack.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE03E4BC261479EA00E5795C /* NotoSansThai-SemiCondensedBlack.ttf */; };
+		CE03E507261479EA00E5795C /* NotoSansThaiUI-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE03E4BD261479EA00E5795C /* NotoSansThaiUI-Bold.ttf */; };
+		CE03E508261479EA00E5795C /* NotoSansThai-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE03E4BE261479EA00E5795C /* NotoSansThai-ExtraBold.ttf */; };
+		CE03E509261479EA00E5795C /* NotoSansThai-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE03E4BF261479EA00E5795C /* NotoSansThai-Medium.ttf */; };
+		CE03E50A261479EA00E5795C /* NotoSansThaiUI-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE03E4C0261479EA00E5795C /* NotoSansThaiUI-Black.ttf */; };
+		CE03E50B261479EA00E5795C /* NotoSansThai-CondensedMedium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE03E4C1261479EA00E5795C /* NotoSansThai-CondensedMedium.ttf */; };
+		CE03E50C261479EA00E5795C /* NotoSansThai-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE03E4C2261479EA00E5795C /* NotoSansThai-Bold.ttf */; };
+		CE03E50D261479EA00E5795C /* NotoSansThai-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE03E4C3261479EA00E5795C /* NotoSansThai-Light.ttf */; };
+		CE03E50E261479EA00E5795C /* NotoSansThai-SemiCondensedThin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE03E4C4261479EA00E5795C /* NotoSansThai-SemiCondensedThin.ttf */; };
+		CE03E50F261479EA00E5795C /* NotoSansThaiUI-CondensedSemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE03E4C5261479EA00E5795C /* NotoSansThaiUI-CondensedSemiBold.ttf */; };
+		CE03E510261479EA00E5795C /* NotoSansThai-ExtraCondensedBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE03E4C6261479EA00E5795C /* NotoSansThai-ExtraCondensedBold.ttf */; };
+		CE03E511261479EA00E5795C /* NotoSansThaiUI-SemiCondensedLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE03E4C7261479EA00E5795C /* NotoSansThaiUI-SemiCondensedLight.ttf */; };
+		CE03E512261479EA00E5795C /* NotoSansThai-ExtraCondensedThin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE03E4C8261479EA00E5795C /* NotoSansThai-ExtraCondensedThin.ttf */; };
+		CE03E513261479EA00E5795C /* NotoSansThaiUI-ExtraCondensedLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE03E4C9261479EA00E5795C /* NotoSansThaiUI-ExtraCondensedLight.ttf */; };
+		CE03E514261479EA00E5795C /* NotoSansThai-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE03E4CA261479EA00E5795C /* NotoSansThai-Thin.ttf */; };
+		CE03E515261479EA00E5795C /* NotoSansThai-SemiCondensedBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE03E4CB261479EA00E5795C /* NotoSansThai-SemiCondensedBold.ttf */; };
+		CE03E516261479EA00E5795C /* NotoSansThai-ExtraCondensedExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE03E4CC261479EA00E5795C /* NotoSansThai-ExtraCondensedExtraBold.ttf */; };
+		CE03E517261479EA00E5795C /* NotoSansThai-ExtraCondensedLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE03E4CD261479EA00E5795C /* NotoSansThai-ExtraCondensedLight.ttf */; };
+		CE03E518261479EA00E5795C /* NotoSansThaiUI-SemiCondensedExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE03E4CE261479EA00E5795C /* NotoSansThaiUI-SemiCondensedExtraLight.ttf */; };
+		CE03E519261479EA00E5795C /* README in Resources */ = {isa = PBXBuildFile; fileRef = CE03E4CF261479EA00E5795C /* README */; };
+		CE03E51A261479EA00E5795C /* NotoSansThaiUI-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE03E4D0261479EA00E5795C /* NotoSansThaiUI-Thin.ttf */; };
+		CE03E51B261479EA00E5795C /* NotoSansThai-Condensed.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE03E4D1261479EA00E5795C /* NotoSansThai-Condensed.ttf */; };
+		CE03E51C261479EA00E5795C /* NotoSansThaiUI-ExtraCondensedBlack.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE03E4D2261479EA00E5795C /* NotoSansThaiUI-ExtraCondensedBlack.ttf */; };
+		CE03E51D261479EA00E5795C /* NotoSansThaiUI-SemiCondensedExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE03E4D3261479EA00E5795C /* NotoSansThaiUI-SemiCondensedExtraBold.ttf */; };
+		CE03E51E261479EA00E5795C /* NotoSansThaiUI-SemiCondensedSemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE03E4D4261479EA00E5795C /* NotoSansThaiUI-SemiCondensedSemiBold.ttf */; };
+		CE03E51F261479EA00E5795C /* NotoSansThai-SemiCondensedExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE03E4D5261479EA00E5795C /* NotoSansThai-SemiCondensedExtraLight.ttf */; };
+		CE03E520261479EA00E5795C /* NotoSansThai-SemiCondensedSemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE03E4D6261479EA00E5795C /* NotoSansThai-SemiCondensedSemiBold.ttf */; };
+		CE03E521261479EA00E5795C /* NotoSansThaiUI-SemiCondensedBlack.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE03E4D7261479EA00E5795C /* NotoSansThaiUI-SemiCondensedBlack.ttf */; };
+		CE03E522261479EA00E5795C /* NotoSansThaiUI-ExtraCondensedExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE03E4D8261479EA00E5795C /* NotoSansThaiUI-ExtraCondensedExtraBold.ttf */; };
+		CE03E523261479EA00E5795C /* NotoSansThaiUI-ExtraCondensedBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE03E4D9261479EA00E5795C /* NotoSansThaiUI-ExtraCondensedBold.ttf */; };
+		CE03E524261479EA00E5795C /* NotoSansThaiUI-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE03E4DA261479EA00E5795C /* NotoSansThaiUI-Medium.ttf */; };
+		CE03E525261479EA00E5795C /* NotoSansThai-ExtraCondensedBlack.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE03E4DB261479EA00E5795C /* NotoSansThai-ExtraCondensedBlack.ttf */; };
+		CE03E526261479EA00E5795C /* NotoSansThaiUI-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE03E4DC261479EA00E5795C /* NotoSansThaiUI-Regular.ttf */; };
+		CE03E527261479EA00E5795C /* NotoSansThaiUI-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE03E4DD261479EA00E5795C /* NotoSansThaiUI-ExtraLight.ttf */; };
+		CE03E528261479EA00E5795C /* NotoSansThai-ExtraCondensedSemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE03E4DE261479EA00E5795C /* NotoSansThai-ExtraCondensedSemiBold.ttf */; };
+		CE03E529261479EA00E5795C /* NotoSansThaiUI-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE03E4DF261479EA00E5795C /* NotoSansThaiUI-Light.ttf */; };
+		CE03E52A261479EA00E5795C /* NotoSansThaiUI-ExtraCondensedThin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE03E4E0261479EA00E5795C /* NotoSansThaiUI-ExtraCondensedThin.ttf */; };
+		CE03E52B261479EA00E5795C /* NotoSansThai-SemiCondensedLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE03E4E1261479EA00E5795C /* NotoSansThai-SemiCondensedLight.ttf */; };
+		CE03E52C261479EA00E5795C /* NotoSansThaiUI-ExtraCondensedMedium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE03E4E2261479EA00E5795C /* NotoSansThaiUI-ExtraCondensedMedium.ttf */; };
+		CE03E52D261479EA00E5795C /* NotoSansThai-ExtraCondensedMedium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE03E4E3261479EA00E5795C /* NotoSansThai-ExtraCondensedMedium.ttf */; };
+		CE03E52E261479EA00E5795C /* NotoSansThai-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE03E4E4261479EA00E5795C /* NotoSansThai-Black.ttf */; };
+		CE03E52F261479EA00E5795C /* NotoSansThai-CondensedBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE03E4E5261479EA00E5795C /* NotoSansThai-CondensedBold.ttf */; };
+		CE03E530261479EA00E5795C /* NotoSansThaiUI-Condensed.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE03E4E6261479EA00E5795C /* NotoSansThaiUI-Condensed.ttf */; };
+		CE03E531261479EA00E5795C /* NotoSansThai-CondensedExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE03E4E7261479EA00E5795C /* NotoSansThai-CondensedExtraLight.ttf */; };
+		CE03E532261479EA00E5795C /* NotoSansThai-CondensedLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE03E4E8261479EA00E5795C /* NotoSansThai-CondensedLight.ttf */; };
+		CE03E533261479EA00E5795C /* NotoSansThaiUI-CondensedMedium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE03E4E9261479EA00E5795C /* NotoSansThaiUI-CondensedMedium.ttf */; };
+		CE03E534261479EA00E5795C /* NotoSansThaiUI-CondensedExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE03E4EA261479EA00E5795C /* NotoSansThaiUI-CondensedExtraLight.ttf */; };
+		CE03E535261479EA00E5795C /* NotoSansThaiUI-ExtraCondensedExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE03E4EB261479EA00E5795C /* NotoSansThaiUI-ExtraCondensedExtraLight.ttf */; };
+		CE03E536261479EA00E5795C /* NotoSansThaiUI-CondensedLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE03E4EC261479EA00E5795C /* NotoSansThaiUI-CondensedLight.ttf */; };
+		CE03E537261479EA00E5795C /* NotoSansThaiUI-ExtraCondensedSemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE03E4ED261479EA00E5795C /* NotoSansThaiUI-ExtraCondensedSemiBold.ttf */; };
+		CE03E538261479EA00E5795C /* NotoSansThai-CondensedExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE03E4EE261479EA00E5795C /* NotoSansThai-CondensedExtraBold.ttf */; };
+		CE03E539261479EA00E5795C /* NotoSansThaiUI-SemiCondensedMedium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE03E4EF261479EA00E5795C /* NotoSansThaiUI-SemiCondensedMedium.ttf */; };
+		CE03E53A261479EA00E5795C /* NotoSansThai-SemiCondensed.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE03E4F0261479EA00E5795C /* NotoSansThai-SemiCondensed.ttf */; };
+		CE03E53B261479EA00E5795C /* NotoSansThai-SemiCondensedMedium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE03E4F1261479EA00E5795C /* NotoSansThai-SemiCondensedMedium.ttf */; };
+		CE03E53C261479EA00E5795C /* LICENSE_OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE03E4F2261479EA00E5795C /* LICENSE_OFL.txt */; };
+		CE03E53D261479EA00E5795C /* NotoSansThai-SemiCondensedExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE03E4F3261479EA00E5795C /* NotoSansThai-SemiCondensedExtraBold.ttf */; };
+		CE03E53E261479EA00E5795C /* NotoSansThai-CondensedThin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE03E4F4261479EA00E5795C /* NotoSansThai-CondensedThin.ttf */; };
 		CE2A408325D29609003A51FF /* ReealmFundsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2A408225D29609003A51FF /* ReealmFundsList.swift */; };
 		CE40658F25C3B8C000027C32 /* HomepagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE40658925C3B8C000027C32 /* HomepagePresenter.swift */; };
 		CE40659025C3B8C000027C32 /* HomepageWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE40658A25C3B8C000027C32 /* HomepageWorker.swift */; };
@@ -60,6 +134,8 @@
 		CE56D46B25F757310070B655 /* AddSimulationPortInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE56D46525F757310070B655 /* AddSimulationPortInteractor.swift */; };
 		CE7656A9260B052F006AAB86 /* GetOrderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7656A8260B052F006AAB86 /* GetOrderModel.swift */; };
 		CE7B2C7A25D3A8F9009F773B /* BuyViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7B2C7925D3A8F9009F773B /* BuyViewCell.swift */; };
+		CE7BBBFD261AF5C500BEAD98 /* NavListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7BBBFC261AF5C500BEAD98 /* NavListModel.swift */; };
+		CE7BBC01261AF5F700BEAD98 /* NavListDb.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7BBC00261AF5F700BEAD98 /* NavListDb.swift */; };
 		CE7DD26925DF79C100B47B3B /* SecondSearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7DD26325DF79C100B47B3B /* SecondSearchPresenter.swift */; };
 		CE7DD26A25DF79C100B47B3B /* SecondSearchWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7DD26425DF79C100B47B3B /* SecondSearchWorker.swift */; };
 		CE7DD26B25DF79C100B47B3B /* SecondSearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7DD26525DF79C100B47B3B /* SecondSearchRouter.swift */; };
@@ -201,8 +277,82 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1A4F99A9707ABFA074CDDB09 /* Pods_QuizFundsPhillip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuizFundsPhillip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4C051F0A8B6BD8A2A5D22227 /* Pods-QuizFundsPhillip.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuizFundsPhillip.debug.xcconfig"; path = "Target Support Files/Pods-QuizFundsPhillip/Pods-QuizFundsPhillip.debug.xcconfig"; sourceTree = "<group>"; };
+		055D70E71A5E2C62ECE3DB8C /* Pods_QuizFundsPhillip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuizFundsPhillip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFC1D4E81C70841A0F0E3B3E /* Pods-QuizFundsPhillip.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuizFundsPhillip.release.xcconfig"; path = "Target Support Files/Pods-QuizFundsPhillip/Pods-QuizFundsPhillip.release.xcconfig"; sourceTree = "<group>"; };
+		CE03E4AB261479EA00E5795C /* NotoSansThaiUI-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansThaiUI-ExtraBold.ttf"; sourceTree = "<group>"; };
+		CE03E4AC261479EA00E5795C /* NotoSansThai-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansThai-SemiBold.ttf"; sourceTree = "<group>"; };
+		CE03E4AD261479EA00E5795C /* NotoSansThaiUI-SemiCondensedBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansThaiUI-SemiCondensedBold.ttf"; sourceTree = "<group>"; };
+		CE03E4AE261479EA00E5795C /* NotoSansThaiUI-CondensedBlack.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansThaiUI-CondensedBlack.ttf"; sourceTree = "<group>"; };
+		CE03E4AF261479EA00E5795C /* NotoSansThai-ExtraCondensed.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansThai-ExtraCondensed.ttf"; sourceTree = "<group>"; };
+		CE03E4B0261479EA00E5795C /* NotoSansThai-ExtraCondensedExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansThai-ExtraCondensedExtraLight.ttf"; sourceTree = "<group>"; };
+		CE03E4B1261479EA00E5795C /* NotoSansThaiUI-CondensedBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansThaiUI-CondensedBold.ttf"; sourceTree = "<group>"; };
+		CE03E4B2261479EA00E5795C /* NotoSansThai-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansThai-Regular.ttf"; sourceTree = "<group>"; };
+		CE03E4B3261479EA00E5795C /* NotoSansThaiUI-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansThaiUI-SemiBold.ttf"; sourceTree = "<group>"; };
+		CE03E4B4261479EA00E5795C /* NotoSansThaiUI-CondensedExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansThaiUI-CondensedExtraBold.ttf"; sourceTree = "<group>"; };
+		CE03E4B5261479EA00E5795C /* NotoSansThaiUI-CondensedThin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansThaiUI-CondensedThin.ttf"; sourceTree = "<group>"; };
+		CE03E4B6261479EA00E5795C /* NotoSansThai-CondensedBlack.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansThai-CondensedBlack.ttf"; sourceTree = "<group>"; };
+		CE03E4B7261479EA00E5795C /* NotoSansThaiUI-SemiCondensedThin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansThaiUI-SemiCondensedThin.ttf"; sourceTree = "<group>"; };
+		CE03E4B8261479EA00E5795C /* NotoSansThai-CondensedSemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansThai-CondensedSemiBold.ttf"; sourceTree = "<group>"; };
+		CE03E4B9261479EA00E5795C /* NotoSansThaiUI-SemiCondensed.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansThaiUI-SemiCondensed.ttf"; sourceTree = "<group>"; };
+		CE03E4BA261479EA00E5795C /* NotoSansThaiUI-ExtraCondensed.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansThaiUI-ExtraCondensed.ttf"; sourceTree = "<group>"; };
+		CE03E4BB261479EA00E5795C /* NotoSansThai-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansThai-ExtraLight.ttf"; sourceTree = "<group>"; };
+		CE03E4BC261479EA00E5795C /* NotoSansThai-SemiCondensedBlack.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansThai-SemiCondensedBlack.ttf"; sourceTree = "<group>"; };
+		CE03E4BD261479EA00E5795C /* NotoSansThaiUI-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansThaiUI-Bold.ttf"; sourceTree = "<group>"; };
+		CE03E4BE261479EA00E5795C /* NotoSansThai-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansThai-ExtraBold.ttf"; sourceTree = "<group>"; };
+		CE03E4BF261479EA00E5795C /* NotoSansThai-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansThai-Medium.ttf"; sourceTree = "<group>"; };
+		CE03E4C0261479EA00E5795C /* NotoSansThaiUI-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansThaiUI-Black.ttf"; sourceTree = "<group>"; };
+		CE03E4C1261479EA00E5795C /* NotoSansThai-CondensedMedium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansThai-CondensedMedium.ttf"; sourceTree = "<group>"; };
+		CE03E4C2261479EA00E5795C /* NotoSansThai-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansThai-Bold.ttf"; sourceTree = "<group>"; };
+		CE03E4C3261479EA00E5795C /* NotoSansThai-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansThai-Light.ttf"; sourceTree = "<group>"; };
+		CE03E4C4261479EA00E5795C /* NotoSansThai-SemiCondensedThin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansThai-SemiCondensedThin.ttf"; sourceTree = "<group>"; };
+		CE03E4C5261479EA00E5795C /* NotoSansThaiUI-CondensedSemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansThaiUI-CondensedSemiBold.ttf"; sourceTree = "<group>"; };
+		CE03E4C6261479EA00E5795C /* NotoSansThai-ExtraCondensedBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansThai-ExtraCondensedBold.ttf"; sourceTree = "<group>"; };
+		CE03E4C7261479EA00E5795C /* NotoSansThaiUI-SemiCondensedLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansThaiUI-SemiCondensedLight.ttf"; sourceTree = "<group>"; };
+		CE03E4C8261479EA00E5795C /* NotoSansThai-ExtraCondensedThin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansThai-ExtraCondensedThin.ttf"; sourceTree = "<group>"; };
+		CE03E4C9261479EA00E5795C /* NotoSansThaiUI-ExtraCondensedLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansThaiUI-ExtraCondensedLight.ttf"; sourceTree = "<group>"; };
+		CE03E4CA261479EA00E5795C /* NotoSansThai-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansThai-Thin.ttf"; sourceTree = "<group>"; };
+		CE03E4CB261479EA00E5795C /* NotoSansThai-SemiCondensedBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansThai-SemiCondensedBold.ttf"; sourceTree = "<group>"; };
+		CE03E4CC261479EA00E5795C /* NotoSansThai-ExtraCondensedExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansThai-ExtraCondensedExtraBold.ttf"; sourceTree = "<group>"; };
+		CE03E4CD261479EA00E5795C /* NotoSansThai-ExtraCondensedLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansThai-ExtraCondensedLight.ttf"; sourceTree = "<group>"; };
+		CE03E4CE261479EA00E5795C /* NotoSansThaiUI-SemiCondensedExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansThaiUI-SemiCondensedExtraLight.ttf"; sourceTree = "<group>"; };
+		CE03E4CF261479EA00E5795C /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		CE03E4D0261479EA00E5795C /* NotoSansThaiUI-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansThaiUI-Thin.ttf"; sourceTree = "<group>"; };
+		CE03E4D1261479EA00E5795C /* NotoSansThai-Condensed.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansThai-Condensed.ttf"; sourceTree = "<group>"; };
+		CE03E4D2261479EA00E5795C /* NotoSansThaiUI-ExtraCondensedBlack.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansThaiUI-ExtraCondensedBlack.ttf"; sourceTree = "<group>"; };
+		CE03E4D3261479EA00E5795C /* NotoSansThaiUI-SemiCondensedExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansThaiUI-SemiCondensedExtraBold.ttf"; sourceTree = "<group>"; };
+		CE03E4D4261479EA00E5795C /* NotoSansThaiUI-SemiCondensedSemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansThaiUI-SemiCondensedSemiBold.ttf"; sourceTree = "<group>"; };
+		CE03E4D5261479EA00E5795C /* NotoSansThai-SemiCondensedExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansThai-SemiCondensedExtraLight.ttf"; sourceTree = "<group>"; };
+		CE03E4D6261479EA00E5795C /* NotoSansThai-SemiCondensedSemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansThai-SemiCondensedSemiBold.ttf"; sourceTree = "<group>"; };
+		CE03E4D7261479EA00E5795C /* NotoSansThaiUI-SemiCondensedBlack.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansThaiUI-SemiCondensedBlack.ttf"; sourceTree = "<group>"; };
+		CE03E4D8261479EA00E5795C /* NotoSansThaiUI-ExtraCondensedExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansThaiUI-ExtraCondensedExtraBold.ttf"; sourceTree = "<group>"; };
+		CE03E4D9261479EA00E5795C /* NotoSansThaiUI-ExtraCondensedBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansThaiUI-ExtraCondensedBold.ttf"; sourceTree = "<group>"; };
+		CE03E4DA261479EA00E5795C /* NotoSansThaiUI-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansThaiUI-Medium.ttf"; sourceTree = "<group>"; };
+		CE03E4DB261479EA00E5795C /* NotoSansThai-ExtraCondensedBlack.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansThai-ExtraCondensedBlack.ttf"; sourceTree = "<group>"; };
+		CE03E4DC261479EA00E5795C /* NotoSansThaiUI-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansThaiUI-Regular.ttf"; sourceTree = "<group>"; };
+		CE03E4DD261479EA00E5795C /* NotoSansThaiUI-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansThaiUI-ExtraLight.ttf"; sourceTree = "<group>"; };
+		CE03E4DE261479EA00E5795C /* NotoSansThai-ExtraCondensedSemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansThai-ExtraCondensedSemiBold.ttf"; sourceTree = "<group>"; };
+		CE03E4DF261479EA00E5795C /* NotoSansThaiUI-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansThaiUI-Light.ttf"; sourceTree = "<group>"; };
+		CE03E4E0261479EA00E5795C /* NotoSansThaiUI-ExtraCondensedThin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansThaiUI-ExtraCondensedThin.ttf"; sourceTree = "<group>"; };
+		CE03E4E1261479EA00E5795C /* NotoSansThai-SemiCondensedLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansThai-SemiCondensedLight.ttf"; sourceTree = "<group>"; };
+		CE03E4E2261479EA00E5795C /* NotoSansThaiUI-ExtraCondensedMedium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansThaiUI-ExtraCondensedMedium.ttf"; sourceTree = "<group>"; };
+		CE03E4E3261479EA00E5795C /* NotoSansThai-ExtraCondensedMedium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansThai-ExtraCondensedMedium.ttf"; sourceTree = "<group>"; };
+		CE03E4E4261479EA00E5795C /* NotoSansThai-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansThai-Black.ttf"; sourceTree = "<group>"; };
+		CE03E4E5261479EA00E5795C /* NotoSansThai-CondensedBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansThai-CondensedBold.ttf"; sourceTree = "<group>"; };
+		CE03E4E6261479EA00E5795C /* NotoSansThaiUI-Condensed.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansThaiUI-Condensed.ttf"; sourceTree = "<group>"; };
+		CE03E4E7261479EA00E5795C /* NotoSansThai-CondensedExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansThai-CondensedExtraLight.ttf"; sourceTree = "<group>"; };
+		CE03E4E8261479EA00E5795C /* NotoSansThai-CondensedLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansThai-CondensedLight.ttf"; sourceTree = "<group>"; };
+		CE03E4E9261479EA00E5795C /* NotoSansThaiUI-CondensedMedium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansThaiUI-CondensedMedium.ttf"; sourceTree = "<group>"; };
+		CE03E4EA261479EA00E5795C /* NotoSansThaiUI-CondensedExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansThaiUI-CondensedExtraLight.ttf"; sourceTree = "<group>"; };
+		CE03E4EB261479EA00E5795C /* NotoSansThaiUI-ExtraCondensedExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansThaiUI-ExtraCondensedExtraLight.ttf"; sourceTree = "<group>"; };
+		CE03E4EC261479EA00E5795C /* NotoSansThaiUI-CondensedLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansThaiUI-CondensedLight.ttf"; sourceTree = "<group>"; };
+		CE03E4ED261479EA00E5795C /* NotoSansThaiUI-ExtraCondensedSemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansThaiUI-ExtraCondensedSemiBold.ttf"; sourceTree = "<group>"; };
+		CE03E4EE261479EA00E5795C /* NotoSansThai-CondensedExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansThai-CondensedExtraBold.ttf"; sourceTree = "<group>"; };
+		CE03E4EF261479EA00E5795C /* NotoSansThaiUI-SemiCondensedMedium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansThaiUI-SemiCondensedMedium.ttf"; sourceTree = "<group>"; };
+		CE03E4F0261479EA00E5795C /* NotoSansThai-SemiCondensed.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansThai-SemiCondensed.ttf"; sourceTree = "<group>"; };
+		CE03E4F1261479EA00E5795C /* NotoSansThai-SemiCondensedMedium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansThai-SemiCondensedMedium.ttf"; sourceTree = "<group>"; };
+		CE03E4F2261479EA00E5795C /* LICENSE_OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE_OFL.txt; sourceTree = "<group>"; };
+		CE03E4F3261479EA00E5795C /* NotoSansThai-SemiCondensedExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansThai-SemiCondensedExtraBold.ttf"; sourceTree = "<group>"; };
+		CE03E4F4261479EA00E5795C /* NotoSansThai-CondensedThin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansThai-CondensedThin.ttf"; sourceTree = "<group>"; };
 		CE2A408225D29609003A51FF /* ReealmFundsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReealmFundsList.swift; sourceTree = "<group>"; };
 		CE40658925C3B8C000027C32 /* HomepagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepagePresenter.swift; sourceTree = "<group>"; };
 		CE40658A25C3B8C000027C32 /* HomepageWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageWorker.swift; sourceTree = "<group>"; };
@@ -255,6 +405,8 @@
 		CE56D46525F757310070B655 /* AddSimulationPortInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSimulationPortInteractor.swift; sourceTree = "<group>"; };
 		CE7656A8260B052F006AAB86 /* GetOrderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetOrderModel.swift; sourceTree = "<group>"; };
 		CE7B2C7925D3A8F9009F773B /* BuyViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyViewCell.swift; sourceTree = "<group>"; };
+		CE7BBBFC261AF5C500BEAD98 /* NavListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavListModel.swift; sourceTree = "<group>"; };
+		CE7BBC00261AF5F700BEAD98 /* NavListDb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavListDb.swift; sourceTree = "<group>"; };
 		CE7DD26325DF79C100B47B3B /* SecondSearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSearchPresenter.swift; sourceTree = "<group>"; };
 		CE7DD26425DF79C100B47B3B /* SecondSearchWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSearchWorker.swift; sourceTree = "<group>"; };
 		CE7DD26525DF79C100B47B3B /* SecondSearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSearchRouter.swift; sourceTree = "<group>"; };
@@ -395,7 +547,7 @@
 		CED9FE3125D137FE001142CD /* SearchFundsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFundsInteractor.swift; sourceTree = "<group>"; };
 		CED9FE3B25D14298001142CD /* SearchFundsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFundsModel.swift; sourceTree = "<group>"; };
 		CED9FE4025D1486B001142CD /* SearchFundsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFundsViewCell.swift; sourceTree = "<group>"; };
-		E4AECD68B67F822DA4CF042A /* Pods-QuizFundsPhillip.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuizFundsPhillip.release.xcconfig"; path = "Target Support Files/Pods-QuizFundsPhillip/Pods-QuizFundsPhillip.release.xcconfig"; sourceTree = "<group>"; };
+		FF13678C1C1B89B9BEC63CD9 /* Pods-QuizFundsPhillip.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuizFundsPhillip.debug.xcconfig"; path = "Target Support Files/Pods-QuizFundsPhillip/Pods-QuizFundsPhillip.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -403,7 +555,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B44A5C1359FF625C4C62E61F /* Pods_QuizFundsPhillip.framework in Frameworks */,
+				A3E34F2D4829E4704D42E544 /* Pods_QuizFundsPhillip.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,10 +565,99 @@
 		4A460506C4F713E6AE2C08B1 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				4C051F0A8B6BD8A2A5D22227 /* Pods-QuizFundsPhillip.debug.xcconfig */,
-				E4AECD68B67F822DA4CF042A /* Pods-QuizFundsPhillip.release.xcconfig */,
+				FF13678C1C1B89B9BEC63CD9 /* Pods-QuizFundsPhillip.debug.xcconfig */,
+				AFC1D4E81C70841A0F0E3B3E /* Pods-QuizFundsPhillip.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		B46A1E1A840424135F228067 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				055D70E71A5E2C62ECE3DB8C /* Pods_QuizFundsPhillip.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CE03E4AA261479EA00E5795C /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				CE03E4AB261479EA00E5795C /* NotoSansThaiUI-ExtraBold.ttf */,
+				CE03E4AC261479EA00E5795C /* NotoSansThai-SemiBold.ttf */,
+				CE03E4AD261479EA00E5795C /* NotoSansThaiUI-SemiCondensedBold.ttf */,
+				CE03E4AE261479EA00E5795C /* NotoSansThaiUI-CondensedBlack.ttf */,
+				CE03E4AF261479EA00E5795C /* NotoSansThai-ExtraCondensed.ttf */,
+				CE03E4B0261479EA00E5795C /* NotoSansThai-ExtraCondensedExtraLight.ttf */,
+				CE03E4B1261479EA00E5795C /* NotoSansThaiUI-CondensedBold.ttf */,
+				CE03E4B2261479EA00E5795C /* NotoSansThai-Regular.ttf */,
+				CE03E4B3261479EA00E5795C /* NotoSansThaiUI-SemiBold.ttf */,
+				CE03E4B4261479EA00E5795C /* NotoSansThaiUI-CondensedExtraBold.ttf */,
+				CE03E4B5261479EA00E5795C /* NotoSansThaiUI-CondensedThin.ttf */,
+				CE03E4B6261479EA00E5795C /* NotoSansThai-CondensedBlack.ttf */,
+				CE03E4B7261479EA00E5795C /* NotoSansThaiUI-SemiCondensedThin.ttf */,
+				CE03E4B8261479EA00E5795C /* NotoSansThai-CondensedSemiBold.ttf */,
+				CE03E4B9261479EA00E5795C /* NotoSansThaiUI-SemiCondensed.ttf */,
+				CE03E4BA261479EA00E5795C /* NotoSansThaiUI-ExtraCondensed.ttf */,
+				CE03E4BB261479EA00E5795C /* NotoSansThai-ExtraLight.ttf */,
+				CE03E4BC261479EA00E5795C /* NotoSansThai-SemiCondensedBlack.ttf */,
+				CE03E4BD261479EA00E5795C /* NotoSansThaiUI-Bold.ttf */,
+				CE03E4BE261479EA00E5795C /* NotoSansThai-ExtraBold.ttf */,
+				CE03E4BF261479EA00E5795C /* NotoSansThai-Medium.ttf */,
+				CE03E4C0261479EA00E5795C /* NotoSansThaiUI-Black.ttf */,
+				CE03E4C1261479EA00E5795C /* NotoSansThai-CondensedMedium.ttf */,
+				CE03E4C2261479EA00E5795C /* NotoSansThai-Bold.ttf */,
+				CE03E4C3261479EA00E5795C /* NotoSansThai-Light.ttf */,
+				CE03E4C4261479EA00E5795C /* NotoSansThai-SemiCondensedThin.ttf */,
+				CE03E4C5261479EA00E5795C /* NotoSansThaiUI-CondensedSemiBold.ttf */,
+				CE03E4C6261479EA00E5795C /* NotoSansThai-ExtraCondensedBold.ttf */,
+				CE03E4C7261479EA00E5795C /* NotoSansThaiUI-SemiCondensedLight.ttf */,
+				CE03E4C8261479EA00E5795C /* NotoSansThai-ExtraCondensedThin.ttf */,
+				CE03E4C9261479EA00E5795C /* NotoSansThaiUI-ExtraCondensedLight.ttf */,
+				CE03E4CA261479EA00E5795C /* NotoSansThai-Thin.ttf */,
+				CE03E4CB261479EA00E5795C /* NotoSansThai-SemiCondensedBold.ttf */,
+				CE03E4CC261479EA00E5795C /* NotoSansThai-ExtraCondensedExtraBold.ttf */,
+				CE03E4CD261479EA00E5795C /* NotoSansThai-ExtraCondensedLight.ttf */,
+				CE03E4CE261479EA00E5795C /* NotoSansThaiUI-SemiCondensedExtraLight.ttf */,
+				CE03E4CF261479EA00E5795C /* README */,
+				CE03E4D0261479EA00E5795C /* NotoSansThaiUI-Thin.ttf */,
+				CE03E4D1261479EA00E5795C /* NotoSansThai-Condensed.ttf */,
+				CE03E4D2261479EA00E5795C /* NotoSansThaiUI-ExtraCondensedBlack.ttf */,
+				CE03E4D3261479EA00E5795C /* NotoSansThaiUI-SemiCondensedExtraBold.ttf */,
+				CE03E4D4261479EA00E5795C /* NotoSansThaiUI-SemiCondensedSemiBold.ttf */,
+				CE03E4D5261479EA00E5795C /* NotoSansThai-SemiCondensedExtraLight.ttf */,
+				CE03E4D6261479EA00E5795C /* NotoSansThai-SemiCondensedSemiBold.ttf */,
+				CE03E4D7261479EA00E5795C /* NotoSansThaiUI-SemiCondensedBlack.ttf */,
+				CE03E4D8261479EA00E5795C /* NotoSansThaiUI-ExtraCondensedExtraBold.ttf */,
+				CE03E4D9261479EA00E5795C /* NotoSansThaiUI-ExtraCondensedBold.ttf */,
+				CE03E4DA261479EA00E5795C /* NotoSansThaiUI-Medium.ttf */,
+				CE03E4DB261479EA00E5795C /* NotoSansThai-ExtraCondensedBlack.ttf */,
+				CE03E4DC261479EA00E5795C /* NotoSansThaiUI-Regular.ttf */,
+				CE03E4DD261479EA00E5795C /* NotoSansThaiUI-ExtraLight.ttf */,
+				CE03E4DE261479EA00E5795C /* NotoSansThai-ExtraCondensedSemiBold.ttf */,
+				CE03E4DF261479EA00E5795C /* NotoSansThaiUI-Light.ttf */,
+				CE03E4E0261479EA00E5795C /* NotoSansThaiUI-ExtraCondensedThin.ttf */,
+				CE03E4E1261479EA00E5795C /* NotoSansThai-SemiCondensedLight.ttf */,
+				CE03E4E2261479EA00E5795C /* NotoSansThaiUI-ExtraCondensedMedium.ttf */,
+				CE03E4E3261479EA00E5795C /* NotoSansThai-ExtraCondensedMedium.ttf */,
+				CE03E4E4261479EA00E5795C /* NotoSansThai-Black.ttf */,
+				CE03E4E5261479EA00E5795C /* NotoSansThai-CondensedBold.ttf */,
+				CE03E4E6261479EA00E5795C /* NotoSansThaiUI-Condensed.ttf */,
+				CE03E4E7261479EA00E5795C /* NotoSansThai-CondensedExtraLight.ttf */,
+				CE03E4E8261479EA00E5795C /* NotoSansThai-CondensedLight.ttf */,
+				CE03E4E9261479EA00E5795C /* NotoSansThaiUI-CondensedMedium.ttf */,
+				CE03E4EA261479EA00E5795C /* NotoSansThaiUI-CondensedExtraLight.ttf */,
+				CE03E4EB261479EA00E5795C /* NotoSansThaiUI-ExtraCondensedExtraLight.ttf */,
+				CE03E4EC261479EA00E5795C /* NotoSansThaiUI-CondensedLight.ttf */,
+				CE03E4ED261479EA00E5795C /* NotoSansThaiUI-ExtraCondensedSemiBold.ttf */,
+				CE03E4EE261479EA00E5795C /* NotoSansThai-CondensedExtraBold.ttf */,
+				CE03E4EF261479EA00E5795C /* NotoSansThaiUI-SemiCondensedMedium.ttf */,
+				CE03E4F0261479EA00E5795C /* NotoSansThai-SemiCondensed.ttf */,
+				CE03E4F1261479EA00E5795C /* NotoSansThai-SemiCondensedMedium.ttf */,
+				CE03E4F2261479EA00E5795C /* LICENSE_OFL.txt */,
+				CE03E4F3261479EA00E5795C /* NotoSansThai-SemiCondensedExtraBold.ttf */,
+				CE03E4F4261479EA00E5795C /* NotoSansThai-CondensedThin.ttf */,
+			);
+			path = fonts;
 			sourceTree = "<group>";
 		};
 		CE2A408025D295D6003A51FF /* Database */ = {
@@ -601,6 +842,7 @@
 		CE56D45E25F756F50070B655 /* Add Simulation Port */ = {
 			isa = PBXGroup;
 			children = (
+				CE7BBBFB261AF5AF00BEAD98 /* Model */,
 				CE56D45F25F757090070B655 /* Secene */,
 			);
 			path = "Add Simulation Port";
@@ -633,6 +875,15 @@
 				CE7B2C7925D3A8F9009F773B /* BuyViewCell.swift */,
 			);
 			path = ViewCell;
+			sourceTree = "<group>";
+		};
+		CE7BBBFB261AF5AF00BEAD98 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CE7BBBFC261AF5C500BEAD98 /* NavListModel.swift */,
+				CE7BBC00261AF5F700BEAD98 /* NavListDb.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		CE7DD26125DF799400B47B3B /* SecondSearch */ = {
@@ -881,7 +1132,7 @@
 				CEAF7A1D25C25EBD00F88FB1 /* QuizFundsPhillip */,
 				CEAF7A1C25C25EBD00F88FB1 /* Products */,
 				4A460506C4F713E6AE2C08B1 /* Pods */,
-				D86CEB1A021CDD1AA79A115E /* Frameworks */,
+				B46A1E1A840424135F228067 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -896,6 +1147,7 @@
 		CEAF7A1D25C25EBD00F88FB1 /* QuizFundsPhillip */ = {
 			isa = PBXGroup;
 			children = (
+				CE03E4AA261479EA00E5795C /* fonts */,
 				CE2A408025D295D6003A51FF /* Database */,
 				CE46468A25C7F780000DF60F /* Services */,
 				CEAF7A3B25C2603A00F88FB1 /* Scenes */,
@@ -1203,14 +1455,6 @@
 			path = ViewCell;
 			sourceTree = "<group>";
 		};
-		D86CEB1A021CDD1AA79A115E /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				1A4F99A9707ABFA074CDDB09 /* Pods_QuizFundsPhillip.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1218,11 +1462,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CEAF7A2F25C25EBE00F88FB1 /* Build configuration list for PBXNativeTarget "QuizFundsPhillip" */;
 			buildPhases = (
-				C033DED8CB19853915D7C58D /* [CP] Check Pods Manifest.lock */,
+				E89BCEEF66E2E5825E9BD05A /* [CP] Check Pods Manifest.lock */,
 				CEAF7A1725C25EBD00F88FB1 /* Sources */,
 				CEAF7A1825C25EBD00F88FB1 /* Frameworks */,
 				CEAF7A1925C25EBD00F88FB1 /* Resources */,
-				D64627EA515060981B1AD4B9 /* [CP] Embed Pods Frameworks */,
+				0644A384DD8DDF1398D66C7D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1270,16 +1514,107 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE03E514261479EA00E5795C /* NotoSansThai-Thin.ttf in Resources */,
+				CE03E511261479EA00E5795C /* NotoSansThaiUI-SemiCondensedLight.ttf in Resources */,
+				CE03E529261479EA00E5795C /* NotoSansThaiUI-Light.ttf in Resources */,
+				CE03E50F261479EA00E5795C /* NotoSansThaiUI-CondensedSemiBold.ttf in Resources */,
+				CE03E52B261479EA00E5795C /* NotoSansThai-SemiCondensedLight.ttf in Resources */,
+				CE03E507261479EA00E5795C /* NotoSansThaiUI-Bold.ttf in Resources */,
+				CE03E513261479EA00E5795C /* NotoSansThaiUI-ExtraCondensedLight.ttf in Resources */,
+				CE03E531261479EA00E5795C /* NotoSansThai-CondensedExtraLight.ttf in Resources */,
+				CE03E4FE261479EA00E5795C /* NotoSansThaiUI-CondensedExtraBold.ttf in Resources */,
+				CE03E538261479EA00E5795C /* NotoSansThai-CondensedExtraBold.ttf in Resources */,
+				CE03E536261479EA00E5795C /* NotoSansThaiUI-CondensedLight.ttf in Resources */,
+				CE03E51C261479EA00E5795C /* NotoSansThaiUI-ExtraCondensedBlack.ttf in Resources */,
+				CE03E4F7261479EA00E5795C /* NotoSansThaiUI-SemiCondensedBold.ttf in Resources */,
+				CE03E524261479EA00E5795C /* NotoSansThaiUI-Medium.ttf in Resources */,
+				CE03E4FC261479EA00E5795C /* NotoSansThai-Regular.ttf in Resources */,
+				CE03E512261479EA00E5795C /* NotoSansThai-ExtraCondensedThin.ttf in Resources */,
+				CE03E516261479EA00E5795C /* NotoSansThai-ExtraCondensedExtraBold.ttf in Resources */,
+				CE03E52E261479EA00E5795C /* NotoSansThai-Black.ttf in Resources */,
+				CE03E4FA261479EA00E5795C /* NotoSansThai-ExtraCondensedExtraLight.ttf in Resources */,
+				CE03E50A261479EA00E5795C /* NotoSansThaiUI-Black.ttf in Resources */,
+				CE03E526261479EA00E5795C /* NotoSansThaiUI-Regular.ttf in Resources */,
+				CE03E530261479EA00E5795C /* NotoSansThaiUI-Condensed.ttf in Resources */,
+				CE03E532261479EA00E5795C /* NotoSansThai-CondensedLight.ttf in Resources */,
+				CE03E53C261479EA00E5795C /* LICENSE_OFL.txt in Resources */,
+				CE03E520261479EA00E5795C /* NotoSansThai-SemiCondensedSemiBold.ttf in Resources */,
+				CE03E528261479EA00E5795C /* NotoSansThai-ExtraCondensedSemiBold.ttf in Resources */,
+				CE03E51D261479EA00E5795C /* NotoSansThaiUI-SemiCondensedExtraBold.ttf in Resources */,
+				CE03E518261479EA00E5795C /* NotoSansThaiUI-SemiCondensedExtraLight.ttf in Resources */,
+				CE03E4FF261479EA00E5795C /* NotoSansThaiUI-CondensedThin.ttf in Resources */,
+				CE03E4F8261479EA00E5795C /* NotoSansThaiUI-CondensedBlack.ttf in Resources */,
+				CE03E53A261479EA00E5795C /* NotoSansThai-SemiCondensed.ttf in Resources */,
+				CE03E506261479EA00E5795C /* NotoSansThai-SemiCondensedBlack.ttf in Resources */,
+				CE03E503261479EA00E5795C /* NotoSansThaiUI-SemiCondensed.ttf in Resources */,
+				CE03E50D261479EA00E5795C /* NotoSansThai-Light.ttf in Resources */,
+				CE03E521261479EA00E5795C /* NotoSansThaiUI-SemiCondensedBlack.ttf in Resources */,
+				CE03E4FD261479EA00E5795C /* NotoSansThaiUI-SemiBold.ttf in Resources */,
+				CE03E51F261479EA00E5795C /* NotoSansThai-SemiCondensedExtraLight.ttf in Resources */,
+				CE03E534261479EA00E5795C /* NotoSansThaiUI-CondensedExtraLight.ttf in Resources */,
+				CE03E522261479EA00E5795C /* NotoSansThaiUI-ExtraCondensedExtraBold.ttf in Resources */,
+				CE03E504261479EA00E5795C /* NotoSansThaiUI-ExtraCondensed.ttf in Resources */,
+				CE03E519261479EA00E5795C /* README in Resources */,
+				CE03E4F9261479EA00E5795C /* NotoSansThai-ExtraCondensed.ttf in Resources */,
+				CE03E52F261479EA00E5795C /* NotoSansThai-CondensedBold.ttf in Resources */,
+				CE03E4FB261479EA00E5795C /* NotoSansThaiUI-CondensedBold.ttf in Resources */,
+				CE03E537261479EA00E5795C /* NotoSansThaiUI-ExtraCondensedSemiBold.ttf in Resources */,
+				CE03E535261479EA00E5795C /* NotoSansThaiUI-ExtraCondensedExtraLight.ttf in Resources */,
+				CE03E523261479EA00E5795C /* NotoSansThaiUI-ExtraCondensedBold.ttf in Resources */,
+				CE03E510261479EA00E5795C /* NotoSansThai-ExtraCondensedBold.ttf in Resources */,
+				CE03E527261479EA00E5795C /* NotoSansThaiUI-ExtraLight.ttf in Resources */,
+				CE03E53B261479EA00E5795C /* NotoSansThai-SemiCondensedMedium.ttf in Resources */,
+				CE03E525261479EA00E5795C /* NotoSansThai-ExtraCondensedBlack.ttf in Resources */,
+				CE03E502261479EA00E5795C /* NotoSansThai-CondensedSemiBold.ttf in Resources */,
 				CEAF7A2B25C25EBE00F88FB1 /* LaunchScreen.storyboard in Resources */,
+				CE03E50C261479EA00E5795C /* NotoSansThai-Bold.ttf in Resources */,
+				CE03E515261479EA00E5795C /* NotoSansThai-SemiCondensedBold.ttf in Resources */,
+				CE03E51E261479EA00E5795C /* NotoSansThaiUI-SemiCondensedSemiBold.ttf in Resources */,
+				CE03E533261479EA00E5795C /* NotoSansThaiUI-CondensedMedium.ttf in Resources */,
+				CE03E501261479EA00E5795C /* NotoSansThaiUI-SemiCondensedThin.ttf in Resources */,
 				CEAF7A2825C25EBE00F88FB1 /* Assets.xcassets in Resources */,
+				CE03E508261479EA00E5795C /* NotoSansThai-ExtraBold.ttf in Resources */,
+				CE03E505261479EA00E5795C /* NotoSansThai-ExtraLight.ttf in Resources */,
+				CE03E52A261479EA00E5795C /* NotoSansThaiUI-ExtraCondensedThin.ttf in Resources */,
+				CE03E53E261479EA00E5795C /* NotoSansThai-CondensedThin.ttf in Resources */,
+				CE03E4F6261479EA00E5795C /* NotoSansThai-SemiBold.ttf in Resources */,
+				CE03E52D261479EA00E5795C /* NotoSansThai-ExtraCondensedMedium.ttf in Resources */,
+				CE03E517261479EA00E5795C /* NotoSansThai-ExtraCondensedLight.ttf in Resources */,
+				CE03E509261479EA00E5795C /* NotoSansThai-Medium.ttf in Resources */,
 				CEAF7A2625C25EBD00F88FB1 /* Main.storyboard in Resources */,
+				CE03E500261479EA00E5795C /* NotoSansThai-CondensedBlack.ttf in Resources */,
+				CE03E52C261479EA00E5795C /* NotoSansThaiUI-ExtraCondensedMedium.ttf in Resources */,
+				CE03E53D261479EA00E5795C /* NotoSansThai-SemiCondensedExtraBold.ttf in Resources */,
+				CE03E539261479EA00E5795C /* NotoSansThaiUI-SemiCondensedMedium.ttf in Resources */,
+				CE03E50B261479EA00E5795C /* NotoSansThai-CondensedMedium.ttf in Resources */,
+				CE03E51A261479EA00E5795C /* NotoSansThaiUI-Thin.ttf in Resources */,
+				CE03E50E261479EA00E5795C /* NotoSansThai-SemiCondensedThin.ttf in Resources */,
+				CE03E4F5261479EA00E5795C /* NotoSansThaiUI-ExtraBold.ttf in Resources */,
+				CE03E51B261479EA00E5795C /* NotoSansThai-Condensed.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		C033DED8CB19853915D7C58D /* [CP] Check Pods Manifest.lock */ = {
+		0644A384DD8DDF1398D66C7D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-QuizFundsPhillip/Pods-QuizFundsPhillip-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-QuizFundsPhillip/Pods-QuizFundsPhillip-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-QuizFundsPhillip/Pods-QuizFundsPhillip-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E89BCEEF66E2E5825E9BD05A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1299,23 +1634,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D64627EA515060981B1AD4B9 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-QuizFundsPhillip/Pods-QuizFundsPhillip-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-QuizFundsPhillip/Pods-QuizFundsPhillip-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-QuizFundsPhillip/Pods-QuizFundsPhillip-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1364,6 +1682,7 @@
 				CEAF7A8A25C2BFA600F88FB1 /* WeeklyViewCell.swift in Sources */,
 				CE4065C325C3E30C00027C32 /* GMFWorker.swift in Sources */,
 				CE4065B225C3E2AD00027C32 /* SSFWorker.swift in Sources */,
+				CE7BBBFD261AF5C500BEAD98 /* NavListModel.swift in Sources */,
 				CEAB3F952600560E0093B43F /* HistoryRouter.swift in Sources */,
 				CE4065A425C3E29000027C32 /* RMFWorker.swift in Sources */,
 				CEAB3F942600560E0093B43F /* HistoryWorker.swift in Sources */,
@@ -1425,6 +1744,7 @@
 				CED9FDF925D0F5AB001142CD /* TradeModels.swift in Sources */,
 				CE7DD26E25DF79C100B47B3B /* SecondSearchInteractor.swift in Sources */,
 				CE40659025C3B8C000027C32 /* HomepageWorker.swift in Sources */,
+				CE7BBC01261AF5F700BEAD98 /* NavListDb.swift in Sources */,
 				CEA79EF82611BD020092F6E4 /* DeleteMenuWorker.swift in Sources */,
 				CED4370625DE6D7C000A26A9 /* PaymentViewController.swift in Sources */,
 				CE867C1425FF1F890003FA70 /* BuyAndSaleViewController.swift in Sources */,
@@ -1657,7 +1977,7 @@
 		};
 		CEAF7A3025C25EBE00F88FB1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4C051F0A8B6BD8A2A5D22227 /* Pods-QuizFundsPhillip.debug.xcconfig */;
+			baseConfigurationReference = FF13678C1C1B89B9BEC63CD9 /* Pods-QuizFundsPhillip.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1680,7 +2000,7 @@
 		};
 		CEAF7A3125C25EBE00F88FB1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E4AECD68B67F822DA4CF042A /* Pods-QuizFundsPhillip.release.xcconfig */;
+			baseConfigurationReference = AFC1D4E81C70841A0F0E3B3E /* Pods-QuizFundsPhillip.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

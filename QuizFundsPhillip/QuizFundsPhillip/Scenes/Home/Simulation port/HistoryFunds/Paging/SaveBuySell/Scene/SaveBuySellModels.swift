@@ -16,16 +16,17 @@ enum SaveBuySell
 {
   // MARK: Use cases
   
-  enum Something
-  {
-    struct Request
-    {
+    enum FetchFundsDataHistory {
+        struct Request {
+ 
+        }
+        struct Response {
+
+            var getHistory: [DataGetHistoryModel]?
+        }
+        struct ViewModel {
+
+            var getHistory: [DataGetHistoryModel]?
+        }
     }
-    struct Response
-    {
-    }
-    struct ViewModel
-    {
-    }
-  }
 }

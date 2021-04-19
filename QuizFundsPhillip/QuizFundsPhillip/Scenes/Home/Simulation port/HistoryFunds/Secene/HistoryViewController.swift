@@ -12,16 +12,22 @@
 
 import UIKit
 import Parchment
-protocol HistoryDisplayLogic: class
-{
-  func displaySomething(viewModel: History.Something.ViewModel)
+protocol HistoryDisplayLogic: class {
+    func displayfetchHistory(viewModel: History.FetchHistoryData.ViewModel)
+    func displayfetchfundscode(viewModel: History.FetchFundsID.ViewModel)
 }
 
 class HistoryViewController: UIViewController, HistoryDisplayLogic
 {
+    @IBAction func btnBack(_ sender: Any) {
+        router?.backtoPagePreview()
+    }
     @IBOutlet weak var viewPaging: UIView!
+    var fcode = ""
+    var portNo = 0
+    var  getHistory: [DataGetHistoryModel]?
     var interactor: HistoryBusinessLogic?
-  var router: (NSObjectProtocol & HistoryRoutingLogic & HistoryDataPassing)?
+    var router: (NSObjectProtocol & HistoryRoutingLogic & HistoryDataPassing)?
 
   // MARK: Object lifecycle
   
@@ -70,50 +76,61 @@ class HistoryViewController: UIViewController, HistoryDisplayLogic
   override func viewDidLoad()
   {
     super.viewDidLoad()
-    doSomething()
-    
-    
+    doFetchFundsId()
     // MARK:Pagging
- 
-    
-    let saveBuySell  = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SaveBuySellViewController") as! SaveBuySellViewController
-    let saveDividend = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SaveDividendViewController") as! SaveDividendViewController
-            let viewControllers = [
-    
-                saveBuySell,
-                saveDividend
-            ]
-            
-            let pagingViewController = PagingViewController(viewControllers: viewControllers)
-            
-            // Make sure you add the PagingViewController as a child view
-            // controller and constrain it to the edges of the view.
-            addChild(pagingViewController)
-        self.viewPaging.addSubview(pagingViewController.view)
-   
-      //      view.constrainToEdges(pagingViewController.view)
-             pagingViewController.didMove(toParent: self)
-        pagingViewController.view.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            pagingViewController.view.topAnchor.constraint(equalTo: self.viewPaging.topAnchor),
-              pagingViewController.view.bottomAnchor.constraint(equalTo: self.viewPaging.bottomAnchor),
-              pagingViewController.view.leadingAnchor.constraint(equalTo: self.viewPaging.leadingAnchor),
-              pagingViewController.view.trailingAnchor.constraint(equalTo: self.viewPaging.trailingAnchor),
-        ])
+  
   }
   
   // MARK: Do something
   
   //@IBOutlet weak var nameTextField: UITextField!
   
-  func doSomething()
-  {
-    let request = History.Something.Request()
-    interactor?.doSomething(request: request)
+    func doFetchFundsId() {
+    let request = History.FetchFundsID.Request()
+    interactor?.doFetchFundsId(request: request)
+    
+    }
+func dofetchHistory(portNo: Int, fcode: String) {
+    let request = History.FetchHistoryData.Request(username: "bookling01", portno: portNo, fcode: fcode)
+    interactor?.dofetchHistory(request: request)
+//    self.tableView.reloadData()
   }
-  
-  func displaySomething(viewModel: History.Something.ViewModel)
-  {
-    //nameTextField.text = viewModel.name
-  }
+func displayfetchHistory(viewModel: History.FetchHistoryData.ViewModel) {
+    self.getHistory = viewModel.getHistory?.Data
+    self.pagging(getDataHistory: self.getHistory)
+    }
+func displayfetchfundscode(viewModel: History.FetchFundsID.ViewModel) {
+        self.fcode = viewModel.fcode
+        self.portNo = viewModel.portNo
+        dofetchHistory(portNo: viewModel.portNo, fcode: viewModel.fcode)
+    }
+func pagging(getDataHistory: [DataGetHistoryModel]?) {
+        let saveBuySell  = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SaveBuySellViewController") as! SaveBuySellViewController
+        var destinationDS = saveBuySell.router?.dataStore
+//        print("self.getHistory", getDataHistory)
+        destinationDS?.getHistory = getDataHistory
+        let saveDividend = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SaveDividendViewController") as! SaveDividendViewController
+                let viewControllers = [
+        
+                    saveBuySell,
+                    saveDividend
+                ]
+                
+                let pagingViewController = PagingViewController(viewControllers: viewControllers)
+                
+                // Make sure you add the PagingViewController as a child view
+                // controller and constrain it to the edges of the view.
+                addChild(pagingViewController)
+            self.viewPaging.addSubview(pagingViewController.view)
+       
+          //      view.constrainToEdges(pagingViewController.view)
+                 pagingViewController.didMove(toParent: self)
+            pagingViewController.view.translatesAutoresizingMaskIntoConstraints = false
+            NSLayoutConstraint.activate([
+                pagingViewController.view.topAnchor.constraint(equalTo: self.viewPaging.topAnchor),
+                  pagingViewController.view.bottomAnchor.constraint(equalTo: self.viewPaging.bottomAnchor),
+                  pagingViewController.view.leadingAnchor.constraint(equalTo: self.viewPaging.leadingAnchor),
+                  pagingViewController.view.trailingAnchor.constraint(equalTo: self.viewPaging.trailingAnchor),
+            ])
+    }
 }

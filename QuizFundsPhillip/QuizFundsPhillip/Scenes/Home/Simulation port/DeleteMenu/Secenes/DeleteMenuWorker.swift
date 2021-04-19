@@ -32,7 +32,7 @@ class DeleteMenuWorker {
 //                print("data>>", response.value)
                 do {
                     let getHistoryDataModel = try JSONDecoder().decode(GetHistoryModel.self, from: data)
-//                    print("getOrderModelData >> ", getOrderModelData)
+//                    print("getOrderModelData >> ", getHistoryDataModel)
                     completionHandler(getHistoryDataModel, nil)
                     
                 } catch let error {

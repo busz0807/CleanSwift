@@ -16,18 +16,21 @@ protocol PortDetailBusinessLogic
 {
   func doDeletePort(request: PortDetail.DeletePort.Request)
    func doFetchPortNo(request: PortDetail.PortNo.Request)
+    func doFecthGetOrderData(request: PortDetail.GetOrderList.Request)
 }
 
 protocol PortDetailDataStore
 {
   var deleteData: DeleteModel? { get set }
     var portNo: Int? { get set }
+    var getOrderList: DataGetOrder? { get set}
 }
 
 class PortDetailInteractor: PortDetailBusinessLogic, PortDetailDataStore
 {
     var portNo: Int?
     var deleteData: DeleteModel?
+    var getOrderList: DataGetOrder?
     var presenter: PortDetailPresentationLogic?
   var worker: PortDetailWorker?
   //var name: String = ""
@@ -58,6 +61,23 @@ class PortDetailInteractor: PortDetailBusinessLogic, PortDetailDataStore
         }
 
   }
+    func doFecthGetOrderData(request: PortDetail.GetOrderList.Request) {
+        let username = request.username
+        let portNo = request.portNo
+        print("portNo", portNo)
+        worker = PortDetailWorker()
+        worker?.fecthGetOrderData (username: username, portNo: portNo){ (getOrderData , error ) in
+            if error != nil {
+                let response = PortDetail.GetOrderList.Response(getOrderData: nil, error: error)
+                self.presenter?.presentdoFecthGetOrderData(response: response)
+            }
+            
+            let response = PortDetail.GetOrderList.Response(getOrderData: getOrderData, error: nil)
+    //      print("getOrderData", getOrderData)
+            self.presenter?.presentdoFecthGetOrderData(response: response)
+        }
+    }
+    
 }
 
 

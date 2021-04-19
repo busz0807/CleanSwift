@@ -43,48 +43,50 @@ class ReealmFundsListMobile: Object {
     @objc dynamic var subCategoryTH: String = ""
     @objc dynamic var thName: String = ""
     @objc dynamic var type:String = ""
-    
+    let nav  = Array(arrayLiteral: SearchNavModel())
     override static func primaryKey() -> String? {
         return "_id"
     }
     
-    convenience init(data: SearchFundsModel) {
+    convenience init(dataFunds: SearchFundsModel,dataNav: SearchNavModel) {
         self.init()
-        self._change = data._change ?? ""
-        self.amc = data.amc ?? ""
-        self.approvedDate = data.approvedDate ?? ""
-        self.assetCompany = data.assetCompany ?? ""
-        if let characteristics = data.characteristics {
+        self._change = dataFunds._change ?? ""
+        self.amc = dataFunds.amc ?? ""
+        self.approvedDate = dataFunds.approvedDate ?? ""
+        self.assetCompany = dataFunds.assetCompany ?? ""
+        if let characteristics = dataFunds.characteristics {
             self.characteristics.append(characteristics[0])
               }
-        self.classification = data.classification ?? ""
-        self.closeDate = data.closeDate ?? ""
-        self.code = data.code ?? ""
-        self.cutOffTime = data.cutOffTime ?? ""
-        self.cutOffTimePmoney = data.cutOffTimePmoney ?? ""
-        self.cutOffTimeSell = data.cutOffTimeSell ?? ""
-        self.dividend = data.dividend ?? false
-        self.enName = data.enName ?? ""
-        self.forexRisk = data.forexRisk ?? false
-        self.fundId = data.fundId ?? ""
-        self.investCloseDate = data.investCloseDate ?? ""
-        self.investOpenDate = data.investCloseDate ?? ""
-        self.ipoPrice = data.ipoPrice ?? 0
-        self.mainCategory = data.mainCategory ?? ""
-        self.mainCategoryTH = data.mainCategoryTH ?? ""
-        self.min1stInv = Int(data.min1stInv ?? 0.0)
-        self.minHold = data.minHold ?? 0
-        self.minHoldUnits = data.minHoldUnits ?? 0
-        self.minInv = Int(data.minInv ?? 0)
-        self.minRedeem = data.minRedeem ?? 0
-        self.minRedeemUnits = data.minRedeemUnits ?? 0
-        self.openDate = data.openDate ?? ""
-        self.risk = data.risk ?? 0
-        self.riskCategory = data.riskCategory ?? ""
-        self.subCategory = data.subCategory ?? ""
-        self.subCategoryTH = data.subCategoryTH ?? ""
-        self.thName = data.thName ?? ""
-        self.type = data.type ?? ""
+        self.classification = dataFunds.classification ?? ""
+        self.closeDate = dataFunds.closeDate ?? ""
+        self.code = dataFunds.code ?? ""
+        self.cutOffTime = dataFunds.cutOffTime ?? ""
+        self.cutOffTimePmoney = dataFunds.cutOffTimePmoney ?? ""
+        self.cutOffTimeSell = dataFunds.cutOffTimeSell ?? ""
+        self.dividend = dataFunds.dividend ?? false
+        self.enName = dataFunds.enName ?? ""
+        self.forexRisk = dataFunds.forexRisk ?? false
+        self.fundId = dataFunds.fundId ?? ""
+        self.investCloseDate = dataFunds.investCloseDate ?? ""
+        self.investOpenDate = dataFunds.investCloseDate ?? ""
+        self.ipoPrice = dataFunds.ipoPrice ?? 0
+        self.mainCategory = dataFunds.mainCategory ?? ""
+        self.mainCategoryTH = dataFunds.mainCategoryTH ?? ""
+        self.min1stInv = Int(dataFunds.min1stInv ?? 0.0)
+        self.minHold = dataFunds.minHold ?? 0
+        self.minHoldUnits = dataFunds.minHoldUnits ?? 0
+        self.minInv = Int(dataFunds.minInv ?? 0)
+        self.minRedeem = dataFunds.minRedeem ?? 0
+        self.minRedeemUnits = dataFunds.minRedeemUnits ?? 0
+        self.openDate = dataFunds.openDate ?? ""
+        self.risk = dataFunds.risk ?? 0
+        self.riskCategory = dataFunds.riskCategory ?? ""
+        self.subCategory = dataFunds.subCategory ?? ""
+        self.subCategoryTH = dataFunds.subCategoryTH ?? ""
+        self.thName = dataFunds.thName ?? ""
+        self.type = dataFunds.type ?? ""
+// 
+//       
     }
 }
 

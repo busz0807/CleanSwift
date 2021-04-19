@@ -14,9 +14,11 @@ import UIKit
 
 protocol DeleteMenuBusinessLogic
 {
-    func dofetchHistory(request: DeleteMenu.FetchHistoryData.Request)
+  
     func dodeleteorder(request: DeleteMenu.DeleteOrderNo.Request)
     func dodeletefcode(request: DeleteMenu.DeleteFcode.Request)
+    func doFetchFundsId(request: DeleteMenu.FetchFundsID.Request)
+    func dofetchHistory(request: DeleteMenu.FetchHistoryData.Request)
     
     
 }
@@ -25,10 +27,14 @@ protocol DeleteMenuDataStore
 {
   var getHistory: GetHistoryModel? { get set }
     var getDeleteOrder: DeleteModel? {get set}
+    var fundsId: String? {get set}
+    var portNo: Int {get set}
 }
 
 class DeleteMenuInteractor: DeleteMenuBusinessLogic, DeleteMenuDataStore
 {
+    var fundsId: String?
+    var portNo: Int = 0
     var getHistory: GetHistoryModel?
     var getDeleteOrder: DeleteModel?
   var presenter: DeleteMenuPresentationLogic?
@@ -43,6 +49,9 @@ class DeleteMenuInteractor: DeleteMenuBusinessLogic, DeleteMenuDataStore
     let username = request.username
     let portNo = request.portno
     let fcode = request.fcode
+//    print("username", username)
+//    print("portNo", portNo )
+//    print("fcode", fcode )
     worker?.fecthGetHistoryData (username: username, portNo: portNo, fcode: fcode) { (getHistory, error ) in
         if error != nil {
             let response =  DeleteMenu.FetchHistoryData.Response(getHistory: nil, error: error)
@@ -64,11 +73,11 @@ class DeleteMenuInteractor: DeleteMenuBusinessLogic, DeleteMenuDataStore
         let portNo = request.portno
         let channel = request.channel
         let ordno  = request.ordno
-        print("delFlag>",delFlag)
-        print("username>",username)
-        print("portNo>",portNo)
-        print("channel>",channel)
-        print("ordno>",ordno)
+//        print("delFlag>",delFlag)
+//        print("username>",username)
+//        print("portNo>",portNo)
+//        print("channel>",channel)
+//        print("ordno>",ordno)
         worker?.fecthdeltedata(DelFlag: delFlag , username: username , portNo: portNo, channel: channel, ordno: ordno ) { (getDeleteOrder, error ) in
             if error != nil {
                 let response =  DeleteMenu.DeleteOrderNo.Response(delorder: nil, error: error)
@@ -91,11 +100,11 @@ class DeleteMenuInteractor: DeleteMenuBusinessLogic, DeleteMenuDataStore
         let portNo = request.portno
         let channel = request.channel
         let fcode  = request.fcode
-        print("delFlag>",delFlag)
-        print("username>",username)
-        print("portNo>",portNo)
-        print("channel>",channel)
-        print("ordno>",fcode)
+//        print("delFlag>",delFlag)
+//        print("username>",username)
+//        print("portNo>",portNo)
+//        print("channel>",channel)
+//        print("ordno>",fcode)
         worker?.fecthdeletefcode(DelFlag: delFlag , username: username , portNo: portNo, channel: channel, fcode: fcode ) { (getDeleteOrder, error ) in
             if error != nil {
                 let response =  DeleteMenu.DeleteFcode.Response(delorder: nil, error: error)
@@ -111,4 +120,8 @@ class DeleteMenuInteractor: DeleteMenuBusinessLogic, DeleteMenuDataStore
         let response = DeleteMenu.DeleteFcode.Response()
         presenter?.presentDeleteFcode(response: response)
       }
+    func doFetchFundsId(request: DeleteMenu.FetchFundsID.Request) {
+        let response = DeleteMenu.FetchFundsID.Response(fcode: fundsId ?? "", portNo: portNo )
+        presenter?.presentFundscode(response: response)
+    }
 }

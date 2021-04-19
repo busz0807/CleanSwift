@@ -78,5 +78,37 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+    	<key>UIAppFonts</key>
+	<array>
+		<string>NotoSansThaiUI-ExtraBold.ttf</string>
+		<string>NotoSansThai-SemiBold.ttf</string>
+		<string>NotoSansThaiUI-SemiCondensedBold.ttf</string>
+		<string>NotoSansThaiUI-CondensedBlack.ttf</string>
+		<string>NotoSansThai-ExtraCondensed.ttf</string>
+		<string>NotoSansThai-ExtraCondensedExtraLight.ttf</string>
+		<string>NotoSansThaiUI-CondensedBold.ttf</string>
+		<string>NotoSansThai-Regular.ttf</string>
+		<string>NotoSansThaiUI-SemiBold.ttf</string>
+		<string>NotoSansThaiUI-CondensedExtraBold.ttf</string>
+		<string>NotoSansThaiUI-CondensedThin.ttf</string>
+		<string>NotoSansThai-CondensedBlack.ttf</string>
+		<string>NotoSansThaiUI-SemiCondensedThin.ttf</string>
+		<string>NotoSansThai-CondensedSemiBold.ttf</string>
+		<string>NotoSansThaiUI-SemiCondensed.ttf</string>
+		<string>NotoSansThaiUI-ExtraCondensed.ttf</string>
+		<string>NotoSansThai-ExtraLight.ttf</string>
+		<string>NotoSansThai-SemiCondensedBlack.ttf</string>
+		<string>NotoSansThaiUI-Bold.ttf</string>
+		<string>NotoSansThai-ExtraBold.ttf</string>
+		<string>NotoSansThai-Medium.ttf</string>
+		<string>NotoSansThaiUI-Black.ttf</string>
+		<string>NotoSansThai-CondensedMedium.ttf</string>
+		<string>NotoSansThai-Bold.ttf</string>
+		<string>NotoSansThai-Light.ttf</string>
+		<string>NotoSansThai-SemiCondensedThin.ttf</string>
+		<string>NotoSansThaiUI-CondensedSemiBold.ttf</string>
+		<string>NotoSansThai-ExtraCondensedBold.ttf</string>
+		<string>NotoSansThaiUI-CondensedThin.ttf</string>	
+	</array>
 </dict>
 </plist>

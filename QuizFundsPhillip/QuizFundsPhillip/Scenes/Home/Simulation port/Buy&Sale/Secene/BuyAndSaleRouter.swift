@@ -12,11 +12,16 @@
 
 import UIKit
 
-@objc protocol BuyAndSaleRoutingLogic
+protocol BuyAndSaleRoutingLogic
 {
-  //func routeToSomewhere(segue: UIStoryboardSegue?)
+    func backtoMainPagePreview()
+    func backtoPagePreview()
+    func sendDatagoToRiskPreview(risk: Int?)
+    func sendDatagoToDeletePreview(fundsId: String?, portNo: Int)
+    func sendDatagoToHistoryPreview(fundsId: String?, portNo: Int)
+    func sendDatagoToAddPortPreview(mainPage: String,enName: String, thName:String, risk: Int, nav: String, chage: String, buy: String, sell: String, date: String, portNo: Int,assetCompany: String, investOpenDate: String, getOrderList: DataGetOrder?)
+    func sendDatagoToSellPortPreview(mainPage: String,enName: String, thName:String, risk: Int, nav: String, chage: String, buy: String, sell: String, date: String, portNo: Int,assetCompany: String, investOpenDate: String, getOrderList: DataGetOrder?)
 }
-
 protocol BuyAndSaleDataPassing
 {
   var dataStore: BuyAndSaleDataStore? { get }
@@ -29,32 +34,72 @@ class BuyAndSaleRouter: NSObject, BuyAndSaleRoutingLogic, BuyAndSaleDataPassing
   
   // MARK: Routing
   
-  //func routeToSomewhere(segue: UIStoryboardSegue?)
-  //{
-  //  if let segue = segue {
-  //    let destinationVC = segue.destination as! SomewhereViewController
-  //    var destinationDS = destinationVC.router!.dataStore!
-  //    passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-  //  } else {
-  //    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-  //    let destinationVC = storyboard.instantiateViewController(withIdentifier: "SomewhereViewController") as! SomewhereViewController
-  //    var destinationDS = destinationVC.router!.dataStore!
-  //    passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-  //    navigateToSomewhere(source: viewController!, destination: destinationVC)
-  //  }
-  //}
-
-  // MARK: Navigation
-  
-  //func navigateToSomewhere(source: BuyAndSaleViewController, destination: SomewhereViewController)
-  //{
-  //  source.show(destination, sender: nil)
-  //}
-  
-  // MARK: Passing data
-  
-  //func passDataToSomewhere(source: BuyAndSaleDataStore, destination: inout SomewhereDataStore)
-  //{
-  //  destination.name = source.name
-  //}
+    func sendDatagoToRiskPreview(risk: Int?) {
+         let destinationVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "RiskViewController") as! RiskViewController
+         var destinationDS = destinationVC.router!.dataStore!
+        destinationDS.risk = risk
+        viewController?.present(destinationVC, animated: true)
+        
+    }
+    func sendDatagoToDeletePreview(fundsId: String?, portNo: Int) {
+         let destinationVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DeleteMenuViewController") as! DeleteMenuViewController
+         var destinationDS = destinationVC.router!.dataStore!
+        destinationDS.fundsId = fundsId
+        destinationDS.portNo = portNo
+        viewController?.present(destinationVC, animated: true)
+        
+    }
+    func sendDatagoToAddPortPreview(mainPage: String,enName: String, thName:String, risk: Int, nav: String, chage: String, buy: String, sell: String, date: String, portNo: Int,assetCompany: String, investOpenDate: String, getOrderList: DataGetOrder?) {
+      let destinationVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AddSimulationPortViewController") as! AddSimulationPortViewController
+      var destinationDS = destinationVC.router!.dataStore!
+        destinationDS.mainPage = mainPage
+        destinationDS.enName = enName
+        destinationDS.thName = thName
+        destinationDS.risk = risk
+        destinationDS.nav = nav
+        destinationDS.chage = chage
+        destinationDS.buy = buy
+        destinationDS.sell = sell
+        destinationDS.datenav = date
+        destinationDS.portNo = portNo
+        destinationDS.assetCompany = assetCompany
+        destinationDS.investOpenDate = investOpenDate
+        destinationDS.getOrderList = getOrderList
+      viewController?.present(destinationVC, animated: false)
+    
+    }
+    func sendDatagoToSellPortPreview(mainPage: String,enName: String, thName:String, risk: Int, nav: String, chage: String, buy: String, sell: String, date: String, portNo: Int,assetCompany: String, investOpenDate: String, getOrderList: DataGetOrder?){
+      let destinationVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "FundSaleViewController") as! FundSaleViewController
+      var destinationDS = destinationVC.router!.dataStore!
+        destinationDS.mainPage = mainPage
+        destinationDS.enName = enName
+        destinationDS.thName = thName
+        destinationDS.risk = risk
+        destinationDS.nav = nav
+        destinationDS.chage = chage
+        destinationDS.buy = buy
+        destinationDS.sell = sell
+        destinationDS.datenav = date
+        destinationDS.portNo = portNo
+        destinationDS.assetCompany = assetCompany
+        destinationDS.investOpenDate = investOpenDate
+        destinationDS.getOrderList = getOrderList
+      viewController?.present(destinationVC, animated: false)
+    }
+    func sendDatagoToHistoryPreview(fundsId: String?, portNo: Int){
+        let destinationVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HistoryViewController") as! HistoryViewController
+        var destinationDS = destinationVC.router!.dataStore!
+       destinationDS.fundsId = fundsId
+       destinationDS.portNo = portNo
+       viewController?.present(destinationVC, animated: true)
+    }
+    func backtoMainPagePreview() {
+//        let destinationtabbarVC = UITapbar.performSegue(withIdentifier: "tabBar", sender: self
+       
+        viewController?.view.window?.rootViewController?.dismiss(animated: false, completion: nil)
+        
+    }
+    func backtoPagePreview() {
+        viewController?.dismiss(animated: true, completion: nil)
+    }
 }

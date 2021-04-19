@@ -16,16 +16,18 @@ enum BuyAndSale
 {
   // MARK: Use cases
   
-  enum Something
-  {
-    struct Request
-    {
+    enum FetchData {
+      struct Request {
+      }
+      struct Response {
+          var fundsList: [ReealmFundsListMobile]?
+          var portNo: Int?
+          var getOrderList: DataGetOrder?
+      }
+      struct ViewModel {
+          var fundsList: [ReealmFundsListMobile]?
+          var portNo: Int?
+          var getOrderList: DataGetOrder?
+      }
     }
-    struct Response
-    {
-    }
-    struct ViewModel
-    {
-    }
-  }
 }

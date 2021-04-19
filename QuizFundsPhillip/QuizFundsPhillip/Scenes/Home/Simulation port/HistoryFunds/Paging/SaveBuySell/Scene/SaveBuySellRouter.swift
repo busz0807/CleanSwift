@@ -12,7 +12,7 @@
 
 import UIKit
 
-@objc protocol SaveBuySellRoutingLogic
+protocol SaveBuySellRoutingLogic
 {
   //func routeToSomewhere(segue: UIStoryboardSegue?)
 }

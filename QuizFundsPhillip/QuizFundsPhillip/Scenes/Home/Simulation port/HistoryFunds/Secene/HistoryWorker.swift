@@ -11,10 +11,37 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
+class HistoryWorker {
+    typealias FecthGetHistoryDataCompletionHandler = (_ getHistory: GetHistoryModel?,_ error: Error?) -> ()
+    func fecthGetHistoryData(username: String, portNo: Int, fcode: String, completionHandler: @escaping FecthGetHistoryDataCompletionHandler) {
+        let router = Funds.getHistory.path
+//        print("\(router)?username=\(username)&portNo=\(portNo)&portName=\(portName)&fcode=\(fcode)&ordtp=\(ordtp)&grsam=\(grsam)&units=\(units)&unprc=\(unprc)&unprc=\(unprc)&trndt=\(trndt)&status=\(status)&channel=\(channel)&realized=\(realized)")
+//        let url = URL(string: "\(router)username=\(username)&portNo=\(portNo)" )!
+//        var request = URLRequest(url: url)
+//        request.httpMethod = "POST"
+//        router, method: .post, parameters: ["username": username, "portNo": portNo, "fcode": fcode, "ordtp": ordtp, "grsam": grsam, "units": units, "unprc": unprc, "trndt":    trndt, "status": status, "channel": channel, "realized": realized]
+        Alamofire.request(router, method: .post, parameters: ["username": username, "portNo": portNo, "fcode": fcode]).responseJSON { response in
+            if response.error != nil {
+                completionHandler(nil, response.error)
+                return
+            }
+            
+            if let data = response.data {
+//                print("data>>", response.value)
+                do {
+                    let getHistoryDataModel = try JSONDecoder().decode(GetHistoryModel.self, from: data)
+//                    print("getOrderModelData >> ", getHistoryDataModel)
+                    completionHandler(getHistoryDataModel, nil)
+                    
+                } catch let error {
+                    print("Failed to load: \(error.localizedDescription)")
 
-class HistoryWorker
-{
-  func doSomeWork()
-  {
-  }
+                    completionHandler(nil, error)
+                }
+            }
+        }
+    
+    }
 }

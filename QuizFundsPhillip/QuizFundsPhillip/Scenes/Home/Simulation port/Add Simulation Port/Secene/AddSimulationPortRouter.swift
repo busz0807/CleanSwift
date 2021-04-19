@@ -15,6 +15,8 @@ import UIKit
 protocol AddSimulationPortRoutingLogic
 {
     func sendDatagoToRiskPreview(risk: Int?)
+    func backtoMainPagePreview()
+    func backtoPagePreview()
 }
 
 protocol AddSimulationPortDataPassing
@@ -34,5 +36,14 @@ class AddSimulationPortRouter: NSObject, AddSimulationPortRoutingLogic, AddSimul
         destinationDS.risk = risk
         viewController?.present(destinationVC, animated: true)
         
+    }
+    func backtoMainPagePreview() {
+//        let destinationtabbarVC = UITapbar.performSegue(withIdentifier: "tabBar", sender: self
+       
+        viewController?.view.window?.rootViewController?.dismiss(animated: false, completion: nil)
+        
+    }
+    func backtoPagePreview() {
+        viewController?.dismiss(animated: true, completion: nil)
     }
 }

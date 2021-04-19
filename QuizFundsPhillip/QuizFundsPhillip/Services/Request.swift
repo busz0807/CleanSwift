@@ -10,13 +10,14 @@ import Alamofire
 
 
 enum Funds: URLRequestConvertible {
-    case analystReport, iPO, fundsList, getOder, insertOrder, getHistory, deleteOrder
+    case analystReport, iPO, fundsList, navList, getOder, insertOrder, getHistory, deleteOrder
 
     var  method: HTTPMethod {
         switch self {
         case .analystReport: return .get
         case .iPO: return .post
         case .fundsList: return .get
+        case .navList: return . get
         case .getOder: return .post
         case .insertOrder: return .post
         case .getHistory: return .post
@@ -28,6 +29,7 @@ enum Funds: URLRequestConvertible {
         case .analystReport: return "https://servicebeta.poems.in.th/FundSmart/api/funds/reports"
         case .iPO: return "https://www.fame.in.th/FAMEMvc/api/DashUnAuthor/IPO"
         case .fundsList: return "http://servicebeta.poems.in.th/fundsmart/api/funds/GetFundList"
+        case .navList: return "http://servicebeta.poems.in.th/fundsmart/api/funds/GetNAVList"
         case .getOder: return "https://servicebeta.poems.in.th/FundSmart/api/SimPort/GetOrder"
         //?username=bookling01&portNo=1
         case .insertOrder: return "https://servicebeta.poems.in.th/FundSmart/api/SimPort/InsertOrder"

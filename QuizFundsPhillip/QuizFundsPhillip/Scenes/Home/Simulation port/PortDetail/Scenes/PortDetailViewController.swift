@@ -16,20 +16,29 @@ protocol PortDetailDisplayLogic: class
 {
   func displayDeletePort(viewModel: PortDetail.DeletePort.ViewModel)
     func displayFecthPortNo(viewModel: PortDetail.PortNo.ViewModel)
+    func displayFecthGetOrderData(viewModel: PortDetail.GetOrderList.ViewModel)
 }
 
 class PortDetailViewController: UIViewController, PortDetailDisplayLogic
 {
    
    
+    @IBOutlet weak var principalLabel: UILabel!
+    @IBOutlet weak var uprealizedLabel: UILabel!
+    @IBOutlet weak var numLabel: UILabel!
     @IBOutlet weak var lbTitle: UILabel!
     @IBOutlet weak var viewbtn: UIView!
+    @IBOutlet weak var realizedLabel: UILabel!
+    @IBOutlet weak var numtotalLabel: UILabel!
     @IBAction func btnback(_ sender: Any) {
-        router?.dismiss()
+        router?.backtoPagePreview()
     }
     
     @IBAction func btnclearport(_ sender: Any) {
         doDeletePort()
+        setNotificationCenter()
+        router?.backtoPagePreview()
+
     }
     @IBOutlet weak var textField: UITextField! {
         didSet{
@@ -91,6 +100,7 @@ class PortDetailViewController: UIViewController, PortDetailDisplayLogic
     super.viewDidLoad()
     
     doFetchPortNo()
+    doFecthGetOrderData()
     self.viewbtn.clipsToBounds = true
     self.viewbtn.layer.cornerRadius = 25
     self.viewbtn.layer.shadowRadius = 15
@@ -118,9 +128,22 @@ class PortDetailViewController: UIViewController, PortDetailDisplayLogic
   }
   
     func displayDeletePort(viewModel: PortDetail.DeletePort.ViewModel) {
-        print("err", viewModel.error)
-        print("nil", viewModel.delete?.Message ?? "Success")
+//        print("err", viewModel.error)
+//        print("nil", viewModel.delete?.Message ?? "Success")
   }
+    // MARK: setNotificationCenter
+    func setNotificationCenter() {
+     
+        NotificationCenter.default.post(name: NSNotification.Name(NotificationCenterPortDetailPage.Clicked.rawValue), object: self)
+
+    }
+    func doFecthGetOrderData() {
+        let request = PortDetail.GetOrderList.Request(username: "bookling01", portNo: self.portNo)
+    interactor?.doFecthGetOrderData(request: request)
+  }
+    func displayFecthGetOrderData(viewModel: PortDetail.GetOrderList.ViewModel) {
+//        self.principalLabel.text = viewModel.getOrderData?.Data.
+    }
 }
 extension UITextField {
     func setIcon(image: UIImage) {

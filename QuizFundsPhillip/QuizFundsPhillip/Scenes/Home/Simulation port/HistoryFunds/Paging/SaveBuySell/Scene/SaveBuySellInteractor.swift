@@ -14,28 +14,27 @@ import UIKit
 
 protocol SaveBuySellBusinessLogic
 {
-  func doSomething(request: SaveBuySell.Something.Request)
+    func doFetchFundsId(request: SaveBuySell.FetchFundsDataHistory.Request)
 }
 
 protocol SaveBuySellDataStore
 {
-  //var name: String { get set }
+    var getHistory: [DataGetHistoryModel]? { get set }
+
 }
 
 class SaveBuySellInteractor: SaveBuySellBusinessLogic, SaveBuySellDataStore
 {
+    var getHistory: [DataGetHistoryModel]?
   var presenter: SaveBuySellPresentationLogic?
   var worker: SaveBuySellWorker?
   //var name: String = ""
-  
+   
   // MARK: Do something
   
-  func doSomething(request: SaveBuySell.Something.Request)
-  {
-    worker = SaveBuySellWorker()
-    worker?.doSomeWork()
-    
-    let response = SaveBuySell.Something.Response()
-    presenter?.presentSomething(response: response)
-  }
+    func doFetchFundsId(request: SaveBuySell.FetchFundsDataHistory.Request) {
+        let response = SaveBuySell.FetchFundsDataHistory.Response(getHistory: getHistory )
+//        print("getHistory", response.getHistory ?? "")
+        presenter?.presentFundscode(response: response)
+    }
 }

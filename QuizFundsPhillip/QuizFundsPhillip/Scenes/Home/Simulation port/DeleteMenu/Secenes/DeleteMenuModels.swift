@@ -15,7 +15,22 @@ import UIKit
 enum DeleteMenu
 {
   // MARK: Use cases
-  
+    enum FetchFundsID {
+      struct Request
+      {
+   
+      }
+      struct Response
+      {
+        var fcode: String
+        var portNo: Int
+      }
+      struct ViewModel
+      {
+        var fcode: String
+        var portNo: Int
+      }
+    }
   enum FetchHistoryData
   {
     struct Request

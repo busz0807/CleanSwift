@@ -14,7 +14,8 @@ import UIKit
 
 protocol HistoryPresentationLogic
 {
-  func presentSomething(response: History.Something.Response)
+    func presentFundscode(response: History.FetchFundsID.Response)
+    func presentfetchHistory(response: History.FetchHistoryData.Response)
 }
 
 class HistoryPresenter: HistoryPresentationLogic
@@ -23,9 +24,13 @@ class HistoryPresenter: HistoryPresentationLogic
   
   // MARK: Do something
   
-  func presentSomething(response: History.Something.Response)
-  {
-    let viewModel = History.Something.ViewModel()
-    viewController?.displaySomething(viewModel: viewModel)
-  }
+    func presentfetchHistory(response: History.FetchHistoryData.Response)
+    {
+      let viewModel = History.FetchHistoryData.ViewModel(getHistory: response.getHistory, error: response.error)
+      viewController?.displayfetchHistory(viewModel: viewModel)
+    }
+    func presentFundscode(response: History.FetchFundsID.Response) {
+        let viewModel = History.FetchFundsID.ViewModel(fcode: response.fcode, portNo: response.portNo)
+        viewController?.displayfetchfundscode(viewModel: viewModel)
+    }
 }

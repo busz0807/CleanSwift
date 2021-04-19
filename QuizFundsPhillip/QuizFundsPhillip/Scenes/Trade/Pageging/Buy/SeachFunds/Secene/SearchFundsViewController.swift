@@ -27,11 +27,12 @@ class SearchFundsViewController: UIViewController, SearchFundsDisplayLogic
     @IBOutlet weak var btnsearchFunds: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     var mainpage: String = ""
+    var portNo: Int = 0
     var interactor: SearchFundsBusinessLogic?
     var router: (NSObjectProtocol & SearchFundsRoutingLogic & SearchFundsDataPassing)?
     var searchFunds :[SearchFundsModel]?
     var fundsList: [ReealmFundsListMobile]?
-    var searchfunds:[ReealmFundsListMobile] = []
+//    var searchfunds:[ReealmFundsListMobile] = []
     let realm: Realm = try! Realm()
   
   // MARK: Object lifecycle
@@ -79,6 +80,7 @@ class SearchFundsViewController: UIViewController, SearchFundsDisplayLogic
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    print("maonpage", self.mainpage)
     doFetchMainPageName()
     print("Server", Realm.Configuration.defaultConfiguration.fileURL)
     doFetchSearchFunds()
@@ -99,6 +101,7 @@ class SearchFundsViewController: UIViewController, SearchFundsDisplayLogic
     func displaySearchFunds(viewModel: SearchFunds.FetchSearchFundsData.ViewModel) {
     //nameTextField.text = viewModel.name
         self.searchFunds = viewModel.searchfunds
+        print("count", searchFunds?.count)
 //        print("Data",searchFunds)
        //  MARK: Add Database Realm
 //        let count = self.searchFunds?.count ?? 0
@@ -115,7 +118,11 @@ class SearchFundsViewController: UIViewController, SearchFundsDisplayLogic
 }
     func displayMainPageName(viewModel: SearchFunds.FetchMainPageName.ViewModel) {
         print("MainPageName>>", viewModel.mainpage ?? "")
+        print("portNo>>", viewModel.portNo ?? 0)
+        self.portNo = viewModel.portNo ?? 0
         self.mainpage = viewModel.mainpage ?? ""
+        self.tableView.reloadData()
+        
     }
     }
     
@@ -128,6 +135,7 @@ extension SearchFundsViewController: UITableViewDelegate, UITableViewDataSource 
         let cell = tableView.dequeueReusableCell(withIdentifier: "SearchFundsViewCell") as! SearchFundsViewCell
         cell.searchfundsData = self.fundsList?[indexPath.row]
         cell.searchcount = self.fundsList
+     
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -138,7 +146,8 @@ extension SearchFundsViewController: UITableViewDelegate, UITableViewDataSource 
         }
         }else {
             if let data = self.fundsList {
-            router?.sendDatagoToAddPortPreview(fundsList: data[0])
+                self.tableView.reloadData()
+                router?.sendDatagoToAddPortPreview(fundsList: data[0], portNo: self.portNo, mainPage: "SarchPage" )
             }
           
         }

@@ -19,7 +19,7 @@ protocol SearchFundsBusinessLogic {
 protocol SearchFundsDataStore {
     var searchFundsData: [SearchFundsModel]? { get set }
     var mainpage: String {get set}
-    
+    var portNo: Int {get set}
 }
 
 class SearchFundsInteractor: SearchFundsBusinessLogic, SearchFundsDataStore {
@@ -28,6 +28,7 @@ class SearchFundsInteractor: SearchFundsBusinessLogic, SearchFundsDataStore {
     var worker: SearchFundsWorker?
     var searchFundsData: [SearchFundsModel]?
     var mainpage: String = ""
+    var portNo: Int = 0
   // MARK: Do something
     func doFetchSearchFunds(request: SearchFunds.FetchSearchFundsData.Request) {
     worker = SearchFundsWorker()
@@ -43,7 +44,7 @@ class SearchFundsInteractor: SearchFundsBusinessLogic, SearchFundsDataStore {
         }
     }
     func doFetchMainPageName(request: SearchFunds.FetchMainPageName.Request){
-        let response = SearchFunds.FetchMainPageName.Response(mainpage: mainpage)
+        let response = SearchFunds.FetchMainPageName.Response(mainpage: mainpage, portNo: portNo)
 //        print("mainpage", mainpage)
         self.presenter?.presentMainPageName(response: response)
     }

@@ -14,28 +14,30 @@ import UIKit
 
 protocol BuyAndSaleBusinessLogic
 {
-  func doSomething(request: BuyAndSale.Something.Request)
+    func doFetchData(request: BuyAndSale.FetchData.Request)
 }
 
 protocol BuyAndSaleDataStore
 {
-  //var name: String { get set }
+    var fundsList:[ReealmFundsListMobile]? {get set}
+    var portNo: Int? {get set}
+    var getOrderList: DataGetOrder? {get set}
 }
 
 class BuyAndSaleInteractor: BuyAndSaleBusinessLogic, BuyAndSaleDataStore
 {
   var presenter: BuyAndSalePresentationLogic?
   var worker: BuyAndSaleWorker?
-  //var name: String = ""
-  
+    var fundsList: [ReealmFundsListMobile]?
+    var portNo: Int?
+    var getOrderList: DataGetOrder?
   // MARK: Do something
-  
-  func doSomething(request: BuyAndSale.Something.Request)
-  {
-    worker = BuyAndSaleWorker()
-    worker?.doSomeWork()
-    
-    let response = BuyAndSale.Something.Response()
-    presenter?.presentSomething(response: response)
-  }
+    func doFetchData(request: BuyAndSale.FetchData.Request)
+    {
+      worker = BuyAndSaleWorker()
+      worker?.doSomeWork()
+//        print("fcode", getOrderList)
+      let response = BuyAndSale.FetchData.Response(fundsList: fundsList, portNo: portNo, getOrderList: getOrderList)
+      presenter?.presentFetchData(response: response)
+    }
 }

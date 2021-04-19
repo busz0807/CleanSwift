@@ -14,7 +14,8 @@ import UIKit
 
 protocol FundSalePresentationLogic
 {
-  func presentSomething(response: FundSale.Something.Response)
+  func presentFetchData(response: FundSale.FetchData.Response)
+    func presentFetchInsertFunds(response:FundSale.FetchInsertDataFunds.Response)
 }
 
 class FundSalePresenter: FundSalePresentationLogic
@@ -23,9 +24,16 @@ class FundSalePresenter: FundSalePresentationLogic
   
   // MARK: Do something
   
-  func presentSomething(response: FundSale.Something.Response)
+  func presentFetchData(response: FundSale.FetchData.Response)
   {
-    let viewModel = FundSale.Something.ViewModel()
-    viewController?.displaySomething(viewModel: viewModel)
+    let viewModel = FundSale.FetchData.ViewModel(risk: response.risk, fcode: response.fcode, mainPage: response.mainPage, enName: response.enName, thName: response.thName, nav: response.nav, chage: response.chage, buy: response.buy, sell: response.sell, datenav: response.datenav, portNo: response.portNo, assetCompany: response.assetCompany,investOpenDate: response.investOpenDate, getOrderList: response.getOrderList)
+    viewController?.displayFetchData(viewModel: viewModel)
   }
+    func presentFetchInsertFunds(response:FundSale.FetchInsertDataFunds.Response) {
+        //        displayInsertFunds
+                let insertOrder = response.insertOrder
+                let error = response.error
+                let viewModel = FundSale.FetchInsertDataFunds.ViewModel(insertOrder: insertOrder, error: error)
+                viewController?.displayInsertFunds(viewModel: viewModel)
+    }
 }

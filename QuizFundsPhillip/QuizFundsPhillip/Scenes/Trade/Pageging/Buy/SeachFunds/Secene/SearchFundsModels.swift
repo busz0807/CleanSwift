@@ -34,10 +34,11 @@ enum SearchFunds {
       }
       struct Response {
         var mainpage: String?
-         
+        var portNo: Int?
       }
       struct ViewModel {
         var mainpage: String?
+        var portNo: Int?
       }
     }
 }

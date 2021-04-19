@@ -21,10 +21,79 @@ enum AddSimulationPort
           
       }
       struct Response {
-          var searchfunds: ReealmFundsListMobile?
+        var risk : Int
+        var fcode: String
+        var mainPage: String
+        var enName: String
+        var thName: String
+        var nav: String
+        var chage: String
+        var buy: String
+        var sell: String
+        var datenav: String
+        var portNo: Int
+        var assetCompany: String
+        var investOpenDate: String
+        var getOrderList: DataGetOrder?
+        var searchfunds: ReealmFundsListMobile?
+       
       }
       struct ViewModel {
-          var searchfunds: ReealmFundsListMobile?
+        var risk : Int
+        var fcode: String
+        var mainPage: String
+        var enName: String
+        var thName: String
+        var nav: String
+        var chage: String
+        var buy: String
+        var sell: String
+        var datenav: String
+        var portNo: Int
+        var assetCompany: String
+        var investOpenDate: String
+        var getOrderList: DataGetOrder?
+        var searchfunds: ReealmFundsListMobile?
+      }
+    }
+    enum FetchNavListData {
+      struct Request {
+         
+      }
+      struct Response {
+        var NavList: [NavListModel]?
+        var error: Error?
+      }
+      struct ViewModel {
+    
+        var NavList: [NavListModel]?
+        var error: Error?
+      }
+    }
+    enum  FetchInsertDataFunds {
+      struct Request {
+          var username: String
+          var portNo: Int
+          var portName: String
+          var fcode: String
+          var ordtp: Double
+          var grsam: Double
+          var units: Double
+          var unprc: Double
+          var trndt: String
+          var status: String
+          var channel:String
+          var realized: String
+      }
+      struct Response {
+          var insertOrder: InsertOrderModel?
+         
+          var error: Error?
+      }
+      struct ViewModel {
+          var insertOrder: InsertOrderModel?
+        
+          var error: Error?
       }
     }
 }

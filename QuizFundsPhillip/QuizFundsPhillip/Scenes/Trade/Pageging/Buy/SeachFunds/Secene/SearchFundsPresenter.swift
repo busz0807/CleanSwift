@@ -29,7 +29,7 @@ class SearchFundsPresenter: SearchFundsPresentationLogic {
         viewController?.displaySearchFunds(viewModel: viewModel)
   }
     func presentMainPageName(response: SearchFunds.FetchMainPageName.Response) {
-        let viewModel = SearchFunds.FetchMainPageName.ViewModel(mainpage:  response.mainpage)
+        let viewModel = SearchFunds.FetchMainPageName.ViewModel(mainpage:  response.mainpage, portNo: response.portNo)
         viewController?.displayMainPageName(viewModel: viewModel)
     }
 }

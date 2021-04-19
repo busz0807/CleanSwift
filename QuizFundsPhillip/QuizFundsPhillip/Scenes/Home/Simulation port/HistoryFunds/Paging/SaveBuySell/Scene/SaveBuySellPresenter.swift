@@ -14,7 +14,7 @@ import UIKit
 
 protocol SaveBuySellPresentationLogic
 {
-  func presentSomething(response: SaveBuySell.Something.Response)
+  func presentFundscode(response: SaveBuySell.FetchFundsDataHistory.Response)
 }
 
 class SaveBuySellPresenter: SaveBuySellPresentationLogic
@@ -23,9 +23,9 @@ class SaveBuySellPresenter: SaveBuySellPresentationLogic
   
   // MARK: Do something
   
-  func presentSomething(response: SaveBuySell.Something.Response)
+    func presentFundscode(response: SaveBuySell.FetchFundsDataHistory.Response)
   {
-    let viewModel = SaveBuySell.Something.ViewModel()
-    viewController?.displaySomething(viewModel: viewModel)
+        let viewModel = SaveBuySell.FetchFundsDataHistory.ViewModel(getHistory: response.getHistory)
+    viewController?.displayfetchfundscode(viewModel: viewModel)
   }
 }
