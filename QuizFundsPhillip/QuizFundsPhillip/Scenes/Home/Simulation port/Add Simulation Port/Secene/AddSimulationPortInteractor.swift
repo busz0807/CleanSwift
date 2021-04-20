@@ -39,6 +39,7 @@ protocol AddSimulationPortDataStore
     var datenav: String {get set}
     var assetCompany: String {get set}
     var portNo: Int  {get set}
+    var color: String {get set}
     var investOpenDate: String {get set}
     var getOrderList: DataGetOrder?  {get set}
 }
@@ -59,6 +60,7 @@ class AddSimulationPortInteractor: AddSimulationPortBusinessLogic, AddSimulation
     var datenav = ""
     var assetCompany = ""
     var investOpenDate = ""
+    var color = ""
     var fundslist: [ReealmFundsListMobile]?
     var searchfunds: ReealmFundsListMobile?
     var navList: [NavListModel]?
@@ -73,7 +75,7 @@ class AddSimulationPortInteractor: AddSimulationPortBusinessLogic, AddSimulation
       worker = AddSimulationPortWorker()
       worker?.doSomeWork()
       
-        let response = AddSimulationPort.Something.Response(risk: risk, fcode: fcode, mainPage: mainPage, enName: enName, thName: thName, nav: nav, chage: chage, buy: buy, sell: sell, datenav: datenav, portNo: portNo, assetCompany: assetCompany, investOpenDate: investOpenDate, getOrderList: getOrderList, searchfunds: searchfunds)
+        let response = AddSimulationPort.Something.Response(risk: risk, fcode: fcode, mainPage: mainPage, enName: enName, thName: thName, nav: nav, chage: chage, color: color, buy: buy, sell: sell, datenav: datenav, portNo: portNo, assetCompany: assetCompany, investOpenDate: investOpenDate, getOrderList: getOrderList, searchfunds: searchfunds)
   //        print("Data", response.fundsList?._change ?? "")
       presenter?.presentSomething(response: response)
     }

@@ -3560,17 +3560,17 @@
                                                         </constraints>
                                                         <prototypes>
                                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="FundsViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FundsViewCell" id="23G-GX-tCx" customClass="FundsViewCell" customModule="QuizFundsPhillip" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="28" width="376" height="245"/>
+                                                                <rect key="frame" x="0.0" y="28" width="376" height="199.5"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="23G-GX-tCx" id="Pfw-En-Eh0">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="376" height="245"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="376" height="199.5"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                     <subviews>
                                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vfx-Jh-ifq">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="376" height="245"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="376" height="199.5"/>
                                                                             <subviews>
                                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N7o-k5-R4E">
-                                                                                    <rect key="frame" x="0.0" y="5" width="363" height="220"/>
+                                                                                    <rect key="frame" x="0.0" y="5" width="363" height="174.5"/>
                                                                                     <subviews>
                                                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QrP-4V-MU0">
                                                                                             <rect key="frame" x="0.0" y="10" width="363" height="72"/>
@@ -3628,10 +3628,10 @@
                                                                                             </constraints>
                                                                                         </view>
                                                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8C8-hd-Uy5">
-                                                                                            <rect key="frame" x="0.0" y="82" width="363" height="46"/>
+                                                                                            <rect key="frame" x="0.0" y="82" width="363" height="0.5"/>
                                                                                             <subviews>
-                                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ไม่มีข้อมูล" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xqQ-bN-gK6">
-                                                                                                    <rect key="frame" x="0.0" y="0.0" width="363" height="46"/>
+                                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xqQ-bN-gK6">
+                                                                                                    <rect key="frame" x="0.0" y="0.0" width="363" height="0.5"/>
                                                                                                     <fontDescription key="fontDescription" name="NotoSansThai-Medium" family="Noto Sans Thai" pointSize="30"/>
                                                                                                     <nil key="highlightedColor"/>
                                                                                                 </label>
@@ -3645,7 +3645,7 @@
                                                                                             </constraints>
                                                                                         </view>
                                                                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="pcV-p4-Ert">
-                                                                                            <rect key="frame" x="15" y="128" width="338" height="82"/>
+                                                                                            <rect key="frame" x="15" y="82.5" width="338" height="82"/>
                                                                                             <subviews>
                                                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LvW-Cy-aqA">
                                                                                                     <rect key="frame" x="0.0" y="0.0" width="169" height="82"/>

@@ -102,6 +102,10 @@ class SearchFundsViewController: UIViewController, SearchFundsDisplayLogic
     //nameTextField.text = viewModel.name
         self.searchFunds = viewModel.searchfunds
         print("count", searchFunds?.count)
+//        for fundList in  searchFunds! {
+//      //        self.saveNAVList(data: fundList)
+//      //        }
+
 //        print("Data",searchFunds)
        //  MARK: Add Database Realm
 //        let count = self.searchFunds?.count ?? 0
@@ -116,6 +120,19 @@ class SearchFundsViewController: UIViewController, SearchFundsDisplayLogic
 //        }
 //  }
 }
+ 
+    func saveNAVList(data: ReealmFundsListMobile) {
+        let realm: Realm = try! Realm()
+        try! realm.write {
+            let task = ReealmFundsListMobile(value: data)
+            realm.add(task, update: .all)
+        }
+    }
+    func checkFundsListExisting(data: ReealmFundsListMobile) -> Bool {
+        
+        let realm: Realm = try! Realm()
+        return realm.object(ofType: ReealmFundsListMobile.self, forPrimaryKey: data.fundId ) != nil
+    }
     func displayMainPageName(viewModel: SearchFunds.FetchMainPageName.ViewModel) {
         print("MainPageName>>", viewModel.mainpage ?? "")
         print("portNo>>", viewModel.portNo ?? 0)

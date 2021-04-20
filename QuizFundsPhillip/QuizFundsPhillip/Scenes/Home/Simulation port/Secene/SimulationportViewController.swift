@@ -35,7 +35,7 @@ protocol SimulationportDisplayLogic: class
 class SimulationportViewController: UIViewController, SimulationportDisplayLogic
 {
     @IBAction func btnback(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        router?.backtoMainPagePreview()
     }
   
     let cellPercentWidth: CGFloat = 1.0
@@ -47,9 +47,21 @@ class SimulationportViewController: UIViewController, SimulationportDisplayLogic
     var getOrderData4: GetOrderModel?
     var getOrderData5: GetOrderModel?
   
-    var sumValue: Double?
-    var sumunrealizedReturns: Double?
-    var sumunrealizedProfits: Double?
+    var sumValue: String?
+    var sumunrealizedReturns: String?
+    var sumunrealizedProfits: String?
+    var sumValue2: String?
+    var sumunrealizedReturns2: String?
+    var sumunrealizedProfits2: String?
+    var sumValue3: String?
+    var sumunrealizedReturns3: String?
+    var sumunrealizedProfits3: String?
+    var sumValue4: String?
+    var sumunrealizedReturns4: String?
+    var sumunrealizedProfits4: String?
+    var sumValue5: String?
+    var sumunrealizedReturns5: String?
+    var sumunrealizedProfits5: String?
     var indexcollectioncenterred: Int?
     @IBAction func btngoToFunds(_ sender: Any) {
         print("mainpage", mainpage)
@@ -198,21 +210,10 @@ class SimulationportViewController: UIViewController, SimulationportDisplayLogic
 //        for countindex in 0...count {
 //            let unrealizedReturns1 = Double(self.getOrderData?.Data[countindex].currentValue ?? 0.0)
 //            print("unrealizedReturns1", unrealizedReturns1)
-        let unrealizedReturns2 = self.getOrderData?.Data[0].unrealizedProfits ?? 0
-        let unrealizedReturns3 = self.getOrderData?.Data[1].unrealizedProfits ?? 0
-        self.sumunrealizedReturns =  unrealizedReturns2 + unrealizedReturns3
-        print("sumunrealizedReturns", sumunrealizedReturns)
-//        }
-//
-//        let unrealizedProfits1 = self.getOrderData?.Data[0].unrealizedProfits ?? 0
-//        let unrealizedProfits2 = self.getOrderData?.Data[1].unrealizedProfits ?? 0
-//        let unrealizedProfits3 = self.getOrderData?.Data[2].unrealizedProfits ?? 0
-//        self.sumunrealizedProfits = unrealizedProfits1 + unrealizedProfits2 + unrealizedProfits3
-//
-//        let currentValue1 = self.getOrderData?.Data[0].currentValue ?? 0
-//        let currentValue2 = self.getOrderData?.Data[1].currentValue ?? 0
-//        let currentValue3 = self.getOrderData?.Data[2].currentValue ?? 0
-//        self.sumValue = currentValue1 + currentValue2 + currentValue3
+        self.sumunrealizedProfits =  String(self.getOrderData?.Data.reduce(0) { $0 + $1.unrealizedProfits } ?? 0.00)
+        self.sumValue =  String(self.getOrderData?.Data.reduce(0) { $0 + $1.currentValue } ?? 0.00)
+        self.sumunrealizedReturns = String(self.getOrderData?.Data.reduce(0) { $0 + $1.unrealizedReturns } ?? 0.00)
+        
         self.tableView.reloadData()
         self.collectionView.reloadData()
     }
@@ -220,20 +221,9 @@ class SimulationportViewController: UIViewController, SimulationportDisplayLogic
 //        print("GetOrder2", viewModel.getOrderDate2)
 //        print("err2", viewModel.error)
         self.getOrderData2 = viewModel.getOrderDate2
-//        let unrealizedReturns1 = self.getOrderData2?.Data[0].unrealizedReturns ?? 0
-//        let unrealizedReturns2 = self.getOrderData2?.Data[1].unrealizedReturns ?? 0
-//        let unrealizedReturns3 = self.getOrderData2?.Data[2].unrealizedReturns ?? 0
-//        self.sumunrealizedReturns = unrealizedReturns1 + unrealizedReturns2 + unrealizedReturns3
-//        
-//        let unrealizedProfits1 = self.getOrderData2?.Data[0].unrealizedProfits ?? 0
-//        let unrealizedProfits2 = self.getOrderData2?.Data[1].unrealizedProfits ?? 0
-//        let unrealizedProfits3 = self.getOrderData2?.Data[2].unrealizedProfits ?? 0
-//        self.sumunrealizedProfits = unrealizedProfits1 + unrealizedProfits2 + unrealizedProfits3
-//        
-//        let currentValue1 = self.getOrderData2?.Data[0].currentValue ?? 0
-//        let currentValue2 = self.getOrderData2?.Data[1].currentValue ?? 0
-//        let currentValue3 = self.getOrderData2?.Data[2].currentValue ?? 0
-//        self.sumValue = currentValue1 + currentValue2 + currentValue3
+        self.sumunrealizedProfits2 =  String(self.getOrderData2?.Data.reduce(0) { $0 + $1.unrealizedProfits } ?? 0.00)
+        self.sumValue2 =  String(self.getOrderData2?.Data.reduce(0) { $0 + $1.currentValue } ?? 0.00)
+        self.sumunrealizedReturns2 = String(self.getOrderData2?.Data.reduce(0) { $0 + $1.unrealizedReturns } ?? 0.00)
         self.tableView.reloadData()
         self.collectionView.reloadData()
     }
@@ -241,17 +231,35 @@ class SimulationportViewController: UIViewController, SimulationportDisplayLogic
 //        print("GetOrder3", viewModel.getOrderDate3)
 //        print("err3", viewModel.error)
         self.getOrderData3 = viewModel.getOrderDate3
+        self.sumunrealizedProfits3 = String(self.getOrderData3?.Data.reduce(0) { $0 + $1.unrealizedProfits } ?? 0.00)
+        self.sumValue3 =  String(self.getOrderData3?.Data.reduce(0) { $0 + $1.currentValue } ?? 0.00)
+        self.sumunrealizedReturns3 = String(self.getOrderData3?.Data.reduce(0) { $0 + $1.unrealizedReturns } ?? 0.00 )
+        self.tableView.reloadData()
+        self.collectionView.reloadData()
+
     }
     func displayFecthGetOrderData4(viewModel: Simulationport.GetOrder4.ViewModel){
 //        print("GetOrder4", viewModel.getOrderDate4)
 //        print("err4", viewModel.error)
         self.getOrderData4 = viewModel.getOrderDate4
+        
+        self.sumunrealizedProfits4 =  String(self.getOrderData4?.Data.reduce(0) { $0 + $1.unrealizedProfits } ?? 0.00)
+        self.sumValue4 =  String(self.getOrderData4?.Data.reduce(0) { $0 + $1.currentValue } ?? 0.00)
+        self.sumunrealizedReturns4 = String(self.getOrderData4?.Data.reduce(0) { $0 + $1.unrealizedReturns } ?? 0.00)
+        self.tableView.reloadData()
+        self.collectionView.reloadData()
+
 
     }
     func displayFecthGetOrderData5(viewModel: Simulationport.GetOrder5.ViewModel) {
 //        print("GetOrder5", viewModel.getOrderDate5)
 //        print("err5", viewModel.error)
         self.getOrderData5 = viewModel.getOrderDate5
+        self.sumunrealizedProfits5 =  String(self.getOrderData5?.Data.reduce(0) { $0 + $1.unrealizedProfits } ?? 0.00)
+        self.sumValue5 =  String(self.getOrderData5?.Data.reduce(0) { $0 + $1.currentValue } ?? 0.00)
+        self.sumunrealizedReturns5 = String(self.getOrderData5?.Data.reduce(0) { $0 + $1.unrealizedReturns } ?? 0.00)
+        self.tableView.reloadData()
+        self.collectionView.reloadData()
 
     }
     func sendclickPortDetail() {
@@ -308,68 +316,166 @@ extension SimulationportViewController: UICollectionViewDelegate, UICollectionVi
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SimulationPortViewCell", for: indexPath) as! SimulationPortViewCell
 //        let indexcollection = self.indexcollectioncenterred
         if indexPath.row == 0 {
-            let data = Int(self.getOrderData?.Data.count ?? 0)
-            if data == 0 {
+            let data = self.getOrderData?.Data[0].fcode ?? ""
+            print("data???", data)
+            if data == "" {
                 cell.lbcurrency.text = "ไม่มีพอร์ตจำลอง"
                 cell.lbport.text = ""
                 cell.lbdouble.text = ""
                 cell.lbfloat.text = ""
-            }
-            cell.lbcurrency.text = "\(self.getOrderData?.Data[0].currentValue ?? 0)"
-            cell.lbport.text = "พอร์ตจำลอง\((indexPath.row) + 1)"
-            cell.lbfloat.text = "\(self.getOrderData?.Data[0].unrealizedReturns ?? 0)"
-            let change = self.getOrderData?.Data[0].unrealizedProfits ?? 0
-            if change < 0 {
-            cell.lbdouble.text = "\(self.getOrderData?.Data[0].unrealizedProfits ?? 0)"
-            cell.lbdouble.textColor = .red
-//                self.chage = "\(navlist[countindexnav].change)(\(navlist[countindexnav].changePercent)%)"
             } else {
-                cell.lbdouble.text = "+\(self.getOrderData?.Data[0].unrealizedProfits ?? 0)"
-//                self.chage = "+\(navlist[countindexnav].change)(+\(navlist[countindexnav].changePercent)%)"
-                cell.lbdouble.textColor = .green
+                cell.lbcurrency.text = self.sumValue ?? ""
+                cell.lbport.text = "พอร์ตจำลอง\((indexPath.row) + 1)"
+                cell.lbfloat.text = self.sumunrealizedReturns ?? ""
+                let changeString = self.sumunrealizedProfits ?? ""
+                let changeDouble = Double(changeString) ?? 0.00
+                if changeDouble < 0.00 {
+                cell.lbdouble.text = self.sumunrealizedProfits ?? ""
+                cell.lbdouble.textColor = .red
+    //                self.chage = "\(navlist[countindexnav].change)(\(navlist[countindexnav].changePercent)%)"
+                } else {
+                    cell.lbdouble.text = "+\(self.sumunrealizedProfits ?? "")"
+    //                self.chage = "+\(navlist[countindexnav].change)(+\(navlist[countindexnav].changePercent)%)"
+                    cell.lbdouble.textColor = .green
+                }
             }
-            cell.lbfloat.text = "\(self.getOrderData?.Data[0].unrealizedReturns ?? 0)"
           
 //            cell.index = indexPath.row
-        } else if indexPath.row  == 1 {  let data = Int(self.getOrderData2?.Data.count ?? 0)
+        } else if indexPath.row  == 1 {
+            let data = Int(self.getOrderData2?.Data.count ?? 0)
+            if data == 0 {
+                cell.lbcurrency.text = "ไม่มีพอร์ตจำลอง"
+                cell.lbport.text = ""
+                cell.lbdouble.text = ""
+                cell.lbfloat.text = ""
+            } else {
+                cell.lbcurrency.text = self.sumValue2 ?? ""
+                cell.lbport.text = "พอร์ตจำลอง\((indexPath.row) + 1)"
+                cell.lbfloat.text = self.sumunrealizedReturns2 ?? ""
+                let change = Double(self.sumunrealizedProfits2 ?? "") ?? 0
+                if change < 0.00 {
+                    cell.lbdouble.text = "\(self.sumunrealizedProfits2 ?? "")"
+                    cell.lbdouble.textColor = .red
+                    //                self.chage = "\(navlist[countindexnav].change)(\(navlist[countindexnav].changePercent)%)"
+                } else {
+                    cell.lbdouble.text = "+\(self.sumunrealizedProfits2 ?? "")"
+                    //                self.chage = "+\(navlist[countindexnav].change)(+\(navlist[countindexnav].changePercent)%)"
+                    cell.lbdouble.textColor = .green
+                }
+                let changeReuturnDouble = Double(self.sumunrealizedReturns2 ?? "") ?? 0.00
+                if changeReuturnDouble < 0.00 {
+                    cell.lbfloat.text = "\(self.sumunrealizedReturns2 ?? "")%"
+                    cell.lbfloat.textColor = .red
+    //                self.chage = "\(navlist[countindexnav].change)(\(navlist[countindexnav].changePercent)%)"
+                } else {
+                    cell.lbfloat.text = "+\(self.sumunrealizedReturns2 ?? "")%"
+                    //                self.chage = "+\(navlist[countindexnav].change)(+\(navlist[countindexnav].changePercent)%)"
+                    cell.lbfloat.textColor = .green
+                }
+            }
+         
+//            cell.index = indexPath.row
+        }  else if indexPath.row  == 2 {
+            let data = Int(self.getOrderData3?.Data.count ?? 0)
             if data == 0 {
                 cell.lbcurrency.text = "ไม่มีพอร์ตจำลอง"
                 cell.lbport.text = ""
                 cell.lbdouble.text = ""
                 cell.lbfloat.text = ""
             }
-            cell.lbcurrency.text = "\(self.getOrderData2?.Data[0].currentValue ?? 0)"
-            cell.lbport.text = "พอร์ตจำลอง\((indexPath.row) + 1)"
-            cell.lbfloat.text = "\(self.getOrderData2?.Data[0].unrealizedReturns ?? 0)"
-            let change = self.getOrderData2?.Data[0].unrealizedProfits ?? 0
-            if change < 0 {
-            cell.lbdouble.text = "\(self.getOrderData2?.Data[0].unrealizedProfits ?? 0)"
-            cell.lbdouble.textColor = .red
-//                self.chage = "\(navlist[countindexnav].change)(\(navlist[countindexnav].changePercent)%)"
-            } else {
-                cell.lbdouble.text = "+\(self.getOrderData2?.Data[0].unrealizedProfits ?? 0)"
-//                self.chage = "+\(navlist[countindexnav].change)(+\(navlist[countindexnav].changePercent)%)"
-                cell.lbdouble.textColor = .green
+            else {
+                cell.lbcurrency.text = self.sumValue3 ?? ""
+                cell.lbport.text = "พอร์ตจำลอง\((indexPath.row) + 1)"
+                cell.lbfloat.text = self.sumunrealizedReturns3 ?? ""
+                let change = Double(self.sumunrealizedProfits3 ?? "") ?? 0.00
+                if change < 0.00 {
+                cell.lbdouble.text = "\(self.sumunrealizedProfits3 ?? "")"
+                cell.lbdouble.textColor = .red
+    //                self.chage = "\(navlist[countindexnav].change)(\(navlist[countindexnav].changePercent)%)"
+                } else {
+                    cell.lbdouble.text = "+\(self.sumunrealizedProfits3 ?? "")"
+    //                self.chage = "+\(navlist[countindexnav].change)(+\(navlist[countindexnav].changePercent)%)"
+                    cell.lbdouble.textColor = .green
+                }
+                let changeReuturnDouble = Double(self.sumunrealizedReturns3 ?? "") ?? 0.00
+                if changeReuturnDouble < 0.00 {
+                cell.lbfloat.text = "\(self.sumunrealizedReturns3 ?? "")%"
+                cell.lbfloat.textColor = .red
+    //                self.chage = "\(navlist[countindexnav].change)(\(navlist[countindexnav].changePercent)%)"
+                } else {
+                    cell.lbfloat.text = "+\(self.sumunrealizedReturns3 ?? "")%"
+    //                self.chage = "+\(navlist[countindexnav].change)(+\(navlist[countindexnav].changePercent)%)"
+                    cell.lbfloat.textColor = .green
+                }
             }
-            cell.lbfloat.text = "\(self.getOrderData?.Data[0].unrealizedReturns ?? 0)"
-          
-        }  else if indexPath.row  == 2 {
-            cell.lbcurrency.text = "ไม่มีพอร์ตจำลอง"
-            cell.lbport.text = ""
-            cell.lbdouble.text = ""
-            cell.lbfloat.text = ""
+           
 //            cell.index = indexPath.row
         }  else if indexPath.row == 3 {
-            cell.lbcurrency.text = "ไม่มีพอร์ตจำลอง"
-            cell.lbport.text = ""
-            cell.lbdouble.text = ""
-            cell.lbfloat.text = ""
+            let data = Int(self.getOrderData4?.Data.count ?? 0)
+            if data == 0 {
+                cell.lbcurrency.text = "ไม่มีพอร์ตจำลอง"
+                cell.lbport.text = ""
+                cell.lbdouble.text = ""
+                cell.lbfloat.text = ""
+            } else {
+                cell.lbcurrency.text = self.sumValue4 ?? ""
+                cell.lbport.text = "พอร์ตจำลอง\((indexPath.row) + 1)"
+                cell.lbfloat.text = self.sumunrealizedReturns4 ?? ""
+                let change = Double(self.sumunrealizedProfits4 ?? "") ?? 0.00
+                if change < 0.00 {
+                cell.lbdouble.text = self.sumunrealizedProfits4 ?? ""
+                cell.lbdouble.textColor = .red
+    //                self.chage = "\(navlist[countindexnav].change)(\(navlist[countindexnav].changePercent)%)"
+                } else {
+                    cell.lbdouble.text = "+\(self.sumunrealizedProfits4 ?? "")"
+    //                self.chage = "+\(navlist[countindexnav].change)(+\(navlist[countindexnav].changePercent)%)"
+                    cell.lbdouble.textColor = .green
+                }
+                let changeReuturnDouble = Double(self.sumunrealizedReturns4 ?? "") ?? 0.00
+                if changeReuturnDouble < 0.00 {
+                cell.lbfloat.text = "\(self.sumunrealizedReturns4 ?? "")%"
+                cell.lbfloat.textColor = .red
+    //                self.chage = "\(navlist[countindexnav].change)(\(navlist[countindexnav].changePercent)%)"
+                } else {
+                    cell.lbfloat.text = "+\(self.sumunrealizedReturns4 ?? "")%"
+    //                self.chage = "+\(navlist[countindexnav].change)(+\(navlist[countindexnav].changePercent)%)"
+                    cell.lbfloat.textColor = .green
+                }
+            }
 //            cell.index = indexPath.row
         }  else if indexPath.row == 4 {
-            cell.lbcurrency.text = "ไม่มีพอร์ตจำลอง"
-            cell.lbport.text = ""
-            cell.lbdouble.text = ""
-            cell.lbfloat.text = ""
+            let data = Int(self.getOrderData5?.Data.count ?? 0)
+            if data == 0 {
+                cell.lbcurrency.text = "ไม่มีพอร์ตจำลอง"
+                cell.lbport.text = ""
+                cell.lbdouble.text = ""
+                cell.lbfloat.text = ""
+            } else {
+                cell.lbcurrency.text = self.sumValue5 ?? ""
+                cell.lbport.text = "พอร์ตจำลอง\((indexPath.row) + 1)"
+                cell.lbfloat.text = self.sumunrealizedReturns5 ?? ""
+                let change = Double(self.sumunrealizedProfits5 ?? "") ?? 0.00
+                if change < 0.00 {
+                cell.lbdouble.text = self.sumunrealizedProfits5 ?? ""
+                cell.lbdouble.textColor = .red
+    //                self.chage = "\(navlist[countindexnav].change)(\(navlist[countindexnav].changePercent)%)"
+                } else {
+                    cell.lbdouble.text = "+\(self.sumunrealizedProfits5 ?? "")"
+    //                self.chage = "+\(navlist[countindexnav].change)(+\(navlist[countindexnav].changePercent)%)"
+                    cell.lbdouble.textColor = .green
+                }
+                let changeReuturnDouble = Double(self.sumunrealizedReturns5 ?? "") ?? 0.00
+                if changeReuturnDouble < 0.00 {
+                cell.lbfloat.text = "\(self.sumunrealizedReturns5 ?? "")%"
+                cell.lbfloat.textColor = .red
+    //                self.chage = "\(navlist[countindexnav].change)(\(navlist[countindexnav].changePercent)%)"
+                } else {
+                    cell.lbfloat.text = "+\(self.sumunrealizedReturns5 ?? "")%"
+    //                self.chage = "+\(navlist[countindexnav].change)(+\(navlist[countindexnav].changePercent)%)"
+                    cell.lbfloat.textColor = .green
+                }
+            }
+//            cell.index = indexPath.row
         }
         return cell
     }

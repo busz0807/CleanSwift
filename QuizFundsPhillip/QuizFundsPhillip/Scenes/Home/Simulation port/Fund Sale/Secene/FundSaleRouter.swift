@@ -17,6 +17,7 @@ protocol FundSaleRoutingLogic
     func sendDatagoToRiskPreview(risk: Int?)
     func backtoMainPagePreview()
     func backtoPagePreview()
+    func goToSimportPage() 
 }
 
 protocol FundSaleDataPassing
@@ -46,5 +47,9 @@ class FundSaleRouter: NSObject, FundSaleRoutingLogic, FundSaleDataPassing
     }
     func backtoPagePreview() {
         viewController?.dismiss(animated: true, completion: nil)
+    }
+    func goToSimportPage() {
+        let destinationVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SimulationportViewController") as! SimulationportViewController
+       viewController?.present(destinationVC, animated: true)
     }
 }

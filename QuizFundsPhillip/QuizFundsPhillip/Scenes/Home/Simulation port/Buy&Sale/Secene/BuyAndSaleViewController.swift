@@ -48,11 +48,11 @@ class BuyAndSaleViewController: UIViewController, BuyAndSaleDisplayLogic {
         router?.sendDatagoToHistoryPreview(fundsId: self.fcode, portNo: self.portNo)
     }
     @IBAction func btnbuyplus(_ sender: Any) {
-        router?.sendDatagoToAddPortPreview(mainPage: self.mainPage, enName: self.enName, thName: self.thName, risk: self.risk, nav: self.nav, chage: self.chage, buy: self.buy, sell: self.sell, date: self.datenav, portNo: self.portNo,assetCompany: self.assetCompany,investOpenDate: self.investOpenDate,  getOrderList: self.getOrderList)
+        router?.sendDatagoToAddPortPreview(mainPage: self.mainPage, enName: self.enName, thName: self.thName, risk: self.risk, nav: self.nav, chage: self.chage, color: self.color, buy: self.buy, sell: self.sell, date: self.datenav, portNo: self.portNo,assetCompany: self.assetCompany,investOpenDate: self.investOpenDate,  getOrderList: self.getOrderList)
 
     }
     @IBAction func btnsellfunds(_ sender: Any) {
-        router?.sendDatagoToSellPortPreview(mainPage: self.mainPage, enName: self.enName, thName: self.thName, risk: self.risk, nav: self.nav, chage: self.chage, buy: self.buy, sell: self.sell, date: self.datenav, portNo: self.portNo,assetCompany: self.assetCompany,investOpenDate: self.investOpenDate,  getOrderList: self.getOrderList)
+        router?.sendDatagoToSellPortPreview(mainPage: self.mainPage, enName: self.enName, thName: self.thName, risk: self.risk, nav: self.nav, chage: self.chage, color: self.color, buy: self.buy, sell: self.sell, date: self.datenav, portNo: self.portNo,assetCompany: self.assetCompany,investOpenDate: self.investOpenDate,  getOrderList: self.getOrderList)
     }
     @IBOutlet weak var lbcost: UILabel!
     @IBOutlet weak var unreallizelabel: UILabel!
@@ -243,6 +243,7 @@ class BuyAndSaleViewController: UIViewController, BuyAndSaleDisplayLogic {
     var datenav = ""
     var assetCompany = ""
     var investOpenDate = ""
+    var color = ""
     var getOrderList: DataGetOrder?
   var router: (NSObjectProtocol & BuyAndSaleRoutingLogic & BuyAndSaleDataPassing)?
 
@@ -444,12 +445,14 @@ class BuyAndSaleViewController: UIViewController, BuyAndSaleDisplayLogic {
                         
                         let change = navlist[countindexnav].change
                         if change < 0 {
-                        self.lbchange.text = "\(navlist[countindexnav].change)(\(navlist[countindexnav].changePercent)%)"
-                        self.lbchange.textColor = .red
+                            self.lbchange.text = "\(navlist[countindexnav].change)(\(navlist[countindexnav].changePercent)%)"
+                            self.lbchange.textColor = .red
                             self.chage = "\(navlist[countindexnav].change)(\(navlist[countindexnav].changePercent)%)"
+                            self.color = "red"
                         } else {
                             self.lbchange.text = "+\(navlist[countindexnav].change)(+\(navlist[countindexnav].changePercent)%)"
                             self.chage = "+\(navlist[countindexnav].change)(+\(navlist[countindexnav].changePercent)%)"
+                            self.color = "green"
                             self.lbchange.textColor = .green
                         }
                     }

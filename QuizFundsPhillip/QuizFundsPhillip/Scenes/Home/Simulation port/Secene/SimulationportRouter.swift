@@ -17,6 +17,7 @@ protocol SimulationportRoutingLogic
     func goToSearchFundsPreview(mainpage: String, portNo: Int)
     func goToPortDetail(portNo: Int )
     func sendDatagoToBuyAndSalePreview(fundsList: [ReealmFundsListMobile]?,getOrderList: DataGetOrder? , portNo: Int)
+    func backtoMainPagePreview()
 }
 
 protocol SimulationportDataPassing
@@ -51,6 +52,12 @@ class SimulationportRouter: NSObject, SimulationportRoutingLogic, Simulationport
         destinationDS.portNo = portNo
         destinationDS.getOrderList = getOrderList
       viewController?.present(destinationVC, animated: false)
+        
+    }
+    func backtoMainPagePreview() {
+//        let destinationtabbarVC = UITapbar.performSegue(withIdentifier: "tabBar", sender: self
+       
+        viewController?.view.window?.rootViewController?.dismiss(animated: false, completion: nil)
         
     }
 }

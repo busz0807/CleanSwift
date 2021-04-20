@@ -17,6 +17,7 @@ protocol AddSimulationPortRoutingLogic
     func sendDatagoToRiskPreview(risk: Int?)
     func backtoMainPagePreview()
     func backtoPagePreview()
+    func goToSimportPage()
 }
 
 protocol AddSimulationPortDataPassing
@@ -45,5 +46,9 @@ class AddSimulationPortRouter: NSObject, AddSimulationPortRoutingLogic, AddSimul
     }
     func backtoPagePreview() {
         viewController?.dismiss(animated: true, completion: nil)
+    }
+    func goToSimportPage() {
+        let destinationVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SimulationportViewController") as! SimulationportViewController
+       viewController?.present(destinationVC, animated: true)
     }
 }

@@ -19,8 +19,8 @@ protocol BuyAndSaleRoutingLogic
     func sendDatagoToRiskPreview(risk: Int?)
     func sendDatagoToDeletePreview(fundsId: String?, portNo: Int)
     func sendDatagoToHistoryPreview(fundsId: String?, portNo: Int)
-    func sendDatagoToAddPortPreview(mainPage: String,enName: String, thName:String, risk: Int, nav: String, chage: String, buy: String, sell: String, date: String, portNo: Int,assetCompany: String, investOpenDate: String, getOrderList: DataGetOrder?)
-    func sendDatagoToSellPortPreview(mainPage: String,enName: String, thName:String, risk: Int, nav: String, chage: String, buy: String, sell: String, date: String, portNo: Int,assetCompany: String, investOpenDate: String, getOrderList: DataGetOrder?)
+    func sendDatagoToAddPortPreview(mainPage: String,enName: String, thName:String, risk: Int, nav: String, chage: String,color: String , buy: String, sell: String, date: String, portNo: Int,assetCompany: String, investOpenDate: String, getOrderList: DataGetOrder?)
+    func sendDatagoToSellPortPreview(mainPage: String,enName: String, thName:String, risk: Int, nav: String, chage: String,color: String , buy: String, sell: String, date: String, portNo: Int,assetCompany: String, investOpenDate: String, getOrderList: DataGetOrder?)
 }
 protocol BuyAndSaleDataPassing
 {
@@ -49,7 +49,7 @@ class BuyAndSaleRouter: NSObject, BuyAndSaleRoutingLogic, BuyAndSaleDataPassing
         viewController?.present(destinationVC, animated: true)
         
     }
-    func sendDatagoToAddPortPreview(mainPage: String,enName: String, thName:String, risk: Int, nav: String, chage: String, buy: String, sell: String, date: String, portNo: Int,assetCompany: String, investOpenDate: String, getOrderList: DataGetOrder?) {
+    func sendDatagoToAddPortPreview(mainPage: String,enName: String, thName:String, risk: Int, nav: String, chage: String,color: String , buy: String, sell: String, date: String, portNo: Int,assetCompany: String, investOpenDate: String, getOrderList: DataGetOrder?) {
       let destinationVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AddSimulationPortViewController") as! AddSimulationPortViewController
       var destinationDS = destinationVC.router!.dataStore!
         destinationDS.mainPage = mainPage
@@ -62,13 +62,14 @@ class BuyAndSaleRouter: NSObject, BuyAndSaleRoutingLogic, BuyAndSaleDataPassing
         destinationDS.sell = sell
         destinationDS.datenav = date
         destinationDS.portNo = portNo
+        destinationDS.color = color
         destinationDS.assetCompany = assetCompany
         destinationDS.investOpenDate = investOpenDate
         destinationDS.getOrderList = getOrderList
       viewController?.present(destinationVC, animated: false)
     
     }
-    func sendDatagoToSellPortPreview(mainPage: String,enName: String, thName:String, risk: Int, nav: String, chage: String, buy: String, sell: String, date: String, portNo: Int,assetCompany: String, investOpenDate: String, getOrderList: DataGetOrder?){
+    func sendDatagoToSellPortPreview(mainPage: String,enName: String, thName:String, risk: Int, nav: String, chage: String,color: String , buy: String, sell: String, date: String, portNo: Int,assetCompany: String, investOpenDate: String, getOrderList: DataGetOrder?) {
       let destinationVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "FundSaleViewController") as! FundSaleViewController
       var destinationDS = destinationVC.router!.dataStore!
         destinationDS.mainPage = mainPage
@@ -79,6 +80,7 @@ class BuyAndSaleRouter: NSObject, BuyAndSaleRoutingLogic, BuyAndSaleDataPassing
         destinationDS.chage = chage
         destinationDS.buy = buy
         destinationDS.sell = sell
+        destinationDS.color = color
         destinationDS.datenav = date
         destinationDS.portNo = portNo
         destinationDS.assetCompany = assetCompany

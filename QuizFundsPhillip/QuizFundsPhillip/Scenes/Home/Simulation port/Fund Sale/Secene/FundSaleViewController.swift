@@ -64,7 +64,7 @@ class FundSaleViewController: UIViewController, FundSaleDisplayLogic
     @IBAction func btnActioninsertsellordeee(_ sender: Any) {
         self.doFetchInsertFunds()
         self.setNotificationCenter()
-        router?.backtoMainPagePreview()
+        router?.goToSimportPage()
     }
     @IBAction func navBtnback(_ sender: Any) {
         self.dismiss(animated: false, completion: nil)
@@ -207,7 +207,14 @@ class FundSaleViewController: UIViewController, FundSaleDisplayLogic
         self.lbnav.text = viewModel.nav
         self.lbbuy.text = viewModel.buy
         self.lbsell.text = viewModel.sell
-        self.lbchage.text = viewModel.chage
+        let color = viewModel.color
+        if color == "red" {
+            self.lbchage.text = viewModel.chage
+            self.lbchage.textColor = .red
+        } else if color == "green" {
+            self.lbchage.text = viewModel.chage
+            self.lbchage.textColor = .green
+        }
         self.lbenname.text = viewModel.enName
         self.lbthname.text = viewModel.thName
         self.datenavlabeel.text = "NAV ณ วันที่  \(viewModel.datenav)"
@@ -231,7 +238,13 @@ class FundSaleViewController: UIViewController, FundSaleDisplayLogic
         self.lbavailableUnits.text = "\(viewModel.getOrderList?.availableUnits ?? 0)"
         self.currentValue = viewModel.getOrderList?.currentValue ?? 0.0
         self.availableUnits = viewModel.getOrderList?.availableUnits ?? 0.0
-        self.navsell = Double(viewModel.sell) ?? 0.0
+        let navsell = Double(viewModel.sell) ?? 0.00
+        if navsell == 0.00 {
+            self.navsell = Double(viewModel.nav) ?? 0.00
+        } else {
+            self.navsell = Double(viewModel.sell) ?? 0.00
+        }
+      
   }
     func doFetchInsertFunds() {
       

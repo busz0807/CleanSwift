@@ -26,7 +26,7 @@ class FundSalePresenter: FundSalePresentationLogic
   
   func presentFetchData(response: FundSale.FetchData.Response)
   {
-    let viewModel = FundSale.FetchData.ViewModel(risk: response.risk, fcode: response.fcode, mainPage: response.mainPage, enName: response.enName, thName: response.thName, nav: response.nav, chage: response.chage, buy: response.buy, sell: response.sell, datenav: response.datenav, portNo: response.portNo, assetCompany: response.assetCompany,investOpenDate: response.investOpenDate, getOrderList: response.getOrderList)
+    let viewModel = FundSale.FetchData.ViewModel(risk: response.risk, fcode: response.fcode, mainPage: response.mainPage, enName: response.enName, thName: response.thName, nav: response.nav, chage: response.chage, color: response.color,  buy: response.buy, sell: response.sell, datenav: response.datenav, portNo: response.portNo, assetCompany: response.assetCompany,investOpenDate: response.investOpenDate, getOrderList: response.getOrderList)
     viewController?.displayFetchData(viewModel: viewModel)
   }
     func presentFetchInsertFunds(response:FundSale.FetchInsertDataFunds.Response) {

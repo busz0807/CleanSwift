@@ -64,11 +64,11 @@ class AddSimulationPortViewController: UIViewController, AddSimulationPortDispla
         if self.mainPage == "SarchPage" {
             self.doFetchInsertFunds()
             self.setNotificationCenter()
-            router?.backtoMainPagePreview()
+            router?.goToSimportPage()
         } else if self.mainPage == "BuyandSellPage" {
             self.doFetchInsertFunds()
             self.setNotificationCenter()
-            router?.backtoMainPagePreview()
+            router?.goToSimportPage()
         }
     }
     @IBAction func calendarbtn(_ sender: Any) {
@@ -106,6 +106,7 @@ class AddSimulationPortViewController: UIViewController, AddSimulationPortDispla
     var datenav = ""
     var assetCompany = ""
     var investOpenDate = ""
+    var color = ""
     var navListData: [NavListDb]?
     var navslist: [NavListModel]?
     var searchFunds: ReealmFundsListMobile?
@@ -206,7 +207,7 @@ class AddSimulationPortViewController: UIViewController, AddSimulationPortDispla
             let result = realm.objects(NavListDb.self)
             let navlistdata = Array(result)
             self.navListData = navlistdata
-            print("navListData", self.navListData?.count)
+//            print("navListData", self.navListData?.count)
             let count = self.navListData?.count ?? 0 - 1
             let countnav = Int(count) - 1
             for countindex in 0...countnav  {
@@ -218,8 +219,21 @@ class AddSimulationPortViewController: UIViewController, AddSimulationPortDispla
                         self.navLabel.text = "\(self.navListData?[countindex].nav ?? 0.00)"
                         self.sellLabel.text = "\(self.navListData?[countindex].sell ?? 0.00)"
                         self.navtextField.text = "\(self.navListData?[countindex].buy ?? 0.00)"
-                        self.changeLabel.text = "+\(self.navListData?[countindex].change ?? 0.00)(\(self.navListData?[countindex].changePercent ?? 0.00)%)"
-                        self.navbuy = self.navListData?[countindex].buy ?? 0.00
+                        let change = self.navListData?[countindex].change ?? 0.00
+                        if change < 0.00000000 {
+                            self.changeLabel.text = "\(self.navListData?[countindex].change ?? 0.00)(\(self.navListData?[countindex].changePercent ?? 0.00)%)"
+                            self.changeLabel.textColor = .red
+                        }else {
+                            self.changeLabel.text = "+\(self.navListData?[countindex].change ?? 0.00)(+\(self.navListData?[countindex].changePercent ?? 0.00)%)"
+                            self.changeLabel.textColor = .green
+                        }
+//                        self.changeLabel.text = "+\(self.navListData?[countindex].change ?? 0.00)(\(self.navListData?[countindex].changePercent ?? 0.00)%)"
+                        let navbuy = Double(self.navListData?[countindex].buy ?? 0.00)
+                        if navbuy == 0.00 {
+                            self.navbuy = self.navListData?[countindex].nav ?? 0.00
+                        } else {
+                            self.navbuy = self.navListData?[countindex].buy ?? 0.00
+                        }
                         let dateString = self.navListData?[countindex].date ?? ""
         //                print("date", dateString)
                         let dateFormatter = DateFormatter()
@@ -242,7 +256,14 @@ class AddSimulationPortViewController: UIViewController, AddSimulationPortDispla
                 self.navtitle.title = self.assetCompany
                 self.setbtniamge(risk: self.risk)
                 self.navLabel.text = self.nav
-                self.changeLabel.text = self.chage
+                let color = self.color
+                if color == "red" {
+                    self.changeLabel.text = self.chage
+                    self.changeLabel.textColor = .red
+                }else if color == "green" {
+                    self.changeLabel.text = self.chage
+                    self.changeLabel.textColor = .green
+                }
                 self.buyLabel.text = self.buy
                 self.sellLabel.text = self.sell
                 self.navdatelabel.text = "NAV ณ วันที่  \(self.datenav)"
@@ -285,6 +306,7 @@ class AddSimulationPortViewController: UIViewController, AddSimulationPortDispla
         self.buy = viewModel.buy
         self.sell = viewModel.sell
         self.datenav  = viewModel.datenav
+        self.color = viewModel.color
         self.fcode = viewModel.getOrderList?.fcode ?? ""
     
 //    print("MainPage>>", viewModel.mainPage)
@@ -314,7 +336,7 @@ class AddSimulationPortViewController: UIViewController, AddSimulationPortDispla
         return realm.object(ofType: NavListDb.self, forPrimaryKey: data.fundCode ?? "") != nil
     }
     func doFetchInsertFunds() {
-        let fundsId = self.searchFunds?.fundId ?? ""
+//    let fundsId = self.searchFunds?.fundId ?? ""
     let dataFormatter = DateFormatter()
     dataFormatter.dateFormat = "yyyyMMdd"
     let formattedDate1 = dataFormatter.string(from: Date())
@@ -323,7 +345,7 @@ class AddSimulationPortViewController: UIViewController, AddSimulationPortDispla
       interactor?.doFetchInsertFunds(request: request)
     }
     func displayInsertFunds(viewModel: AddSimulationPort.FetchInsertDataFunds.ViewModel) {
-        print("message", viewModel.insertOrder?.Success ?? "" )
+//        print("message", viewModel.insertOrder?.Success ?? "" )
     }
     // MARK: setNotificationCenter
     func setNotificationCenter() {

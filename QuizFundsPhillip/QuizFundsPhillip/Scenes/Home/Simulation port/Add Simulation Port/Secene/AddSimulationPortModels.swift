@@ -28,6 +28,7 @@ enum AddSimulationPort
         var thName: String
         var nav: String
         var chage: String
+        var color: String
         var buy: String
         var sell: String
         var datenav: String
@@ -46,6 +47,7 @@ enum AddSimulationPort
         var thName: String
         var nav: String
         var chage: String
+        var color: String
         var buy: String
         var sell: String
         var datenav: String

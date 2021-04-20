@@ -30,6 +30,7 @@ protocol FundSaleDataStore
     var buy: String {get set}
     var sell: String {get set}
     var datenav: String {get set}
+    var color: String {get set}
     var assetCompany: String {get set}
     var portNo: Int?  {get set}
     var investOpenDate: String {get set}
@@ -50,6 +51,7 @@ class FundSaleInteractor: FundSaleBusinessLogic, FundSaleDataStore
     var thName = ""
     var nav = ""
     var chage = ""
+    var color = ""
     var buy = ""
     var sell = ""
     var datenav = ""
@@ -62,7 +64,7 @@ class FundSaleInteractor: FundSaleBusinessLogic, FundSaleDataStore
   func doFetchData(request: FundSale.FetchData.Request)
   {
     worker = FundSaleWorker()
-    let response = FundSale.FetchData.Response(risk: risk, fcode: fcode, mainPage: mainPage, enName: enName, thName: thName, nav: nav, chage: chage, buy: buy, sell: sell, datenav: datenav, portNo: portNo, assetCompany: assetCompany, investOpenDate: investOpenDate, getOrderList: getOrderList)
+    let response = FundSale.FetchData.Response(risk: risk, fcode: fcode, mainPage: mainPage, enName: enName, thName: thName, nav: nav, chage: chage, color: color, buy: buy, sell: sell, datenav: datenav, portNo: portNo, assetCompany: assetCompany, investOpenDate: investOpenDate, getOrderList: getOrderList)
     presenter?.presentFetchData(response: response)
   }
     func doFetchInsertFunds(request: FundSale.FetchInsertDataFunds.Request) {
