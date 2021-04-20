@@ -15,7 +15,7 @@ import UIKit
 protocol SimulationportRoutingLogic
 {
     func goToSearchFundsPreview(mainpage: String, portNo: Int)
-    func goToPortDetail(portNo: Int )
+    func goToPortDetail(portNo: Int, unreailizeProfits: String, realizedProfit: String, principal: String)
     func sendDatagoToBuyAndSalePreview(fundsList: [ReealmFundsListMobile]?,getOrderList: DataGetOrder? , portNo: Int)
     func backtoMainPagePreview()
 }
@@ -39,10 +39,13 @@ class SimulationportRouter: NSObject, SimulationportRoutingLogic, Simulationport
         destinationDS.portNo = portNo
         viewController?.present(destinationVC, animated: true)
     }
-    func goToPortDetail(portNo: Int ) {
+    func goToPortDetail(portNo: Int, unreailizeProfits: String, realizedProfit: String, principal: String) {
         let destinationVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PortDetailViewController") as! PortDetailViewController
         var destinationDS = destinationVC.router!.dataStore!
         destinationDS.portNo = portNo
+        destinationDS.unreailizeProfits = unreailizeProfits
+        destinationDS.realizedProfit = realizedProfit
+        destinationDS.principal = principal
         viewController?.present(destinationVC, animated: true, completion: nil)
    }
     func sendDatagoToBuyAndSalePreview(fundsList: [ReealmFundsListMobile]?,getOrderList: DataGetOrder? , portNo: Int) {

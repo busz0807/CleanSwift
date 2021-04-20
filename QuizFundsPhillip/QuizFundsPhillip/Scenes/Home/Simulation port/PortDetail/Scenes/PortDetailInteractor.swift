@@ -24,11 +24,17 @@ protocol PortDetailDataStore
   var deleteData: DeleteModel? { get set }
     var portNo: Int? { get set }
     var getOrderList: DataGetOrder? { get set}
+    var unreailizeProfits: String { get set}
+    var realizedProfit: String { get set}
+    var principal: String { get set}
 }
 
 class PortDetailInteractor: PortDetailBusinessLogic, PortDetailDataStore
 {
     var portNo: Int?
+    var unreailizeProfits = ""
+    var realizedProfit = ""
+    var principal = ""
     var deleteData: DeleteModel?
     var getOrderList: DataGetOrder?
     var presenter: PortDetailPresentationLogic?
@@ -38,7 +44,7 @@ class PortDetailInteractor: PortDetailBusinessLogic, PortDetailDataStore
   // MARK: Do something
     func doFetchPortNo(request: PortDetail.PortNo.Request) {
         worker = PortDetailWorker()
-        let response = PortDetail.PortNo.Response(portno: portNo ?? 0)
+        let response = PortDetail.PortNo.Response(portno: portNo ?? 0, unreailizeProfits: unreailizeProfits, realizedProfit: realizedProfit, principal: principal)
         self.presenter?.presentFecthPortNo(response: response)
     }
   func doDeletePort(request: PortDetail.DeletePort.Request)

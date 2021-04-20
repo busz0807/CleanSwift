@@ -120,6 +120,35 @@ class PortDetailViewController: UIViewController, PortDetailDisplayLogic
         print("portNo",  self.portNo)
         textField.text = "พอร์ตจำลอง \(self.portNo)"
         self.lbTitle.text = "พอร์ตจำลอง \(self.portNo)"
+        self.principalLabel.text = viewModel.principal
+        let numuprealizedLabel =  Double(viewModel.unreailizeProfits) ?? 0.00
+        let numprincipalLabel = Double(viewModel.principal) ?? 0.00
+        if numuprealizedLabel < 0.000 {
+            let num = numprincipalLabel - numuprealizedLabel
+            self.numLabel.text = "\(num)"
+
+            self.uprealizedLabel.text = viewModel.unreailizeProfits
+            self.uprealizedLabel.textColor = .red
+        } else {
+            let num = numprincipalLabel + numuprealizedLabel
+            self.numLabel.text = "\(num)"
+
+            self.uprealizedLabel.text = "+\(viewModel.unreailizeProfits)"
+            self.uprealizedLabel.textColor = .green
+        }
+        let numrealizedProfit = Double(viewModel.realizedProfit) ?? 0.00
+        let nums =  Double(self.numLabel.text ?? "") ?? 0.00
+        if numrealizedProfit < 0.000 {
+            let numtotal = nums - numrealizedProfit
+            self.numtotalLabel.text = "\(numtotal)"
+            self.realizedLabel.text = viewModel.realizedProfit
+            self.realizedLabel.textColor = .red
+        } else {
+            let numtotal = nums + numrealizedProfit
+            self.numtotalLabel.text = "\(numtotal)"
+            self.realizedLabel.text = "+\(viewModel.realizedProfit)"
+            self.realizedLabel.textColor = .green
+        }
     }
   func doDeletePort()
   {

@@ -26,7 +26,7 @@ class PortDetailPresenter: PortDetailPresentationLogic
   
   // MARK: Do something
     func presentFecthPortNo(response: PortDetail.PortNo.Response) {
-        let viewModel = PortDetail.PortNo.ViewModel(portno: response.portno)
+        let viewModel = PortDetail.PortNo.ViewModel(portno: response.portno, unreailizeProfits: response.unreailizeProfits, realizedProfit: response.realizedProfit, principal: response.principal)
         viewController?.displayFecthPortNo(viewModel: viewModel)
     }
         

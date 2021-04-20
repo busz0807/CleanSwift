@@ -36,9 +36,15 @@ enum PortDetail
     }
     struct Response{
         var portno:Int
+        var unreailizeProfits: String
+        var realizedProfit: String
+        var principal: String
     }
     struct ViewModel{
         var portno:Int
+        var unreailizeProfits = ""
+        var realizedProfit = ""
+        var principal = ""
 
     }
   }

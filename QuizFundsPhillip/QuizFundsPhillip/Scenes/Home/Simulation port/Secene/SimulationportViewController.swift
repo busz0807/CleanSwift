@@ -50,18 +50,28 @@ class SimulationportViewController: UIViewController, SimulationportDisplayLogic
     var sumValue: String?
     var sumunrealizedReturns: String?
     var sumunrealizedProfits: String?
+    var principal: String?
+    var realizedProfit: String?
     var sumValue2: String?
     var sumunrealizedReturns2: String?
     var sumunrealizedProfits2: String?
+    var principal2: String?
+    var realizedProfit2: String?
     var sumValue3: String?
     var sumunrealizedReturns3: String?
     var sumunrealizedProfits3: String?
+    var principal3: String?
+    var realizedProfit3: String?
     var sumValue4: String?
     var sumunrealizedReturns4: String?
     var sumunrealizedProfits4: String?
+    var principal4: String?
+    var realizedProfit4: String?
     var sumValue5: String?
     var sumunrealizedReturns5: String?
     var sumunrealizedProfits5: String?
+    var principal5: String?
+    var realizedProfit5: String?
     var indexcollectioncenterred: Int?
     @IBAction func btngoToFunds(_ sender: Any) {
         print("mainpage", mainpage)
@@ -213,7 +223,8 @@ class SimulationportViewController: UIViewController, SimulationportDisplayLogic
         self.sumunrealizedProfits =  String(self.getOrderData?.Data.reduce(0) { $0 + $1.unrealizedProfits } ?? 0.00)
         self.sumValue =  String(self.getOrderData?.Data.reduce(0) { $0 + $1.currentValue } ?? 0.00)
         self.sumunrealizedReturns = String(self.getOrderData?.Data.reduce(0) { $0 + $1.unrealizedReturns } ?? 0.00)
-        
+        self.principal = String(self.getOrderData?.Data.reduce(0) { $0 + $1.principal } ?? 0.00)
+        self.realizedProfit = String(self.getOrderData?.Data.reduce(0) { $0 + $1.realizedProfit } ?? 0.00)
         self.tableView.reloadData()
         self.collectionView.reloadData()
     }
@@ -224,6 +235,8 @@ class SimulationportViewController: UIViewController, SimulationportDisplayLogic
         self.sumunrealizedProfits2 =  String(self.getOrderData2?.Data.reduce(0) { $0 + $1.unrealizedProfits } ?? 0.00)
         self.sumValue2 =  String(self.getOrderData2?.Data.reduce(0) { $0 + $1.currentValue } ?? 0.00)
         self.sumunrealizedReturns2 = String(self.getOrderData2?.Data.reduce(0) { $0 + $1.unrealizedReturns } ?? 0.00)
+        self.principal2 = String(self.getOrderData2?.Data.reduce(0) { $0 + $1.principal } ?? 0.00)
+        self.realizedProfit2 = String(self.getOrderData2?.Data.reduce(0) { $0 + $1.realizedProfit } ?? 0.00)
         self.tableView.reloadData()
         self.collectionView.reloadData()
     }
@@ -234,6 +247,8 @@ class SimulationportViewController: UIViewController, SimulationportDisplayLogic
         self.sumunrealizedProfits3 = String(self.getOrderData3?.Data.reduce(0) { $0 + $1.unrealizedProfits } ?? 0.00)
         self.sumValue3 =  String(self.getOrderData3?.Data.reduce(0) { $0 + $1.currentValue } ?? 0.00)
         self.sumunrealizedReturns3 = String(self.getOrderData3?.Data.reduce(0) { $0 + $1.unrealizedReturns } ?? 0.00 )
+        self.principal3 = String(self.getOrderData3?.Data.reduce(0) { $0 + $1.principal } ?? 0.00)
+        self.realizedProfit3 = String(self.getOrderData3?.Data.reduce(0) { $0 + $1.realizedProfit } ?? 0.00)
         self.tableView.reloadData()
         self.collectionView.reloadData()
 
@@ -246,6 +261,8 @@ class SimulationportViewController: UIViewController, SimulationportDisplayLogic
         self.sumunrealizedProfits4 =  String(self.getOrderData4?.Data.reduce(0) { $0 + $1.unrealizedProfits } ?? 0.00)
         self.sumValue4 =  String(self.getOrderData4?.Data.reduce(0) { $0 + $1.currentValue } ?? 0.00)
         self.sumunrealizedReturns4 = String(self.getOrderData4?.Data.reduce(0) { $0 + $1.unrealizedReturns } ?? 0.00)
+        self.principal4 = String(self.getOrderData4?.Data.reduce(0) { $0 + $1.principal } ?? 0.00)
+        self.realizedProfit4 = String(self.getOrderData4?.Data.reduce(0) { $0 + $1.realizedProfit } ?? 0.00)
         self.tableView.reloadData()
         self.collectionView.reloadData()
 
@@ -258,6 +275,8 @@ class SimulationportViewController: UIViewController, SimulationportDisplayLogic
         self.sumunrealizedProfits5 =  String(self.getOrderData5?.Data.reduce(0) { $0 + $1.unrealizedProfits } ?? 0.00)
         self.sumValue5 =  String(self.getOrderData5?.Data.reduce(0) { $0 + $1.currentValue } ?? 0.00)
         self.sumunrealizedReturns5 = String(self.getOrderData5?.Data.reduce(0) { $0 + $1.unrealizedReturns } ?? 0.00)
+        self.principal5 = String(self.getOrderData5?.Data.reduce(0) { $0 + $1.principal } ?? 0.00)
+        self.realizedProfit5 = String(self.getOrderData5?.Data.reduce(0) { $0 + $1.realizedProfit } ?? 0.00)
         self.tableView.reloadData()
         self.collectionView.reloadData()
 
@@ -498,8 +517,34 @@ extension SimulationportViewController: UICollectionViewDelegate, UICollectionVi
         pageControl.currentPage = indexPath.row
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        print("indexPathdid", indexPath.row)
-        router?.goToPortDetail(portNo: indexPath.row)
+        let index = indexPath.row
+        if index == 0 {
+            let unreailizeProfits = self.sumunrealizedProfits ?? ""
+            let realizedProfit = self.realizedProfit ?? ""
+            let principal = self.principal ?? ""
+        router?.goToPortDetail(portNo: indexPath.row, unreailizeProfits: unreailizeProfits, realizedProfit: realizedProfit, principal: principal)
+        } else  if index == 1 {
+            let unreailizeProfits = self.sumunrealizedProfits2 ?? ""
+            let realizedProfit = self.realizedProfit2 ?? ""
+            let principal = self.principal2 ?? ""
+        router?.goToPortDetail(portNo: indexPath.row, unreailizeProfits: unreailizeProfits, realizedProfit: realizedProfit, principal: principal)
+        } else  if index == 2 {
+            let unreailizeProfits = self.sumunrealizedProfits3 ?? ""
+            let realizedProfit = self.realizedProfit3 ?? ""
+            let principal = self.principal3 ?? ""
+        router?.goToPortDetail(portNo: indexPath.row, unreailizeProfits: unreailizeProfits, realizedProfit: realizedProfit, principal: principal)
+        }else  if index == 3 {
+            let unreailizeProfits = self.sumunrealizedProfits4 ?? ""
+            let realizedProfit = self.realizedProfit4 ?? ""
+            let principal = self.principal4 ?? ""
+        router?.goToPortDetail(portNo: indexPath.row, unreailizeProfits: unreailizeProfits, realizedProfit: realizedProfit, principal: principal)
+        }else  if index == 4 {
+            let unreailizeProfits = self.sumunrealizedProfits5 ?? ""
+            let realizedProfit = self.realizedProfit5 ?? ""
+            let principal = self.principal5 ?? ""
+        router?.goToPortDetail(portNo: indexPath.row, unreailizeProfits: unreailizeProfits, realizedProfit: realizedProfit, principal: principal)
+        }
+
     }
 }
 extension SimulationportViewController: UITableViewDelegate, UITableViewDataSource {
